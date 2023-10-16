@@ -4,7 +4,8 @@
 
 The objective of this Request for Comment (RFC) is to present a new, unified, and interoperable standard tailored for exchanging &mu;seismic data in mining environments. This RFC seeks valuable feedback and input from industry stakeholders, researchers, and vendors to ensure the robustness and adaptability of the proposed format.
 
-In the current mining scenario, the absence of a standardized data format, combined with the proliferation of proprietary systems, has created barriers to efficient data exchange and integration. This results in potential inefficiencies, increased costs, and limitations in adopting multivendor solutions. Given the complexities and unique requirements of linked to the microseismic monitoring data collected by mining operations, there's a pronounced need for a format that can accommodate both triggered and continuous data, catering to a spectrum of waveform data types, be it triggered fixed length (mostly use by ESG), triggered variable length (mostly used by IMS), or continuous.
+In the current mining scenario, the absence of a standardized data format, combined with the proliferation of proprietary systems, has created barriers to efficient data exchange and integration. This results in potential inefficiencies, increased costs, and limitations in adopting multivendor solutions. Given the complexities and unique requirements of linked to the microseismic monitoring data collected by mining operations, there's a pronounced need for a format that can accommodate a wide range of seismic data types including but not limited to triggered and continuous data, catering to a spectrum of waveform data types, be it triggered fixed length (mostly use by ESG), triggered variable length (mostly used by IMS), or continuous. 
+
 
 Drawing inspiration from tried-and-tested standards in earthquake seismology (miniSEED, QuakeML and StationXML), this document introduces the necessary modifications to adapt to the specifics of the mining context. The overarching aim is to usher in a comprehensive, open-source standard that promotes consistent and unhindered data interchange across a variety of systems and platforms. Through this endeavor, we anticipate fostering collaboration, improving data analysis capabilities, and paving the way for innovation in microseismic monitoring in mining.
 
@@ -65,7 +66,7 @@ Acknowledging these subtleties, the proposed standard comes with the following v
 
 #### Introduction
 
-Within the evolving &mu;seismic industry, the &mu;Seismic Data Exchange Format (MDE v1.0) presents a timely solution for efficient and adaptable data exchange mechanisms. Denoted by the `.mde` extension, this format captures the intricate details of microseismic data, fostering unhindered data sharing across various platforms and applications. The proposed format aims at representing most types of seismic 
+Within the evolving &mu;seismic industry, the &mu;Seismic Data Exchange Format (MDE v1.0) presents a timely solution for efficient and adaptable data exchange mechanisms. Denoted by the `.mde` extension, this format captures the intricate details of microseismic data, fostering unhindered data sharing across various platforms and applications. The proposed format aims at representing most types of seismic data including 
 
 #### Format Components Overview
 
@@ -122,7 +123,7 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzMTQ4NDQ0Nyw4MTYxMDc0ODQsLTQ2NT
+eyJoaXN0b3J5IjpbMjEwMTYxODg5Nyw4MTYxMDc0ODQsLTQ2NT
 UyOTI3MywyMDAwNzc0NDI5LC0zNTQ4MDM1MDgsLTE4MTAwNTE1
 XX0=
 -->
