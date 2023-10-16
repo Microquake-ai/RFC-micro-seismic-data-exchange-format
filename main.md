@@ -47,7 +47,9 @@ Through these adaptations, this document aims to bridge the gap between establis
 
 Microseismic data are broadly used in underground mining, guiding pivotal decisions safety critical and shaping operational strategies. However, the current landscape, devoid of a universally recognized data format, presents numerous challenges:
 
+<!--
 -   **Vendor Lock-in**: The proprietary nature of data formats means mines can inadvertently tether themselves to a single vendor's seismic system. This captivity limits their agility in embracing emerging technologies or pivoting to alternative systems that may offer enhanced features or economic advantages.
+-->
     
 -   **Data Interoperability Concerns**: A lack of standardization complicates the integration of microseismic data emanating from diverse sources or vendors. Each integration often demands tailor-made solutions, escalating costs and heightening the risk of data discrepancies.
     
@@ -62,12 +64,14 @@ Given these challenges, this standard is sculpted with the following paramount o
 
 <!--    
 -   **Boost Vendor Competition**: A harmonized standard reshapes the competitive landscape, nudging vendors to rival based on equipment excellence, sophisticated data analysis tools, and unparalleled customer support, rather than the confines of proprietary data formats.
---!>
+-->
     
 -   **Leverage Tried-and-Tested Seismological Standards**: Instead of charting an entirely new path, this standard is anchored in time-tested seismological data formats. While these provide a sturdy and reliable bedrock, bespoke extensions are woven in to cater to the mining sector's distinct requisites.
     
 -   **Pave the Way for Technological Progress**: A universally embraced standard lays the groundwork for revolutionary advances in microseismic monitoring and analysis, ensuring the mining industry remains at the forefront of cutting-edge innovations.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0NzcyMDU0NywtMzU0ODAzNTA4LC0xOD
+eyJoaXN0b3J5IjpbMjAwMDc3NDQyOSwtMzU0ODAzNTA4LC0xOD
 EwMDUxNV19
 -->
