@@ -40,7 +40,6 @@ Through these adaptations, this document aims to bridge the gap between establis
 -   **QuakeML**: An XML-oriented format, QuakeML is crafted to articulate seismic event parameters.
     
 -   **StationXML**: This is an XML-centric format devised to encapsulate the nuances and specifics of a seismic station. It encompasses details about the station's sensors and the metadata associated with the recorded data.
-  
 
 ### Rationale
 
@@ -62,6 +61,6 @@ Acknowledging these subtleties, the proposed standard comes with the following v
     
 -   **Catalyze Technological Advancements**: With a universally endorsed standard, the mining sector is primed to adopt and assimilate breakthroughs in microseismic monitoring and analysis, ensuring continued advancement in safety and operational efficiency.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjIzODAwMjEsMjAwMDc3NDQyOSwtMzU0OD
-AzNTA4LC0xODEwMDUxNV19
+eyJoaXN0b3J5IjpbLTQ2NTUyOTI3MywyMDAwNzc0NDI5LC0zNT
+Q4MDM1MDgsLTE4MTAwNTE1XX0=
 -->
