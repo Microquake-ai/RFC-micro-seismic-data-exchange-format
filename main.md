@@ -4,6 +4,7 @@
 
 The objective of this Request for Comment (RFC) is to present a new, unified, and interoperable standard tailored for exchanging &mu;seismic data in mining environments. This RFC seeks valuable feedback and input from industry stakeholders, researchers, and vendors to ensure the robustness and adaptability of the proposed format.
 
+
 In the current mining scenario, the absence of a standardized data format, combined with the proliferation of proprietary systems, has created barriers to efficient data exchange and integration. This results in potential inefficiencies, increased costs, and limitations in adopting multivendor solutions. Given the complexities and unique requirements of linked to the microseismic monitoring data collected by mining operations, there's a pronounced need for a format that can accommodate a broad range of seismic data types. The proposed format can accomodate a wide range scenario including distibuted acoustic sensing. 
 
 
@@ -123,7 +124,7 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyOTgxMDM0MSwtMTg3ODAwNzMwLDgxNj
-EwNzQ4NCwtNDY1NTI5MjczLDIwMDA3NzQ0MjksLTM1NDgwMzUw
-OCwtMTgxMDA1MTVdfQ==
+eyJoaXN0b3J5IjpbMjY5NTMzNjUxLDIxMjk4MTAzNDEsLTE4Nz
+gwMDczMCw4MTYxMDc0ODQsLTQ2NTUyOTI3MywyMDAwNzc0NDI5
+LC0zNTQ4MDM1MDgsLTE4MTAwNTE1XX0=
 -->
