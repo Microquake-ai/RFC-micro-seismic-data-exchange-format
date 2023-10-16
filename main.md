@@ -27,6 +27,22 @@ While these foundational formats offer robustness, the distinct challenges and s
 
 Through these adaptations, this document aims to bridge the gap between established seismological data formats and the unique requirements of the mining sector, ensuring seamless data interchange and analysis.
 
+### Terminology
+
+-   **Waveforms**: These are digital renditions of seismic waves. For the purpose of this standard, they are primarily encapsulated using the miniSEED format.
+    
+-   **Catalogue Information**: This is a structured compilation of seismic events, detailing their origins, magnitudes, and other pertinent data. Within the scope of this standard, we represent this information using the QuakeML format, augmented with extensions tailored for the mining context.
+    
+-   **Inventory Data**: Refers to a comprehensive registry detailing seismic instruments, pinpointing their locations, and delineating their unique characteristics. StationXML, with specific modifications for mining contexts, is the chosen format to represent this data in this standard.
+    
+-   **miniSEED**: A predominant data format in the realm of seismology, miniSEED is instrumental in storing seismic waveform data.
+    
+-   **QuakeML**: An XML-oriented format, QuakeML is crafted to articulate seismic event parameters.
+    
+-   **StationXML**: This is an XML-centric format devised to encapsulate the nuances and specifics of a seismic station. It encompasses details about the station's sensors and the metadata associated with the recorded data.
+    
+
+----------
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTA4MzA1MTMsLTE4MTAwNTE1XX0=
+eyJoaXN0b3J5IjpbMTM0ODE2MTkyOCwtMTgxMDA1MTVdfQ==
 -->
