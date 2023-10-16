@@ -60,7 +60,68 @@ Acknowledging these subtleties, the proposed standard comes with the following v
 -   **Leverage Established Seismological Standards**: This standard harnesses the strength of existing seismological data formats. While they form the foundational backbone, specific extensions are melded in to meet the unique requirements of the mining industry.
     
 -   **Catalyze Technological Advancements**: With a universally endorsed standard, the mining sector is primed to adopt and assimilate breakthroughs in microseismic monitoring and analysis, ensuring continued advancement in safety and operational efficiency.
+
+### Data Format Specification for Microseismic Data Exchange (MDE v1.0)
+
+#### Introduction
+
+Within the evolving microseismic industry that bridges academic and commercial spheres, the Microseismic Data Exchange Format (MDE v1.0) presents a timely solution for efficient and adaptable data exchange. Denoted by the `.mde` extension, this format captures the intricate details of microseismic data, fostering unhindered data sharing across various platforms and applications.
+
+#### Format Components Overview
+
+The MDE v1.0 standard stands on the shoulders of three primary components, each finetuned to capture the entirety of microseismic data:
+
+**1. MiniSEED**  
+Esteemed in the seismic community, miniSEED’s compact nature serves to represent both continuous data streams and individual event recordings. Salient features:
+
+-   **Compactness**: Facilitates efficient storage and transfer of extensive seismic datasets.
+-   **Versatility**: Encapsulates both continuous data and event-focused recordings.
+-   **Independence**: Remains unaffected by specific recording equipment.
+
+By retaining the core essence of miniSEED, the MDE v1.0 format guarantees compatibility with existing seismological tools and platforms.
+
+_Reference to miniSEED official documentation_
+
+**2. QuakeML v2.0 Adaptations for Microseismic Data**  
+While retaining the foundational structure of QuakeML v2.0, some adaptations for the microseismic realm include:
+
+-   **Origin**: Utilizes Cartesian coordinates, specifically Easting, Northing, and a Z-coordinate that can represent either Depth or Elevation. An associated flag indicates the direction of the Z-coordinate.
+-   **Magnitude**: Enhanced to capture corner frequencies and energy parameters.
+-   **Event Types**: Augmented to encompass specific event types relevant to mining scenarios. This was achieved by adapting standard QuakeML types to include those prevalent in the mining sector.
+
+_Note on derived source parameters and on-the-spot calculations_
+
+**3. StationXML v1.2 for Microseismic Data**  
+StationXML v1.2, primarily used for detailing metadata associated with seismic stations, has been tailored for the microseismic context:
+
+-   **Hierarchy & Definitions**: The inherent hierarchy (Inventory > Networks > Stations > Locations > Channels) remains, yet with nuances adjusted for microseismology.
+-   **Microseismic-specific Adaptations**: Introduces attributes such as Cartesian coordinates and channel orientation, which have been modified or introduced to meet the specialized needs of the microseismic landscape.
+
+_Deviation from the standard includes the utilization of Easting, Northing, and Z-coordinates for station and channels, channel orientation based on the cosine vector, and the allowance for longer station names._
+
+#### File Packaging and Structure
+
+MDE v1.0 suggests a distinct packaging strategy. For **triggered data**, the package should comprise three components: `catalog.xml`, `stream.mseed`, and `inventory.xml`. For **continuous data**, only `stream.mseed` and `inventory.xml` are necessary. The files should be packaged using the tar protocol, then compressed using gzip. Upon decompression, the `.mde` package would reveal these constituent files, each echoing with event catalogs, waveform data, or inventory information respectively.
+
+#### Coordinate System Conversion
+
+The Cartesian system is designed to be straightforward and unambiguous. For seamless interoperability, metadata should facilitate conversion to and from spherical coordinates. This includes potential usage in the imperial coordinate system (e.g., feet). Conversion can be achieved through operations like rotation, translation, and scaling.
+
+_Python libraries like `pyproj` can aid in this transformation. For example:_
+
+```python
+import pyproj
+# Define the conversion using pyproj
+converter = pyproj.Transformer.from_crs("epsg:xxxx", "epsg:yyyy")
+
+# Convert coordinates
+easting, northing, z = converter.transform(x, y, z)
+```
+
+#### Concluding Remarks
+
+With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2NTUyOTI3MywyMDAwNzc0NDI5LC0zNT
-Q4MDM1MDgsLTE4MTAwNTE1XX0=
+eyJoaXN0b3J5IjpbODE2MTA3NDg0LC00NjU1MjkyNzMsMjAwMD
+c3NDQyOSwtMzU0ODAzNTA4LC0xODEwMDUxNV19
 -->
