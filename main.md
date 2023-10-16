@@ -1,4 +1,5 @@
-# Purpose
+# Request for Comment - MicroSeismic Data Exchange Format (
+## Purpose
 
 The objective of this Request for Comment (RFC) is to present a new, unified, and interoperable standard tailored for exchanging microseismic data in mining environments. This RFC seeks valuable feedback and input from industry stakeholders, researchers, and vendors to ensure the robustness and adaptability of the proposed format.
 
@@ -6,5 +7,5 @@ In the current mining scenario, the absence of a standardized data format, combi
 
 Drawing inspiration from tried-and-tested standards in earthquake seismology, this document introduces necessary modifications to adapt to the specifics of the mining context. The overarching aim is to usher in a comprehensive, open-source standard that promotes consistent and unhindered data interchange across a variety of systems and platforms. Through this endeavor, we anticipate fostering collaboration, improving data analysis capabilities, and paving the way for innovation in microseismic monitoring in mining.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTk2NjYyMjFdfQ==
+eyJoaXN0b3J5IjpbLTcwNTc3NjU3OF19
 -->
