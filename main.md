@@ -61,11 +61,11 @@ Acknowledging these subtleties, the proposed standard comes with the following v
     
 -   **Catalyze Technological Advancements**: With a universally endorsed standard, the mining sector is primed to adopt and assimilate breakthroughs in microseismic monitoring and analysis, ensuring continued advancement in safety and operational efficiency.
 
-### Data Format Specification for &seismic Data Exchange (MDE v1.0)
+### Data Format Specification for &mu;Seismic Data Exchange (MDE v1.0)
 
 #### Introduction
 
-Within the evolving microseismic industry that bridges academic and commercial spheres, the Microseismic Data Exchange Format (MDE v1.0) presents a timely solution for efficient and adaptable data exchange. Denoted by the `.mde` extension, this format captures the intricate details of microseismic data, fostering unhindered data sharing across various platforms and applications.
+Within the evolving &mu;seismic industry that bridges academic and commercial spheres, the &mu;Seismic Data Exchange Format (MDE v1.0) presents a timely solution for efficient and adaptable data exchange. Denoted by the `.mde` extension, this format captures the intricate details of microseismic data, fostering unhindered data sharing across various platforms and applications.
 
 #### Format Components Overview
 
@@ -122,7 +122,7 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTU0NDA3NDIsODE2MTA3NDg0LC00Nj
-U1MjkyNzMsMjAwMDc3NDQyOSwtMzU0ODAzNTA4LC0xODEwMDUx
-NV19
+eyJoaXN0b3J5IjpbLTc2MTQyNTUzNyw4MTYxMDc0ODQsLTQ2NT
+UyOTI3MywyMDAwNzc0NDI5LC0zNTQ4MDM1MDgsLTE4MTAwNTE1
+XX0=
 -->
