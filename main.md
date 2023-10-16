@@ -19,7 +19,7 @@ While these foundational formats offer robustness, the distinct challenges and s
 
 1.  **Coordinate System**: Transition from a traditional spherical system to a Cartesian coordinate system tailored for mining contexts.
 2.  **Magnitude Description**: Modifications to cater to the specific magnitude scales and measurement techniques prevalent in mining seismology.
-3.  **Event Types**: Introduction of event types unique to mining seismic activities, distinct from conventional seismological events.
+3.  **Event Types**: Adapting the format to ensure the prescribed event types are suited to describe the mining seismic activities, that are distinct from conventional seismological events.
 
 #### StationXML Adaptations:
 
@@ -28,5 +28,5 @@ While these foundational formats offer robustness, the distinct challenges and s
 Through these adaptations, this document aims to bridge the gap between established seismological data formats and the unique requirements of the mining sector, ensuring seamless data interchange and analysis.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzEwMDE3MTUsLTE4MTAwNTE1XX0=
+eyJoaXN0b3J5IjpbLTEwNTA4MzA1MTMsLTE4MTAwNTE1XX0=
 -->
