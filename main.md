@@ -35,12 +35,13 @@ Through these adaptations, this document aims to bridge the gap between establis
     
 -   **Inventory Data**: Refers to a comprehensive registry detailing seismic instruments, pinpointing their locations, and delineating their unique characteristics. StationXML, with specific modifications for mining contexts, is the chosen format to represent this data in this standard.
     
--   **miniSEED**: A predominant data format in the realm of seismology, miniSEED is instrumental in storing seismic waveform data.
+-   **miniSEED**: A predominant data format in the realm of seismology, miniSEED is instrumental in storing seismic waveform data. 
     
 -   **QuakeML**: An XML-oriented format, QuakeML is crafted to articulate seismic event parameters.
     
 -   **StationXML**: This is an XML-centric format devised to encapsulate the nuances and specifics of a seismic station. It encompasses details about the station's sensors and the metadata associated with the recorded data.
   
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1NDgwMzUwOCwtMTgxMDA1MTVdfQ==
+eyJoaXN0b3J5IjpbLTEzNjM5ODM3MTIsLTM1NDgwMzUwOCwtMT
+gxMDA1MTVdfQ==
 -->
