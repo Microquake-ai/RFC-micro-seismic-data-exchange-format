@@ -7,7 +7,11 @@ In the current mining scenario, the absence of a standardized data format, combi
 
 Drawing inspiration from tried-and-tested standards in earthquake seismology (miniSEED, QuakeML and StationXML), this document introduces the necessary modifications to adapt to the specifics of the mining context. The overarching aim is to usher in a comprehensive, open-source standard that promotes consistent and unhindered data interchange across a variety of systems and platforms. Through this endeavor, we anticipate fostering collaboration, improving data analysis capabilities, and paving the way for innovation in microseismic monitoring in mining.
 
+## Scope
 
+The aim of this standard is to define a comprehensive data format encompassing three pivotal components: waveforms, catalogue information, and inventory data. To ensure both reliability and wide adaptability, we've grounded our approach on globally acknowledged seismological formats: miniSEED for waveforms, QuakeML for catalogue data, and StationXML for inventory specifics.
+
+While these foundational formats offer robustness, the distinct challenges and specifications of mining environments necessitate custom adaptations. Consequently, this document delves into the integration of Cartesian coordinate systems, distinct from the traditional spherical systems, and the expansion of naming conventions within the QuakeML and StationXML formats to aptly cater to the mining milieu.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE4MzMxODM0XX0=
+eyJoaXN0b3J5IjpbLTE4MTAwNTE1XX0=
 -->
