@@ -40,9 +40,7 @@ Through these adaptations, this document aims to bridge the gap between establis
 -   **QuakeML**: An XML-oriented format, QuakeML is crafted to articulate seismic event parameters.
     
 -   **StationXML**: This is an XML-centric format devised to encapsulate the nuances and specifics of a seismic station. It encompasses details about the station's sensors and the metadata associated with the recorded data.
-    
-
-----------
+  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0ODE2MTkyOCwtMTgxMDA1MTVdfQ==
+eyJoaXN0b3J5IjpbLTM1NDgwMzUwOCwtMTgxMDA1MTVdfQ==
 -->
