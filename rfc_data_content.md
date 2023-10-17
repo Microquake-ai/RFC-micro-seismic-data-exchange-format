@@ -47,13 +47,13 @@ The required metadata are:
 - **Network Code** &mdash; Represents the code of the network and shall be expressed with two character
 - **Station Code** &mdash; Represents the code of the station that contains the digitizer.
 - **Location Code** &mdash; A two character numerical code representing the recording site (where the sensor is deployed). For each station, the location code shall be unique. 
-- **Channel Code** &mdash; The three character channel code shall follow the standard naming convention described [here](
+- **Channel Code** &mdash; The three character channel code shall follow the standard naming convention described [here](https://ds.iris.edu/ds/nodes/dmc/data/formats/seed-channel-naming/). The first letter represents the band code, the second the instrument code and the third the orientation code. f
 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4NjQ1NzIxOSwtMTM3MzcwMjM1NywtMT
+eyJoaXN0b3J5IjpbMTQzODI2OTcyMiwtMTM3MzcwMjM1NywtMT
 M4NTk3MDM1MF19
 -->
