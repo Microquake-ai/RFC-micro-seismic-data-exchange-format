@@ -42,9 +42,9 @@ Using the `Zarr` format to package the information was suggested by personnel at
 
 The `Zarr` format was developed to efficiently store and access large-scale array-oriented scientific data. Its design specifically addresses the challenges posed by cloud and distributed storage by allowing for concurrent reads and writes. The format excels in scenarios where data needs to be analyzed in chunks without reading the entire dataset into memory, making it especially suitable for multidimensional arrays. With built-in support for compression and chunking, Zarr enables high-speed data access regardless of the storage backend, be it file systems, object storage, or databases.
 
-Adopting `Zarr` allows for the data and metadata to be stored in format that are 
+Adopting `Zarr` allows for the data and metadata to be stored in format that are very close to broadly adopted data format broadly adopted by the seismology community. It is possible to pack in one container, the waveforms, event catalog and system informat
 
-The main advantage of adopting the `Zarr` format to store the event data are particularly pronounced for the waveforms:
+The main advantage of adopting the `Zarr` format to store all the data  are particularly pronounced for the waveforms:
 
 1.  **Chunked Storage and Access**: Zarr's inherent design supports chunking, allowing users to efficiently read or write small sections of large seismic datasets without needing to access the entire file. This is particularly beneficial for processing long-duration continuous seismic recordings.
     
@@ -147,8 +147,8 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NzMwMjg1OCwxMDgxMDE3NjY2LDExMj
-QxMTQxOTMsLTcxMjQxOTE5MSwxNTQ2MjI3MTkyLDEwMTc2NTA5
-MDksNTU0NzU3MDA3LDE3MTQ5OTgyNDAsLTQ2NjI4MDY1MCwxNj
-MwMTUyNzI0LC0xMzczNzAyMzU3LC0xMzg1OTcwMzUwXX0=
+eyJoaXN0b3J5IjpbOTQ3NTM5NDA5LDEwODEwMTc2NjYsMTEyND
+ExNDE5MywtNzEyNDE5MTkxLDE1NDYyMjcxOTIsMTAxNzY1MDkw
+OSw1NTQ3NTcwMDcsMTcxNDk5ODI0MCwtNDY2MjgwNjUwLDE2Mz
+AxNTI3MjQsLTEzNzM3MDIzNTcsLTEzODU5NzAzNTBdfQ==
 -->
