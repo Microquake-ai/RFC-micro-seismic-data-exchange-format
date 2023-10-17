@@ -92,11 +92,11 @@ def stream_to_zarr_group(stream, zarr_group_path):
         arr = group.create_dataset(trace_id, data=tr.data, 
         shape=(len(tr.data),), dtype='float32', overwrite=True)
 
-        # Store all trace stats as Zarr attributes
+        # Store selected stats as Zarr attributes
         for key in ['network_code', 'station_code', 'location_code', 
                     'channel_code', 'sampling_rate', 'starttime', 'calib']:
             # Convert non-string objects to strings for easier storage and retrieval
-            arr.attrs[key] = str(tr.stats[key])
+            arr.attrs[key] = tr.stats[key]
 
 # Load a sample ObsPy Stream (modify this to load your data)
 st = obspy.read()
@@ -116,7 +116,7 @@ The catalog information
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODU2MzkzMjksMTAxNzY1MDkwOSw1NT
-Q3NTcwMDcsMTcxNDk5ODI0MCwtNDY2MjgwNjUwLDE2MzAxNTI3
-MjQsLTEzNzM3MDIzNTcsLTEzODU5NzAzNTBdfQ==
+eyJoaXN0b3J5IjpbMTMwODk3NzMwLDEwMTc2NTA5MDksNTU0Nz
+U3MDA3LDE3MTQ5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNzI0
+LC0xMzczNzAyMzU3LC0xMzg1OTcwMzUwXX0=
 -->
