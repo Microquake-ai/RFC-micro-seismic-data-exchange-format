@@ -232,8 +232,6 @@ print(new_cat)
 
 The catalog can also be stored in the native XML format, which is QuakeML's traditional format. QuakeML, being a structured XML-based format, offers a robust platform for standardizing the description of seismic events and their associated parameters. For those familiar with the format and looking to integrate with other systems that recognize QuakeML, using the native XML format is advantageous. However, it's essential to be aware of the modifications made for the μseismic context to ensure compatibility.
 
-### System or Inventory information
-
 ### System or Inventory Information
 
 The system or inventory information is crucial for any seismic network as it provides comprehensive details about the stations and channels that are a part of that network. The StationXML format, which is an established standard in the seismic community, is designed to hold such inventory metadata.
@@ -246,6 +244,14 @@ In a typical seismic application, the StationXML format uses latitude and longit
 
 Thus, we recommend replacing the latitude and longitude fields in the StationXML format with `x`, `y`, and `z` coordinates for both the station and channel locations. This change aligns with the earlier modifications made for QuakeML, ensuring consistency across different components of the μseismic system.
 
+#### System/Inventory Information Packaging
+
+The inventory or system information of a seismic network, which details the stations and channels, can also be serialized and stored efficiently. We propose to options. The first option consist in storing the informa `Zarr` and `StationXML`.
+
+##### Zarr
+
+Storing inventory information in a `Zarr` format offers flexibility, especially when dealing with large datasets. Like the catalog information, the StationXML data can be serialized using the json library and then stored in a `Zarr` file. This allows for efficient storage and quick retrieval of inventory data. Here's a potential method:
+
 
 
 
@@ -254,11 +260,11 @@ Thus, we recommend replacing the latitude and longitude fields in the StationXML
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDU3Mjc4NTgsLTMxMjAyODIzOCw0Nj
-M2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0NDQwNTE1NCwtMTY0NTkx
-NzA5NCw4NDAxNDUwNTksLTE0MzE4OTAzOTMsLTExNzcyMjc5ND
-csMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03MTI0MTkxOTEsMTU0
-NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAwNywxNzE0OTk4Mj
-QwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwtMTM3MzcwMjM1Nywt
-MTM4NTk3MDM1MF19
+eyJoaXN0b3J5IjpbLTIxMDg2MzQ0NTQsLTE5NDU3Mjc4NTgsLT
+MxMjAyODIzOCw0NjM2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0NDQw
+NTE1NCwtMTY0NTkxNzA5NCw4NDAxNDUwNTksLTE0MzE4OTAzOT
+MsLTExNzcyMjc5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03
+MTI0MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1Nz
+AwNywxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwt
+MTM3MzcwMjM1N119
 -->
