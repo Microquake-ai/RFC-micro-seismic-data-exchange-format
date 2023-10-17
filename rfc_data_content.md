@@ -1,32 +1,33 @@
+
 # Request For Comment &mdash; Content for &mu;Seismic Data Exchange
 
 ## Introduction
 
 ### Purpose
 
-The purpose of this document is to invite comments on a suggested format to allow standardized and consistent access to the &mu;seismic data collected by mine &mu;seismic system and enable seamless and lossless exchange between different platforms. 
+The purpose of this document is to invite comments on a suggested format to allow for standardized and consistent access to &mu;seismic data collected by mine &mu;seismic systems. This format aims to enable a seamless and lossless exchange between different platforms.
 
-Access to the &mu;seismic data is not consistent between the different vendors, and sometimes between different implementation by the same vendors. There are variations from site to site, often driven by third party requirements. This leads to inefficiencies that make the integration of different systems providing complementary products and services and the usage of data unnecessarily difficult. 
+Access to the &mu;seismic data is inconsistent among various vendors, and occasionally within different implementations by the same vendor. Variations arise from site to site, often driven by third-party requirements. Such inconsistencies lead to inefficiencies, complicating the integration of various systems that offer complementary products and services, and making data usage unnecessarily challenging.
 
-The current document does proposed a file structure and format. At this stage, we seek alignment regarding the content of the information transferred and agreement on the container. 
+This document proposes a file structure and format. At this stage, we seek alignment on the content of the information transferred and consensus on the container format.
 
 ### Scope
 
-The scope is to define the content and nature &mu;seismic information provided to third parties and suggest a format to package the information. This document is concerned with the building blocks and seismic information that are the essence of &mu;seismic monitoring. The information of concern can be classified in three categories:
+The scope of this document is to define the content and nature of &mu;seismic information provided to third parties and to suggest a format for packaging this information. It focuses on the foundational elements and seismic information intrinsic to &mu;seismic monitoring. The pertinent information can be divided into three categories:
 
-- **Waveform** &mdash; The raw unprocessed waveform both for the continuous and triggered data.
-- **Catalog Information** &mdash; The event information derived from the processing of the waveform data
-- **Inventory or System Information** &mdash; This includes the information regarding the instruments (sensor and data acquisition modules) along the data acquisition chain and other information critical to processing the data (e.g., velocity, density and attenuation values or models).
+- **Waveform** &mdash; This includes the raw, unprocessed waveform for both continuous and triggered data.
+- **Catalog Information** &mdash; This covers event information derived from waveform data processing.
+- **Inventory or System Information** &mdash; Details about the instruments (sensors and data acquisition modules) used in the data acquisition chain are included here, along with other critical data processing information, such as velocity, density, and attenuation values or models.
 
 ### Rationale
 
 #### Need for a New Standard
 
-Microseismic data plays a important role in ensuring the safety and enabling the efficiency of underground mining operations. While it's one of several essential tools in the arsenal of modern mining techniques, the current scenario of diverse data formats can sometimes complicate seamless integration and analysis.
+Microseismic data plays an essential role in ensuring the safety and enhancing the efficiency of underground mining operations. Although it is one of the many vital tools in the repertoire of modern mining techniques, the existing diverse data formats can impede smooth integration and analysis.
 
 #### Goal
 
-The proposed data content and a packaging format to promote interoperability, consistency and innovations.
+The goal is to introduce a proposed data content and packaging format that fosters interoperability, consistency, and innovation.
 
 ## Proposal
 
@@ -237,9 +238,10 @@ The file can also be strore in the native XML format.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDU5MTcwOTQsODQwMTQ1MDU5LC0xND
-MxODkwMzkzLC0xMTc3MjI3OTQ3LDEwODEwMTc2NjYsMTEyNDEx
-NDE5MywtNzEyNDE5MTkxLDE1NDYyMjcxOTIsMTAxNzY1MDkwOS
-w1NTQ3NTcwMDcsMTcxNDk5ODI0MCwtNDY2MjgwNjUwLDE2MzAx
-NTI3MjQsLTEzNzM3MDIzNTcsLTEzODU5NzAzNTBdfQ==
+eyJoaXN0b3J5IjpbMTA0NDQwNTE1NCwtMTY0NTkxNzA5NCw4ND
+AxNDUwNTksLTE0MzE4OTAzOTMsLTExNzcyMjc5NDcsMTA4MTAx
+NzY2NiwxMTI0MTE0MTkzLC03MTI0MTkxOTEsMTU0NjIyNzE5Mi
+wxMDE3NjUwOTA5LDU1NDc1NzAwNywxNzE0OTk4MjQwLC00NjYy
+ODA2NTAsMTYzMDE1MjcyNCwtMTM3MzcwMjM1NywtMTM4NTk3MD
+M1MF19
 -->
