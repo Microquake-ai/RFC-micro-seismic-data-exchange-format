@@ -32,7 +32,7 @@ The proposed data content and a packaging format to promote interoperability, co
 
 ### Overview
 
-Our proposal concerns three categories of data, the waveforms, the catalog data and the inventory and system information. We propose storing this information in a unique `Zar
+Our proposal concerns three categories of data, the waveforms, the catalog data and the inventory and system information. We propose storing this information in a unique `Zarr` file with a `.zarr` extension. 
 
 To ensure interoperability, the information in the provided files shall be consistent. The sensor naming convention shall be the same all across, the locations of sensors and events shall be expressed using one single coordinate system, which should also be used for the grids, if applicable.
 
@@ -153,7 +153,7 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDYwMjU1MTksMTEyNDExNDE5MywtNz
+eyJoaXN0b3J5IjpbLTEwMzY4ODIxODAsMTEyNDExNDE5MywtNz
 EyNDE5MTkxLDE1NDYyMjcxOTIsMTAxNzY1MDkwOSw1NTQ3NTcw
 MDcsMTcxNDk5ODI0MCwtNDY2MjgwNjUwLDE2MzAxNTI3MjQsLT
 EzNzM3MDIzNTcsLTEzODU5NzAzNTBdfQ==
