@@ -391,6 +391,23 @@ grid_from_file = Grid.read("path_to_grid_file.grid")
 
 This approach simplifies the process of handling gridded data in seismology by using the `uquake` library's built-in functionalities.
 
+## Rationale
+
+Understanding the motivations and reasons behind any proposed change is essential to ensure clarity, gain stakeholder buy-in, and ensure the technical merits of the proposal align with the broader goals.
+
+1.  **Adapting QuakeML for μseismic Data**: Traditional QuakeML formats, while robust for standard seismology needs, are not fully suited to address the nuances of μseismic data. The unique requirements of μseismic monitoring, especially in mining contexts, necessitate modifications to the existing format. By making these adjustments, the system becomes more flexible and directly applicable to the μseismic domain, allowing for better data representation and interpretation.
+    
+2.  **Use of a Grid for Velocity Models**: Seismic data interpretation largely hinges on the accuracy and clarity of velocity models. The industry trend has shifted towards grid representations of these models due to their higher precision and ease of use. Implementing a standard grid format for data exchange promotes interoperability and standardization across systems and tools.
+    
+3.  **Introduction of the `uquake` Library**: The seismic domain has various software libraries that cater to specific needs. The choice of `uquake` was driven by its capabilities to manage the proposed data structures efficiently and its extensibility to cater to future modifications. By embedding support for the newly proposed data structures directly within `uquake`, users can expect a seamless experience and avoid the complexities associated with multi-tool workflows.
+    
+4.  **Latitude and Longitude to X, Y, Z Conversion**: Given that most mining operations work on local coordinate systems rather than global ones, expressing positions in terms of x, y, and z becomes not just convenient, but also essential. This shift eliminates the need for complex transformations and ensures data is immediately useful for local operations and analysis.
+    
+5.  **Choice of Data Packaging Formats**: The proposal to utilize `Zarr` for packaging catalog information and waveform data, and the native XML format for QuakeML, was driven by their respective capabilities and industry adoption. `Zarr` offers efficient storage and retrieval mechanisms, especially for large datasets, while the native XML format ensures compatibility with systems traditionally designed to handle QuakeML.
+    
+
+In summary, the proposed changes and implementations in this RFC stem from a direct need to address the unique challenges posed by μseismic monitoring, especially in mining contexts. They reflect both the evolution of seismic data interpretation methodologies and the tools used in the industry. Through these proposals, we aim to establish a more streamlined, precise, and standardized approach to μseismic data management and interpretation.
+
 
 
 
@@ -402,11 +419,11 @@ This approach simplifies the process of handling gridded data in seismology by u
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODgxMzE2OSwtMzg5NDM1OTkzLC03NT
-QzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NTgsLTMxMjAy
-ODIzOCw0NjM2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0NDQwNTE1NC
-wtMTY0NTkxNzA5NCw4NDAxNDUwNTksLTE0MzE4OTAzOTMsLTEx
-NzcyMjc5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03MTI0MT
-kxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAwNywx
-NzE0OTk4MjQwXX0=
+eyJoaXN0b3J5IjpbOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OT
+QzNTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3
+ODU4LC0zMTIwMjgyMzgsNDYzNjg0NDk3LC0xNjE2MTczNTgyLD
+EwNDQ0MDUxNTQsLTE2NDU5MTcwOTQsODQwMTQ1MDU5LC0xNDMx
+ODkwMzkzLC0xMTc3MjI3OTQ3LDEwODEwMTc2NjYsMTEyNDExND
+E5MywtNzEyNDE5MTkxLDE1NDYyMjcxOTIsMTAxNzY1MDkwOSw1
+NTQ3NTcwMDddfQ==
 -->
