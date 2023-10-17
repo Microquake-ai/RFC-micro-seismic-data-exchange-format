@@ -198,7 +198,7 @@ The catalog information can easily be packaged with the waform in a `Zarr` file.
 
 ```python
 # import obspy
-import uquake # similar to obspy with the modification discussed 
+import uquake # similar to obspy with the modifications discussed 
 above implemented
 import zarr
 import json
@@ -231,9 +231,9 @@ print(new_cat)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQwMTQ1MDU5LC0xNDMxODkwMzkzLC0xMT
-c3MjI3OTQ3LDEwODEwMTc2NjYsMTEyNDExNDE5MywtNzEyNDE5
-MTkxLDE1NDYyMjcxOTIsMTAxNzY1MDkwOSw1NTQ3NTcwMDcsMT
-cxNDk5ODI0MCwtNDY2MjgwNjUwLDE2MzAxNTI3MjQsLTEzNzM3
-MDIzNTcsLTEzODU5NzAzNTBdfQ==
+eyJoaXN0b3J5IjpbMTIzNDg5NjQxNCw4NDAxNDUwNTksLTE0Mz
+E4OTAzOTMsLTExNzcyMjc5NDcsMTA4MTAxNzY2NiwxMTI0MTE0
+MTkzLC03MTI0MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LD
+U1NDc1NzAwNywxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1
+MjcyNCwtMTM3MzcwMjM1NywtMTM4NTk3MDM1MF19
 -->
