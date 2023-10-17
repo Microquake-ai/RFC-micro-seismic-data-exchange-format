@@ -47,7 +47,7 @@ The required metadata are:
 - **Network Code** &mdash; Represents the code of the network and shall be expressed with two character
 - **Station Code** &mdash; Represents the code of the station that contains the digitizer.
 - **Location Code** &mdash; A two character numerical code representing the recording site (where the sensor is deployed). For each station, the location code shall be unique. 
-- **Channel Code** &mdash; The three character channel code shall follow the FDSN standard naming convention of August 2000 described [here](https://ds.iris.edu/ds/nodes/dmc/data/formats/seed-channel-naming/). The first letter represents the band code, the second the instrument code and the third the orientation code. For instance, a typical $14 Hz$ or $15 Hz$ omnidirectional geophones code would be GH?, where ? would be replaced be the component orientation code.
+- **Channel Code** &mdash; The three character channel code shall follow the FDSN standard naming convention of August 2000 described in the SEED document [Appendix A](http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf). The first letter represents the band code, the second the instrument code and the third the orientation code. For instance, a typical $14 Hz$ or $15 Hz$ omnidirectional geophones code would be GH?, where ? would be replaced by the appropriate component orientation code.
 
 | **Orientation Code** | **Description**                                        |
 |------------------|----------------------------------------------------------|
@@ -67,6 +67,6 @@ The required metadata are:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2NjI4MDY1MCwxNjMwMTUyNzI0LC0xMz
-czNzAyMzU3LC0xMzg1OTcwMzUwXX0=
+eyJoaXN0b3J5IjpbLTE1NzAzMTE5MTksLTQ2NjI4MDY1MCwxNj
+MwMTUyNzI0LC0xMzczNzAyMzU3LC0xMzg1OTcwMzUwXX0=
 -->
