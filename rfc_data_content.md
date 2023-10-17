@@ -282,6 +282,10 @@ print(new_inventory)
 
 StationXML is the conventional format for representing inventory information in the seismic community. Being a structured XML-based format, it provides a comprehensive framework for detailing stations and channels. When using StationXML, especially in a μseismic context, it's vital to ensure that the modifications made (such as the introduction of `x, y, z` coordinates and unit vector for channel orientation) are incorporated correctly.
 
+### System Metadata and Grid Data
+
+To fully enable the interpretation of the seismic data, accessing the 
+
 
 
 
@@ -292,7 +296,7 @@ StationXML is the conventional format for representing inventory information in 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyMDc4NzEyNywtMTk0NTcyNzg1OCwtMz
+eyJoaXN0b3J5IjpbMTM1NDQ4NDExMiwtMTk0NTcyNzg1OCwtMz
 EyMDI4MjM4LDQ2MzY4NDQ5NywtMTYxNjE3MzU4MiwxMDQ0NDA1
 MTU0LC0xNjQ1OTE3MDk0LDg0MDE0NTA1OSwtMTQzMTg5MDM5My
 wtMTE3NzIyNzk0NywxMDgxMDE3NjY2LDExMjQxMTQxOTMsLTcx
