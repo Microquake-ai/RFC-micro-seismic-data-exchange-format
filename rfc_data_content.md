@@ -30,8 +30,11 @@ The proposed data content is mainly designed to promote interoperability and inn
 
 ## Proposal
 
+### Overview
 
 Our proposal concerns three categories of data, the waveforms, the catalog data and the inventory and system information.
+
+To ensure interoperability, the information in the provided files shall be consistent. The sensor naming convention shall be  
 
 
 
@@ -39,5 +42,5 @@ Our proposal concerns three categories of data, the waveforms, the catalog data 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ4Mjk3NTMzXX0=
+eyJoaXN0b3J5IjpbMTU3Mjc5MzI0MV19
 -->
