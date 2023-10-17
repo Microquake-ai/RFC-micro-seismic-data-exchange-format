@@ -137,7 +137,7 @@ The catalog includes information related to an event or trigger or a series of e
 
 - **Event** &mdash; The event_type field is restricted to specific values that are not suited for &mu;seismic monitoring  
 - **Origin** &mdash; The position is expressed in latitude and longitude. This will need to be changed to x, y and z.
-- **Magnitude** &mdash; The magnitude object would benefit from adding a field to store the corner frequency. This would allow for the a large range of source p 
+- **Magnitude** &mdash; The magnitude object would benefit from adding a field to store the corner frequency, P-wave and S-wave Energy. This would allow for the a large range of source parameters to be computed on the fly and not stored in the magnitude object.  This
 
 The QuakeML format was designed to store seismic data at a regional and global scale. Consequently, the QuakeML format has adopted a spherical coordinate system storing the location information in latitude and longitude. 
 
@@ -162,9 +162,9 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjE2Nzg1ODQyLC0xMTc3MjI3OTQ3LDEwOD
-EwMTc2NjYsMTEyNDExNDE5MywtNzEyNDE5MTkxLDE1NDYyMjcx
-OTIsMTAxNzY1MDkwOSw1NTQ3NTcwMDcsMTcxNDk5ODI0MCwtND
-Y2MjgwNjUwLDE2MzAxNTI3MjQsLTEzNzM3MDIzNTcsLTEzODU5
-NzAzNTBdfQ==
+eyJoaXN0b3J5IjpbLTE2MjkzNTA4OTAsLTExNzcyMjc5NDcsMT
+A4MTAxNzY2NiwxMTI0MTE0MTkzLC03MTI0MTkxOTEsMTU0NjIy
+NzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAwNywxNzE0OTk4MjQwLC
+00NjYyODA2NTAsMTYzMDE1MjcyNCwtMTM3MzcwMjM1NywtMTM4
+NTk3MDM1MF19
 -->
