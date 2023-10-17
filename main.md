@@ -2,7 +2,7 @@
 ## Introduction
 ### Purpose
 
-The objective of this Request for Comment (RFC) is to present a new, unified, and interoperable standard tailored for exchanging &mu;seismic data collected by mine &mu;seismic monitoring systems. The proposes standard seeks primarily to ensure lossless export and that all information required to utilise the data are readily available. The current standard is not primarily designed for efficiency or for particular case where extracting This RFC seeks valuable feedback and input from industry stakeholders, researchers, and vendors to ensure the robustness and adaptability of the proposed format. 
+The objective of this Request for Comment (RFC) is to present a new, unified, and interoperable standard tailored for exchanging &mu;seismic data collected by mine &mu;seismic monitoring systems. The proposes standard seeks primarily to ensure lossless export and that all information required to utilise the data are readily available. The current standard is not primarily designed for the efficient recovery from disk of channel by channel information. Other format based on TileDB, Za. This RFC seeks valuable feedback and input from industry stakeholders, researchers, and vendors to ensure the robustness and adaptability of the proposed format. 
 
 
 In the current mining scenario, the absence of a standardized data format, combined with the proliferation of proprietary systems, has created barriers to efficient data exchange and integration. This results in potential inefficiencies, increased costs, and limitations in adopting multivendor solutions. Given the complexities and unique requirements of linked to the microseismic monitoring data collected by mining operations, there's a pronounced need for a format that can accommodate a broad range of seismic data types. The proposed format can accomodate a wide range scenario including distibuted acoustic sensing. 
@@ -124,7 +124,7 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0NzAxNjEzNCwyNjk1MzM2NTEsMjEyOT
-gxMDM0MSwtMTg3ODAwNzMwLDgxNjEwNzQ4NCwtNDY1NTI5Mjcz
-LDIwMDA3NzQ0MjksLTM1NDgwMzUwOCwtMTgxMDA1MTVdfQ==
+eyJoaXN0b3J5IjpbLTE2MzcwMjc2NDAsMjY5NTMzNjUxLDIxMj
+k4MTAzNDEsLTE4NzgwMDczMCw4MTYxMDc0ODQsLTQ2NTUyOTI3
+MywyMDAwNzc0NDI5LC0zNTQ4MDM1MDgsLTE4MTAwNTE1XX0=
 -->
