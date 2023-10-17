@@ -342,7 +342,7 @@ Let's consider a simple example to illustrate this:
 from uquake.core.grid.base import Grid
 import numpy as np
 
-#### Define grid header specifications
+# Define grid header specifications
 
 header = {
     "NX": 100,  
@@ -355,18 +355,15 @@ header = {
     "SPACEY": 0.1,  
     "SPACEZ": 0.2,  
 }
-```
 
-#### Initialize the grid using grid dimensions and set default value as 0
+# Initialize the grid using grid dimensions and set default value as 0
 
-```python
 grid_dims = (header["NX"], header["NY"], header["NZ"])
 spacing = (header["SPACEX"], header["SPACEY"], header["SPACEZ"])
 origin = (header["ORIGX"], header["ORIGY"], header["ORIGZ"])
 
 grid = Grid(data_or_dims=grid_dims, spacing=spacing, origin=origin, value=0)
 ```
-
 Here, we've initialized a 3D grid using the dimensions specified in the header. The grid is filled with a default value of 0.
 
 #### Reading and Writing Grids
@@ -375,16 +372,13 @@ The `Grid` object is equipped with methods to read and write grid data, making i
 
 Here's an example of how one might read from and write to a grid file:
 
-pythonCopy code
+```python
+# Write the modified or new grid to a file
+grid.write("path_to_new_grid_file.grid")
 
-`# Assuming 'read' and 'write' methods are available
 # Reading a grid from a file
 grid_from_file = Grid.read("path_to_grid_file.grid")
-
-# Perform any modifications to the grid...
-
-# Write the modified or new grid to a file
-grid_from_file.write("path_to_new_grid_file.grid")` 
+```
 
 This approach simplifies the process of handling gridded data in seismology by using the `uquake` library's built-in functionalities.
 
@@ -399,11 +393,11 @@ This approach simplifies the process of handling gridded data in seismology by u
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Nzk0ODI3MjcsLTM4OTQzNTk5MywtNz
-U0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3ODU4LC0zMTIw
-MjgyMzgsNDYzNjg0NDk3LC0xNjE2MTczNTgyLDEwNDQ0MDUxNT
-QsLTE2NDU5MTcwOTQsODQwMTQ1MDU5LC0xNDMxODkwMzkzLC0x
-MTc3MjI3OTQ3LDEwODEwMTc2NjYsMTEyNDExNDE5MywtNzEyND
-E5MTkxLDE1NDYyMjcxOTIsMTAxNzY1MDkwOSw1NTQ3NTcwMDcs
-MTcxNDk5ODI0MF19
+eyJoaXN0b3J5IjpbMTA1MDE4ODM1OSwtMzg5NDM1OTkzLC03NT
+QzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NTgsLTMxMjAy
+ODIzOCw0NjM2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0NDQwNTE1NC
+wtMTY0NTkxNzA5NCw4NDAxNDUwNTksLTE0MzE4OTAzOTMsLTEx
+NzcyMjc5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03MTI0MT
+kxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAwNywx
+NzE0OTk4MjQwXX0=
 -->
