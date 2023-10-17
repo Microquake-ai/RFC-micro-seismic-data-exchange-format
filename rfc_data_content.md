@@ -183,14 +183,11 @@ The QuakeML format was designed to store seismic data at a regional and global s
 
 Using Latitude and Longitude to describe the mining related events is possible but not convenient. It would require precisely knowing the series of transformations required to convert the position expressed in the local coordinate system into longitude and latitude. We suggest, overriding the Latitude and Longitude information and use x, y and z instead. The use of x, y and z notation instead of the right handed (easting, northing and elevation) or (northing, easting, down) tripplets is to provide flexibility notation and ensure consistency between the mine and the seismic system coordinate system.
 
-Two possibilities:
+The &mu;Quake implementation exploits the QuakeML extra parameters to store the x, y and z values and associated errors.
 
-1. Redefine the schema; or 
-2. Use the QuakeML extra parameters to store the x, y and z values and associated errors.
+#### Magnitude &mdash; Corner Frequency, and Energy
 
-The Python &mu;Quake library implements the second options and store the x, y and z in the extra parameters.
-
-#### Magnitude &mdash
+The QuakeML standadoes not include objects suited to store the corner frequency. The energy could be stored 
 
 
 
@@ -211,9 +208,9 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3OTkyNTM1MiwtMTQzMTg5MDM5MywtMT
-E3NzIyNzk0NywxMDgxMDE3NjY2LDExMjQxMTQxOTMsLTcxMjQx
-OTE5MSwxNTQ2MjI3MTkyLDEwMTc2NTA5MDksNTU0NzU3MDA3LD
-E3MTQ5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNzI0LC0xMzcz
-NzAyMzU3LC0xMzg1OTcwMzUwXX0=
+eyJoaXN0b3J5IjpbMjY3MTU1MjU3LC0xNDMxODkwMzkzLC0xMT
+c3MjI3OTQ3LDEwODEwMTc2NjYsMTEyNDExNDE5MywtNzEyNDE5
+MTkxLDE1NDYyMjcxOTIsMTAxNzY1MDkwOSw1NTQ3NTcwMDcsMT
+cxNDk5ODI0MCwtNDY2MjgwNjUwLDE2MzAxNTI3MjQsLTEzNzM3
+MDIzNTcsLTEzODU5NzAzNTBdfQ==
 -->
