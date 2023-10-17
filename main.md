@@ -84,7 +84,7 @@ Within the evolving &mu;seismic industry, the &mu;Seismic Data Exchange Format (
 The MDE v1.0 standard is based on three components some used as is and some adapted to align with the need  &mu;seismic data:
 
 **1. MiniSEED**  
-Esteemed in the seismic community, miniSEED’s compact nature serves to represent both continuous data streams and individual event recordings. The Salient features:
+Esteemed in the seismic community, miniSEED’s compact nature serves to represent both continuous data streams and individual event recordings. The miniSEED files are composed of data blocks, called data records. The data block size Salient features:
 
 -   **Compactness**: Facilitates efficient storage and transfer of extensive seismic datasets.
 -   **Versatility**: Encapsulates both continuous data and event-focused recordings.
@@ -139,9 +139,9 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDkwNDIxNjYsMjExMDcwNDk5NiwtMT
-AwNjI2NzcyNywxNzQyMjM2LC0xNjYzNzUwMDQwLDI2OTUzMzY1
-MSwyMTI5ODEwMzQxLC0xODc4MDA3MzAsODE2MTA3NDg0LC00Nj
-U1MjkyNzMsMjAwMDc3NDQyOSwtMzU0ODAzNTA4LC0xODEwMDUx
-NV19
+eyJoaXN0b3J5IjpbMTc0MzIwNzQ4NiwyMTEwNzA0OTk2LC0xMD
+A2MjY3NzI3LDE3NDIyMzYsLTE2NjM3NTAwNDAsMjY5NTMzNjUx
+LDIxMjk4MTAzNDEsLTE4NzgwMDczMCw4MTYxMDc0ODQsLTQ2NT
+UyOTI3MywyMDAwNzc0NDI5LC0zNTQ4MDM1MDgsLTE4MTAwNTE1
+XX0=
 -->
