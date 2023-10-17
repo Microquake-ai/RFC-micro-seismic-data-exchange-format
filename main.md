@@ -29,7 +29,7 @@ Such foundational structures are acknowledged for their robustness, compatibilit
 #### QuakeML Adaptations:
 
 1.  **Coordinate System**: Transition from a traditional spherical system to a Cartesian coordinate system tailored for mining contexts.
-2.  **Magnitude Description**: Modifications to cater to the specific magnitude scales and measurement techniques prevalent in mining seismology.
+2.  **Magnitude Description**: The main inclusions are fields for the corner frequency and energies 
 3.  **Event Types**: Adapting the format to ensure the prescribed event types are suited to describe the mining seismic activities, that are distinct from conventional seismological events.
 
 #### StationXML Adaptations:
@@ -133,8 +133,8 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4NjgzMDA4MiwxNzQyMjM2LC0xNjYzNz
-UwMDQwLDI2OTUzMzY1MSwyMTI5ODEwMzQxLC0xODc4MDA3MzAs
-ODE2MTA3NDg0LC00NjU1MjkyNzMsMjAwMDc3NDQyOSwtMzU0OD
-AzNTA4LC0xODEwMDUxNV19
+eyJoaXN0b3J5IjpbLTEwMDYyNjc3MjcsMTc0MjIzNiwtMTY2Mz
+c1MDA0MCwyNjk1MzM2NTEsMjEyOTgxMDM0MSwtMTg3ODAwNzMw
+LDgxNjEwNzQ4NCwtNDY1NTI5MjczLDIwMDA3NzQ0MjksLTM1ND
+gwMzUwOCwtMTgxMDA1MTVdfQ==
 -->
