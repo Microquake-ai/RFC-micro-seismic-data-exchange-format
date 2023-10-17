@@ -27,4 +27,6 @@ jobs:
         git config --local user.name "GitHub Action"
         git add -A
         git commit -m "Convert Markdown files to HTML" || echo "No changes to commit"
-        git push
+        git push origin HEAD:<branch_name>  # replace <branch_name> with the name of your branch
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
