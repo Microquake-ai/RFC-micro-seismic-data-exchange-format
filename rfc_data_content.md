@@ -141,7 +141,10 @@ The catalog includes information related to an event or trigger or a series of e
 
 #### Event and Event Type:
 
-| Event Type                          | Description                  |
+There are two approaches to modifying the event types
+1- is to redfine the schema and allow
+
+| Event Type (&mu;seismic)            | Event Type (QuakeML)        |
 |-------------------------------------|-----------------------------|
 | earthquake/large event              | earthquake                  |
 | seismic event                       | induced or triggered event  |
@@ -196,9 +199,9 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDY0MDU0ODEsLTE0MzE4OTAzOTMsLT
-ExNzcyMjc5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03MTI0
-MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAwNy
-wxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwtMTM3
-MzcwMjM1NywtMTM4NTk3MDM1MF19
+eyJoaXN0b3J5IjpbNzk5OTU1NTUwLC0xNDMxODkwMzkzLC0xMT
+c3MjI3OTQ3LDEwODEwMTc2NjYsMTEyNDExNDE5MywtNzEyNDE5
+MTkxLDE1NDYyMjcxOTIsMTAxNzY1MDkwOSw1NTQ3NTcwMDcsMT
+cxNDk5ODI0MCwtNDY2MjgwNjUwLDE2MzAxNTI3MjQsLTEzNzM3
+MDIzNTcsLTEzODU5NzAzNTBdfQ==
 -->
