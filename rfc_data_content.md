@@ -8,7 +8,7 @@ The purpose of this document is to invite comments on a suggested format to allo
 
 Access to the &mu;seismic data is not consistent between the different vendors, and sometimes between different implementation by the same vendors. There are variations from site to site, often driven by third party requirements. This leads to inefficiencies that make the integration of different systems providing complementary products and services and the usage of data unnecessarily difficult. 
 
-The current document does not propose or prescribe specific format at this stage. This will come later. At this stage, we seek alignment regarding the content of the information transferred, agreement on the container should come at a later stage. Deviation from the previous statement will concern the packaging of the waveforms. Waveforms receive a special treatment because they can be voluminous and there exists significant divergence between the different vendors regarding the nature and packaging. Efficient processing requires the data format to be prescribed.
+The current document does proposed a file . This will come later. At this stage, we seek alignment regarding the content of the information transferred, agreement on the container should come at a later stage. Deviation from the previous statement will concern the packaging of the waveforms. Waveforms receive a special treatment because they can be voluminous and there exists significant divergence between the different vendors regarding the nature and packaging. Efficient processing requires the data format to be prescribed.
 
 ### Scope
 
@@ -137,7 +137,7 @@ The use of the `Zarr` format affords several advantages:
 12.  **Consolidated Storage**: Ability to store multi-dimensional arrays together with its coordinates and attributes, making it suitable for complex datasets.
 
 ### Catalog
-The catalog includes information related to an event or trigger or a series of events. We suggest stori convention and hierachy closely following the QuakeML standard [documentation](https://quake.ethz.ch/quakeml) but with some deviations to enable the simpler mapping of the information stored by the system. Also, we suspect there will be a strong preference to allow for the exchange format to 
+The catalog includes information related to an event or trigger or a series of events. We suggest storing the catalog information in QuakeML like object slightly adapted to &mu;seismic data. convention and hierachy closely following the QuakeML standard [documentation](https://quake.ethz.ch/quakeml) but with some deviations to enable the simpler mapping of the information stored by the system. Also, we suspect there will be a strong preference to allow for the exchange format to 
 
 We propose to organize the catalog information as follows
 - **Level 0**: Catalog
@@ -153,7 +153,7 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1MzcyOTQ0OCwxMTI0MTE0MTkzLC03MT
+eyJoaXN0b3J5IjpbMTkzOTY3ODU3MCwxMTI0MTE0MTkzLC03MT
 I0MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAw
 NywxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwtMT
 M3MzcwMjM1NywtMTM4NTk3MDM1MF19
