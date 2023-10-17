@@ -26,15 +26,15 @@ Microseismic data plays a important role in ensuring the safety and enabling the
 
 #### Goal
 
-Acknowledging these subtleties, the proposed data content is mainly designed to Promote Interoperability and innovation
--   **Catalyze Technological Advancements**: With a universally endorsed standard, the mining sector is primed to adopt and assimilate breakthroughs in microseismic monitoring and analysis, ensuring continued advancement in safety and operational efficiency.
+The proposed data content is mainly designed to promote interoperability and innovations.
 
+## Proposal
 
-
+we  concerns three categories of data
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA1Nzg4MzQ1XX0=
+eyJoaXN0b3J5IjpbLTIzMTUxMTg4OF19
 -->
