@@ -131,7 +131,9 @@ stream_to_zarr_group(st, 'seismic_data_group.zarr')
 ```
 
 ### Catalog
-The catalog includes information related to an event or trigger or a series of events. We suggest storing the catalog information in a QuakeML like format adapted to &mu;seismic data (see QuakeML documentation [documentation](https://quake.ethz.ch/quakeml)). The QuakeML format was designed to store seismic data at a regional and global scale. Consequently, the QuakeML format has adopted a spherical coordinate system storing the location information in latitude and longitude. Using Latitude and Longitude to describe the mining related events is possible but not convenient. It would require precisely knowing the series of transformation required to convert the local coordinate system into longitude and latitude. We suggest, overriding the Latitude and Longitude information and use Easting and Northing instead.  
+The catalog includes information related to an event or trigger or a series of events. We suggest storing the catalog information in a QuakeML like format adapted to &mu;seismic data (see QuakeML documentation [documentation](https://quake.ethz.ch/quakeml)). The QuakeML format was designed to store seismic data at a regional and global scale. Consequently, the QuakeML format has adopted a spherical coordinate system storing the location information in latitude and longitude. 
+
+Using Latitude and Longitude to describe the mining related events is possible but not convenient. It would require precisely knowing the series of transformations required to convert the position expressed in the local coordinate system into longitude and latitude. We suggest, overriding the Latitude and Longitude information and use x, y and z instead. The use of x, y and z instead of easting, northing 
 
 We propose to organize the catalog information as follows
 - **Level 0**: Catalog
@@ -148,7 +150,7 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NDA5MzczNiwxMDgxMDE3NjY2LDExMj
+eyJoaXN0b3J5IjpbLTc3ODM2NDI5NCwxMDgxMDE3NjY2LDExMj
 QxMTQxOTMsLTcxMjQxOTE5MSwxNTQ2MjI3MTkyLDEwMTc2NTA5
 MDksNTU0NzU3MDA3LDE3MTQ5OTgyNDAsLTQ2NjI4MDY1MCwxNj
 MwMTUyNzI0LC0xMzczNzAyMzU3LC0xMzg1OTcwMzUwXX0=
