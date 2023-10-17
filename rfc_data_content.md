@@ -69,7 +69,7 @@ The _miniSEED_ format is widely adopted in seismology and is very convenient for
 - **Channel Code**: Three (3) alphanumerical characters, following the FDSN guidelines of August 2000.
 
 ##### Alternative Formats
-The Iris DMC recommend the use of  
+The IRIS DMC recommends the use of the TileDB or Zarr formats over the ASDF format. The TileDB and Zarr format can both conveniently be used 
 
 ### Catalog Information
 The catalog information 
@@ -81,7 +81,7 @@ The catalog information
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzYzMDYzMjEsNTU0NzU3MDA3LDE3MT
-Q5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNzI0LC0xMzczNzAy
-MzU3LC0xMzg1OTcwMzUwXX0=
+eyJoaXN0b3J5IjpbLTU0ODM5MjQwMiw1NTQ3NTcwMDcsMTcxND
+k5ODI0MCwtNDY2MjgwNjUwLDE2MzAxNTI3MjQsLTEzNzM3MDIz
+NTcsLTEzODU5NzAzNTBdfQ==
 -->
