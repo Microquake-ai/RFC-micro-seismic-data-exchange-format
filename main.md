@@ -77,7 +77,7 @@ Acknowledging these subtleties, the proposed standard comes with the following o
 
 #### Introduction
 
-Within the evolving &mu;seismic industry, the &mu;Seismic Data Exchange Format (MDE v1.0) presents a timely solution for efficient and adaptable data exchange mechanisms. Denoted by the `.mde` extension, this format captures the intricate details of microseismic data, fostering unhindered data sharing across various platforms and applications. The proposed format aims at representing most types of seismic data including 
+Within the evolving &mu;seismic industry, the &mu;Seismic Data Exchange Format (MDE v1.0) presents a solution for efficient and adaptable lossless and comprehensive data exchange mechanisms. Denoted by the `.mde` extension, this format captures the intricate details of microseismic data, fostering data sharing across various platforms and applications. The proposed format aims to provide the required flexibility to representing most types of seismic data including: 
 
 #### Format Components Overview
 
@@ -136,7 +136,7 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwMDIxOTk2OCwyMTEwNzA0OTk2LC0xMD
+eyJoaXN0b3J5IjpbLTM2NDc3MTg1MiwyMTEwNzA0OTk2LC0xMD
 A2MjY3NzI3LDE3NDIyMzYsLTE2NjM3NTAwNDAsMjY5NTMzNjUx
 LDIxMjk4MTAzNDEsLTE4NzgwMDczMCw4MTYxMDc0ODQsLTQ2NT
 UyOTI3MywyMDAwNzc0NDI5LC0zNTQ4MDM1MDgsLTE4MTAwNTE1
