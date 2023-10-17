@@ -288,6 +288,14 @@ To fully enable the interpretation of the seismic data, accessing information on
 
 In this section, we propose using a simple grid format for data exchange.  
 
+#### Grid Format Overview
+
+The NLLOC grid format is a structured representation designed to capture the velocity model in a gridded manner. This format primarily consists of a header, which details the grid's metadata, and the actual data values in the grid.
+
+##### Header
+
+The header section provides crucial information about the grid, including its dimensions, the geographic origin, and the grid spacing. A typical header might look something like:
+
 
 
 
@@ -298,11 +306,11 @@ In this section, we propose using a simple grid format for data exchange.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODcwNDMwOTksLTE5NDU3Mjc4NTgsLT
-MxMjAyODIzOCw0NjM2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0NDQw
-NTE1NCwtMTY0NTkxNzA5NCw4NDAxNDUwNTksLTE0MzE4OTAzOT
-MsLTExNzcyMjc5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03
-MTI0MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1Nz
-AwNywxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwt
-MTM3MzcwMjM1N119
+eyJoaXN0b3J5IjpbLTc1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMT
+k0NTcyNzg1OCwtMzEyMDI4MjM4LDQ2MzY4NDQ5NywtMTYxNjE3
+MzU4MiwxMDQ0NDA1MTU0LC0xNjQ1OTE3MDk0LDg0MDE0NTA1OS
+wtMTQzMTg5MDM5MywtMTE3NzIyNzk0NywxMDgxMDE3NjY2LDEx
+MjQxMTQxOTMsLTcxMjQxOTE5MSwxNTQ2MjI3MTkyLDEwMTc2NT
+A5MDksNTU0NzU3MDA3LDE3MTQ5OTgyNDAsLTQ2NjI4MDY1MCwx
+NjMwMTUyNzI0XX0=
 -->
