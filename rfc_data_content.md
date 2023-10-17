@@ -18,7 +18,11 @@ The scope is to define the content and nature &mu;seismic information provided t
 - **Catalog Information** &mdash; The event information derived from the processing of the waveform data
 - **Inventory or System Information** &mdash; This includes the information regarding the instruments (sensor and data acquisition modules) along the data acquisition chain and other information critical to processing the data (e.g., velocity, density and attenuation values or models).
 
+### Rationale
+
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNDg2NzU4OV19
+eyJoaXN0b3J5IjpbLTMyMzQyMzYyNV19
 -->
