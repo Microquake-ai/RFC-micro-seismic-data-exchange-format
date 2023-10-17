@@ -55,7 +55,7 @@ The required metadata for each trace are:
 
 #### Notes:
 
-**  
+**Network, Station and Location Codes**: The above convention is usually not strictly followed by the &m  
 
 **Important Notes Concerning the miniSEED format:**
 
@@ -71,7 +71,7 @@ The catalog information
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDkxNTQ4NDUsNTU0NzU3MDA3LDE3MT
-Q5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNzI0LC0xMzczNzAy
-MzU3LC0xMzg1OTcwMzUwXX0=
+eyJoaXN0b3J5IjpbLTEzNjM2ODgwNyw1NTQ3NTcwMDcsMTcxND
+k5ODI0MCwtNDY2MjgwNjUwLDE2MzAxNTI3MjQsLTEzNzM3MDIz
+NTcsLTEzODU5NzAzNTBdfQ==
 -->
