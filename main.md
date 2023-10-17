@@ -28,14 +28,14 @@ The selected building blocks are acknowledged for their robustness, compatibilit
 #### QuakeML Adaptations:
 
 1.  **Coordinate System**: Transition from a traditional spherical system to a Cartesian coordinate system tailored for mining contexts.
-2.  **Magnitude Description**: The magnitude description requires the in 
+2.  **Magnitude Description**: The magnitude description requires the inclusion of the corner frequency for completeness.  
 3.  **Event Types**: Adapting the format to ensure the prescribed event types are suited to describe the mining seismic activities, that are distinct from conventional seismological events.
 
 #### StationXML Adaptations:
 
 1.  **Coordinate System**: Integration of a Cartesian coordinate system to more aptly represent the spatial characteristics of mining operations.
 
-Through these adaptations, this document aims to bridge the gap between established seismological data formats and the unique requirements of the mining sector, ensuring seamless data interchange and analysis.
+Through these adaptations, this document aims to bridge the gap between established seismological data formats and the unique requirements of the mining sector, ensuring seamless data interchange and analysis. This document also prescribes the use of those format and provides exam
 
 ### Terminology
 
@@ -132,8 +132,8 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE2NzQ0NDYzLC0xMDA2MjY3NzI3LDE3ND
-IyMzYsLTE2NjM3NTAwNDAsMjY5NTMzNjUxLDIxMjk4MTAzNDEs
-LTE4NzgwMDczMCw4MTYxMDc0ODQsLTQ2NTUyOTI3MywyMDAwNz
-c0NDI5LC0zNTQ4MDM1MDgsLTE4MTAwNTE1XX0=
+eyJoaXN0b3J5IjpbLTEwMjA5ODUwMTUsLTEwMDYyNjc3MjcsMT
+c0MjIzNiwtMTY2Mzc1MDA0MCwyNjk1MzM2NTEsMjEyOTgxMDM0
+MSwtMTg3ODAwNzMwLDgxNjEwNzQ4NCwtNDY1NTI5MjczLDIwMD
+A3NzQ0MjksLTM1NDgwMzUwOCwtMTgxMDA1MTVdfQ==
 -->
