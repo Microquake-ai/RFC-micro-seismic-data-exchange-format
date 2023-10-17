@@ -38,12 +38,12 @@ To ensure interoperability, the information in the provided files shall be consi
 
 ### Waveform data
 
-The waveform data ar
+The waveform data is the raw vibration recorded directly by the sensors. For convenience, the waveform data should be provided in physical units of $m$, $\frac{m
 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjk0ODIxNzldfQ==
+eyJoaXN0b3J5IjpbLTcwMzMxOTY4Ml19
 -->
