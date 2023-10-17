@@ -139,11 +139,11 @@ The catalog includes information related to an event or trigger or a series of e
 - **Origin** &mdash; The position is expressed in latitude and longitude. This will need to be changed to x, y and z.
 - **Magnitude** &mdash; The magnitude object would benefit from adding a field to store the corner frequency, P-wave and S-wave Energy. This would allow for the a large range of source parameters to be computed on the fly and not stored in the magnitude object.  This approach what is typically done in mine seismology. 
 
-#### Event and Event Type:
+#### Event &mdash; Event Type
 
 There are two approaches to modifying the event types
 1. Redfine the schema and allow for event type related to mining to be stored in a &mu;QuakeML file; and
-2. Map the &mu;seismic type to the current
+2. Map each &mu;seismic type to the an existing QuakeML event type
 
 | Event Type (&mu;seismic)            | Event Type (QuakeML)        |
 |-------------------------------------|-----------------------------|
@@ -175,6 +175,8 @@ There are two approaches to modifying the event types
 | unknown                             | plane crash                 |
 | tap test/test                       | avalanche                   |
 
+#### Origin &mdash; 
+
 
 The QuakeML format was designed to store seismic data at a regional and global scale. Consequently, the QuakeML format has adopted a spherical coordinate system storing the location information in latitude and longitude. 
 
@@ -199,7 +201,7 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwNDcyNzc5MiwtMTQzMTg5MDM5MywtMT
+eyJoaXN0b3J5IjpbLTEwNzY3NjUxMiwtMTQzMTg5MDM5MywtMT
 E3NzIyNzk0NywxMDgxMDE3NjY2LDExMjQxMTQxOTMsLTcxMjQx
 OTE5MSwxNTQ2MjI3MTkyLDEwMTc2NTA5MDksNTU0NzU3MDA3LD
 E3MTQ5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNzI0LC0xMzcz
