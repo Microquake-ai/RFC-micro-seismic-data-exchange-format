@@ -69,7 +69,11 @@ The _miniSEED_ format is widely adopted in seismology and is very convenient for
 - **Channel Code**: Three (3) alphanumerical characters, following the FDSN guidelines of August 2000.
 
 ##### Alternative Formats
-The IRIS DMC recommends the use of the `Zarr` formats (or TileDB) over the `HDF5` based format like the `ASDF` format. The `Zarr` format can conveniently be used to store the waveform data. Below is an example written in Python that allows the information contained in an _Obspy_ Stream object to be written in a `.zarr` file:
+The IRIS DMC recommends the use of the `Zarr` formats (or TileDB) over the `HDF5` based format like the `ASDF` format. The `Zarr` format can conveniently be used to store the waveform data. Althought we strongly encourage the naming convention presented 
+
+**Note**: The `Zarr` file format could be extended to include the catalogue and inventory information.
+
+Below is an example written in Python that allows the information contained in an _Obspy_ Stream object to be written in a `.zarr` file:
 
 ```python
 import zarr
@@ -141,8 +145,8 @@ The catalog information
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTczMjA3NjQwLDE1NDYyMjcxOTIsMTAxNz
-Y1MDkwOSw1NTQ3NTcwMDcsMTcxNDk5ODI0MCwtNDY2MjgwNjUw
-LDE2MzAxNTI3MjQsLTEzNzM3MDIzNTcsLTEzODU5NzAzNTBdfQ
-==
+eyJoaXN0b3J5IjpbLTI5MzMyMzE1MSwxNTQ2MjI3MTkyLDEwMT
+c2NTA5MDksNTU0NzU3MDA3LDE3MTQ5OTgyNDAsLTQ2NjI4MDY1
+MCwxNjMwMTUyNzI0LC0xMzczNzAyMzU3LC0xMzg1OTcwMzUwXX
+0=
 -->
