@@ -141,6 +141,36 @@ The catalog includes information related to an event or trigger or a series of e
 
 #### Event and Event Type:
 
+| Event Type                          | Description                  |
+|-------------------------------------|-----------------------------|
+| earthquake/large event              | earthquake                  |
+| seismic event                       | induced or triggered event  |
+| offsite event                       | atmospheric event           |
+| low quality event                   | cavity collapse             |
+| rock burst                          | rock burst                  |
+| fall of ground/rockfall             | mine collapse               |
+| blast                               | explosion                   |
+| blast sequence                      | accidental explosion        |
+| development blast                   | industrial explosion        |
+| production blast                    | mining explosion            |
+| far away blast/open pit blast       | quarry blast                |
+| offsite blast                       | nuclear explosion           |
+| paste firing                        | chemical explosion          |
+| calibration blast                   | controlled explosion        |
+| other blast/slashing                | experimental explosion      |
+| mid-shift blast/slash blast         | industrial explosion        |
+| raise bore                          | hydroacoustic event         |
+| crusher noise                       | road cut                    |
+| orepass noise                       | collapse                    |
+| drilling noise                      | acoustic noise              |
+| electrical noise                    | thunder                     |
+| scaling noise                       | anthropogenic event         |
+| mechanical noise                    | crash                       |
+| test pulse                          | sonic boom                  |
+| unidentified noise/other noise      | other event                 |
+| duplicate                           | boat crash                  |
+| unknown                             | plane crash                 |
+| tap test/test                       | avalanche                   |
 
 
 The QuakeML format was designed to store seismic data at a regional and global scale. Consequently, the QuakeML format has adopted a spherical coordinate system storing the location information in latitude and longitude. 
@@ -166,9 +196,9 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzE4OTAzOTMsLTExNzcyMjc5NDcsMT
-A4MTAxNzY2NiwxMTI0MTE0MTkzLC03MTI0MTkxOTEsMTU0NjIy
-NzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAwNywxNzE0OTk4MjQwLC
-00NjYyODA2NTAsMTYzMDE1MjcyNCwtMTM3MzcwMjM1NywtMTM4
-NTk3MDM1MF19
+eyJoaXN0b3J5IjpbLTEzNDY0MDU0ODEsLTE0MzE4OTAzOTMsLT
+ExNzcyMjc5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03MTI0
+MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAwNy
+wxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwtMTM3
+MzcwMjM1NywtMTM4NTk3MDM1MF19
 -->
