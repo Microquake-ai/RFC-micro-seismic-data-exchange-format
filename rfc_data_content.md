@@ -12,7 +12,10 @@ The current document does not propose or prescribe specific format at this stage
 
 ### Scope
 
-The scope is to define the content and nature &mu;seismic information provided to third parties. This document is concerned with the building blocks and information used 
+The scope is to define the content and nature &mu;seismic information provided to third parties. This document is concerned with the building blocks and seismic information that are the essence of &mu;seismic monitoring. The information of concern can be classified in three categories:
+
+- **Waveform data**
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyMzEyNTU5NV19
+eyJoaXN0b3J5IjpbLTc1OTkxMTczMl19
 -->
