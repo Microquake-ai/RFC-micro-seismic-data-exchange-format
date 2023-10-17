@@ -45,8 +45,8 @@ Along the amplitude values additional metadata describing the instrument recordi
 The required metadata for each trace are:
 
 - **Location identification**: The location identification convention described [here](https://ds.iris.edu/ds/newsletter/vol1/no1/1/specification-of-seismograms-the-location-identifier/). The convention has been adapted for the purpose of &mu;seismic monitoring in the mining context. 
-  - **Network Code [network_code]** &mdash; Represents the code of the network and shall be expressed with two character
-  - **Station Code [station_code]** &mdash; A five (5) alphanumerical code representing the station contains the digitizer. The station is defined as the location where the data acquisition units reside.
+  - **Network Code [network_code]** &mdash; Represents the code of the network. 
+  - **Station Code [station_code]** &mdash; Code representing the station containing the digitizer. This often represents the instrument code. The station is defined as the location where the data acquisition units reside.
   - **Location Code [location_code]** &mdash; A two (2) alphanumerical  code representing the recording site or the location of an instrument comprising one or more components. For each station, the location code of individual instrument shall be unique. 
   - **Channel Code [channel_code]** &mdash; The three (3) alphanumerical code that represents the channel and shall follow the FDSN standard naming convention of August 2000 described in the SEED document [Appendix A](http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf). The first letter represents the band code, the second the instrument code and the third the orientation code. For instance, a typical $14 Hz$ or $15 Hz$ omnidirectional geophones code would be GH?, where ? would be replaced by the appropriate component orientation code. 
  - **Sampling Rate [sampling_rate]** &mdash; The signal sampling rate in sample per second.
@@ -65,7 +65,7 @@ The catalog information
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU0NzU3MDA3LDE3MTQ5OTgyNDAsLTQ2Nj
-I4MDY1MCwxNjMwMTUyNzI0LC0xMzczNzAyMzU3LC0xMzg1OTcw
-MzUwXX0=
+eyJoaXN0b3J5IjpbLTMxODQxNjA2Nyw1NTQ3NTcwMDcsMTcxND
+k5ODI0MCwtNDY2MjgwNjUwLDE2MzAxNTI3MjQsLTEzNzM3MDIz
+NTcsLTEzODU5NzAzNTBdfQ==
 -->
