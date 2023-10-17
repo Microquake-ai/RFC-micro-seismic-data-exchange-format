@@ -69,7 +69,7 @@ The _miniSEED_ format is widely adopted in seismology and is very convenient for
 - **Channel Code**: Three (3) alphanumerical characters, following the FDSN guidelines of August 2000.
 
 ##### Alternative Formats
-The IRIS DMC recommends the use of the `Zarr` formats (or TileDB) over the `HDF5` based format like the `ASDF` format. The `Zarr` format can conveniently be used to store the waveform data. Althought we strongly encourage the naming convention presented 
+The IRIS DMC recommends the use of the `Zarr` formats (or TileDB) over the `HDF5` based format like the `ASDF` format. The `Zarr` format can conveniently be used to store the waveform data. Althought we strongly encourage the naming convention for the presented in the previous section to be followed givin each component a unique name that can be composed as follows network_code.station_code.location_code.chann
 
 **Note**: The `Zarr` file format could be extended to include the catalogue and inventory information.
 
@@ -145,8 +145,8 @@ The catalog information
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MzMyMzE1MSwxNTQ2MjI3MTkyLDEwMT
-c2NTA5MDksNTU0NzU3MDA3LDE3MTQ5OTgyNDAsLTQ2NjI4MDY1
-MCwxNjMwMTUyNzI0LC0xMzczNzAyMzU3LC0xMzg1OTcwMzUwXX
-0=
+eyJoaXN0b3J5IjpbLTE5MDk2NzE1MTgsMTU0NjIyNzE5MiwxMD
+E3NjUwOTA5LDU1NDc1NzAwNywxNzE0OTk4MjQwLC00NjYyODA2
+NTAsMTYzMDE1MjcyNCwtMTM3MzcwMjM1NywtMTM4NTk3MDM1MF
+19
 -->
