@@ -71,7 +71,7 @@ Acknowledging these subtleties, the proposed standard comes with the following o
     
 -   **Catalyze Technological Advancements**: With a universally endorsed standard, the mining sector is primed to adopt and assimilate breakthroughs in microseismic monitoring and analysis, ensuring continued advancement in safety and operational efficiency.
 
--  **Prescribe Usage**: The propose format is comprehensive and flexible. To ensure consistency, the format must 
+-  **Prescribe Usage**: The propose format is comprehensive and flexible. To ensure consistency, portability and compatibility, the format must be used in a consistent fashion across multiple application.
 
 ### Data Format Specification for &mu;Seismic Data Exchange (MDE v1.0)
 
@@ -81,7 +81,7 @@ Within the evolving &mu;seismic industry, the &mu;Seismic Data Exchange Format (
 
 #### Format Components Overview
 
-The MDE v1.0 standard stands on the shoulders of three primary components, each finetuned to capture the entirety of microseismic data:
+The MDE v1.0 standard is based three primary components some used as is and some adapted to  microseismic data:
 
 **1. MiniSEED**  
 Esteemed in the seismic community, miniSEED’s compact nature serves to represent both continuous data streams and individual event recordings. Salient features:
@@ -134,8 +134,8 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyMzE5NjUyMSwtMTAwNjI2NzcyNywxNz
-QyMjM2LC0xNjYzNzUwMDQwLDI2OTUzMzY1MSwyMTI5ODEwMzQx
-LC0xODc4MDA3MzAsODE2MTA3NDg0LC00NjU1MjkyNzMsMjAwMD
-c3NDQyOSwtMzU0ODAzNTA4LC0xODEwMDUxNV19
+eyJoaXN0b3J5IjpbLTE4ODI1MDY1MjAsLTEwMDYyNjc3MjcsMT
+c0MjIzNiwtMTY2Mzc1MDA0MCwyNjk1MzM2NTEsMjEyOTgxMDM0
+MSwtMTg3ODAwNzMwLDgxNjEwNzQ4NCwtNDY1NTI5MjczLDIwMD
+A3NzQ0MjksLTM1NDgwMzUwOCwtMTgxMDA1MTVdfQ==
 -->
