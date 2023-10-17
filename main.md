@@ -84,12 +84,14 @@ Within the evolving &mu;seismic industry, the &mu;Seismic Data Exchange Format (
 The MDE v1.0 standard is based on three components some used as is and some adapted to align with the need  &mu;seismic data:
 
 **1. MiniSEED**  
-Esteemed in the seismic community, miniSEED’s compact nature serves to represent both continuous data streams and individual event recordings. The miniSEED files are composed of data blocks, called _data records_. By default, each data record is 4096 bytes long. The data block size can be adjusted Salient features:
+Esteemed in the seismic community, miniSEED’s compact nature serves to represent both continuous data streams and individual event recordings. The miniSEED files are composed of data blocks, called _data records_. By default, each data record is 4096 bytes long. The data block size can be optimized depending on the application. For the purpose of this standard we prescribe to keep the record length to 4096 bytes. Salient features:
 
 -   **Compactness**: Facilitates efficient storage and transfer of extensive seismic datasets.
 -   **Versatility**: Encapsulates both continuous data and event-focused recordings.
 -   **Independence**: Remains unaffected by specific recording equipment.
--   **Streaming**: The format is designed for streaming purpose breaking down the structure in blocks of predefined size. Typically the block size is set to 4096 bytes.
+-   **Streaming**: The format is designed for streaming purpose breaking down the structure in blocks of predefined size that can easily be stored or transmitted. 
+
+
 
 By retaining the core essence of miniSEED, the MDE v1.0 format guarantees compatibility with existing seismological tools and platforms.
 
@@ -139,9 +141,9 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzAzNjc3NDMsMjExMDcwNDk5NiwtMT
-AwNjI2NzcyNywxNzQyMjM2LC0xNjYzNzUwMDQwLDI2OTUzMzY1
-MSwyMTI5ODEwMzQxLC0xODc4MDA3MzAsODE2MTA3NDg0LC00Nj
-U1MjkyNzMsMjAwMDc3NDQyOSwtMzU0ODAzNTA4LC0xODEwMDUx
-NV19
+eyJoaXN0b3J5IjpbODM4MTY2MTE3LDIxMTA3MDQ5OTYsLTEwMD
+YyNjc3MjcsMTc0MjIzNiwtMTY2Mzc1MDA0MCwyNjk1MzM2NTEs
+MjEyOTgxMDM0MSwtMTg3ODAwNzMwLDgxNjEwNzQ4NCwtNDY1NT
+I5MjczLDIwMDA3NzQ0MjksLTM1NDgwMzUwOCwtMTgxMDA1MTVd
+fQ==
 -->
