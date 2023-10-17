@@ -42,6 +42,18 @@ Using the `Zarr` format to package the information was suggested by personnel at
 
 The `Zarr` format was developed to efficiently store and access large-scale array-oriented scientific data. Its design specifically addresses the challenges posed by cloud and distributed storage by allowing for concurrent reads and writes. The format excels in scenarios where data needs to be analyzed in chunks without reading the entire dataset into memory, making it especially suitable for multidimensional arrays. With built-in support for compression and chunking, Zarr enables high-speed data access regardless of the storage backend, be it file systems, object storage, or databases.
 
+The main advantage of adopting the `Zarr` format to store the event data are:
+
+1.  **Chunked Storage and Access**: Zarr's inherent design supports chunking, allowing users to efficiently read or write small sections of large seismic datasets without needing to access the entire file. This is particularly beneficial for processing long-duration continuous seismic recordings.
+    
+2.  **Concurrent Reads and Writes**: Zarr is built for cloud and distributed storage environments, making it feasible for multiple processes or even multiple users to read and write data simultaneously without conflicts, facilitating collaborative analysis.
+    
+3.  **Flexible Compression**: Zarr supports a variety of compression algorithms. This means seismic data, which can be extensive, can be efficiently compressed to save storage space while maintaining quick access times.
+    
+4.  **Multidimensional Support**: Seismic data often comes in multi-dimensional arrays (e.g., time, depth, latitude, longitude). Zarr natively handles multidimensional datasets, streamlining data organization and access.
+    
+5.  **Metadata Storage**: Zarr allows for the inclusion of metadata directly within the dataset. This capability ensures that seismic trace metadata, acquisition details, and any processing history can be stored alongside the waveform data, ensuring comprehensive context for the stored seismic information.
+
 ### Waveform data
 
 The waveform data is the raw vibration recorded directly by the sensors. For convenience, the waveform data can be provided in physical units native to the instrument recording the data of $m$, ${m}/{s}$, or $m/s^2$ for displacement, velocity and acceleration, respectively. However, if size is of concern, storing the ADC count is more appropriate. Storing the ADC count represented as integers allow the usage of the Steim1 and Steim2 differential compression algorithms. 
@@ -133,8 +145,8 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03MT
-I0MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAw
-NywxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwtMT
-M3MzcwMjM1NywtMTM4NTk3MDM1MF19
+eyJoaXN0b3J5IjpbLTM1NDAxOTgwMiwxMDgxMDE3NjY2LDExMj
+QxMTQxOTMsLTcxMjQxOTE5MSwxNTQ2MjI3MTkyLDEwMTc2NTA5
+MDksNTU0NzU3MDA3LDE3MTQ5OTgyNDAsLTQ2NjI4MDY1MCwxNj
+MwMTUyNzI0LC0xMzczNzAyMzU3LC0xMzg1OTcwMzUwXX0=
 -->
