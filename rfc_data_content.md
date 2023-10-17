@@ -138,7 +138,9 @@ The use of the `Zarr` format affords several advantages:
 ### Catalog Information
 The catalog information includes information related to an event or trigger or a series of events. We recommend following the naming convention and hierarchy defined in the QuakeML [documentation](https://quake.ethz.ch/quakeml)   . The catalog information is organized as follows:
 - **Level 0**: Catalog
-  - **Level 1**: Event
+  - **Level 1**: Events &mdash; an array of events
+    - **Level 2**: Origins &mdash; and array of origins representing event locations
+    - **Level 2**: Magnitudes; an 
 
 
 
@@ -146,8 +148,8 @@ The catalog information includes information related to an event or trigger or a
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjM4NjEzMTYsMTU0NjIyNzE5MiwxMD
-E3NjUwOTA5LDU1NDc1NzAwNywxNzE0OTk4MjQwLC00NjYyODA2
-NTAsMTYzMDE1MjcyNCwtMTM3MzcwMjM1NywtMTM4NTk3MDM1MF
-19
+eyJoaXN0b3J5IjpbMjEzMTA1NDIzOSwxNTQ2MjI3MTkyLDEwMT
+c2NTA5MDksNTU0NzU3MDA3LDE3MTQ5OTgyNDAsLTQ2NjI4MDY1
+MCwxNjMwMTUyNzI0LC0xMzczNzAyMzU3LC0xMzg1OTcwMzUwXX
+0=
 -->
