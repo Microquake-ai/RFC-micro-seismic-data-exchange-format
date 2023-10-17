@@ -14,8 +14,9 @@ The current document does not propose or prescribe specific format at this stage
 
 The scope is to define the content and nature &mu;seismic information provided to third parties. This document is concerned with the building blocks and seismic information that are the essence of &mu;seismic monitoring. The information of concern can be classified in three categories:
 
-- **Waveform data**
-- 
+- **Waveform** &mdash; The raw unprocessed waveform both for the continuous and triggered data.
+- **Catalog Information** &mdash 
+- **Inventory or System Information**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1OTkxMTczMl19
+eyJoaXN0b3J5IjpbMTU5NDAyNTc5Ml19
 -->
