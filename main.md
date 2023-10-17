@@ -84,18 +84,20 @@ Within the evolving &mu;seismic industry, the &mu;Seismic Data Exchange Format (
 The MDE v1.0 standard is based on three components some used as is and some adapted to align with the need  &mu;seismic data:
 
 **1. MiniSEED**  
-Esteemed in the seismic community, miniSEED’s compact nature serves to represent both continuous data streams and individual event recordings. The miniSEED files are composed of data blocks, called _data records_. By default, each data record is 4096 bytes long. The data block size can be optimized depending on the application. For the purpose of this standard we prescribe to keep the record length to 4096 bytes. Salient features:
+Esteemed in the seismic community, miniSEED’s compact nature serves to represent both continuous data streams and individual event recordings. Salient features:
 
 -   **Compactness**: Facilitates efficient storage and transfer of extensive seismic datasets.
 -   **Versatility**: Encapsulates both continuous data and event-focused recordings.
 -   **Independence**: Remains unaffected by specific recording equipment.
 -   **Streaming**: The format is designed for streaming purpose breaking down the structure in blocks of predefined size that can easily be stored or transmitted. 
 
+The **MiniSEED** format allows for the waveform data to be stored with acquisition parameters such as sampling rate, start time, and the number of sample to be independently defined on a channel by channel basis. The format is flexible and can be u
+
+**Block Size**
+The miniSEED files are composed of data blocks, called _data records_. By default, each data record is 4096 bytes long. The data block size can be optimized depending on the application. For the purpose of this standard we prescribe to keep the record length to **4096 bytes**
 
 
-By retaining the core essence of miniSEED, the MDE v1.0 format guarantees compatibility with existing seismological tools and platforms.
-
-The **MiniSEED** format allows for the waveform data to be stored with acquisition parameters such as sampling rate, start time, and the number of sample to be independently defined on a channel by channel basis. The format 
+ 
 
 _Reference to miniSEED official documentation_
 
@@ -141,9 +143,9 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODM4MTY2MTE3LDIxMTA3MDQ5OTYsLTEwMD
-YyNjc3MjcsMTc0MjIzNiwtMTY2Mzc1MDA0MCwyNjk1MzM2NTEs
-MjEyOTgxMDM0MSwtMTg3ODAwNzMwLDgxNjEwNzQ4NCwtNDY1NT
-I5MjczLDIwMDA3NzQ0MjksLTM1NDgwMzUwOCwtMTgxMDA1MTVd
-fQ==
+eyJoaXN0b3J5IjpbMTQ4ODIwMjE5OCwyMTEwNzA0OTk2LC0xMD
+A2MjY3NzI3LDE3NDIyMzYsLTE2NjM3NTAwNDAsMjY5NTMzNjUx
+LDIxMjk4MTAzNDEsLTE4NzgwMDczMCw4MTYxMDc0ODQsLTQ2NT
+UyOTI3MywyMDAwNzc0NDI5LC0zNTQ4MDM1MDgsLTE4MTAwNTE1
+XX0=
 -->
