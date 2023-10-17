@@ -53,7 +53,7 @@ The required metadata for each trace are:
  - **Calibration Factor [calib]** &mdash; The calibration factor this value is optional and will be set to 1.0 if not provided. This value represents the calibration factor should the sensor deviate from the typical response.
  - **Start Time [starttime]** &mdash; The trace start time.  
 
-**Suggested data format:** We recommend using the _miniSEED_ format using a 4096 block size to package the waveform data. The miniSEED format is widely adopted in seismology. It is an efficient and we
+**Suggested data format:** We recommend using the _miniSEED_ format using a 4096 block size to package the waveform data. The _miniSEED_ format is widely adopted in seismology. It is an efficient, flexible and easy to read seismic data container. The _miniSEED_ format can accommodate traces from different instrument q
           
 
 
@@ -62,7 +62,7 @@ The required metadata for each trace are:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5NTcxMjU2OCwxNzE0OTk4MjQwLC00Nj
-YyODA2NTAsMTYzMDE1MjcyNCwtMTM3MzcwMjM1NywtMTM4NTk3
-MDM1MF19
+eyJoaXN0b3J5IjpbNDY3MDM0MDIsMTcxNDk5ODI0MCwtNDY2Mj
+gwNjUwLDE2MzAxNTI3MjQsLTEzNzM3MDIzNTcsLTEzODU5NzAz
+NTBdfQ==
 -->
