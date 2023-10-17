@@ -54,6 +54,8 @@ The required metadata for each trace is:
  - **Sampling Rate [sampling_rate]** &mdash; The signal sampling rate in sample per second.
  - **Calibration Factor [calib]** &mdash; The calibration factor this value is optional and will be set to 1.0 if not provided. This value represents the calibration factor should the sensor deviate from the typical response.
  - **Start Time [starttime]** &mdash; The trace start time.  
+
+**Suggested data format:** We recommend using the _miniSEED_ format using a to package the waveform data 
           
 
 
@@ -62,6 +64,6 @@ The required metadata for each trace is:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzExOTU3NTQsLTQ2NjI4MDY1MCwxNj
+eyJoaXN0b3J5IjpbLTEyMTYyMjg2NjAsLTQ2NjI4MDY1MCwxNj
 MwMTUyNzI0LC0xMzczNzAyMzU3LC0xMzg1OTcwMzUwXX0=
 -->
