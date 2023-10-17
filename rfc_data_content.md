@@ -40,6 +40,8 @@ To ensure interoperability, the information in the provided files shall be consi
 
 Using the `Zarr` format to package the information was suggested by personnel at the IRIS data center. IRIS now encourage submission using the `TimeDB` or `Zarr` format. Storing the data to `TileDB` require a database engine and would therefore require additional components to be installed alongside the server.  
 
+The `Zarr` format was developed to efficiently store and access large-scale array-oriented scientific data. Its design specifically addresses the challenges posed by cloud and distributed storage by allowing for concurrent reads and writes. The format excels in scenarios where data needs to be analyzed in chunks without reading the entire dataset into memory, making it especially suitable for multidimensional arrays. With built-in support for compression and chunking, Zarr enables high-speed data access regardless of the storage backend, be it file systems, object storage, or databases.
+
 ### Waveform data
 
 The waveform data is the raw vibration recorded directly by the sensors. For convenience, the waveform data can be provided in physical units native to the instrument recording the data of $m$, ${m}/{s}$, or $m/s^2$ for displacement, velocity and acceleration, respectively. However, if size is of concern, storing the ADC count is more appropriate. Storing the ADC count represented as integers allow the usage of the Steim1 and Steim2 differential compression algorithms. 
@@ -131,7 +133,7 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3NjEwNDU1MywxMTI0MTE0MTkzLC03MT
+eyJoaXN0b3J5IjpbMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03MT
 I0MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAw
 NywxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwtMT
 M3MzcwMjM1NywtMTM4NTk3MDM1MF19
