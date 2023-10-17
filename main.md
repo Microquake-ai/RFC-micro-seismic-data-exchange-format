@@ -89,7 +89,7 @@ Esteemed in the seismic community, miniSEED’s compact nature serves to represe
 -   **Compactness**: Facilitates efficient storage and transfer of extensive seismic datasets.
 -   **Versatility**: Encapsulates both continuous data and event-focused recordings.
 -   **Independence**: Remains unaffected by specific recording equipment.
--   **Streaming**: The format is designed for streaming purpose breaking down the structure in blocks of predefined size. The default block size of  
+-   **Streaming**: The format is designed for streaming purpose breaking down the structure in blocks of predefined size. A block size of 4096 is recommended, but the block size can be adapted to  
 
 By retaining the core essence of miniSEED, the MDE v1.0 format guarantees compatibility with existing seismological tools and platforms.
 
@@ -139,7 +139,7 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NzExNjQ4MywyMTEwNzA0OTk2LC0xMD
+eyJoaXN0b3J5IjpbLTQ2OTIwNjEzOSwyMTEwNzA0OTk2LC0xMD
 A2MjY3NzI3LDE3NDIyMzYsLTE2NjM3NTAwNDAsMjY5NTMzNjUx
 LDIxMjk4MTAzNDEsLTE4NzgwMDczMCw4MTYxMDc0ODQsLTQ2NT
 UyOTI3MywyMDAwNzc0NDI5LC0zNTQ4MDM1MDgsLTE4MTAwNTE1
