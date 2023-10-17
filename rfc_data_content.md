@@ -57,7 +57,11 @@ The required metadata for each trace are:
 
 **Network, Station and Location Codes**: The above convention is usually not strictly followed by the &mu;seismic system suppliers. Flexibility in applying the convention is necessary. There is usually no distinction between the station and location, and each instrument receives a unique code that may or may not refer to the data acquisition station. In this case, we suggest using the **Station Code** field to store the _instrument_ code and  fill the location code using 01 or 00. In a network, each combination of **Station Code** &ndash; **Location Code** &ndash; **Channel Code** should be unique.
 
-**Important Notes Concerning the miniSEED format:**
+#### Waveform Data Packaging
+
+##### MiniSEED
+
+The miniSEED format is widely adopted in seismology and is very convenient for storing seismic data. It is important to note, howerve
 
 **Suggested data format:** We recommend using the _miniSEED_ format using a 4096 block size to package the waveform data. The _miniSEED_ format is widely adopted in seismology. It is an efficient, flexible and easy to read seismic data container. The _miniSEED_ format can accommodate traces from different instrument acquired at a different sampling rate, of different sampling rate, start times and end times. The format also efficient merging of data as the "blockettes" can usually be combined together and shuffled around. 
 
@@ -71,7 +75,7 @@ The catalog information
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2Mzc3NDEyNCw1NTQ3NTcwMDcsMTcxND
-k5ODI0MCwtNDY2MjgwNjUwLDE2MzAxNTI3MjQsLTEzNzM3MDIz
-NTcsLTEzODU5NzAzNTBdfQ==
+eyJoaXN0b3J5IjpbLTE2Mzg5NDUzMjMsNTU0NzU3MDA3LDE3MT
+Q5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNzI0LC0xMzczNzAy
+MzU3LC0xMzg1OTcwMzUwXX0=
 -->
