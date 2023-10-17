@@ -58,36 +58,37 @@ The benefits of using the `Zarr` format become particularly evident when conside
     
 5.  **Metadata Storage**: Zarr permits the inclusion of metadata directly within the dataset. This feature ensures that seismic trace metadata, acquisition details, and processing histories can coexist alongside the waveform data, providing a comprehensive context for the stored seismic information.
 
-### Waveform data
+### Waveform Data
 
-The waveform data is the raw vibration recorded directly by the sensors. For convenience, the waveform data can be provided in physical units native to the instrument recording the data of $m$, ${m}/{s}$, or $m/s^2$ for displacement, velocity and acceleration, respectively. However, if size is of concern, storing the ADC count is more appropriate. Storing the ADC count represented as integers allow the usage of the Steim1 and Steim2 differential compression algorithms. 
+The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of �m, ��sm​, or �/�2m/s2 for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC count is more suitable. Storing the ADC count as integers allows for the use of the Steim1 and Steim2 differential compression algorithms.
 
-Along the amplitude values additional metadata describing the instrument recording the data and time series parameter should be provided for each trace. Each trace shall be stored with its own metadata information
+Alongside the amplitude values, additional metadata describing the instrument recording the data and time series parameters should be provided for each trace. Each trace should be stored with its own metadata information.
 
-The required metadata for each trace are:
+The required metadata for each trace includes:
 
-- **Trace Identifier**: A unique identifier for the trace (see Obspy [documentation](https://docs.obspy.org/master/packages/autogen/obspy.core.event.resourceid.ResourceIdentifier.html) for information on the recommended _resource identifier_ structure.
-- **Location identification**: The location identification convention described [here](https://ds.iris.edu/ds/newsletter/vol1/no1/1/specification-of-seismograms-the-location-identifier/). The convention has been adapted for the purpose of &mu;seismic monitoring in the mining context. 
-  - **Network Code [network_code]** &mdash; Code representing the network. 
-  - **Station Code [station_code]** &mdash; Code that representing the station containing the digitizer. 
-  - **Location Code [location_code]** &mdash; Code representing the instrument 
-  - **Channel Code [channel_code]** &mdash; The three (3) alphanumerical code that represents the channel and shall follow the FDSN standard naming convention of August 2000 described in the SEED document [Appendix A](http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf). The first letter represents the band code, the second the instrument code and the third the orientation code. For instance, a typical $14 Hz$ or $15 Hz$ omnidirectional geophones code would be GH?, where ? would be replaced by the appropriate component orientation code. 
- - **Sampling Rate [sampling_rate]** &mdash; The signal sampling rate in sample per second.
- - **Calibration Factor [calib]** &mdash; The calibration factor this value is optional and will be set to 1.0 if not provided. This value represents the calibration factor should the sensor deviate from the typical response.
- - **Start Time [starttime]** &mdash; The trace start time.
+-   **Trace Identifier**: A unique identifier for the trace (see Obspy [documentation](https://docs.obspy.org/master/packages/autogen/obspy.core.event.resourceid.ResourceIdentifier.html) for information on the recommended _resource identifier_ structure).
+-   **Location Identification**: The location identification convention described [here](https://ds.iris.edu/ds/newsletter/vol1/no1/1/specification-of-seismograms-the-location-identifier/). This convention has been adapted for μseismic monitoring in the mining context.
+    -   **Network Code [network_code]** — Code representing the network.
+    -   **Station Code [station_code]** — Code representing the station containing the digitizer.
+    -   **Location Code [location_code]** — Code representing the instrument.
+    -   **Channel Code [channel_code]** — The three (3) alphanumerical code representing the channel shall follow the FDSN standard naming convention of August 2000 described in the SEED document [Appendix A](http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf). For instance, a typical 14��14Hz or 15��15Hz omnidirectional geophone code would be GH?, where ? would be replaced by the appropriate component orientation code.
+-   **Sampling Rate [sampling_rate]** — The signal's sampling rate in samples per second.
+-   **Calibration Factor [calib]** — This value is optional and defaults to 1.0 if not provided. It represents the calibration factor should the sensor deviate from the typical response.
+-   **Start Time [starttime]** — The trace's start time.
 
 #### Notes:
 
-**Network, Station and Location Codes**: The above convention is usually not strictly followed by the &mu;seismic system suppliers. Flexibility in applying the convention is necessary. There is usually no distinction between the station and location, and each instrument receives a unique code that may or may not refer to the data acquisition station. In this case, we suggest using the **Station Code** field to store the _instrument_ code and  fill the location code using 01 or 00. In a network, each combination of **Station Code** &ndash; **Location Code** &ndash; **Channel Code** should be unique.
+**Network, Station, and Location Codes**: The mentioned convention is often not strictly adhered to by μseismic system providers. Flexibility in applying the convention is crucial. Typically, no distinction is made between the station and location, and each instrument is assigned a unique code that may or may not refer to the data acquisition station. In such cases, we suggest using the **Station Code** field to store the _instrument_ code and populate the location code with 01 or 00. In a network, each combination of **Station Code** – **Location Code** – **Channel Code** should be unique.
 
 #### Waveform Data Packaging
 
 ##### Zarr
-The IRIS DMC recommends the use of the `Zarr` formats (or TileDB) over the `HDF5` based format like the `ASDF` format. The `Zarr` format can conveniently be used to store the waveform data. Althought we strongly encourage the naming convention for the presented in the previous section to be followed givin each component a unique name that can be composed as follows `network_code.station_code.location_code.channel_code`.
 
-**Note**: The `Zarr` file format could be extended to include the catalogue and inventory information.
+The IRIS DMC recommends using the `Zarr` formats (or TileDB) over the `HDF5` based formats, such as the `ASDF` format. The `Zarr` format can be conveniently used to store waveform data. We strongly encourage adhering to the naming convention presented in the previous section, giving each component a unique name composed as `network_code.station_code.location_code.channel_code`.
 
-Below is an example written in Python that allows the information contained in an _Obspy_ Stream object to be written in a `.zarr` file:
+**Note**: The `Zarr` file format can also incorporate the catalog and inventory information.
+
+Below is an example written in Python to store information from an _Obspy_ Stream object in a `.zarr` file:
 
 ```python
 import zarr
@@ -238,10 +239,10 @@ The file can also be strore in the native XML format.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NjIxMDU0MSwtMTYxNjE3MzU4MiwxMD
-Q0NDA1MTU0LC0xNjQ1OTE3MDk0LDg0MDE0NTA1OSwtMTQzMTg5
-MDM5MywtMTE3NzIyNzk0NywxMDgxMDE3NjY2LDExMjQxMTQxOT
-MsLTcxMjQxOTE5MSwxNTQ2MjI3MTkyLDEwMTc2NTA5MDksNTU0
-NzU3MDA3LDE3MTQ5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNz
-I0LC0xMzczNzAyMzU3LC0xMzg1OTcwMzUwXX0=
+eyJoaXN0b3J5IjpbNDYzNjg0NDk3LC0xNjE2MTczNTgyLDEwND
+Q0MDUxNTQsLTE2NDU5MTcwOTQsODQwMTQ1MDU5LC0xNDMxODkw
+MzkzLC0xMTc3MjI3OTQ3LDEwODEwMTc2NjYsMTEyNDExNDE5My
+wtNzEyNDE5MTkxLDE1NDYyMjcxOTIsMTAxNzY1MDkwOSw1NTQ3
+NTcwMDcsMTcxNDk5ODI0MCwtNDY2MjgwNjUwLDE2MzAxNTI3Mj
+QsLTEzNzM3MDIzNTcsLTEzODU5NzAzNTBdfQ==
 -->
