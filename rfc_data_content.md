@@ -246,11 +246,39 @@ Thus, we recommend replacing the latitude and longitude fields in the StationXML
 
 #### System/Inventory Information Packaging
 
-The inventory or system information of a seismic network, which details the stations and channels, can also be serialized and stored efficiently. We propose to options. The first option consist in storing the informa `Zarr` and `StationXML`.
+The inventory or system information of a seismic network, which details the stations and channels, can also be serialized and stored efficiently. We propose to options. The first option consist in storing the system or inventory information alongside the waveform and catalogue in a  `Zarr` file. The second option consist in directly using the `StationXML` format.
 
 ##### Zarr
 
-Storing inventory information in a `Zarr` format offers flexibility, especially when dealing with large datasets. Like the catalog information, the StationXML data can be serialized using the json library and then stored in a `Zarr` file. This allows for efficient storage and quick retrieval of inventory data. Here's a potential method:
+Storing inventory information in a `Zarr` format offers flexibility, especially when dealing with large datasets. Like the catalog information, the StationXML data can be serialized using the json library and then stored in a `Zarr` file. This allows for efficient storage and quick retrieval of inventory data. An code example is provided below:
+
+```python
+import uquake # Similar to obspy but tailored for μseismic
+import zarr
+import json
+
+# Sample Inventory
+inventory = uquake.read_inventory()
+
+# 1. Serialize the Inventory to JSON
+json_string = inventory.write(format="JSON", filename=None)
+
+# 2. Store the Serialized JSON in Zarr
+root = zarr.open_group("inventory.zarr", mode="w")
+root.array("inventory_data", data=json_string)
+
+# Reading Back from Zarr
+stored_json_string = root["inventory_data"][:].tobytes().decode()
+
+# 3. Deserialize back to Inventory object
+new_inventory = uquake.read_inventory(filename=None, format="JSON", 
+data=stored_json_string)
+
+print(new_inventory)
+
+```
+
+
 
 
 
@@ -260,11 +288,11 @@ Storing inventory information in a `Zarr` format offers flexibility, especially 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDg2MzQ0NTQsLTE5NDU3Mjc4NTgsLT
-MxMjAyODIzOCw0NjM2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0NDQw
-NTE1NCwtMTY0NTkxNzA5NCw4NDAxNDUwNTksLTE0MzE4OTAzOT
-MsLTExNzcyMjc5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03
-MTI0MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1Nz
-AwNywxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwt
-MTM3MzcwMjM1N119
+eyJoaXN0b3J5IjpbLTExOTkxMDQyMiwtMTk0NTcyNzg1OCwtMz
+EyMDI4MjM4LDQ2MzY4NDQ5NywtMTYxNjE3MzU4MiwxMDQ0NDA1
+MTU0LC0xNjQ1OTE3MDk0LDg0MDE0NTA1OSwtMTQzMTg5MDM5My
+wtMTE3NzIyNzk0NywxMDgxMDE3NjY2LDExMjQxMTQxOTMsLTcx
+MjQxOTE5MSwxNTQ2MjI3MTkyLDEwMTc2NTA5MDksNTU0NzU3MD
+A3LDE3MTQ5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNzI0LC0x
+MzczNzAyMzU3XX0=
 -->
