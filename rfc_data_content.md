@@ -191,7 +191,10 @@ The QuakeML standard does not include objects suited to store the corner frequen
 
 The  &mu;Quake implementation stores the `corner_frequency`, the `energy_p`, `energy_s` and associated error along side the magnitude information in the extra parameter of the Magnitude object. 
 
-### Pack
+### Catalog Information Packaging
+
+#### Zarr 
+The catalog information can easily be packaged with the waform in a `Zarr` file. The QuakeML simply needs to be serialized using the json library. An 
 
 
 
@@ -201,9 +204,9 @@ The  &mu;Quake implementation stores the `corner_frequency`, the `energy_p`, `en
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODAwMzcyMDYsLTE0MzE4OTAzOTMsLT
-ExNzcyMjc5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03MTI0
-MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAwNy
-wxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwtMTM3
-MzcwMjM1NywtMTM4NTk3MDM1MF19
+eyJoaXN0b3J5IjpbMjE2MzExOTEsLTE0MzE4OTAzOTMsLTExNz
+cyMjc5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03MTI0MTkx
+OTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAwNywxNz
+E0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwtMTM3Mzcw
+MjM1NywtMTM4NTk3MDM1MF19
 -->
