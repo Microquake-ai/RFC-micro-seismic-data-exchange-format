@@ -47,13 +47,25 @@ The required metadata are:
 - **Network Code** &mdash; Represents the code of the network and shall be expressed with two character
 - **Station Code** &mdash; Represents the code of the station that contains the digitizer.
 - **Location Code** &mdash; A two character numerical code representing the recording site (where the sensor is deployed). For each station, the location code shall be unique. 
-- **Channel Code** &mdash; The three character channel code shall follow the standard naming convention described [here](https://ds.iris.edu/ds/nodes/dmc/data/formats/seed-channel-naming/). The first letter represents the band code, the second the instrument code and the third the orientation code. For instance, a typical $14 Hz$ or $15 Hz$ omnidirectional geophones code would be GH?, where ? would be replaced be the component orientation code.
+- **Channel Code** &mdash; The three character channel code shall follow the FDSN standard naming convention of August 2000 described [here](https://ds.iris.edu/ds/nodes/dmc/data/formats/seed-channel-naming/). The first letter represents the band code, the second the instrument code and the third the orientation code. For instance, a typical $14 Hz$ or $15 Hz$ omnidirectional geophones code would be GH?, where ? would be replaced be the component orientation code.
+
+| Orientation Code | Description                                              |
+|------------------|----------------------------------------------------------|
+| Z N E            | Traditional (Vertical, North-South, East-West)           |
+| A B C            | Triaxial (Along the edges of a cube turned up on a corner)|
+| T R              | For formed beams (Transverse, Radial)                     |
+| 1 2 3            | Orthogonal components but non traditional orientations   |
+| U V W            | Optional components                                       |
+| Dip/Azimuth:     | Ground motion vector (reverse dip/azimuth if signal polarity incorrect) |
+| Signal Units:    | M, M/S, M/S**2, (for G & M) M/S**2 (usually)              |
+| Channel Flags:   | G                                                        |
+|
 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzAzMTU1OTYxLC0xMzczNzAyMzU3LC0xMz
-g1OTcwMzUwXX0=
+eyJoaXN0b3J5IjpbLTIwOTE0NDI4OSwtMTM3MzcwMjM1NywtMT
+M4NTk3MDM1MF19
 -->
