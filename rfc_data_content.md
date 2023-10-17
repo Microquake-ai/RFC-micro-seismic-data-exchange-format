@@ -71,7 +71,7 @@ The _miniSEED_ format is widely adopted in seismology and is very convenient for
 ##### Alternative Formats
 The IRIS DMC recommends the use of the Zarr formats (or TileDB) over the HDF5 based format like the ASDF format. The Zarr format can conveniently be used to store the waveform data. Below is an example that allow storing the information contained in an _Obspy_ Stream object in a Zarr file:
 
-```p
+```python
 import zarr
 import obspy
 
@@ -87,13 +87,13 @@ def stream_to_zarr_group(stream, zarr_group_path):
     group = zarr.open_group(zarr_group_path, mode='a')
 
     for tr in stream:
-        trace_id = tr.id.replace(".", "_")  # Use trace id as array name (replace '.' to be safe)
 
         # Create Zarr array for this trace
-        arr = group.create_dataset(trace_id, data=tr.data, shape=(len(tr.data),), dtype='float32', overwrite=True)
+        arr = group.create_dataset(trace_id, data=tr.data, 
+        shape=(len(tr.data),), dtype='float32', overwrite=True)
 
         # Store all trace stats as Zarr attributes
-        for key, value in tr.stats.items():
+        for key in ['network_code', 'station_code', ]:
             # Convert non-string objects to strings for easier storage and retrieval
             arr.attrs[key] = str(value)
 
@@ -115,7 +115,7 @@ The catalog information
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDcwNzMzOCwxMDE3NjUwOTA5LDU1ND
+eyJoaXN0b3J5IjpbMTQ2MTMyNTYxNiwxMDE3NjUwOTA5LDU1ND
 c1NzAwNywxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1Mjcy
 NCwtMTM3MzcwMjM1NywtMTM4NTk3MDM1MF19
 -->
