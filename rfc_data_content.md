@@ -376,14 +376,17 @@ The `Grid` object is equipped with methods to read and write grid data, making i
 Here's an example of how one might read from and write to a grid file:
 
 ```python
-# Reading a grid from a file
-grid_from_file = Grid.read("path_to_grid_file.grid") # from version 2.0.1
-```
-```python
 # all versions
 from uquake.core.grid import read_grid
 
+# Reading a grid from a file
 grid_from_file = Grid.read("path_to_grid_file.grid")
+```
+
+```python
+# from version 2.0.1
+# Reading a grid from a file
+grid_from_file = Grid.read("path_to_grid_file.grid") 
 ```
 
 This approach simplifies the process of handling gridded data in seismology by using the `uquake` library's built-in functionalities.
@@ -399,7 +402,7 @@ This approach simplifies the process of handling gridded data in seismology by u
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxNzUzODE5NiwtMzg5NDM1OTkzLC03NT
+eyJoaXN0b3J5IjpbLTEyODgxMzE2OSwtMzg5NDM1OTkzLC03NT
 QzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NTgsLTMxMjAy
 ODIzOCw0NjM2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0NDQwNTE1NC
 wtMTY0NTkxNzA5NCw4NDAxNDUwNTksLTE0MzE4OTAzOTMsLTEx
