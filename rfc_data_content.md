@@ -44,7 +44,7 @@ The `Zarr` format was developed to efficiently store and access large-scale arra
 
 Adopting `Zarr` allows for the data and metadata to be stored in format that are very close to broadly adopted data format broadly adopted by the seismology community. It is possible to pack in one container, the waveforms, event catalog and system information enabling the stand alone uses. The format can also be differentiated to accomodate the variation between the information required for the triggered and continuous data. 
 
-TMore broadly, the main advantages of adopting the `Zarr` format to store the seismic data and metadata are particularly pronounced for the waveforms:
+The advantage of using the `Zarr` format are particularly pronuounce when considering the nature of the waveform data. More broadly, the main advantages of adopting the `Zarr` format to store the seismic data and metadata are:
 
 1.  **Chunked Storage and Access**: Zarr's inherent design supports chunking, allowing users to efficiently read or write small sections of large seismic datasets without needing to access the entire file. This is particularly beneficial for processing long-duration continuous seismic recordings.
     
@@ -147,7 +147,7 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzAzNjc5NDYsMTA4MTAxNzY2NiwxMT
+eyJoaXN0b3J5IjpbLTIwMTIyODE5OTUsMTA4MTAxNzY2NiwxMT
 I0MTE0MTkzLC03MTI0MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUw
 OTA5LDU1NDc1NzAwNywxNzE0OTk4MjQwLC00NjYyODA2NTAsMT
 YzMDE1MjcyNCwtMTM3MzcwMjM1NywtMTM4NTk3MDM1MF19
