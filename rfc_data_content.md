@@ -143,7 +143,7 @@ The catalog includes information related to an event or trigger or a series of e
 
 There are two approaches to modifying the event types
 1. Redfine the schema and allow for event type related to mining to be stored in a &mu;QuakeML file; and
-2. Map the &mu;seismic type to the current QuakeML types
+2. Map the &mu;seismic type to the current %
 
 | Event Type (&mu;seismic)            | Event Type (QuakeML)        |
 |-------------------------------------|-----------------------------|
@@ -200,7 +200,7 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODI4OTYyOTAsLTE0MzE4OTAzOTMsLT
+eyJoaXN0b3J5IjpbLTEwMzYxNjkzNjgsLTE0MzE4OTAzOTMsLT
 ExNzcyMjc5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03MTI0
 MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAwNy
 wxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwtMTM3
