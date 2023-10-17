@@ -35,7 +35,7 @@ The selected building blocks are acknowledged for their robustness, compatibilit
 
 1.  **Coordinate System**: Integration of a Cartesian coordinate system to more aptly represent the spatial characteristics of mining operations.
 
-Through these adaptations, this document aims to bridge the gap between established seismological data formats and the unique requirements of the mining sector, ensuring seamless data interchange and analysis. This document also prescribes the use of those format and provides exam
+Through these adaptations, this document aims to bridge the gap between established seismological data formats and the unique requirements of the mining sector, ensuring seamless data interchange and analysis. This document also prescribes the use of those format and provides usage examples
 
 ### Terminology
 
@@ -43,7 +43,7 @@ Through these adaptations, this document aims to bridge the gap between establis
     
 -   **Catalogue Information**: This is a structured compilation of seismic events, detailing their origins, magnitudes, and other pertinent data. Within the scope of this standard, we represent this information using the QuakeML format, augmented with extensions tailored for the mining context.
     
--   **Inventory Data**: Refers to a comprehensive registry detailing seismic instruments, pinpointing their locations, and delineating their unique characteristics. StationXML, with specific modifications for mining contexts, is the chosen format to represent this data in this standard.
+-   **Inventory Data**: Refers to a comprehensive registry of all the seismic instrument along the acquisition chain.detailing seismic instruments, their locations, and delineating their unique characteristics. StationXML, with specific modifications for mining contexts, is the chosen format to represent this data in this standard.
     
 -   **miniSEED**: A predominant data format in the realm of seismology, miniSEED is instrumental in storing seismic waveform data. 
     
@@ -132,7 +132,7 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjA5ODUwMTUsLTEwMDYyNjc3MjcsMT
+eyJoaXN0b3J5IjpbLTE1MTg3MTE5NzQsLTEwMDYyNjc3MjcsMT
 c0MjIzNiwtMTY2Mzc1MDA0MCwyNjk1MzM2NTEsMjEyOTgxMDM0
 MSwtMTg3ODAwNzMwLDgxNjEwNzQ4NCwtNDY1NTI5MjczLDIwMD
 A3NzQ0MjksLTM1NDgwMzUwOCwtMTgxMDA1MTVdfQ==
