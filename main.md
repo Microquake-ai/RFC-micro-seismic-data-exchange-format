@@ -43,7 +43,7 @@ Through these adaptations, this document aims to bridge the gap between establis
     
 -   **Catalogue Information**: This is a structured compilation of seismic events, detailing their origins, magnitudes, and other pertinent data. Within the scope of this standard, we represent this information using the QuakeML format, augmented with extensions tailored for the mining context.
     
--   **Inventory Data**: Refers to a comprehensive registry of all the seismic instrument along the acquisition chain.detailing seismic instruments, their locations, and delineating their unique characteristics. StationXML, with specific modifications for mining contexts, is the chosen format to represent this data in this standard.
+-   **Inventory Data**: Refers to a comprehensive registry of all the seismic instrument along the acquisition chain. It comprises detailed information on sensor location, orientation and response. 
     
 -   **miniSEED**: A predominant data format in the realm of seismology, miniSEED is instrumental in storing seismic waveform data. 
     
@@ -132,8 +132,8 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTg3MTE5NzQsLTEwMDYyNjc3MjcsMT
-c0MjIzNiwtMTY2Mzc1MDA0MCwyNjk1MzM2NTEsMjEyOTgxMDM0
-MSwtMTg3ODAwNzMwLDgxNjEwNzQ4NCwtNDY1NTI5MjczLDIwMD
-A3NzQ0MjksLTM1NDgwMzUwOCwtMTgxMDA1MTVdfQ==
+eyJoaXN0b3J5IjpbMTA2NDQxMjQ1OCwtMTAwNjI2NzcyNywxNz
+QyMjM2LC0xNjYzNzUwMDQwLDI2OTUzMzY1MSwyMTI5ODEwMzQx
+LC0xODc4MDA3MzAsODE2MTA3NDg0LC00NjU1MjkyNzMsMjAwMD
+c3NDQyOSwtMzU0ODAzNTA4LC0xODEwMDUxNV19
 -->
