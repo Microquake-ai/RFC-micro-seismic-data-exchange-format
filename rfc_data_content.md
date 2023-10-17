@@ -141,9 +141,10 @@ The catalog includes information related to an event or trigger or a series of e
 We propose to organize the catalog information as follows
 - **Level 0**: Catalog
   - **Level 1**: Events &mdash; an array of events
-    - **Level 2**: Origin &mdash; contains the information related to the location (an array in QuakeML) 
+    - **Level 2**: Origin &mdash; contains the information related to the location (an array in QuakeML)
+      - **Level 3**: Arrivals &mdash; an array containing the information linked to the picks related to an origin
     - **Level 2**: Magnitude &mdash; contains the information related to the magnitude (an array in QuakeML)
-    - **Level 2**: Picks &mdash; The _P_ and _S_ picks
+    - **Level 2**: Picks &mdash; an array representing all the _P_ and _S_ picks I
 
 
 
@@ -151,8 +152,8 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTcwMzMwOTksLTcxMjQxOTE5MSwxNT
-Q2MjI3MTkyLDEwMTc2NTA5MDksNTU0NzU3MDA3LDE3MTQ5OTgy
-NDAsLTQ2NjI4MDY1MCwxNjMwMTUyNzI0LC0xMzczNzAyMzU3LC
-0xMzg1OTcwMzUwXX0=
+eyJoaXN0b3J5IjpbMTEwMTk1ODg4NiwtNzEyNDE5MTkxLDE1ND
+YyMjcxOTIsMTAxNzY1MDkwOSw1NTQ3NTcwMDcsMTcxNDk5ODI0
+MCwtNDY2MjgwNjUwLDE2MzAxNTI3MjQsLTEzNzM3MDIzNTcsLT
+EzODU5NzAzNTBdfQ==
 -->
