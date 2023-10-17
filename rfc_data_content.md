@@ -327,7 +327,7 @@ grid_values = np.zeros((header["NX"], header["NY"], header["NZ"]))
 
 In this representation, the grid values are stored in a structured manner, allowing for easy indexing and operations. Each cell in the array corresponds to a grid point in the velocity model, with its value representing the velocity (or density or attenuation, depending on the grid type) at that point.
 
-#### Implementatio
+#### Implementation
 
 
 
@@ -340,11 +340,11 @@ In this representation, the grid values are stored in a structured manner, allow
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzU0MjY5MjUsLTc1NDM3MTgxOSwtMT
-k4NzA0MzA5OSwtMTk0NTcyNzg1OCwtMzEyMDI4MjM4LDQ2MzY4
-NDQ5NywtMTYxNjE3MzU4MiwxMDQ0NDA1MTU0LC0xNjQ1OTE3MD
-k0LDg0MDE0NTA1OSwtMTQzMTg5MDM5MywtMTE3NzIyNzk0Nywx
-MDgxMDE3NjY2LDExMjQxMTQxOTMsLTcxMjQxOTE5MSwxNTQ2Mj
-I3MTkyLDEwMTc2NTA5MDksNTU0NzU3MDA3LDE3MTQ5OTgyNDAs
-LTQ2NjI4MDY1MF19
+eyJoaXN0b3J5IjpbLTM4OTQzNTk5MywtNzU0MzcxODE5LC0xOT
+g3MDQzMDk5LC0xOTQ1NzI3ODU4LC0zMTIwMjgyMzgsNDYzNjg0
+NDk3LC0xNjE2MTczNTgyLDEwNDQ0MDUxNTQsLTE2NDU5MTcwOT
+QsODQwMTQ1MDU5LC0xNDMxODkwMzkzLC0xMTc3MjI3OTQ3LDEw
+ODEwMTc2NjYsMTEyNDExNDE5MywtNzEyNDE5MTkxLDE1NDYyMj
+cxOTIsMTAxNzY1MDkwOSw1NTQ3NTcwMDcsMTcxNDk5ODI0MCwt
+NDY2MjgwNjUwXX0=
 -->
