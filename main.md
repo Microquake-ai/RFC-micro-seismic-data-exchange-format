@@ -61,7 +61,7 @@ Microseismic data plays a pivotal role in enhancing both the safety and efficien
 
 #### Goal
 
-Acknowledging these subtleties, the proposed standard comes with the following visionary objectives:
+Acknowledging these subtleties, the proposed standard comes with the following objectives:
 
 -   **Promote Interoperability**: A common format ensures a smooth exchange, processing, and analysis of microseismic data across a range of systems, championing collaboration and data coherence regardless of vendor distinctions.
     
@@ -70,6 +70,8 @@ Acknowledging these subtleties, the proposed standard comes with the following v
 -   **Leverage Established Seismological Standards**: This standard harnesses the strength of existing seismological data formats. While they form the foundational backbone, specific extensions are melded in to meet the unique requirements of the mining industry.
     
 -   **Catalyze Technological Advancements**: With a universally endorsed standard, the mining sector is primed to adopt and assimilate breakthroughs in microseismic monitoring and analysis, ensuring continued advancement in safety and operational efficiency.
+
+-  **Prescribe Usage**: The propose format is comprehensive and flexible. To ensure consistency, the format must 
 
 ### Data Format Specification for &mu;Seismic Data Exchange (MDE v1.0)
 
@@ -132,7 +134,7 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2NDQxMjQ1OCwtMTAwNjI2NzcyNywxNz
+eyJoaXN0b3J5IjpbMTYyMzE5NjUyMSwtMTAwNjI2NzcyNywxNz
 QyMjM2LC0xNjYzNzUwMDQwLDI2OTUzMzY1MSwyMTI5ODEwMzQx
 LC0xODc4MDA3MzAsODE2MTA3NDg0LC00NjU1MjkyNzMsMjAwMD
 c3NDQyOSwtMzU0ODAzNTA4LC0xODEwMDUxNV19
