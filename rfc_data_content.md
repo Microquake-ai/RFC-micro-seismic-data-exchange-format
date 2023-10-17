@@ -30,11 +30,11 @@ The proposed data content is mainly designed to promote interoperability and inn
 
 ## Proposal
 
-we  concerns three categories of data
+We propose to  concerns three categories of data
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzMTUxMTg4OF19
+eyJoaXN0b3J5IjpbMzY4Njk0NzczXX0=
 -->
