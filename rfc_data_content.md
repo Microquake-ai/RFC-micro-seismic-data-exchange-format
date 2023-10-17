@@ -34,13 +34,16 @@ The proposed data content is mainly designed to promote interoperability and inn
 
 Our proposal concerns three categories of data, the waveforms, the catalog data and the inventory and system information.
 
-To ensure interoperability, the information in the provided files shall be consistent. The sensor naming convention shall be the same all across, the locations of sensors and events shall be expressed using one single coordinate system.  
+To ensure interoperability, the information in the provided files shall be consistent. The sensor naming convention shall be the same all across, the locations of sensors and events shall be expressed using one single coordinate system, which should also be used for the grids, if applicable.
 
+### Waveform data
+
+The waveform data ar
 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYzNjI3NDU0XX0=
+eyJoaXN0b3J5IjpbLTEwMjk0ODIxNzldfQ==
 -->
