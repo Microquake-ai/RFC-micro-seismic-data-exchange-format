@@ -10,11 +10,21 @@ This proposed standard exhibits adaptability, rendering it suitable for a variet
 
 In presenting this RFC, feedback, scrutiny, and constructive contributions are actively solicited from industry stakeholders, academic researchers, and equipment vendors. Such collaborative input is imperative to enhance the robustness and adaptability of the proposed format, ensuring its relevance and efficacy for future deployments.
 
+
 ### Scope
 
-This standard seeks to establish a definitive data format tailored for the exchange of μseismic data acquired by seismic systems operating within mines. The encapsulated proposal comprises three components essential for lossless translation of waveforms, catalogue and system information. Our foundational strategy leverages widely recognized seismological formats, namely miniSEED for waveform representation, QuakeML event metadata, and StationXML for inventory or system information.
+This standard seeks to establish a definitive data format tailored for the exchange of μseismic data acquired by seismic systems operating within mines. The encapsulated proposal comprises three components essential for lossless translation of waveforms, catalogue, and system information. Our foundational strategy leverages widely recognized seismological formats, namely miniSEED for waveform representation, QuakeML for event metadata, and StationXML for system metadata.
 
-Such foundational structures are acknowledged for their robustness, compatibility, and broad acceptance within the seismological community. While miniSEED, QuakeML, and StationXML are all exemplary in design and scope, they primarily cater to global seismic monitoring needs. Although they can be employed in their current form for μseismic monitoring in mines, they would benefit from nuanced modifications to more closely align with the requirements and intricacies of &mu;seismic monitoring in mines. Consequently, our proposed adaptations to these foundational formats are elucidated as follows:
+At the heart of our approach are the following seismological formats:
+
+-   **miniSEED**: Esteemed for its compactness and versatility, miniSEED serves as a primary choice for seismic waveform representation across various seismological applications. It guarantees the efficient compression and storage of vast seismic datasets.
+    
+-   **QuakeML**: An XML-based data format tailored for the representation of seismological event parameters. Its structured design enables comprehensive documentation of seismic event metadata, including origins, magnitudes, and focal mechanisms.
+    
+-   **StationXML**: This format provides a detailed and structured representation of seismic network, station, and channel metadata. It encompasses crucial information about instrument responses, location, and other attributes critical for accurate seismic data interpretation.
+    
+
+Such foundational structures are acknowledged for their robustness, compatibility, and broad acceptance within the seismological community. While miniSEED, QuakeML, and StationXML are all exemplary in design and scope, they have been historically oriented towards global seismic monitoring needs. Although they can be employed in their current form for μseismic monitoring in mines, they would benefit from nuanced modifications to more closely align with the unique demands and intricacies of μseismic monitoring within mining environments. Consequently, our proposed adaptations to these foundational formats are elucidated as follows:
 
 #### QuakeML Adaptations:
 
@@ -123,7 +133,7 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzNjUyMTAxNCwxNzQyMjM2LC0xNjYzNz
+eyJoaXN0b3J5IjpbLTk4NjgzMDA4MiwxNzQyMjM2LC0xNjYzNz
 UwMDQwLDI2OTUzMzY1MSwyMTI5ODEwMzQxLC0xODc4MDA3MzAs
 ODE2MTA3NDg0LC00NjU1MjkyNzMsMjAwMDc3NDQyOSwtMzU0OD
 AzNTA4LC0xODEwMDUxNV19
