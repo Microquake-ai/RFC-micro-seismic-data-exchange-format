@@ -69,7 +69,41 @@ The _miniSEED_ format is widely adopted in seismology and is very convenient for
 - **Channel Code**: Three (3) alphanumerical characters, following the FDSN guidelines of August 2000.
 
 ##### Alternative Formats
-The IRIS DMC recommends the use of the TileDB or Zarr formats over the HDF5 based format like the ASDF format. The TileDB and Zarr format can both conveniently be used to store the waveform data
+The IRIS DMC recommends the use of the Zarr formats (or TileDB) over the HDF5 based format like the ASDF format. The Zarr format can conveniently be used to store the waveform data. Below is an example that allow storing the information contained in an _Obspy_ Stream object in a Zarr file:
+
+```p
+import zarr
+import obspy
+
+def stream_to_zarr_group(stream, zarr_group_path):
+    """
+    Converts an ObsPy stream to a Zarr group.
+    Each trace is stored as a separate Zarr array with its associated metadata.
+    :param stream: ObsPy Stream object
+    :param zarr_group_path: Path to create/save the Zarr group
+    """
+
+    # Create or open a Zarr group
+    group = zarr.open_group(zarr_group_path, mode='a')
+
+    for tr in stream:
+        trace_id = tr.id.replace(".", "_")  # Use trace id as array name (replace '.' to be safe)
+
+        # Create Zarr array for this trace
+        arr = group.create_dataset(trace_id, data=tr.data, shape=(len(tr.data),), dtype='float32', overwrite=True)
+
+        # Store all trace stats as Zarr attributes
+        for key, value in tr.stats.items():
+            # Convert non-string objects to strings for easier storage and retrieval
+            arr.attrs[key] = str(value)
+
+# Load a sample ObsPy Stream (modify this to load your data)
+st = obspy.read()
+
+# Convert and store the stream in a Zarr group
+stream_to_zarr_group(st, 'seismic_data_group.zarr')
+
+```
 
 ### Catalog Information
 The catalog information 
@@ -81,7 +115,7 @@ The catalog information
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNzY1MDkwOSw1NTQ3NTcwMDcsMTcxND
-k5ODI0MCwtNDY2MjgwNjUwLDE2MzAxNTI3MjQsLTEzNzM3MDIz
-NTcsLTEzODU5NzAzNTBdfQ==
+eyJoaXN0b3J5IjpbLTE4NDcwNzMzOCwxMDE3NjUwOTA5LDU1ND
+c1NzAwNywxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1Mjcy
+NCwtMTM3MzcwMjM1NywtMTM4NTk3MDM1MF19
 -->
