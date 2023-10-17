@@ -45,8 +45,8 @@ The vibration data shall be provided with the metadata required to appropriately
 The required metadata are:
 
 - **Network Code** &mdash; Represents the code of the network and shall be expressed with two character
-- **Station Code** &mdash; Represents the code of the station that contains the digitizer
-- **Location Code** &mdash; A unique two character numerical code representing the sensor ID
+- **Station Code** &mdash; Represents the code of the station that contains the digitizer.
+- **Location Code** &mdash; A two character numerical code representing the recording site (where the sensor is deployed). For each station, the location code shall be unique. 
 - **Channel Code**
 
 
@@ -54,5 +54,5 @@ The required metadata are:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0NDM2MDI4XX0=
+eyJoaXN0b3J5IjpbMTA2NzIyMjI4XX0=
 -->
