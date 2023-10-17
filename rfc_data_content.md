@@ -65,9 +65,11 @@ The _miniSEED_ format is widely adopted in seismology and is very convenient for
 
 - **Network Code** &mdash; Two (2) alphanumerical characters
 - **Station Code**: Five (5) alphanumerical characters
-- **Location Code**: Two (4)
+- **Location Code**: Two (2) alphanumerical characters
+- **Channel Code**: Three (3) alphanumerical characters, following the FDSN guidelines of August 2000.
 
-**Suggested data format:** We recommend using the _miniSEED_ format using a 4096 block size to package the waveform data. The _miniSEED_ format is widely adopted in seismology. It is an efficient, flexible and easy to read seismic data container. The _miniSEED_ format can accommodate traces from different instrument acquired at a different sampling rate, of different sampling rate, start times and end times. The format also efficient merging of data as the "blockettes" can usually be combined together and shuffled around. 
+##### Alternative Formats
+The Iris DMC recommend the use of  
 
 ### Catalog Information
 The catalog information 
@@ -79,7 +81,7 @@ The catalog information
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4MzI1NjcyNiw1NTQ3NTcwMDcsMTcxND
-k5ODI0MCwtNDY2MjgwNjUwLDE2MzAxNTI3MjQsLTEzNzM3MDIz
-NTcsLTEzODU5NzAzNTBdfQ==
+eyJoaXN0b3J5IjpbLTE3NzYzMDYzMjEsNTU0NzU3MDA3LDE3MT
+Q5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNzI0LC0xMzczNzAy
+MzU3LC0xMzg1OTcwMzUwXX0=
 -->
