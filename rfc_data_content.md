@@ -38,7 +38,7 @@ To ensure interoperability, the information in the provided files shall be consi
 
 ### Waveform data
 
-The waveform data is the raw vibration recorded directly by the sensors. For convenience, the waveform data should be provided in physical units native to the instrument recording the data of $m$, ${m}/{s}$, or $m/s^2$ for displacement, velocity and acceleration, respectively. 
+The waveform data is the raw vibration recorded directly by the sensors. For convenience, the waveform data should be provided in physical units native to the instrument recording the data of $m$, ${m}/{s}$, or $m/s^2$ for displacement, velocity and acceleration, respectively. The data can also be stored in ADC count as integers. The advantage with 
 
 The vibration data shall be provided with the metadata required to appropriately read and interpret the waveform.
 
@@ -55,7 +55,7 @@ The required metadata for each trace is:
  - **Calibration Factor [calib]** &mdash; The calibration factor this value is optional and will be set to 1.0 if not provided. This value represents the calibration factor should the sensor deviate from the typical response.
  - **Start Time [starttime]** &mdash; The trace start time.  
 
-**Suggested data format:** We recommend using the _miniSEED_ format using a to package the waveform data 
+**Suggested data format:** We recommend using the _miniSEED_ format using a 4096 block size to package the waveform data. The miniSEED format is widely adopted in seismology and is 
           
 
 
@@ -64,6 +64,6 @@ The required metadata for each trace is:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTYyMjg2NjAsLTQ2NjI4MDY1MCwxNj
-MwMTUyNzI0LC0xMzczNzAyMzU3LC0xMzg1OTcwMzUwXX0=
+eyJoaXN0b3J5IjpbMTcxNDk5ODI0MCwtNDY2MjgwNjUwLDE2Mz
+AxNTI3MjQsLTEzNzM3MDIzNTcsLTEzODU5NzAzNTBdfQ==
 -->
