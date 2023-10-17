@@ -38,13 +38,11 @@ To ensure interoperability, the information in the provided files shall be consi
 
 ### Waveform data
 
-The waveform data is the raw vibration recorded directly by the sensors. For convenience, the waveform data can be provided in physical units native to the instrument recording the data of $m$, ${m}/{s}$, or $m/s^2$ for displacement, velocity and acceleration, respectively. However, if size is of concern, storing the ADC count is more appropriate. Storing the ADC count represented as integers allow the usage of the Steim1 and Steim2 differential compression algorithms. Along the ti
+The waveform data is the raw vibration recorded directly by the sensors. For convenience, the waveform data can be provided in physical units native to the instrument recording the data of $m$, ${m}/{s}$, or $m/s^2$ for displacement, velocity and acceleration, respectively. However, if size is of concern, storing the ADC count is more appropriate. Storing the ADC count represented as integers allow the usage of the Steim1 and Steim2 differential compression algorithms. 
 
-The vibration data shall be provided with the metadata required to appropriately read and interpret the waveform.
+Along the amplitude values additional metadata describing the instrument recording the data and time series parameter should be provided for each trace. Each trace shall be stored with its own metadata information
 
-Each trace shall be stored with its own metadata information
-
-The required metadata for each trace is:
+The required metadata for each trace are:
 
 - **Location identification**: The location identification convention described [here](https://ds.iris.edu/ds/newsletter/vol1/no1/1/specification-of-seismograms-the-location-identifier/). The convention has been adapted for the purpose of &mu;seismic monitoring in the mining context. 
   - **Network Code [network_code]** &mdash; Represents the code of the network and shall be expressed with two character
@@ -55,7 +53,7 @@ The required metadata for each trace is:
  - **Calibration Factor [calib]** &mdash; The calibration factor this value is optional and will be set to 1.0 if not provided. This value represents the calibration factor should the sensor deviate from the typical response.
  - **Start Time [starttime]** &mdash; The trace start time.  
 
-**Suggested data format:** We recommend using the _miniSEED_ format using a 4096 block size to package the waveform data. The miniSEED format is widely adopted in seismology and is 
+**Suggested data format:** We recommend using the _miniSEED_ format using a 4096 block size to package the waveform data. The miniSEED format is widely adopted in seismology. It is an efficient and we
           
 
 
@@ -64,7 +62,7 @@ The required metadata for each trace is:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODkyOTM5OTMyLDE3MTQ5OTgyNDAsLTQ2Nj
-I4MDY1MCwxNjMwMTUyNzI0LC0xMzczNzAyMzU3LC0xMzg1OTcw
-MzUwXX0=
+eyJoaXN0b3J5IjpbLTQ5NTcxMjU2OCwxNzE0OTk4MjQwLC00Nj
+YyODA2NTAsMTYzMDE1MjcyNCwtMTM3MzcwMjM1NywtMTM4NTk3
+MDM1MF19
 -->
