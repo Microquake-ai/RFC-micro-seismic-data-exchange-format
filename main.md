@@ -2,11 +2,14 @@
 ## Introduction
 ### Purpose
 
-The objective of this Request for Comment (RFC) is to present a new, unified, and interoperable standard tailored for exchanging &mu;seismic data collected by mine &mu;seismic monitoring systems. The proposes standard seeks primarily to ensure lossless export and that all information required to utilise the data are readily available and properly packaged. The current standard is not primarily designed for the efficient recovery from disk of channel by channel information. A standard format based on TileDB, Zarr or the ASDF would be more efficient for that purpose. This RFC seeks valuable feedback and input from industry stakeholders, researchers, and vendors to ensure the robustness and adaptability of the proposed format. 
+The objective of this Request for Comment (RFC) is to present a new, unified, and interoperable standard tailored for exchanging &mu;seismic data collected by mine &mu;seismic monitoring systems. The proposes standard seeks primarily to ensure lossless export and that all information required to utilise the data are readily available and properly packaged. The current standard is not primarily designed for the efficient recovery from disk of channel by channel information. A standard format based on TileDB, Zarr or the ASDF would be more efficient for that purpose. 
 
+The propose standard aims at accomodating a wide range of application and
 In the current mining scenario, the absence of a standardized data format, combined with the proliferation of proprietary systems, has created barriers to efficient data exchange and integration. This results in potential inefficiencies, increased costs, and limitations in adopting multivendor solutions. Given the complexities and unique requirements of linked to the microseismic monitoring data collected by mining operations, there's a pronounced need for a format that can accommodate a broad range of seismic data types. The proposed format can accomodate a wide range scenario including distibuted acoustic sensing. 
 
 Drawing inspiration from tried-and-tested standards in earthquake seismology (miniSEED, QuakeML and StationXML), this document introduces the necessary modifications to adapt to the specifics of the mining context. The overarching aim is to usher in a comprehensive, open-source standard that promotes consistent and unhindered data interchange across a variety of systems and platforms. Through this endeavor, we anticipate fostering collaboration, improving data analysis capabilities, and paving the way for innovation in microseismic monitoring in mining.
+
+This RFC seeks valuable feedback and input from industry stakeholders, researchers, and vendors to ensure the robustness and adaptability of the proposed format. 
 
 
 ### Scope
@@ -122,7 +125,8 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjM3NTAwNDAsMjY5NTMzNjUxLDIxMj
-k4MTAzNDEsLTE4NzgwMDczMCw4MTYxMDc0ODQsLTQ2NTUyOTI3
-MywyMDAwNzc0NDI5LC0zNTQ4MDM1MDgsLTE4MTAwNTE1XX0=
+eyJoaXN0b3J5IjpbMjAwNjk2MzI4OSwtMTY2Mzc1MDA0MCwyNj
+k1MzM2NTEsMjEyOTgxMDM0MSwtMTg3ODAwNzMwLDgxNjEwNzQ4
+NCwtNDY1NTI5MjczLDIwMDA3NzQ0MjksLTM1NDgwMzUwOCwtMT
+gxMDA1MTVdfQ==
 -->
