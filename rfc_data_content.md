@@ -24,11 +24,24 @@ The scope is to define the content and nature &mu;seismic information provided t
 
 Microseismic data plays a important role in ensuring the safety and enabling the efficiency of underground mining operations. While it's one of several essential tools in the arsenal of modern mining techniques, the current scenario of diverse data formats can sometimes complicate seamless integration and analysis.
 
+#### Goal
+
+Acknowledging these subtleties, the proposed data content comes with the following objectives:
+
+-   **Promote Interoperability**: A common content to simplify the exchange, processing, and analysis of &mu;seismic data across a range of systems, championing collaboration and data coherence regardless of vendor distinctions.
+    
+-   **Promote Innovation**: A harmonized framework can invigorate a healthy competitive land. Vendors are then positioned to focus on elevating equipment quality, finessing data analysis methodologies, and providing top-tier customer support, free from data format nuances.
+    
+-   **Leverage Established Seismological Standards**: This standard harnesses the strength of existing seismological data formats. While they form the foundational backbone, specific extensions are melded in to meet the unique requirements of the mining industry.
+    
+-   **Catalyze Technological Advancements**: With a universally endorsed standard, the mining sector is primed to adopt and assimilate breakthroughs in microseismic monitoring and analysis, ensuring continued advancement in safety and operational efficiency.
+
+
 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjIzNTkwMzQ0XX0=
+eyJoaXN0b3J5IjpbMTY1OTU2MzU2N119
 -->
