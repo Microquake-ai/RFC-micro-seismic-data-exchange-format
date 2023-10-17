@@ -253,6 +253,7 @@ The inventory or system information of a seismic network, which details the stat
 Storing inventory information in a `Zarr` format offers flexibility, especially when dealing with large datasets. Like the catalog information, the StationXML data can be serialized using the json library and then stored in a `Zarr` file. This allows for efficient storage and quick retrieval of inventory data. An code example is provided below:
 
 ```python
+# import Obspy
 import uquake # Similar to obspy but tailored for μseismic
 import zarr
 import json
@@ -275,8 +276,11 @@ new_inventory = uquake.read_inventory(filename=None, format="JSON",
 data=stored_json_string)
 
 print(new_inventory)
-
 ```
+
+##### StationXML
+
+StationXML is the conventional format for representing inventory information in the seismic community. Being a structured XML-based format, it provides a comprehensive framework for detailing stations and channels. When using StationXML, especially in a μseismic context, it's vital to ensure that the modifications made (such as the introduction of `x, y, z` coordinates and unit vector for channel orientation) are incorporated correctly.
 
 
 
@@ -288,7 +292,7 @@ print(new_inventory)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTkxMDQyMiwtMTk0NTcyNzg1OCwtMz
+eyJoaXN0b3J5IjpbLTQyMDc4NzEyNywtMTk0NTcyNzg1OCwtMz
 EyMDI4MjM4LDQ2MzY4NDQ5NywtMTYxNjE3MzU4MiwxMDQ0NDA1
 MTU0LC0xNjQ1OTE3MDk0LDg0MDE0NTA1OSwtMTQzMTg5MDM5My
 wtMTE3NzIyNzk0NywxMDgxMDE3NjY2LDExMjQxMTQxOTMsLTcx
