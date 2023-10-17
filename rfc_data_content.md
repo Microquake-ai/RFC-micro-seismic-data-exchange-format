@@ -284,7 +284,7 @@ StationXML is the conventional format for representing inventory information in 
 
 ### System Metadata and Grid Data
 
-To fully enable the interpretation of the seismic data, accessing the 
+To fully enable the interpretation of the seismic data, accessing information on the velocity models is essential. Other important although not as essential are the attenuation model if they exist and the density values or model. For the velocity,  
 
 
 
@@ -296,11 +296,11 @@ To fully enable the interpretation of the seismic data, accessing the
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1NDQ4NDExMiwtMTk0NTcyNzg1OCwtMz
-EyMDI4MjM4LDQ2MzY4NDQ5NywtMTYxNjE3MzU4MiwxMDQ0NDA1
-MTU0LC0xNjQ1OTE3MDk0LDg0MDE0NTA1OSwtMTQzMTg5MDM5My
-wtMTE3NzIyNzk0NywxMDgxMDE3NjY2LDExMjQxMTQxOTMsLTcx
-MjQxOTE5MSwxNTQ2MjI3MTkyLDEwMTc2NTA5MDksNTU0NzU3MD
-A3LDE3MTQ5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNzI0LC0x
-MzczNzAyMzU3XX0=
+eyJoaXN0b3J5IjpbLTEwNjk2MjA5MTgsLTE5NDU3Mjc4NTgsLT
+MxMjAyODIzOCw0NjM2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0NDQw
+NTE1NCwtMTY0NTkxNzA5NCw4NDAxNDUwNTksLTE0MzE4OTAzOT
+MsLTExNzcyMjc5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03
+MTI0MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1Nz
+AwNywxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwt
+MTM3MzcwMjM1N119
 -->
