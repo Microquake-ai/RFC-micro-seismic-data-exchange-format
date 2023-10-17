@@ -184,7 +184,11 @@ Using Latitude and Longitude to describe the mining related events is possible b
 Two possibilities:
 
 1. Redefine the schema; or 
-2. Use the QuakeML extra parameters to store the x, y and z values
+2. Use the QuakeML extra parameters to store the x, y and z values and associated errors.
+
+the P&mu; 
+```python
+```
 
 
 
@@ -205,9 +209,9 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDAwNDA1NjgsLTE0MzE4OTAzOTMsLT
-ExNzcyMjc5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03MTI0
-MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAwNy
-wxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwtMTM3
-MzcwMjM1NywtMTM4NTk3MDM1MF19
+eyJoaXN0b3J5IjpbMTU1NTMyNzkzOCwtMTQzMTg5MDM5MywtMT
+E3NzIyNzk0NywxMDgxMDE3NjY2LDExMjQxMTQxOTMsLTcxMjQx
+OTE5MSwxNTQ2MjI3MTkyLDEwMTc2NTA5MDksNTU0NzU3MDA3LD
+E3MTQ5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNzI0LC0xMzcz
+NzAyMzU3LC0xMzg1OTcwMzUwXX0=
 -->
