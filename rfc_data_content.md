@@ -44,7 +44,7 @@ Along the amplitude values additional metadata describing the instrument recordi
 
 The required metadata for each trace are:
 
-- **Trace Identifier**: A unique identifier for the trace 
+- **Trace Identifier**: A unique identifier for the trace (see 
 - **Location identification**: The location identification convention described [here](https://ds.iris.edu/ds/newsletter/vol1/no1/1/specification-of-seismograms-the-location-identifier/). The convention has been adapted for the purpose of &mu;seismic monitoring in the mining context. 
   - **Network Code [network_code]** &mdash; Code representing the network. 
   - **Station Code [station_code]** &mdash; Code that representing the station containing the digitizer. 
@@ -153,8 +153,8 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3OTA2NTg0OCwxMTI0MTE0MTkzLC03MT
-I0MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAw
-NywxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwtMT
-M3MzcwMjM1NywtMTM4NTk3MDM1MF19
+eyJoaXN0b3J5IjpbNzA4ODY2ODYzLDExMjQxMTQxOTMsLTcxMj
+QxOTE5MSwxNTQ2MjI3MTkyLDEwMTc2NTA5MDksNTU0NzU3MDA3
+LDE3MTQ5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNzI0LC0xMz
+czNzAyMzU3LC0xMzg1OTcwMzUwXX0=
 -->
