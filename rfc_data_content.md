@@ -55,7 +55,7 @@ The required metadata for each trace are:
 
 #### Notes:
 
-**Network, Station and Location Codes**: The above convention is usually not strictly followed by the &mu;seismic system suppliers. Flexibility in applying the convention is necessary. There is usually no distinction between the station and location, and each instrument receives a unique code that may or may not refer to the data acquisition station. In this case, we suggest using the **Station Code** field to store the _instrument_ code and  fill the location code using 01 or 00. The combination of Station 
+**Network, Station and Location Codes**: The above convention is usually not strictly followed by the &mu;seismic system suppliers. Flexibility in applying the convention is necessary. There is usually no distinction between the station and location, and each instrument receives a unique code that may or may not refer to the data acquisition station. In this case, we suggest using the **Station Code** field to store the _instrument_ code and  fill the location code using 01 or 00. In a network, each combination of **Station Code** &ndash; **Location Code** &ndash; **Channel Code** should be unique.
 
 **Important Notes Concerning the miniSEED format:**
 
@@ -71,7 +71,7 @@ The catalog information
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDE1MTgwMjIsNTU0NzU3MDA3LDE3MT
-Q5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNzI0LC0xMzczNzAy
-MzU3LC0xMzg1OTcwMzUwXX0=
+eyJoaXN0b3J5IjpbMTM2Mzc3NDEyNCw1NTQ3NTcwMDcsMTcxND
+k5ODI0MCwtNDY2MjgwNjUwLDE2MzAxNTI3MjQsLTEzNzM3MDIz
+NTcsLTEzODU5NzAzNTBdfQ==
 -->
