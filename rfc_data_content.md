@@ -198,8 +198,8 @@ The catalog information can easily be packaged with the waform in a `Zarr` file.
 
 ```python
 # import obspy
-import uquake # similar to obspy with the modifications discussed 
-above implemented
+import uquake # similar to obspy with the modifications previously 
+              # discussed above implemented
 import zarr
 import json
 
@@ -223,6 +223,12 @@ data=stored_json_string)
 print(new_cat)
 ```
 
+### QuakeML
+
+The file can also be strore in the native XML format.
+
+
+
 
 
 
@@ -231,9 +237,9 @@ print(new_cat)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzNDg5NjQxNCw4NDAxNDUwNTksLTE0Mz
-E4OTAzOTMsLTExNzcyMjc5NDcsMTA4MTAxNzY2NiwxMTI0MTE0
-MTkzLC03MTI0MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LD
-U1NDc1NzAwNywxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1
-MjcyNCwtMTM3MzcwMjM1NywtMTM4NTk3MDM1MF19
+eyJoaXN0b3J5IjpbLTEzNTE5ODIxMDksODQwMTQ1MDU5LC0xND
+MxODkwMzkzLC0xMTc3MjI3OTQ3LDEwODEwMTc2NjYsMTEyNDEx
+NDE5MywtNzEyNDE5MTkxLDE1NDYyMjcxOTIsMTAxNzY1MDkwOS
+w1NTQ3NTcwMDcsMTcxNDk5ODI0MCwtNDY2MjgwNjUwLDE2MzAx
+NTI3MjQsLTEzNzM3MDIzNTcsLTEzODU5NzAzNTBdfQ==
 -->
