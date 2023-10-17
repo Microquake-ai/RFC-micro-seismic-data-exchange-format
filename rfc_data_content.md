@@ -30,11 +30,14 @@ The proposed data content is mainly designed to promote interoperability and inn
 
 ## Proposal
 
-We propose to  concerns three categories of data
+
+Our proposal concerns three categories of data, the waveforms, the catalog data and the inventory and system information.
+
+
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY4Njk0NzczXX0=
+eyJoaXN0b3J5IjpbMjQ4Mjk3NTMzXX0=
 -->
