@@ -111,6 +111,8 @@ StationXML v1.2, primarily used for detailing metadata associated with seismic s
 
 _Deviation from the standard includes the utilization of Easting, Northing, and Z-coordinates for station and channels, channel orientation based on the cosine vector, and the allowance for longer station names._
 
+
+
 #### File Packaging and Structure
 
 MDE v1.0 suggests a distinct packaging strategy. For **triggered data**, the package should comprise three components: `catalog.xml`, `stream.mseed`, and `inventory.xml`. For **continuous data**, only `stream.mseed` and `inventory.xml` are necessary. The files should be packaged using the tar protocol, then compressed using gzip. Upon decompression, the `.mde` package would reveal these constituent files, each echoing with event catalogs, waveform data, or inventory information respectively.
@@ -134,8 +136,9 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExMDcwNDk5NiwtMTAwNjI2NzcyNywxNz
-QyMjM2LC0xNjYzNzUwMDQwLDI2OTUzMzY1MSwyMTI5ODEwMzQx
-LC0xODc4MDA3MzAsODE2MTA3NDg0LC00NjU1MjkyNzMsMjAwMD
-c3NDQyOSwtMzU0ODAzNTA4LC0xODEwMDUxNV19
+eyJoaXN0b3J5IjpbMTUwMDIxOTk2OCwyMTEwNzA0OTk2LC0xMD
+A2MjY3NzI3LDE3NDIyMzYsLTE2NjM3NTAwNDAsMjY5NTMzNjUx
+LDIxMjk4MTAzNDEsLTE4NzgwMDczMCw4MTYxMDc0ODQsLTQ2NT
+UyOTI3MywyMDAwNzc0NDI5LC0zNTQ4MDM1MDgsLTE4MTAwNTE1
+XX0=
 -->
