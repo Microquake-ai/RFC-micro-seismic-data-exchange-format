@@ -329,6 +329,65 @@ In this representation, the grid values are stored in a structured manner, allow
 
 #### Implementation
 
+### Implementation using `uquake`
+
+The `uquake` library provides the necessary tools to handle gridded data in seismology. One of the primary objects to manage such grid data is the `Grid` class from `uquake.core.grid.base`. This class is designed to hold regular grids and can be employed for both 2D and 3D data structures.
+
+#### Initializing a Grid
+
+The `Grid` object can be initialized using either a numpy array representing the grid data or by specifying the grid dimensions. When using the latter approach, the grid is initialized with a default or specified value.
+
+Let's consider a simple example to illustrate this:
+```python
+from uquake.core.grid.base import Grid
+import numpy as np
+
+#### Define grid header specifications
+
+header = {
+    "NX": 100,  
+    "NY": 100,  
+    "NZ": 50,   
+    "ORIGX": 0.0,  
+    "ORIGY": 0.0,  
+    "ORIGZ": 0.0,  
+    "SPACEX": 0.1,  
+    "SPACEY": 0.1,  
+    "SPACEZ": 0.2,  
+}
+```
+
+#### Initialize the grid using grid dimensions and set default value as 0
+
+```python
+grid_dims = (header["NX"], header["NY"], header["NZ"])
+spacing = (header["SPACEX"], header["SPACEY"], header["SPACEZ"])
+origin = (header["ORIGX"], header["ORIGY"], header["ORIGZ"])
+
+grid = Grid(data_or_dims=grid_dims, spacing=spacing, origin=origin, value=0)
+```
+
+Here, we've initialized a 3D grid using the dimensions specified in the header. The grid is filled with a default value of 0.
+
+#### Reading and Writing Grids
+
+The `Grid` object is equipped with methods to read and write grid data, making it easy to load existing grids or store newly created or modified grids.
+
+Here's an example of how one might read from and write to a grid file:
+
+pythonCopy code
+
+`# Assuming 'read' and 'write' methods are available
+# Reading a grid from a file
+grid_from_file = Grid.read("path_to_grid_file.grid")
+
+# Perform any modifications to the grid...
+
+# Write the modified or new grid to a file
+grid_from_file.write("path_to_new_grid_file.grid")` 
+
+This approach simplifies the process of handling gridded data in seismology by using the `uquake` library's built-in functionalities.
+
 
 
 
@@ -340,11 +399,11 @@ In this representation, the grid values are stored in a structured manner, allow
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4OTQzNTk5MywtNzU0MzcxODE5LC0xOT
-g3MDQzMDk5LC0xOTQ1NzI3ODU4LC0zMTIwMjgyMzgsNDYzNjg0
-NDk3LC0xNjE2MTczNTgyLDEwNDQ0MDUxNTQsLTE2NDU5MTcwOT
-QsODQwMTQ1MDU5LC0xNDMxODkwMzkzLC0xMTc3MjI3OTQ3LDEw
-ODEwMTc2NjYsMTEyNDExNDE5MywtNzEyNDE5MTkxLDE1NDYyMj
-cxOTIsMTAxNzY1MDkwOSw1NTQ3NTcwMDcsMTcxNDk5ODI0MCwt
-NDY2MjgwNjUwXX0=
+eyJoaXN0b3J5IjpbLTE4Nzk0ODI3MjcsLTM4OTQzNTk5MywtNz
+U0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3ODU4LC0zMTIw
+MjgyMzgsNDYzNjg0NDk3LC0xNjE2MTczNTgyLDEwNDQ0MDUxNT
+QsLTE2NDU5MTcwOTQsODQwMTQ1MDU5LC0xNDMxODkwMzkzLC0x
+MTc3MjI3OTQ3LDEwODEwMTc2NjYsMTEyNDExNDE5MywtNzEyND
+E5MTkxLDE1NDYyMjcxOTIsMTAxNzY1MDkwOSw1NTQ3NTcwMDcs
+MTcxNDk5ODI0MF19
 -->
