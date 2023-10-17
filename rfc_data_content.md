@@ -51,7 +51,13 @@ The required metadata for each trace are:
   - **Channel Code [channel_code]** &mdash; The three (3) alphanumerical code that represents the channel and shall follow the FDSN standard naming convention of August 2000 described in the SEED document [Appendix A](http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf). The first letter represents the band code, the second the instrument code and the third the orientation code. For instance, a typical $14 Hz$ or $15 Hz$ omnidirectional geophones code would be GH?, where ? would be replaced by the appropriate component orientation code. 
  - **Sampling Rate [sampling_rate]** &mdash; The signal sampling rate in sample per second.
  - **Calibration Factor [calib]** &mdash; The calibration factor this value is optional and will be set to 1.0 if not provided. This value represents the calibration factor should the sensor deviate from the typical response.
- - **Start Time [starttime]** &mdash; The trace start time.  
+ - **Start Time [starttime]** &mdash; The trace start time.
+
+#### Notes:
+
+**  
+
+**Important Notes Concerning the miniSEED format:**
 
 **Suggested data format:** We recommend using the _miniSEED_ format using a 4096 block size to package the waveform data. The _miniSEED_ format is widely adopted in seismology. It is an efficient, flexible and easy to read seismic data container. The _miniSEED_ format can accommodate traces from different instrument acquired at a different sampling rate, of different sampling rate, start times and end times. The format also efficient merging of data as the "blockettes" can usually be combined together and shuffled around. 
 
@@ -65,7 +71,7 @@ The catalog information
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ5MDM5MzAxLDU1NDc1NzAwNywxNzE0OT
-k4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwtMTM3MzcwMjM1
-NywtMTM4NTk3MDM1MF19
+eyJoaXN0b3J5IjpbLTE5MDkxNTQ4NDUsNTU0NzU3MDA3LDE3MT
+Q5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNzI0LC0xMzczNzAy
+MzU3LC0xMzg1OTcwMzUwXX0=
 -->
