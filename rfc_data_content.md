@@ -288,13 +288,47 @@ To fully enable the interpretation of the seismic data, accessing information on
 
 In this section, we propose using a simple grid format for data exchange.  
 
+
 #### Grid Format Overview
 
-The NLLOC grid format is a structured representation designed to capture the velocity model in a gridded manner. This format primarily consists of a header, which details the grid's metadata, and the actual data values in the grid.
+The grid format is structured to represent the velocity model in a systematic, gridded layout. It comprises two main components: the header, which contains metadata about the grid, and the grid values that reflect the actual data.
 
 ##### Header
 
-The header section provides crucial information about the grid, including its dimensions, the geographic origin, and the grid spacing. A typical header might look something like:
+The header is a crucial section that offers insights into the grid's specifications, such as its dimensions, the starting point (origin) of the grid, and the intervals or spacings between grid points. A sample header in Python dictionary format might look like:
+
+```python
+header = {
+    "NX": 100,            # Number of grid points in the X direction
+    "NY": 100,            # Number of grid points in the Y direction
+    "NZ": 50,             # Number of grid points in the Z direction
+    "ORIGX": 0.0,         # X coordinate of the grid origin
+    "ORIGY": 0.0,         # Y coordinate of the grid origin
+    "ORIGZ": 0.0,         # Z coordinate of the grid origin
+    "SPACEX": 0.1,        # Grid spacing in the X direction
+    "SPACEY": 0.1,        # Grid spacing in the Y direction
+    "SPACEZ": 0.2,        # Grid spacing in the Z direction
+}
+```
+
+This dictionary effectively captures the grid's spatial boundaries, intervals, and the type of data contained.
+
+##### Grid Data
+
+The grid data values follow the header. Organized in a sequence, they represent their positions within the grid. For simplicity and efficiency, these values can be represented as a 2D numpy array:
+
+```python
+import numpy as np
+
+# For demonstration purposes, initializing a 2D array with NXxNYxNZ dimensions
+grid_values = np.zeros((header["NX"], header["NY"], header["NZ"]))
+
+```
+
+In this representation, the grid values are stored in a structured manner, allowing for easy indexing and operations. Each cell in the array corresponds to a grid point in the velocity model, with its value representing the velocity (or density or attenuation, depending on the grid type) at that point.
+
+#### Implementatio
+
 
 
 
@@ -306,11 +340,11 @@ The header section provides crucial information about the grid, including its di
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMT
-k0NTcyNzg1OCwtMzEyMDI4MjM4LDQ2MzY4NDQ5NywtMTYxNjE3
-MzU4MiwxMDQ0NDA1MTU0LC0xNjQ1OTE3MDk0LDg0MDE0NTA1OS
-wtMTQzMTg5MDM5MywtMTE3NzIyNzk0NywxMDgxMDE3NjY2LDEx
-MjQxMTQxOTMsLTcxMjQxOTE5MSwxNTQ2MjI3MTkyLDEwMTc2NT
-A5MDksNTU0NzU3MDA3LDE3MTQ5OTgyNDAsLTQ2NjI4MDY1MCwx
-NjMwMTUyNzI0XX0=
+eyJoaXN0b3J5IjpbLTExMzU0MjY5MjUsLTc1NDM3MTgxOSwtMT
+k4NzA0MzA5OSwtMTk0NTcyNzg1OCwtMzEyMDI4MjM4LDQ2MzY4
+NDQ5NywtMTYxNjE3MzU4MiwxMDQ0NDA1MTU0LC0xNjQ1OTE3MD
+k0LDg0MDE0NTA1OSwtMTQzMTg5MDM5MywtMTE3NzIyNzk0Nywx
+MDgxMDE3NjY2LDExMjQxMTQxOTMsLTcxMjQxOTE5MSwxNTQ2Mj
+I3MTkyLDEwMTc2NTA5MDksNTU0NzU3MDA3LDE3MTQ5OTgyNDAs
+LTQ2NjI4MDY1MF19
 -->
