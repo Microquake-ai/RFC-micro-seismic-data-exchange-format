@@ -123,15 +123,14 @@ st = uquake.read()
 # Convert and store the stream in a Zarr group
 stream_to_zarr_group(st, 'seismic_data_group.zarr')
 ```
-
 ##### MiniSEED
 
-The _miniSEED_ format is an alternative. _MiniSEED_ is widely adopted in seismology and very convenient for storing seismic data. The _miniSEED_ format can accommodate traces from different instrument type (geophone, accelerometer, seismometer, etc.) acquired at a different sampling rate, with variable start times and end times. It is important to note, however, that to use _miniSEED_ the network, station, location, and channels code must adhere to a strict convention described below:
+The _miniSEED_ format is another viable option. _MiniSEED_ is widely adopted in seismology and is exceptionally suitable for storing seismic data. The _miniSEED_ format can accommodate traces from various instrument types (geophone, accelerometer, seismometer, etc.), acquired at different sampling rates, with varying start and end times. However, it's essential to note that to use _miniSEED_, the network, station, location, and channel codes must adhere to a strict convention described below:
 
-- **Network Code** &mdash; Two (2) alphanumerical characters
-- **Station Code**: Five (5) alphanumerical characters
-- **Location Code**: Two (2) alphanumerical characters
-- **Channel Code**: Three (3) alphanumerical characters, following the FDSN guidelines of August 2000.
+-   **Network Code** — Two (2) alphanumerical characters.
+-   **Station Code**: Five (5) alphanumerical characters.
+-   **Location Code**: Two (2) alphanumerical characters.
+-   **Channel Code**: Three (3) alphanumerical characters, following the FDSN guidelines of August 2000.
 
 ### Catalog
 
@@ -239,10 +238,10 @@ The file can also be strore in the native XML format.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTYxNzM1ODIsMTA0NDQwNTE1NCwtMT
-Y0NTkxNzA5NCw4NDAxNDUwNTksLTE0MzE4OTAzOTMsLTExNzcy
-Mjc5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03MTI0MTkxOT
-EsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAwNywxNzE0
-OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwtMTM3MzcwMj
-M1NywtMTM4NTk3MDM1MF19
+eyJoaXN0b3J5IjpbMTI2NjIxMDU0MSwtMTYxNjE3MzU4MiwxMD
+Q0NDA1MTU0LC0xNjQ1OTE3MDk0LDg0MDE0NTA1OSwtMTQzMTg5
+MDM5MywtMTE3NzIyNzk0NywxMDgxMDE3NjY2LDExMjQxMTQxOT
+MsLTcxMjQxOTE5MSwxNTQ2MjI3MTkyLDEwMTc2NTA5MDksNTU0
+NzU3MDA3LDE3MTQ5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNz
+I0LC0xMzczNzAyMzU3LC0xMzg1OTcwMzUwXX0=
 -->
