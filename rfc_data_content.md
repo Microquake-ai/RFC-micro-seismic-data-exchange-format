@@ -404,11 +404,29 @@ Understanding the motivations and reasons behind any proposed change is essentia
 4.  **Latitude and Longitude to X, Y, Z Conversion**: Given that most mining operations work on local coordinate systems rather than global ones, expressing positions in terms of x, y, and z becomes not just convenient, but also essential. This shift eliminates the need for complex transformations and ensures data is immediately useful for local operations and analysis.
     
 5.  **Choice of Data Packaging Formats**: The proposal to utilize `Zarr` for packaging catalog information and waveform data, and the native XML format for QuakeML, was driven by their respective capabilities and industry adoption. `Zarr` offers efficient storage and retrieval mechanisms, especially for large datasets, while the native XML format ensures compatibility with systems traditionally designed to handle QuakeML.
-    
 
 In summary, the proposed changes and implementations in this RFC stem from a direct need to address the unique challenges posed by μseismic monitoring, especially in mining contexts. They reflect both the evolution of seismic data interpretation methodologies and the tools used in the industry. Through these proposals, we aim to establish a more streamlined, precise, and standardized approach to μseismic data management and interpretation.
 
+### Feedback Mechanism
 
+Feedback and contributions from the community are essential to refining and improving this RFC. There are two primary ways through which stakeholders, developers, and interested parties can provide their feedback:
+
+1.  **GitHub Issues**:
+    
+    -   Navigate to the [RFC micro-seismic data exchange format repository on GitHub](https://github.com/Microquake-ai/RFC-micro-seismic-data-exchange-format/tree/main).
+    -   Go to the `Issues` tab.
+    -   Click on `New Issue` to create a new issue.
+    -   Provide a concise title and detailed description of your feedback, suggestions, or concerns.
+    -   Once submitted, the issue will be visible to the community, and the project maintainers will review and address it as appropriate.
+2.  **Email**:
+    
+    -   If you prefer a more direct approach or have feedback that you'd like to keep private, you can send an email to [rfc_format@microquake.ai](mailto:rfc_format@microquake.ai).
+    -   Please provide a clear subject line relevant to your feedback to ensure swift handling of your email.
+    -   While we appreciate all feedback, do note that due to the volume of emails, it might take some time before you receive a response.
+
+Whether you choose to leave an issue on GitHub or send an email, your feedback is invaluable. It aids in ensuring that the proposed micro-seismic data exchange format is robust, relevant, and addresses the needs of the community.
+
+Thank you for taking the time to review this RFC and for your contributions towards its continual improvement.
 
 
 
@@ -419,11 +437,11 @@ In summary, the proposed changes and implementations in this RFC stem from a dir
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OT
-QzNTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3
-ODU4LC0zMTIwMjgyMzgsNDYzNjg0NDk3LC0xNjE2MTczNTgyLD
-EwNDQ0MDUxNTQsLTE2NDU5MTcwOTQsODQwMTQ1MDU5LC0xNDMx
-ODkwMzkzLC0xMTc3MjI3OTQ3LDEwODEwMTc2NjYsMTEyNDExND
-E5MywtNzEyNDE5MTkxLDE1NDYyMjcxOTIsMTAxNzY1MDkwOSw1
-NTQ3NTcwMDddfQ==
+eyJoaXN0b3J5IjpbLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyOD
+gxMzE2OSwtMzg5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcwNDMw
+OTksLTE5NDU3Mjc4NTgsLTMxMjAyODIzOCw0NjM2ODQ0OTcsLT
+E2MTYxNzM1ODIsMTA0NDQwNTE1NCwtMTY0NTkxNzA5NCw4NDAx
+NDUwNTksLTE0MzE4OTAzOTMsLTExNzcyMjc5NDcsMTA4MTAxNz
+Y2NiwxMTI0MTE0MTkzLC03MTI0MTkxOTEsMTU0NjIyNzE5Miwx
+MDE3NjUwOTA5XX0=
 -->
