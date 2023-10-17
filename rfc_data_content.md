@@ -45,12 +45,12 @@ The vibration data shall be provided with the metadata required to appropriately
 The required metadata are:
 
 - **Location identification**: The location identification convention described [here](https://ds.iris.edu/ds/newsletter/vol1/no1/1/specification-of-seismograms-the-location-identifier/). The convention has been adapted for the purpose of &mu;seismic monitoring in the mining context. 
-  - **Network Code** &mdash; Represents the code of the network and shall be expressed with two character
-  - **Station Code** &mdash; A five (5) alphanumerical code representing the station contains the digitizer. The station is defined as the location where the data acquisition units reside.
-  - **Location Code** &mdash; A two (2) alphanumerical  code representing the recording site or the location of an instrument comprising one or more components. For each station, the location code of individual instrument shall be unique. 
-  - **Channel Code** &mdash; The three (3) alphanumerical code that represents the channel and shall follow the FDSN standard naming convention of August 2000 described in the SEED document [Appendix A](http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf). The first letter represents the band code, the second the instrument code and the third the orientation code. For instance, a typical $14 Hz$ or $15 Hz$ omnidirectional geophones code would be GH?, where ? would be replaced by the appropriate component orientation code. 
- - **Sampling Rate/sampling_rate** &mdash; The signal sampling rate in sample per second.
- - **Cali
+  - **Network Code [network_code]** &mdash; Represents the code of the network and shall be expressed with two character
+  - **Station Code [station_code]** &mdash; A five (5) alphanumerical code representing the station contains the digitizer. The station is defined as the location where the data acquisition units reside.
+  - **Location Code [location_code]** &mdash; A two (2) alphanumerical  code representing the recording site or the location of an instrument comprising one or more components. For each station, the location code of individual instrument shall be unique. 
+  - **Channel Code [channel_code]** &mdash; The three (3) alphanumerical code that represents the channel and shall follow the FDSN standard naming convention of August 2000 described in the SEED document [Appendix A](http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf). The first letter represents the band code, the second the instrument code and the third the orientation code. For instance, a typical $14 Hz$ or $15 Hz$ omnidirectional geophones code would be GH?, where ? would be replaced by the appropriate component orientation code. 
+ - **Sampling Rate [sampling_rate]** &mdash; The signal sampling rate in sample per second.
+ - **Calibration Factor [calib]** &mdash; The cali
           
 
 
@@ -59,6 +59,6 @@ The required metadata are:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUyMjEzMzg0LC00NjYyODA2NTAsMTYzMD
-E1MjcyNCwtMTM3MzcwMjM1NywtMTM4NTk3MDM1MF19
+eyJoaXN0b3J5IjpbMTE2MzA5MjQ5MiwtNDY2MjgwNjUwLDE2Mz
+AxNTI3MjQsLTEzNzM3MDIzNTcsLTEzODU5NzAzNTBdfQ==
 -->
