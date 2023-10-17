@@ -40,12 +40,19 @@ To ensure interoperability, the information in the provided files shall be consi
 
 The waveform data is the raw vibration recorded directly by the sensors. For convenience, the waveform data should be provided in physical units native to the instrument recording the data of $m$, ${m}/{s}$, or $m/s^2$ for displacement, velocity and acceleration, respectively. 
 
-The vibration data shall be provided with the metadata required to interpret the waveform
+The vibration data shall be provided with the metadata required to appropriately read and interpret the waveform.
+
+The required metadata are:
+
+- **Network Code** &mdash; Represents the code of the network and shall be expressed 
+- **Station Code**
+- **Location Code**
+- **Channel Code**
 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3NTQzMTA1Nl19
+eyJoaXN0b3J5IjpbMTg2NDcyMTc1NF19
 -->
