@@ -17,7 +17,7 @@ In presenting this RFC, feedback, scrutiny, and constructive contributions are a
 
 The aim of this standard is to define a comprehensive data format designed for the exchange of &mu;seismic data collected by seismic system deployed in mines. The proposed standard encompasses three pivotal components essential for lossless data conversion and for standalone: waveforms, catalogue information, and inventory data. To ensure both reliability and wide adaptability, we've grounded our approach on globally acknowledged seismological formats: miniSEED for waveforms, QuakeML for catalogue data, and StationXML for inventory specifics.
 
-These foundational formats offer robustness, compatibility and are widely adopted. While the format are comprehensive and they have been designed for the purpose of seismic monitoring on a global scale. Minimal adaptati the distinct challenges and specifications of mining environments necessitate a lcustom adaptations. Specifically, our enhancements to these formats are as follows:
+These foundational formats offer robustness, compatibility and are widely adopted. The miniSEED, QuakeML and StationsXML are all comprehensive and well designed format. While adopting them in their current form is possible, and they have been designed for the purpose of seismic monitoring on a global scale. Minimal adaptations are required to  the distinct challenges and specifications of mining environments necessitate a lcustom adaptations. Specifically, our enhancements to these formats are as follows:
 
 #### QuakeML Adaptations:
 
@@ -126,8 +126,8 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNzg2ODM0LDE3NDIyMzYsLTE2NjM3NT
-AwNDAsMjY5NTMzNjUxLDIxMjk4MTAzNDEsLTE4NzgwMDczMCw4
-MTYxMDc0ODQsLTQ2NTUyOTI3MywyMDAwNzc0NDI5LC0zNTQ4MD
-M1MDgsLTE4MTAwNTE1XX0=
+eyJoaXN0b3J5IjpbLTIxMTg1Mjc2MzMsMTc0MjIzNiwtMTY2Mz
+c1MDA0MCwyNjk1MzM2NTEsMjEyOTgxMDM0MSwtMTg3ODAwNzMw
+LDgxNjEwNzQ4NCwtNDY1NTI5MjczLDIwMDA3NzQ0MjksLTM1ND
+gwMzUwOCwtMTgxMDA1MTVdfQ==
 -->
