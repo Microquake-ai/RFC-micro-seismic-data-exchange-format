@@ -194,10 +194,33 @@ The  &mu;Quake implementation stores the `corner_frequency`, the `energy_p`, `en
 ### Catalog Information Packaging
 
 #### Zarr 
-The catalog information can easily be packaged with the waform in a `Zarr` file. The QuakeML simply needs to be serialized using the json library. The example below show how an `Obspy` or `uQuake` catalog how this can be implement is show below:
+The catalog information can easily be packaged with the waform in a `Zarr` file. The QuakeML simply needs to be serialized using the json library. The example below show how an `Obspy` or `uQuake` catalog can be stored in a `Zarr` file and retrieved:
 
 ```python
+# import obspy
+import uquake # similar to obspy with the modification discussed 
+above implemented
+import zarr
+import json
 
+# Sample Catalog
+cat = obspy.read_events()
+
+# 1. Serialize the Catalog to JSON
+json_string = cat.write(format="JSON", filename=None)
+
+# 2. Store the Serialized JSON in Zarr
+root = zarr.open_group("catalog.zarr", mode="w")
+root.array("catalog_data", data=json_string)
+
+# Reading Back from Zarr
+stored_json_string = root["catalog_data"][:].tobytes().decode()
+
+# 3. Deserialize back to Catalog object
+new_cat = obspy.read_events(filename=None, format="JSON", 
+data=stored_json_string)
+
+print(new_cat)
 ```
 
 
@@ -208,9 +231,9 @@ The catalog information can easily be packaged with the waform in a `Zarr` file.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyMjc1ODcwMywtMTQzMTg5MDM5MywtMT
-E3NzIyNzk0NywxMDgxMDE3NjY2LDExMjQxMTQxOTMsLTcxMjQx
-OTE5MSwxNTQ2MjI3MTkyLDEwMTc2NTA5MDksNTU0NzU3MDA3LD
-E3MTQ5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNzI0LC0xMzcz
-NzAyMzU3LC0xMzg1OTcwMzUwXX0=
+eyJoaXN0b3J5IjpbODQwMTQ1MDU5LC0xNDMxODkwMzkzLC0xMT
+c3MjI3OTQ3LDEwODEwMTc2NjYsMTEyNDExNDE5MywtNzEyNDE5
+MTkxLDE1NDYyMjcxOTIsMTAxNzY1MDkwOSw1NTQ3NTcwMDcsMT
+cxNDk5ODI0MCwtNDY2MjgwNjUwLDE2MzAxNTI3MjQsLTEzNzM3
+MDIzNTcsLTEzODU5NzAzNTBdfQ==
 -->
