@@ -99,6 +99,7 @@ Below is an example written in Python that allows the information contained in a
 ```python
 import zarr
 # import obspy
+import uquake  # the uquake library can be used instead of Obspy 
 
 def stream_to_zarr_group(stream, zarr_group_path):
     """
@@ -124,7 +125,7 @@ def stream_to_zarr_group(stream, zarr_group_path):
             arr.attrs[key] = tr.stats[key]
 
 # Load a sample ObsPy Stream (modify this to load your data)
-st = obspy.read()
+st = uquake.read()
 
 # Convert and store the stream in a Zarr group
 stream_to_zarr_group(st, 'seismic_data_group.zarr')
@@ -134,8 +135,8 @@ stream_to_zarr_group(st, 'seismic_data_group.zarr')
 
 The catalog includes information related to an event or trigger or a series of events. We suggest storing the catalog information in a QuakeML like format adapted to &mu;seismic data (see QuakeML documentation [documentation](https://quake.ethz.ch/quakeml)). The suggested changes affect the following QuakeML objects:
 
-- **Event** &mdash; In QuakeML, the event_type field is restricted to specific values that are not necessarily suited for  
-- **Origin** &mdash;
+- **Event** &mdash; In QuakeML, the event_type field is restricted to specific values that are not suited for &mu;seismic monitoring  
+- **Origin** &mdash; 
 
 The QuakeML format was designed to store seismic data at a regional and global scale. Consequently, the QuakeML format has adopted a spherical coordinate system storing the location information in latitude and longitude. 
 
@@ -160,7 +161,7 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE2OTY1NDkxLDEwODEwMTc2NjYsMTEyND
+eyJoaXN0b3J5IjpbOTgzOTgyMTc4LDEwODEwMTc2NjYsMTEyND
 ExNDE5MywtNzEyNDE5MTkxLDE1NDYyMjcxOTIsMTAxNzY1MDkw
 OSw1NTQ3NTcwMDcsMTcxNDk5ODI0MCwtNDY2MjgwNjUwLDE2Mz
 AxNTI3MjQsLTEzNzM3MDIzNTcsLTEzODU5NzAzNTBdfQ==
