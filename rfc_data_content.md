@@ -44,11 +44,12 @@ The vibration data shall be provided with the metadata required to appropriately
 
 The required metadata are:
 
-- **Location identification**: The location identification convention described [here](https://ds.iris.edu/ds/newsletter/vol1/no1/1/specification-of-seismograms-the-location-identifier/). The convention has been adapted to 
+- **Location identification**: The location identification convention described [here](https://ds.iris.edu/ds/newsletter/vol1/no1/1/specification-of-seismograms-the-location-identifier/). The convention has been adapted for the purpose of &mu;seismic monitoring in the mining context. 
   - **Network Code** &mdash; Represents the code of the network and shall be expressed with two character
   - **Station Code** &mdash; Represents the code of the station that contains the digitizer.
   - **Location Code** &mdash; A two character numerical code representing the recording site (where the sensor is deployed). For each station, the location code shall be unique. 
-  - **Channel Code** &mdash; The three character channel code shall follow the FDSN standard naming convention of August 2000 described in the SEED document [Appendix A](http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf). The first letter represents the band code, the second the instrument code and the third the orientation code. For instance, a typical $14 Hz$ or $15 Hz$ omnidirectional geophones code would be GH?, where ? would be replaced by the appropriate component orientation code.                                         |
+  - **Channel Code** &mdash; The three character channel code shall follow the FDSN standard naming convention of August 2000 described in the SEED document [Appendix A](http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf). The first letter represents the band code, the second the instrument code and the third the orientation code. For instance, a typical $14 Hz$ or $15 Hz$ omnidirectional geophones code would be GH?, where ? would be replaced by the appropriate component orientation code. 
+  - **Alternate Code**                                      |
           
 
 
@@ -57,6 +58,6 @@ The required metadata are:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1MzAwMDE2MywtNDY2MjgwNjUwLDE2Mz
+eyJoaXN0b3J5IjpbMTI5MjMxNDc3OCwtNDY2MjgwNjUwLDE2Mz
 AxNTI3MjQsLTEzNzM3MDIzNTcsLTEzODU5NzAzNTBdfQ==
 -->
