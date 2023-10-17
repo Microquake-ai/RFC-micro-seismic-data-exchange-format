@@ -1,0 +1,101 @@
+<h1 id="request-for-comment-μseismic-data-exchange-format">Request for Comment — μSeismic Data Exchange Format</h1>
+<h2 id="introduction">Introduction</h2>
+<h3 id="purpose">Purpose</h3>
+<p>This Request for Comment (RFC) formally introduces a proposed unified and interoperable standard tailored for the exchange of μseismic data harvested by mine μseismic monitoring systems. Fundamental to this standard is its capacity for a lossless data export, ensuring the inclusion of all critical data elements—encompassing waveform data, comprehensive inventory information (inclusive of sensor location, type, and associated response files), and catalogue data—thus furnishing all necessary components for optimal data utility. It is imperative to emphasize that this standard’s primary design does not target efficient channel-by-channel data recovery from disk storage. For such specialized retrieval requirements, alternative formats such as TileDB, Zarr, or ASDF would be more appropriate.</p>
+<p>This proposed standard exhibits adaptability, rendering it suitable for a variety of applications, ranging from the storage and dissemination of triggered or continuous data to the integration of distributed acoustic sensing (DAS) data. By building upon the foundational principles established by recognized earthquake seismology standards—miniSEED, QuakeML, and StationXML—this document elucidates the necessary modifications tailored to address the distinctive characteristics of the mining environment. The ultimate objective is to inaugurate a comprehensive, open-source standard, facilitating unobstructed data interchange across an array of systems and platforms. This initiative aspires to cultivate collaboration, augment analytical capabilities, and stimulate innovation in the domain of microseismic monitoring within the mining industry.</p>
+<p>In presenting this RFC, feedback, scrutiny, and constructive contributions are actively solicited from industry stakeholders, academic researchers, and equipment vendors. Such collaborative input is imperative to enhance the robustness and adaptability of the proposed format, ensuring its relevance and efficacy for future deployments.</p>
+<h3 id="scope">Scope</h3>
+<p>This standard seeks to establish a data format tailored for the exchange of μseismic data acquired by seismic systems operating within mines. The encapsulated proposal comprises three components essential for lossless translation of waveforms, catalogue, and system information and prescribe its usage. Our foundational strategy leverages widely recognized seismological formats, namely miniSEED for waveform representation, QuakeML for event metadata, and StationXML for system metadata.</p>
+<p>At the heart of our approach are the following seismological formats:</p>
+<ul>
+<li><p><strong>miniSEED</strong>: Compact and versatile, miniSEED serves as the container for seismic waveform representation across various seismological applications. It guarantees the efficient compression and storage of vast seismic datasets.</p></li>
+<li><p><strong>QuakeML</strong>: An XML-based data format tailored for the representation of seismological event parameters. Its structured design enables comprehensive documentation of seismic event metadata, including origins, magnitudes, and focal mechanisms and moment tensor.</p></li>
+<li><p><strong>StationXML</strong>: This format provides a detailed and structured representation of seismic network, station, and channel metadata. It encompasses crucial information about instrument responses, location, and other attributes critical for accurate seismic data interpretation.</p></li>
+</ul>
+<p>The selected building blocks are acknowledged for their robustness, compatibility, and broad acceptance within the seismological community. While miniSEED, QuakeML, and StationXML are well-designed is comprehensive, they have historically been oriented towards global seismic monitoring needs. Although they can be employed in their current form for μseismic monitoring in mines, they would benefit from nuanced modifications to more closely align with the unique demands and intricacies of μseismic monitoring within mining environments. Consequently, our proposed adaptations to these foundational formats are summarized as follows:</p>
+<h4 id="quakeml-adaptations">QuakeML Adaptations:</h4>
+<ol type="1">
+<li><strong>Coordinate System</strong>: Transition from a traditional spherical system to a Cartesian coordinate system tailored for mining contexts.</li>
+<li><strong>Magnitude Description</strong>: The magnitude description requires the inclusion of the corner frequency for completeness.<br />
+</li>
+<li><strong>Event Types</strong>: Adapting the format to ensure the prescribed event types are suited to describe the mining seismic activities, that are distinct from conventional seismological events.</li>
+</ol>
+<h4 id="stationxml-adaptations">StationXML Adaptations:</h4>
+<ol type="1">
+<li><strong>Coordinate System</strong>: Integration of a Cartesian coordinate system to more aptly represent the spatial characteristics of mining operations.</li>
+</ol>
+<p>Through these adaptations, this document aims to bridge the gap between established seismological data formats and the unique requirements of the mining sector, ensuring seamless data interchange and analysis. This document also prescribes the use of those format and provides usage examples</p>
+<h3 id="terminology">Terminology</h3>
+<ul>
+<li><p><strong>Waveforms</strong>: These are digital renditions of seismic waves. For the purpose of this standard, they are primarily encapsulated using the miniSEED format.</p></li>
+<li><p><strong>Catalogue Information</strong>: This is a structured compilation of seismic events, detailing their origins, magnitudes, and other pertinent data. Within the scope of this standard, we represent this information using the QuakeML format, augmented with extensions tailored for the mining context.</p></li>
+<li><p><strong>Inventory Data</strong>: Refers to a comprehensive registry of all the seismic instrument along the acquisition chain. It comprises detailed information on sensor location, orientation and response.</p></li>
+<li><p><strong>miniSEED</strong>: A predominant data format in the realm of seismology, miniSEED is instrumental in storing seismic waveform data.</p></li>
+<li><p><strong>QuakeML</strong>: An XML-oriented format, QuakeML is crafted to articulate seismic event parameters.</p></li>
+<li><p><strong>StationXML</strong>: This is an XML-centric format devised to encapsulate the nuances and specifics of a seismic station. It encompasses details about the station’s sensors and the metadata associated with the recorded data.</p></li>
+</ul>
+<h3 id="rationale">Rationale</h3>
+<h4 id="need-for-a-new-standard">Need for a New Standard</h4>
+<p>Microseismic data plays a pivotal role in enhancing both the safety and efficiency of underground mining operations. While it’s one of several essential tools in the arsenal of modern mining techniques, the current scenario of diverse data formats can sometimes complicate seamless integration and analysis.</p>
+<ul>
+<li><strong>Unified Data Integration</strong>: The presence of multiple proprietary formats can require tailored solutions for consolidating microseismic data from various sources or vendors. This might not only increase costs but also lead to potential inconsistencies in data interpretation.</li>
+</ul>
+<h4 id="goal">Goal</h4>
+<p>Acknowledging these subtleties, the proposed standard comes with the following objectives:</p>
+<ul>
+<li><p><strong>Promote Interoperability</strong>: A common format ensures a smooth exchange, processing, and analysis of microseismic data across a range of systems, championing collaboration and data coherence regardless of vendor distinctions.</p></li>
+<li><p><strong>Promote Innovation</strong>: A harmonized framework can invigorate a healthy competitive milieu. Vendors are then positioned to focus on elevating equipment quality, finessing data analysis methodologies, and providing top-tier customer support, free from data format nuances.</p></li>
+<li><p><strong>Leverage Established Seismological Standards</strong>: This standard harnesses the strength of existing seismological data formats. While they form the foundational backbone, specific extensions are melded in to meet the unique requirements of the mining industry.</p></li>
+<li><p><strong>Catalyze Technological Advancements</strong>: With a universally endorsed standard, the mining sector is primed to adopt and assimilate breakthroughs in microseismic monitoring and analysis, ensuring continued advancement in safety and operational efficiency.</p></li>
+<li><p><strong>Prescribe Usage</strong>: The propose format is comprehensive and flexible. To ensure consistency, portability and compatibility, the format must be used in a consistent fashion across multiple application.</p></li>
+</ul>
+<h3 id="data-format-specification-for-μseismic-data-exchange-mde-v1.0">Data Format Specification for μSeismic Data Exchange (MDE v1.0)</h3>
+<h4 id="introduction-1">Introduction</h4>
+<p>Within the evolving μseismic industry, the μSeismic Data Exchange Format (MDE v1.0) presents a solution for efficient and adaptable lossless and comprehensive data exchange mechanisms. Denoted by the <code>.mde</code> extension, this format captures the intricate details of microseismic data, fostering data sharing across various platforms and applications. The proposed format aims to provide the required flexibility to represent most types of seismic data including but not necessarily limited to triggered, continuous and distributed acoustic sensing (DAS)..</p>
+<h4 id="format-components-overview">Format Components Overview</h4>
+<p>The MDE v1.0 standard is based on three components some used as is and some adapted to align with the need μseismic data:</p>
+<p><strong>1. MiniSEED</strong><br />
+Esteemed in the seismic community, miniSEED’s compact nature serves to represent both continuous data streams and individual event recordings. Salient features:</p>
+<ul>
+<li><strong>Compactness</strong>: Facilitates efficient storage and transfer of extensive seismic datasets.</li>
+<li><strong>Versatility</strong>: Encapsulates both continuous data and event-focused recordings.</li>
+<li><strong>Independence</strong>: Remains unaffected by specific recording equipment.</li>
+<li><strong>Streaming</strong>: The format is designed for streaming purpose breaking down the structure in blocks of predefined size that can easily be stored or transmitted.</li>
+</ul>
+<p>The <strong>MiniSEED</strong> format allows for the waveform data to be stored with acquisition parameters such as sampling rate, start time, and the number of sample to be independently defined on a channel by channel basis. The format is flexible and can be used to stored or combine data of different types collected by a variety of sensors with different acquisition parameters.</p>
+<p><strong>Block Size</strong> The miniSEED files are composed of data blocks, called <em>data records</em>. By default, each data record is 4096 bytes long. The data block size can be optimized depending on the application. For the purpose of this standard we prescribe to keep the record length to <strong>4096 bytes</strong></p>
+<p><em>Reference to miniSEED official documentation</em></p>
+<p><strong>2. QuakeML v2.0 Adaptations for Microseismic Data</strong><br />
+While retaining the foundational structure of QuakeML v2.0, some adaptations for the microseismic realm include:</p>
+<ul>
+<li><strong>Origin</strong>: Utilizes Cartesian coordinates, specifically Easting, Northing, and a Z-coordinate that can represent either Depth or Elevation. An associated flag indicates the direction of the Z-coordinate.</li>
+<li><strong>Magnitude</strong>: Enhanced to capture corner frequencies and energy parameters.</li>
+<li><strong>Event Types</strong>: Augmented to encompass specific event types relevant to mining scenarios. This was achieved by adapting standard QuakeML types to include those prevalent in the mining sector.</li>
+</ul>
+<p><em>Note on derived source parameters and on-the-spot calculations</em></p>
+<p><strong>3. StationXML v1.2 for Microseismic Data</strong><br />
+StationXML v1.2, primarily used for detailing metadata associated with seismic stations, has been tailored for the microseismic context:</p>
+<ul>
+<li><strong>Hierarchy &amp; Definitions</strong>: The inherent hierarchy (Inventory &gt; Networks &gt; Stations &gt; Locations &gt; Channels) remains, yet with nuances adjusted for microseismology.</li>
+<li><strong>Microseismic-specific Adaptations</strong>: Introduces attributes such as Cartesian coordinates and channel orientation, which have been modified or introduced to meet the specialized needs of the microseismic landscape.</li>
+</ul>
+<p><em>Deviation from the standard includes the utilization of Easting, Northing, and Z-coordinates for station and channels, channel orientation based on the cosine vector, and the allowance for longer station names.</em></p>
+<h4 id="file-packaging-and-structure">File Packaging and Structure</h4>
+<p>MDE v1.0 suggests a distinct packaging strategy. For <strong>triggered data</strong>, the package should comprise three components: <code>catalog.xml</code>, <code>stream.mseed</code>, and <code>inventory.xml</code>. For <strong>continuous data</strong>, only <code>stream.mseed</code> and <code>inventory.xml</code> are necessary. The files should be packaged using the tar protocol, then compressed using gzip. Upon decompression, the <code>.mde</code> package would reveal these constituent files, each echoing with event catalogs, waveform data, or inventory information respectively.</p>
+<h4 id="coordinate-system-conversion">Coordinate System Conversion</h4>
+<p>The Cartesian system is designed to be straightforward and unambiguous. For seamless interoperability, metadata should facilitate conversion to and from spherical coordinates. This includes potential usage in the imperial coordinate system (e.g., feet). Conversion can be achieved through operations like rotation, translation, and scaling.</p>
+<p><em>Python libraries like <code>pyproj</code> can aid in this transformation. For example:</em></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="im">import</span> pyproj</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="co"># Define the conversion using pyproj</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>converter <span class="op">=</span> pyproj.Transformer.from_crs(<span class="st">&quot;epsg:xxxx&quot;</span>, <span class="st">&quot;epsg:yyyy&quot;</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a><span class="co"># Convert coordinates</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>easting, northing, z <span class="op">=</span> converter.transform(x, y, z)</span></code></pre></div>
+<h4 id="concluding-remarks">Concluding Remarks</h4>
+<p>With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm. <!--stackedit_data:
+eyJoaXN0b3J5IjpbMTQwNDgyMjgzMCwyMTEwNzA0OTk2LC0xMD
+A2MjY3NzI3LDE3NDIyMzYsLTE2NjM3NTAwNDAsMjY5NTMzNjUx
+LDIxMjk4MTAzNDEsLTE4NzgwMDczMCw4MTYxMDc0ODQsLTQ2NT
+UyOTI3MywyMDAwNzc0NDI5LC0zNTQ4MDM1MDgsLTE4MTAwNTE1
+XX0=
+--></p>
