@@ -20,9 +20,15 @@ The scope is to define the content and nature &mu;seismic information provided t
 
 ### Rationale
 
+#### Need for a New Standard
+
+Microseismic data plays a important role in ensuring the safety and enabling the efficiency of underground mining operations. While it's one of several essential tools in the arsenal of modern mining techniques, the current scenario of diverse data formats can sometimes complicate seamless integration and analysis.
+
+
+
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyMzQyMzYyNV19
+eyJoaXN0b3J5IjpbNjIzNTkwMzQ0XX0=
 -->
