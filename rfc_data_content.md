@@ -175,6 +175,8 @@ There are two approaches to modifying the event types
 | unknown                             | plane crash                 |
 | tap test/test                       | avalanche                   |
 
+The above mapping is implemented in the &mu;Quake library.
+
 #### Origin &mdash; Coordinate System
 
 The QuakeML format was designed to store seismic data at a regional and global scale. Consequently, the QuakeML format has adopted a spherical coordinate system storing the location information in latitude and longitude. 
@@ -186,9 +188,9 @@ Two possibilities:
 1. Redefine the schema; or 
 2. Use the QuakeML extra parameters to store the x, y and z values and associated errors.
 
-the P&mu; 
-```python
-```
+The Python &mu;Quake library implements the second options and store the x, y and z in the extra parameters.
+
+#### Magnitude &mdash
 
 
 
@@ -209,7 +211,7 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1NTMyNzkzOCwtMTQzMTg5MDM5MywtMT
+eyJoaXN0b3J5IjpbMTU3OTkyNTM1MiwtMTQzMTg5MDM5MywtMT
 E3NzIyNzk0NywxMDgxMDE3NjY2LDExMjQxMTQxOTMsLTcxMjQx
 OTE5MSwxNTQ2MjI3MTkyLDEwMTc2NTA5MDksNTU0NzU3MDA3LD
 E3MTQ5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNzI0LC0xMzcz
