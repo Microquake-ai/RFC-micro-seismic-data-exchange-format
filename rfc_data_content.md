@@ -36,6 +36,10 @@ Our proposal concerns three categories of data, the waveforms, the catalog data 
 
 To ensure interoperability, the information in the provided files shall be consistent. The sensor naming convention shall be the same all across, the locations of sensors and events shall be expressed using one single coordinate system, which should also be used for the grids, if applicable.
 
+### Why Zarr format
+
+Using the Zarr format to package the information is 
+
 ### Waveform data
 
 The waveform data is the raw vibration recorded directly by the sensors. For convenience, the waveform data can be provided in physical units native to the instrument recording the data of $m$, ${m}/{s}$, or $m/s^2$ for displacement, velocity and acceleration, respectively. However, if size is of concern, storing the ADC count is more appropriate. Storing the ADC count represented as integers allow the usage of the Steim1 and Steim2 differential compression algorithms. 
@@ -110,32 +114,6 @@ st = obspy.read()
 stream_to_zarr_group(st, 'seismic_data_group.zarr')
 ```
 
-The use of the `Zarr` format affords several advantages:
-
-1.  **Chunked Storage**: Supports chunked storage, allowing efficient random access to large datasets and enabling optimal data access patterns.
-    
-2.  **Flexible Compression**: Offers a variety of compression algorithms (e.g., Blosc, GZip, LZ4, Zstandard), which can be adjusted based on specific data and application requirements.
-    
-3.  **Parallelism**: Inherently supports parallel reads/writes, making it especially suitable for distributed storage systems and cloud platforms.
-    
-4.  **Extensive Metadata Support**: Stores metadata alongside data in JSON format, enabling rich annotations, descriptions, and structured metadata.
-    
-5.  **Scalability**: Designed to handle very large datasets effectively, even those larger than available RAM.
-    
-6.  **Interoperability**: Zarr's specifications are clear, making it possible for different software tools to operate on Zarr datasets.
-    
-7.  **Language Agnostic**: Tools and libraries exist for interacting with Zarr in various programming languages, not just Python.
-    
-8.  **Cloud-Friendly**: Efficient for cloud storage solutions like Amazon S3 or Google Cloud Storage due to its chunked nature, which allows reading only the parts of the data that are needed.
-    
-9.  **Flexibility in Storage Backends**: Beyond typical filesystems, Zarr can be stored in databases, cloud storage, and other custom storage solutions.
-    
-10.  **Hierarchical Organization**: Allows for organizing datasets in a nested directory-like hierarchy within a single Zarr archive, facilitating data organization.
-    
-11.  **Open Source**: Actively developed as an open-source project, benefiting from community contributions and transparency.
-    
-12.  **Consolidated Storage**: Ability to store multi-dimensional arrays together with its coordinates and attributes, making it suitable for complex datasets.
-
 ### Catalog
 The catalog includes information related to an event or trigger or a series of events. We suggest storing the catalog information in QuakeML like object slightly adapted to &mu;seismic data. convention and hierachy closely following the QuakeML standard [documentation](https://quake.ethz.ch/quakeml) but with some deviations to enable the simpler mapping of the information stored by the system. Also, we suspect there will be a strong preference to allow for the exchange format to 
 
@@ -153,8 +131,8 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzY4ODIxODAsMTEyNDExNDE5MywtNz
-EyNDE5MTkxLDE1NDYyMjcxOTIsMTAxNzY1MDkwOSw1NTQ3NTcw
-MDcsMTcxNDk5ODI0MCwtNDY2MjgwNjUwLDE2MzAxNTI3MjQsLT
-EzNzM3MDIzNTcsLTEzODU5NzAzNTBdfQ==
+eyJoaXN0b3J5IjpbNjU4Mjk3OTI4LDExMjQxMTQxOTMsLTcxMj
+QxOTE5MSwxNTQ2MjI3MTkyLDEwMTc2NTA5MDksNTU0NzU3MDA3
+LDE3MTQ5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNzI0LC0xMz
+czNzAyMzU3LC0xMzg1OTcwMzUwXX0=
 -->
