@@ -175,12 +175,16 @@ There are two approaches to modifying the event types
 | unknown                             | plane crash                 |
 | tap test/test                       | avalanche                   |
 
-#### Origin &mdash; 
-
+#### Origin &mdash; Coordinate System
 
 The QuakeML format was designed to store seismic data at a regional and global scale. Consequently, the QuakeML format has adopted a spherical coordinate system storing the location information in latitude and longitude. 
 
 Using Latitude and Longitude to describe the mining related events is possible but not convenient. It would require precisely knowing the series of transformations required to convert the position expressed in the local coordinate system into longitude and latitude. We suggest, overriding the Latitude and Longitude information and use x, y and z instead. The use of x, y and z notation instead of the right handed (easting, northing and elevation) or (northing, easting, down) tripplets is to provide flexibility notation and ensure consistency between the mine and the seismic system coordinate system.
+
+Two possibilities:
+
+1. Redefine the schema; or 
+2. Use the QuakeML extra parameters to store the x, y and z values
 
 
 
@@ -201,9 +205,9 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzY3NjUxMiwtMTQzMTg5MDM5MywtMT
-E3NzIyNzk0NywxMDgxMDE3NjY2LDExMjQxMTQxOTMsLTcxMjQx
-OTE5MSwxNTQ2MjI3MTkyLDEwMTc2NTA5MDksNTU0NzU3MDA3LD
-E3MTQ5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNzI0LC0xMzcz
-NzAyMzU3LC0xMzg1OTcwMzUwXX0=
+eyJoaXN0b3J5IjpbLTE4MDAwNDA1NjgsLTE0MzE4OTAzOTMsLT
+ExNzcyMjc5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03MTI0
+MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAwNy
+wxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwtMTM3
+MzcwMjM1NywtMTM4NTk3MDM1MF19
 -->
