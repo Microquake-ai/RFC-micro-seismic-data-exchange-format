@@ -191,9 +191,9 @@ The QuakeML standard does not include objects suited to store the corner frequen
 
 The  &mu;Quake implementation stores the `corner_frequency`, the `energy_p`, `energy_s` and associated error along side the magnitude information in the extra parameter of the Magnitude object. 
 
-### Catalog Information Packaging
+#### Catalog Information Packaging
 
-#### Zarr 
+##### Zarr 
 The catalog information can easily be packaged with the waform in a `Zarr` file. The QuakeML simply needs to be serialized using the json library. The example below show how an `Obspy` or `uQuake` catalog can be stored in a `Zarr` file and retrieved:
 
 ```python
@@ -223,11 +223,11 @@ data=stored_json_string)
 print(new_cat)
 ```
 
-### QuakeML
+##### QuakeML
 
 The file can also be strore in the native XML format.
 
-
+### System or Inventory information
 
 
 
@@ -237,7 +237,7 @@ The file can also be strore in the native XML format.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTE5ODIxMDksODQwMTQ1MDU5LC0xND
+eyJoaXN0b3J5IjpbLTE2NDU5MTcwOTQsODQwMTQ1MDU5LC0xND
 MxODkwMzkzLC0xMTc3MjI3OTQ3LDEwODEwMTc2NjYsMTEyNDEx
 NDE5MywtNzEyNDE5MTkxLDE1NDYyMjcxOTIsMTAxNzY1MDkwOS
 w1NTQ3NTcwMDcsMTcxNDk5ODI0MCwtNDY2MjgwNjUwLDE2MzAx
