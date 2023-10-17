@@ -16,7 +16,7 @@ In presenting this RFC, feedback, scrutiny, and constructive contributions are a
 
 ### Scope
 
-This standard seeks to establish a definitive data format tailored for the exchange of μseismic data acquired by seismic systems operating within mines. The encapsulated proposal comprises three components essential for lossless data translation and independent utility: waveform recordings, catalogued event details, and inventory metadata. Our foundational strategy leverages widely recognized seismological formats, namely miniSEED for waveform representation, QuakeML for event cataloguing, and StationXML for inventory delineations.
+This standard seeks to establish a definitive data format tailored for the exchange of μseismic data acquired by seismic systems operating within mines. The encapsulated proposal comprises three components essential for lossless translation of waveforms, catalogue and system information. Our foundational strategy leverages widely recognized seismological formats, namely miniSEED for waveform representation, QuakeML for event cataloguing, and StationXML for inventory delineations.
 
 Such foundational structures are acknowledged for their robustness, compatibility, and broad acceptance within the seismological community. While miniSEED, QuakeML, and StationXML are all exemplary in design and scope, they primarily cater to global seismic monitoring needs. Although they can be employed in their current guise for μseismic monitoring in mines, they would undoubtedly benefit from nuanced modifications to more closely align with the unique demands and intricacies of underground mining contexts. Consequently, our proposed adaptations to these foundational formats are elucidated as follows:
 
@@ -127,8 +127,8 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzcyMzYzNjUsMTc0MjIzNiwtMTY2Mz
-c1MDA0MCwyNjk1MzM2NTEsMjEyOTgxMDM0MSwtMTg3ODAwNzMw
-LDgxNjEwNzQ4NCwtNDY1NTI5MjczLDIwMDA3NzQ0MjksLTM1ND
-gwMzUwOCwtMTgxMDA1MTVdfQ==
+eyJoaXN0b3J5IjpbLTMxMjE1NTgwMiwxNzQyMjM2LC0xNjYzNz
+UwMDQwLDI2OTUzMzY1MSwyMTI5ODEwMzQxLC0xODc4MDA3MzAs
+ODE2MTA3NDg0LC00NjU1MjkyNzMsMjAwMDc3NDQyOSwtMzU0OD
+AzNTA4LC0xODEwMDUxNV19
 -->
