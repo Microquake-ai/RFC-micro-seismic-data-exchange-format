@@ -38,7 +38,7 @@ To ensure interoperability, the information in the provided files shall be consi
 
 ### Why `Zarr` format
 
-Using the `Zarr` format to package the information was suggested by personnel at the IRIS data center. IRIS now encourage submission using the  
+Using the `Zarr` format to package the information was suggested by personnel at the IRIS data center. IRIS now encourage submission using the `TimeDB` or `Zarr` format. Storing the data to `TileDB` require a database engine and would therefore require additional components to be installed alongside the server.  
 
 ### Waveform data
 
@@ -131,8 +131,8 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTcyMjU0MzQsMTEyNDExNDE5MywtNz
-EyNDE5MTkxLDE1NDYyMjcxOTIsMTAxNzY1MDkwOSw1NTQ3NTcw
-MDcsMTcxNDk5ODI0MCwtNDY2MjgwNjUwLDE2MzAxNTI3MjQsLT
-EzNzM3MDIzNTcsLTEzODU5NzAzNTBdfQ==
+eyJoaXN0b3J5IjpbLTI3NjEwNDU1MywxMTI0MTE0MTkzLC03MT
+I0MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAw
+NywxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwtMT
+M3MzcwMjM1NywtMTM4NTk3MDM1MF19
 -->
