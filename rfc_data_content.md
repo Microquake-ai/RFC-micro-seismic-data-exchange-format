@@ -80,16 +80,7 @@ The required metadata for each trace are:
 
 #### Waveform Data Packaging
 
-##### MiniSEED
-
-The _miniSEED_ format is widely adopted in seismology and is very convenient for storing seismic data. The _miniSEED_ format can accommodate traces from different instrument type (geophone, accelerometer, seismometer, etc.) acquired at a different sampling rate, with variable start times and end times. It is important to note, however, that to use _miniSEED_ the network, station, location, and channels code must adhere to a strict convention described below:
-
-- **Network Code** &mdash; Two (2) alphanumerical characters
-- **Station Code**: Five (5) alphanumerical characters
-- **Location Code**: Two (2) alphanumerical characters
-- **Channel Code**: Three (3) alphanumerical characters, following the FDSN guidelines of August 2000.
-
-##### Alternative Formats
+##### Zarr
 The IRIS DMC recommends the use of the `Zarr` formats (or TileDB) over the `HDF5` based format like the `ASDF` format. The `Zarr` format can conveniently be used to store the waveform data. Althought we strongly encourage the naming convention for the presented in the previous section to be followed givin each component a unique name that can be composed as follows `network_code.station_code.location_code.channel_code`.
 
 **Note**: The `Zarr` file format could be extended to include the catalogue and inventory information.
@@ -130,6 +121,15 @@ st = uquake.read()
 # Convert and store the stream in a Zarr group
 stream_to_zarr_group(st, 'seismic_data_group.zarr')
 ```
+
+##### MiniSEED
+
+The _miniSEED_ format is an alternative. _MiniSEED_ is widely adopted in seismology and very convenient for storing seismic data. The _miniSEED_ format can accommodate traces from different instrument type (geophone, accelerometer, seismometer, etc.) acquired at a different sampling rate, with variable start times and end times. It is important to note, however, that to use _miniSEED_ the network, station, location, and channels code must adhere to a strict convention described below:
+
+- **Network Code** &mdash; Two (2) alphanumerical characters
+- **Station Code**: Five (5) alphanumerical characters
+- **Location Code**: Two (2) alphanumerical characters
+- **Channel Code**: Three (3) alphanumerical characters, following the FDSN guidelines of August 2000.
 
 ### Catalog
 
@@ -191,14 +191,9 @@ The QuakeML standard does not include objects suited to store the corner frequen
 
 The  &mu;Quake implementation stores the `corner_frequency`, the `energy_p`, `energy_s` and associated error along side the magnitude information in the extra parameter of the Magnitude object. 
 
-We propose to organize the catalog information as follows
-- **Level 0**: Catalog
-  - **Level 1**: Events &mdash; an array of events
-    - **Level 2**: Origins &mdash; an array containing contains the information related to the location (an array in QuakeML)
-      - **Level 3**: Arrivals &mdash; 
-    - **Level 2**: Magnitude &mdash; contains the information related to the magnitude (an array in QuakeML)
-    - **Level 2**: Picks &mdash; an array representing all the _P_ and _S_ picks
-    - **Level 2**: Focal Mechanism/Moment Tensor &mdash; contains a focal mechanism associated to the event.
+### Pack
+
+
 
 
 
@@ -206,7 +201,7 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjI5MDIzOTEsLTE0MzE4OTAzOTMsLT
+eyJoaXN0b3J5IjpbLTE3ODAwMzcyMDYsLTE0MzE4OTAzOTMsLT
 ExNzcyMjc5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03MTI0
 MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAwNy
 wxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwtMTM3
