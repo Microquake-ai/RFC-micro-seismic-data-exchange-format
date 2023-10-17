@@ -363,6 +363,9 @@ spacing = (header["SPACEX"], header["SPACEY"], header["SPACEZ"])
 origin = (header["ORIGX"], header["ORIGY"], header["ORIGZ"])
 
 grid = Grid(data_or_dims=grid_dims, spacing=spacing, origin=origin, value=0)
+
+# Write the modified or new grid to a file
+grid.write("path_to_new_grid_file.grid")
 ```
 Here, we've initialized a 3D grid using the dimensions specified in the header. The grid is filled with a default value of 0.
 
@@ -373,10 +376,13 @@ The `Grid` object is equipped with methods to read and write grid data, making i
 Here's an example of how one might read from and write to a grid file:
 
 ```python
-# Write the modified or new grid to a file
-grid.write("path_to_new_grid_file.grid")
-
 # Reading a grid from a file
+grid_from_file = Grid.read("path_to_grid_file.grid") # from version 2.0.1
+```
+```python
+# all versions
+from uquake.core.grid import read_grid
+
 grid_from_file = Grid.read("path_to_grid_file.grid")
 ```
 
@@ -393,7 +399,7 @@ This approach simplifies the process of handling gridded data in seismology by u
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1MDE4ODM1OSwtMzg5NDM1OTkzLC03NT
+eyJoaXN0b3J5IjpbLTYxNzUzODE5NiwtMzg5NDM1OTkzLC03NT
 QzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NTgsLTMxMjAy
 ODIzOCw0NjM2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0NDQwNTE1NC
 wtMTY0NTkxNzA5NCw4NDAxNDUwNTksLTE0MzE4OTAzOTMsLTEx
