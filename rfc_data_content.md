@@ -189,11 +189,7 @@ The &mu;Quake implementation exploits the QuakeML extra parameters to store the 
 
 The QuakeML standard does not include objects suited to store the corner frequency. The energy could be stored in the amplitude or station_magnitude object. This is not convenient, however, as it is preferrable to for the magnitude and energy information to be used in tandem. 
 
-The  &mu;Quake implementation stores the 
-
-
-
-
+The  &mu;Quake implementation stores the `corner_frequency`, the `energy_p`, `energy_s` and associated error along side the magnitude information in the extra parameter of the Magnitude object. 
 
 We propose to organize the catalog information as follows
 - **Level 0**: Catalog
@@ -210,9 +206,9 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2NjU2NDIxMSwtMTQzMTg5MDM5MywtMT
-E3NzIyNzk0NywxMDgxMDE3NjY2LDExMjQxMTQxOTMsLTcxMjQx
-OTE5MSwxNTQ2MjI3MTkyLDEwMTc2NTA5MDksNTU0NzU3MDA3LD
-E3MTQ5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNzI0LC0xMzcz
-NzAyMzU3LC0xMzg1OTcwMzUwXX0=
+eyJoaXN0b3J5IjpbLTE2MjI5MDIzOTEsLTE0MzE4OTAzOTMsLT
+ExNzcyMjc5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03MTI0
+MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAwNy
+wxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwtMTM3
+MzcwMjM1NywtMTM4NTk3MDM1MF19
 -->
