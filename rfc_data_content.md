@@ -47,13 +47,13 @@ The required metadata are:
 - **Network Code** &mdash; Represents the code of the network and shall be expressed with two character
 - **Station Code** &mdash; Represents the code of the station that contains the digitizer.
 - **Location Code** &mdash; A two character numerical code representing the recording site (where the sensor is deployed). For each station, the location code shall be unique. 
-- **Channel Code** &mdash; The three character channel code shall follow the standard naming convention described [here](https://ds.iris.edu/ds/nodes/dmc/data/formats/seed-channel-naming/). The first letter represents the band code, the second the instrument code and the third the orientation code. For instance, typical $14 Hz$ or $15 Hz$ omni-directional geophones code would be GP?, where ? would be the component number (1, 2 or 3), if the sensor orientation is arbitrary. If it is oriented along the north, east and z axis, the 
+- **Channel Code** &mdash; The three character channel code shall follow the standard naming convention described [here](https://ds.iris.edu/ds/nodes/dmc/data/formats/seed-channel-naming/). The first letter represents the band code, the second the instrument code and the third the orientation code. For instance, typical $14 Hz$ or $15 Hz$ omni-directional geophones code would be GP?, where ? is replaced be the component number (1, 2 or 3), if the sensor orientation is arbitrary. If it is oriented along the north, east and z axis, the component would be represented by the N, E, Z.
 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU4MTE4OTcxLC0xMzczNzAyMzU3LC0xMz
+eyJoaXN0b3J5IjpbMzg0NzYyMTU5LC0xMzczNzAyMzU3LC0xMz
 g1OTcwMzUwXX0=
 -->
