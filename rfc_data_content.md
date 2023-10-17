@@ -50,7 +50,7 @@ The required metadata are:
   - **Location Code [location_code]** &mdash; A two (2) alphanumerical  code representing the recording site or the location of an instrument comprising one or more components. For each station, the location code of individual instrument shall be unique. 
   - **Channel Code [channel_code]** &mdash; The three (3) alphanumerical code that represents the channel and shall follow the FDSN standard naming convention of August 2000 described in the SEED document [Appendix A](http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf). The first letter represents the band code, the second the instrument code and the third the orientation code. For instance, a typical $14 Hz$ or $15 Hz$ omnidirectional geophones code would be GH?, where ? would be replaced by the appropriate component orientation code. 
  - **Sampling Rate [sampling_rate]** &mdash; The signal sampling rate in sample per second.
- - **Calibration Factor [calib]** &mdash; The cali
+ - **Calibration Factor [calib]** &mdash; The calibration factor this value is optional and will be set to 1.0 if not provided. This value represents the calibration factor should the sensor deviate from the typi 
           
 
 
@@ -59,6 +59,6 @@ The required metadata are:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2MzA5MjQ5MiwtNDY2MjgwNjUwLDE2Mz
-AxNTI3MjQsLTEzNzM3MDIzNTcsLTEzODU5NzAzNTBdfQ==
+eyJoaXN0b3J5IjpbNzk5MzUzOTkzLC00NjYyODA2NTAsMTYzMD
+E1MjcyNCwtMTM3MzcwMjM1NywtMTM4NTk3MDM1MF19
 -->
