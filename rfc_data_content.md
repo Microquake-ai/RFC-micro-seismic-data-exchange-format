@@ -38,9 +38,9 @@ To ensure interoperability, the information in the provided files shall be consi
 
 ### Waveform data
 
-The waveform data is the raw vibration recorded directly by the sensors. For convenience, the waveform data should be provided in physical units native to the instrument recording the data of $m$, ${m}/{s}$, or $m/s^2$ for displacement, velocity and acceleration, respectively. 
+The waveform data is the raw vibration recorded directly by the sensors. For convenience, the waveform data can be provided in physical units native to the instrument recording the data of $m$, ${m}/{s}$, or $m/s^2$ for displacement, velocity and acceleration, respectively. However, if size is of concern, storing the ADC count is more appropriate. S allow compression using the Steim1 and Steim2 differential algorithm, it is preferrable to store the ADC cound
 
-Storing the data The data can also be stored in ADC count as integers.
+Storing the ADC count as integers should be seriously consid
 
 The vibration data shall be provided with the metadata required to appropriately read and interpret the waveform.
 
@@ -66,7 +66,7 @@ The required metadata for each trace is:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MjUxODI4OSwxNzE0OTk4MjQwLC00Nj
+eyJoaXN0b3J5IjpbLTM5NDMyNzYwNSwxNzE0OTk4MjQwLC00Nj
 YyODA2NTAsMTYzMDE1MjcyNCwtMTM3MzcwMjM1NywtMTM4NTk3
 MDM1MF19
 -->
