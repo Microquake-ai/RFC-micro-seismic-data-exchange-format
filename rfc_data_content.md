@@ -8,11 +8,11 @@ The purpose of this document is to invite comments on a suggested format to allo
 
 Access to the &mu;seismic data is not consistent between the different vendors, and sometimes between different implementation by the same vendors. There are variations from site to site, often driven by third party requirements. This leads to inefficiencies that make the integration of different systems providing complementary products and services and the usage of data unnecessarily difficult. 
 
-The current document does proposed a file . This will come later. At this stage, we seek alignment regarding the content of the information transferred, agreement on the container should come at a later stage. Deviation from the previous statement will concern the packaging of the waveforms. Waveforms receive a special treatment because they can be voluminous and there exists significant divergence between the different vendors regarding the nature and packaging. Efficient processing requires the data format to be prescribed.
+The current document does proposed a file structure and format. At this stage, we seek alignment regarding the content of the information transferred and agreement on the container. 
 
 ### Scope
 
-The scope is to define the content and nature &mu;seismic information provided to third parties. This document is concerned with the building blocks and seismic information that are the essence of &mu;seismic monitoring. The information of concern can be classified in three categories:
+The scope is to define the content and nature &mu;seismic information provided to third parties and suggest a format to package the information. This document is concerned with the building blocks and seismic information that are the essence of &mu;seismic monitoring. The information of concern can be classified in three categories:
 
 - **Waveform** &mdash; The raw unprocessed waveform both for the continuous and triggered data.
 - **Catalog Information** &mdash; The event information derived from the processing of the waveform data
@@ -153,8 +153,8 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzOTY3ODU3MCwxMTI0MTE0MTkzLC03MT
-I0MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAw
-NywxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwtMT
-M3MzcwMjM1NywtMTM4NTk3MDM1MF19
+eyJoaXN0b3J5IjpbLTE4Mjc2NDA1MTQsMTEyNDExNDE5MywtNz
+EyNDE5MTkxLDE1NDYyMjcxOTIsMTAxNzY1MDkwOSw1NTQ3NTcw
+MDcsMTcxNDk5ODI0MCwtNDY2MjgwNjUwLDE2MzAxNTI3MjQsLT
+EzNzM3MDIzNTcsLTEzODU5NzAzNTBdfQ==
 -->
