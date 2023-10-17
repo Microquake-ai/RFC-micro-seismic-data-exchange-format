@@ -57,7 +57,7 @@ The required metadata are:
 | 1 2 3            | Orthogonal components but non traditional orientations   |
 | U V W            | Optional components                                       |
 | Dip/Azimuth:     | Ground motion vector (reverse dip/azimuth if signal polarity incorrect) |
-| Signal Units:    | $m$, $m/s$, $M/S2$              |
+| Signal Units:    | $m$, $m/s$, $m/s^2$              |
 | Channel Flags:   | G                                                        |
 
 
@@ -66,6 +66,6 @@ The required metadata are:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0MjUxNjMxMiwtMTM3MzcwMjM1NywtMT
+eyJoaXN0b3J5IjpbMTYzMDE1MjcyNCwtMTM3MzcwMjM1NywtMT
 M4NTk3MDM1MF19
 -->
