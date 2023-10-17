@@ -135,13 +135,13 @@ The use of the `Zarr` format affords several advantages:
     
 12.  **Consolidated Storage**: Ability to store multi-dimensional arrays together with its coordinates and attributes, making it suitable for complex datasets.
 
-### Catalog Information
-The catalog information includes information related to an event or trigger or a series of events. We recommend following the naming convention and hierarchy defined in the QuakeML [documentation](https://quake.ethz.ch/quakeml)   . The catalog information is organized as follows:
+### Catalog
+The catalog includes information related to an event or trigger or a series of events. We recommend following the naming convention and hierarchy defined in the QuakeML [documentation](https://quake.ethz.ch/quakeml)   . The catalog information is organized as follows:
 - **Level 0**: Catalog
   - **Level 1**: Events &mdash; an array of events
     - **Level 2**: Origin &mdash; contains the information related to the location (an array in QuakeML)
     - **Level 2**: Magnitude &mdash; contains the information related to the magnitude (an array in QuakeML)
-    - **Level 2**: Pick
+    - **Level 2**: Picks &mdash; 
 
 
 
@@ -149,7 +149,7 @@ The catalog information includes information related to an event or trigger or a
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwNjk4NDUwMCwxNTQ2MjI3MTkyLDEwMT
+eyJoaXN0b3J5IjpbLTcxMjQxOTE5MSwxNTQ2MjI3MTkyLDEwMT
 c2NTA5MDksNTU0NzU3MDA3LDE3MTQ5OTgyNDAsLTQ2NjI4MDY1
 MCwxNjMwMTUyNzI0LC0xMzczNzAyMzU3LC0xMzg1OTcwMzUwXX
 0=
