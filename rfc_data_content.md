@@ -10,7 +10,9 @@ Access to the &mu;seismic data is not consistent between the different vendors, 
 
 The current document does not propose or prescribe specific format at this stage. This will come later. At this stage, we seek alignment regarding the content of the information transferred, agreement on the container should come at a later stage. Deviation from the previous statement will concern the packaging of the waveforms. Waveforms receive a special treatment because they can be voluminous and there exists significant divergence between the different vendors regarding the nature and packaging. Efficient processing requires the data format to be prescribed.
 
-### 
+### Scope
+
+The scope 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk0NzAzODA2XX0=
+eyJoaXN0b3J5IjpbMTQ2NjUzNTc3OV19
 -->
