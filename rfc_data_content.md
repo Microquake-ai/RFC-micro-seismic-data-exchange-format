@@ -135,17 +135,18 @@ The _miniSEED_ format is another viable option. _MiniSEED_ is widely adopted in 
 
 ### Catalog
 
-The catalog includes information related to an event or trigger or a series of events. We suggest storing the catalog information in a QuakeML like format adapted to &mu;seismic data (see QuakeML documentation [documentation](https://quake.ethz.ch/quakeml)). The suggested changes affect the following QuakeML objects:
+The catalog includes information related to an event, a trigger, or a series of events. We suggest storing the catalog information in a QuakeML-like format adapted to μseismic data (see QuakeML [documentation](https://quake.ethz.ch/quakeml)). The suggested changes affect the following QuakeML objects:
 
-- **Event** &mdash; The event_type field is restricted to specific values that are not suited for &mu;seismic monitoring  
-- **Origin** &mdash; The position is expressed in latitude and longitude. This will need to be changed to x, y and z.
-- **Magnitude** &mdash; The magnitude object would benefit from adding a field to store the corner frequency, P-wave and S-wave Energy. This would allow for the a large range of source parameters to be computed on the fly and not stored in the magnitude object.  This approach what is typically done in mine seismology. 
+-   **Event** — The event_type field is restricted to specific values that are not suited for μseismic monitoring.
+-   **Origin** — The position is expressed in latitude and longitude. This will need to be changed to x, y, and z.
+-   **Magnitude** — The magnitude object would benefit from adding fields to store the corner frequency, as well as P-wave and S-wave Energy. This allows for a broad range of source parameters to be computed on the fly, rather than stored in the magnitude object. This approach is typically used in mine seismology.
 
-#### Event &mdash; Event Type
+#### Event — Event Type
 
-There are two approaches to modifying the event types
-1. Redfine the schema and allow for event type related to mining to be stored in a &mu;QuakeML file; and
-2. Map each &mu;seismic type to the an existing QuakeML event type
+There are two approaches to modifying the event types:
+
+1.  Redefine the schema and allow for event types related to mining to be stored in a μQuakeML file; and
+2.  Map each μseismic type to an existing QuakeML event type.
 
 | Event Type (&mu;seismic)            | Event Type (QuakeML)        |
 |-------------------------------------|-----------------------------|
@@ -177,26 +178,28 @@ There are two approaches to modifying the event types
 | unknown                             | plane crash                 |
 | tap test/test                       | avalanche                   |
 
-The above mapping is implemented in the &mu;Quake library.
 
-#### Origin &mdash; Coordinate System
+The above mapping is implemented in the μQuake library.
 
-The QuakeML format was designed to store seismic data at a regional and global scale. Consequently, the QuakeML format has adopted a spherical coordinate system storing the location information in latitude and longitude. 
+#### Origin — Coordinate System
 
-Using Latitude and Longitude to describe the mining related events is possible but not convenient. It would require precisely knowing the series of transformations required to convert the position expressed in the local coordinate system into longitude and latitude. We suggest, overriding the Latitude and Longitude information and use x, y and z instead. The use of x, y and z notation instead of the right handed (easting, northing and elevation) or (northing, easting, down) tripplets is to provide flexibility notation and ensure consistency between the mine and the seismic system coordinate system.
+The QuakeML format was designed to store seismic data at a regional and global scale. Consequently, the QuakeML format has adopted a spherical coordinate system, storing location information in latitude and longitude.
 
-The &mu;Quake implementation exploits the QuakeML extra parameters to store the x, y and z values and associated errors.
+Using latitude and longitude to describe mining-related events is possible but not convenient. It would require precisely knowing the series of transformations needed to convert the position expressed in the local coordinate system into longitude and latitude. We suggest overriding the latitude and longitude information and using x, y, and z instead. The use of x, y, and z notation, as opposed to the right-handed (easting, northing, and elevation) or (northing, easting, down) triplets, is to provide flexible notation and ensure consistency between the mine and the seismic system's coordinate systems.
 
-#### Magnitude &mdash; Corner Frequency, and Energy
+The μQuake implementation exploits the QuakeML extra parameters to store the x, y, and z values and associated errors.
 
-The QuakeML standard does not include objects suited to store the corner frequency. The energy could be stored in the amplitude or station_magnitude object. This is not convenient, however, as it is preferrable to for the magnitude and energy information to be used in tandem. 
+#### Magnitude — Corner Frequency, and Energy
 
-The  &mu;Quake implementation stores the `corner_frequency`, the `energy_p`, `energy_s` and associated error along side the magnitude information in the extra parameter of the Magnitude object. 
+The QuakeML standard does not include objects suited to store the corner frequency. The energy could be stored in the amplitude or station_magnitude object. However, this isn't convenient, as it's preferable for the magnitude and energy information to be used in tandem.
+
+The μQuake implementation stores the `corner_frequency`, the `energy_p`, `energy_s`, and associated error alongside the magnitude information in the extra parameter of the Magnitude object.
 
 #### Catalog Information Packaging
 
-##### Zarr 
-The catalog information can easily be packaged with the waform in a `Zarr` file. The QuakeML simply needs to be serialized using the json library. The example below show how an `Obspy` or `uQuake` catalog can be stored in a `Zarr` file and retrieved:
+##### Zarr
+
+The catalog information can easily be packaged with the waveform in a `Zarr` file. The QuakeML simply needs to be serialized using the json library. The example below shows how an `Obspy` or `uQuake` catalog can be stored in a `Zarr` file and retrieved:
 
 ```python
 # import obspy
@@ -227,7 +230,7 @@ print(new_cat)
 
 ##### QuakeML
 
-The file can also be strore in the native XML format.
+The catalog can also be stored in the native XML format, which is QuakeML's traditional format. QuakeML, being a structured XML-based format, offers a robust platform for standardizing the description of seismic events and their associated parameters. For those familiar with the format and looking to integrate with other systems that recognize QuakeML, using the native XML format is advantageous. However, it's essential to be aware of the modifications made for the μseismic context to ensure compatibility.
 
 ### System or Inventory information
 
@@ -239,10 +242,11 @@ The file can also be strore in the native XML format.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYzNjg0NDk3LC0xNjE2MTczNTgyLDEwND
-Q0MDUxNTQsLTE2NDU5MTcwOTQsODQwMTQ1MDU5LC0xNDMxODkw
-MzkzLC0xMTc3MjI3OTQ3LDEwODEwMTc2NjYsMTEyNDExNDE5My
-wtNzEyNDE5MTkxLDE1NDYyMjcxOTIsMTAxNzY1MDkwOSw1NTQ3
-NTcwMDcsMTcxNDk5ODI0MCwtNDY2MjgwNjUwLDE2MzAxNTI3Mj
-QsLTEzNzM3MDIzNTcsLTEzODU5NzAzNTBdfQ==
+eyJoaXN0b3J5IjpbLTMxMjAyODIzOCw0NjM2ODQ0OTcsLTE2MT
+YxNzM1ODIsMTA0NDQwNTE1NCwtMTY0NTkxNzA5NCw4NDAxNDUw
+NTksLTE0MzE4OTAzOTMsLTExNzcyMjc5NDcsMTA4MTAxNzY2Ni
+wxMTI0MTE0MTkzLC03MTI0MTkxOTEsMTU0NjIyNzE5MiwxMDE3
+NjUwOTA5LDU1NDc1NzAwNywxNzE0OTk4MjQwLC00NjYyODA2NT
+AsMTYzMDE1MjcyNCwtMTM3MzcwMjM1NywtMTM4NTk3MDM1MF19
+
 -->
