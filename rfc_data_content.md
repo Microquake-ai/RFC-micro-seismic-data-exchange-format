@@ -12,7 +12,7 @@ The current document does not propose or prescribe specific format at this stage
 
 ### Scope
 
-The scope 
+The scope is to define the content and nature &mu;seismic information provided to third parties. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NjUzNTc3OV19
+eyJoaXN0b3J5IjpbNzE3NjY2NjE0XX0=
 -->
