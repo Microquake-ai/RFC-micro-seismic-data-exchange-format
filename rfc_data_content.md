@@ -234,6 +234,18 @@ The catalog can also be stored in the native XML format, which is QuakeML's trad
 
 ### System or Inventory information
 
+### System or Inventory Information
+
+The system or inventory information is crucial for any seismic network as it provides comprehensive details about the stations and channels that are a part of that network. The StationXML format, which is an established standard in the seismic community, is designed to hold such inventory metadata.
+
+However, when tailoring the use of StationXML to the μseismic domain, especially in the mining context, certain modifications are required to better fit the data's unique characteristics and requirements.
+
+#### Station & Channel Coordinates
+
+In a typical seismic application, the StationXML format uses latitude and longitude to describe the geographical position of stations and channels. While this makes sense for global and regional seismic networks, it's not as intuitive or convenient for the μseismic monitoring within a mining setup. In such a scenario, the geographical location is often best described using a local coordinate system.
+
+Thus, we recommend replacing the latitude and longitude fields in the StationXML format with `x`, `y`, and `z` coordinates for both the station and channel locations. This change aligns with the earlier modifications made for QuakeML, ensuring consistency across different components of the μseismic system.
+
 
 
 
@@ -242,11 +254,11 @@ The catalog can also be stored in the native XML format, which is QuakeML's trad
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxMjAyODIzOCw0NjM2ODQ0OTcsLTE2MT
-YxNzM1ODIsMTA0NDQwNTE1NCwtMTY0NTkxNzA5NCw4NDAxNDUw
-NTksLTE0MzE4OTAzOTMsLTExNzcyMjc5NDcsMTA4MTAxNzY2Ni
-wxMTI0MTE0MTkzLC03MTI0MTkxOTEsMTU0NjIyNzE5MiwxMDE3
-NjUwOTA5LDU1NDc1NzAwNywxNzE0OTk4MjQwLC00NjYyODA2NT
-AsMTYzMDE1MjcyNCwtMTM3MzcwMjM1NywtMTM4NTk3MDM1MF19
-
+eyJoaXN0b3J5IjpbLTE5NDU3Mjc4NTgsLTMxMjAyODIzOCw0Nj
+M2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0NDQwNTE1NCwtMTY0NTkx
+NzA5NCw4NDAxNDUwNTksLTE0MzE4OTAzOTMsLTExNzcyMjc5ND
+csMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03MTI0MTkxOTEsMTU0
+NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAwNywxNzE0OTk4Mj
+QwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwtMTM3MzcwMjM1Nywt
+MTM4NTk3MDM1MF19
 -->
