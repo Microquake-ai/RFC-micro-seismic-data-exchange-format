@@ -13,11 +13,11 @@ In presenting this RFC, feedback, scrutiny, and constructive contributions are a
 
 ### Scope
 
-This standard seeks to establish a data format tailored for the exchange of μseismic data acquired by seismic systems operating within mines. The encapsulated proposal comprises three components essential for lossless translation of waveforms, catalogue, and system information. Our foundational strategy leverages widely recognized seismological formats, namely miniSEED for waveform representation, QuakeML for event metadata, and StationXML for system metadata.
+This standard seeks to establish a data format tailored for the exchange of μseismic data acquired by seismic systems operating within mines. The encapsulated proposal comprises three components essential for lossless translation of waveforms, catalogue, and system information and prescribe its usage. Our foundational strategy leverages widely recognized seismological formats, namely miniSEED for waveform representation, QuakeML for event metadata, and StationXML for system metadata.
 
 At the heart of our approach are the following seismological formats:
 
--   **miniSEED**: Esteemed for its compactness and versatility, miniSEED serves as a primary choice for seismic waveform representation across various seismological applications. It guarantees the efficient compression and storage of vast seismic datasets.
+-   **miniSEED**: Compact and versatile, miniSEED serves as the container for seismic waveform representation across various seismological applications. It guarantees the efficient compression and storage of vast seismic datasets.
     
 -   **QuakeML**: An XML-based data format tailored for the representation of seismological event parameters. Its structured design enables comprehensive documentation of seismic event metadata, including origins, magnitudes, and focal mechanisms.
     
@@ -133,8 +133,8 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDExMTU4MjQsLTEwMDYyNjc3MjcsMT
-c0MjIzNiwtMTY2Mzc1MDA0MCwyNjk1MzM2NTEsMjEyOTgxMDM0
-MSwtMTg3ODAwNzMwLDgxNjEwNzQ4NCwtNDY1NTI5MjczLDIwMD
-A3NzQ0MjksLTM1NDgwMzUwOCwtMTgxMDA1MTVdfQ==
+eyJoaXN0b3J5IjpbLTE4MTQ3ODg2OCwtMTAwNjI2NzcyNywxNz
+QyMjM2LC0xNjYzNzUwMDQwLDI2OTUzMzY1MSwyMTI5ODEwMzQx
+LC0xODc4MDA3MzAsODE2MTA3NDg0LC00NjU1MjkyNzMsMjAwMD
+c3NDQyOSwtMzU0ODAzNTA4LC0xODEwMDUxNV19
 -->
