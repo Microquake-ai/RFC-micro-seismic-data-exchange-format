@@ -13,11 +13,12 @@ In presenting this RFC, feedback, scrutiny, and constructive contributions are a
 ----------
 
 
+
 ### Scope
 
-The aim of this standard is to define a comprehensive data format designed for the exchange of &mu;seismic data collected by seismic system deployed in mines. The proposed standard encompasses three pivotal components essential for lossless data conversion and for standalone: waveforms, catalogue information, and inventory data. To ensure both reliability and wide adaptability, we've grounded our approach on globally acknowledged seismological formats: miniSEED for waveforms, QuakeML for catalogue data, and StationXML for inventory specifics.
+This standard seeks to establish a definitive data format tailored for the exchange of μseismic data acquired by seismic systems operating within mines. The encapsulated proposal comprises three components essential for lossless data translation and independent utility: waveform recordings, catalogued event details, and inventory metadata. Our foundational strategy leverages widely recognized seismological formats, namely miniSEED for waveform representation, QuakeML for event cataloguing, and StationXML for inventory delineations.
 
-These foundational formats offer robustness, compatibility and are widely adopted. The miniSEED, QuakeML and StationsXML are all comprehensive and well designed format. While adopting them in their current form is possible, those format have been designed for the purpose of seismic monitoring on a global scale and they would benefit from being adapted to fit the purpose of &mu;seismic monitoring in mine. However, only minimal modifications are required to adapt the format so they meet the distinct challenges and specifications of mining environments. Specifically, our enhancements to these formats are as follows:
+Such foundational structures are acknowledged for their robustness, compatibility, and broad acceptance within the seismological community. While miniSEED, QuakeML, and StationXML are all exemplary in design and scope, they primarily cater to global seismic monitoring needs. Although they can be employed in their current guise for μseismic monitoring in mines, they would undoubtedly benefit from nuanced modifications to more closely align with the unique demands and intricacies of underground mining contexts. Consequently, our proposed adaptations to these foundational formats are elucidated as follows:
 
 #### QuakeML Adaptations:
 
@@ -126,7 +127,7 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mjk5NDY1NzEsMTc0MjIzNiwtMTY2Mz
+eyJoaXN0b3J5IjpbLTE4MzcyMzYzNjUsMTc0MjIzNiwtMTY2Mz
 c1MDA0MCwyNjk1MzM2NTEsMjEyOTgxMDM0MSwtMTg3ODAwNzMw
 LDgxNjEwNzQ4NCwtNDY1NTI5MjczLDIwMDA3NzQ0MjksLTM1ND
 gwMzUwOCwtMTgxMDA1MTVdfQ==
