@@ -131,12 +131,13 @@ stream_to_zarr_group(st, 'seismic_data_group.zarr')
 ```
 
 ### Catalog
-The catalog includes information related to an event or trigger or a series of events. We suggest storing the catalog information in a QuakeML like format adapted to &mu;seismic data (see QuakeML documentation [documentation](https://quake.ethz.ch/quakeml)). The QuakeML format is  
+The catalog includes information related to an event or trigger or a series of events. We suggest storing the catalog information in a QuakeML like format adapted to &mu;seismic data (see QuakeML documentation [documentation](https://quake.ethz.ch/quakeml)). The QuakeML format was designed to store seismic data at a scale that is not  
 
 We propose to organize the catalog information as follows
 - **Level 0**: Catalog
   - **Level 1**: Events &mdash; an array of events
-    - **Level 2**: Origin &mdash; contains the information related to the location (an array in QuakeML)
+    - **Level 2**: Origins &mdash; contains the information related to the location (an array in QuakeML)
+      - **Level 3**: Arrivals &mdash; 
     - **Level 2**: Magnitude &mdash; contains the information related to the magnitude (an array in QuakeML)
     - **Level 2**: Picks &mdash; an array representing all the _P_ and _S_ picks
     - **Level 2**: Focal Mechanism/Moment Tensor &mdash; contains a focal mechanism associated to the event.
@@ -147,7 +148,7 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NDI0NjI5MiwxMDgxMDE3NjY2LDExMj
+eyJoaXN0b3J5IjpbMTM2NDQ3NDIzNiwxMDgxMDE3NjY2LDExMj
 QxMTQxOTMsLTcxMjQxOTE5MSwxNTQ2MjI3MTkyLDEwMTc2NTA5
 MDksNTU0NzU3MDA3LDE3MTQ5OTgyNDAsLTQ2NjI4MDY1MCwxNj
 MwMTUyNzI0LC0xMzczNzAyMzU3LC0xMzg1OTcwMzUwXX0=
