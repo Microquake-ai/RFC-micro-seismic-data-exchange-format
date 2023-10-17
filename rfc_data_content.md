@@ -135,8 +135,9 @@ stream_to_zarr_group(st, 'seismic_data_group.zarr')
 
 The catalog includes information related to an event or trigger or a series of events. We suggest storing the catalog information in a QuakeML like format adapted to &mu;seismic data (see QuakeML documentation [documentation](https://quake.ethz.ch/quakeml)). The suggested changes affect the following QuakeML objects:
 
-- **Event** &mdash; In QuakeML, the event_type field is restricted to specific values that are not suited for &mu;seismic monitoring  
-- **Origin** &mdash; 
+- **Event** &mdash; The event_type field is restricted to specific values that are not suited for &mu;seismic monitoring  
+- **Origin** &mdash; The position is expressed in latitude and longitude. This will need to be changed to x, y and z.
+- **Magnitude** &mdash; The magnitude object  
 
 The QuakeML format was designed to store seismic data at a regional and global scale. Consequently, the QuakeML format has adopted a spherical coordinate system storing the location information in latitude and longitude. 
 
@@ -161,8 +162,8 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgzOTgyMTc4LDEwODEwMTc2NjYsMTEyND
-ExNDE5MywtNzEyNDE5MTkxLDE1NDYyMjcxOTIsMTAxNzY1MDkw
-OSw1NTQ3NTcwMDcsMTcxNDk5ODI0MCwtNDY2MjgwNjUwLDE2Mz
-AxNTI3MjQsLTEzNzM3MDIzNTcsLTEzODU5NzAzNTBdfQ==
+eyJoaXN0b3J5IjpbLTExNzcyMjc5NDcsMTA4MTAxNzY2NiwxMT
+I0MTE0MTkzLC03MTI0MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUw
+OTA5LDU1NDc1NzAwNywxNzE0OTk4MjQwLC00NjYyODA2NTAsMT
+YzMDE1MjcyNCwtMTM3MzcwMjM1NywtMTM4NTk3MDM1MF19
 -->
