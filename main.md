@@ -13,7 +13,7 @@ In presenting this RFC, feedback, scrutiny, and constructive contributions are a
 
 ### Scope
 
-This standard seeks to establish a definitive data format tailored for the exchange of μseismic data acquired by seismic systems operating within mines. The encapsulated proposal comprises three components essential for lossless translation of waveforms, catalogue, and system information. Our foundational strategy leverages widely recognized seismological formats, namely miniSEED for waveform representation, QuakeML for event metadata, and StationXML for system metadata.
+This standard seeks to establish a data format tailored for the exchange of μseismic data acquired by seismic systems operating within mines. The encapsulated proposal comprises three components essential for lossless translation of waveforms, catalogue, and system information. Our foundational strategy leverages widely recognized seismological formats, namely miniSEED for waveform representation, QuakeML for event metadata, and StationXML for system metadata.
 
 At the heart of our approach are the following seismological formats:
 
@@ -133,8 +133,8 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDYyNjc3MjcsMTc0MjIzNiwtMTY2Mz
-c1MDA0MCwyNjk1MzM2NTEsMjEyOTgxMDM0MSwtMTg3ODAwNzMw
-LDgxNjEwNzQ4NCwtNDY1NTI5MjczLDIwMDA3NzQ0MjksLTM1ND
-gwMzUwOCwtMTgxMDA1MTVdfQ==
+eyJoaXN0b3J5IjpbLTEzMDExMTU4MjQsLTEwMDYyNjc3MjcsMT
+c0MjIzNiwtMTY2Mzc1MDA0MCwyNjk1MzM2NTEsMjEyOTgxMDM0
+MSwtMTg3ODAwNzMwLDgxNjEwNzQ4NCwtNDY1NTI5MjczLDIwMD
+A3NzQ0MjksLTM1NDgwMzUwOCwtMTgxMDA1MTVdfQ==
 -->
