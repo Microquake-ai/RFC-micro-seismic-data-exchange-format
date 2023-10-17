@@ -91,13 +91,10 @@ Esteemed in the seismic community, miniSEED’s compact nature serves to represe
 -   **Independence**: Remains unaffected by specific recording equipment.
 -   **Streaming**: The format is designed for streaming purpose breaking down the structure in blocks of predefined size that can easily be stored or transmitted. 
 
-The **MiniSEED** format allows for the waveform data to be stored with acquisition parameters such as sampling rate, start time, and the number of sample to be independently defined on a channel by channel basis. The format is flexible and can be u
+The **MiniSEED** format allows for the waveform data to be stored with acquisition parameters such as sampling rate, start time, and the number of sample to be independently defined on a channel by channel basis. The format is flexible and can be used to stored or combine data of different types collected by a variety of sensors with different acquisition parameters.
 
 **Block Size**
 The miniSEED files are composed of data blocks, called _data records_. By default, each data record is 4096 bytes long. The data block size can be optimized depending on the application. For the purpose of this standard we prescribe to keep the record length to **4096 bytes**
-
-
- 
 
 _Reference to miniSEED official documentation_
 
@@ -143,7 +140,7 @@ easting, northing, z = converter.transform(x, y, z)
 
 With the inception of MDE v1.0, the microseismic community gains a robust and specialized data interchange instrument. This standard marries tried-and-tested formats with purpose-driven modifications, ensuring an optimized and trustworthy data exchange paradigm.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4ODIwMjE5OCwyMTEwNzA0OTk2LC0xMD
+eyJoaXN0b3J5IjpbMTQwNDgyMjgzMCwyMTEwNzA0OTk2LC0xMD
 A2MjY3NzI3LDE3NDIyMzYsLTE2NjM3NTAwNDAsMjY5NTMzNjUx
 LDIxMjk4MTAzNDEsLTE4NzgwMDczMCw4MTYxMDc0ODQsLTQ2NT
 UyOTI3MywyMDAwNzc0NDI5LC0zNTQ4MDM1MDgsLTE4MTAwNTE1
