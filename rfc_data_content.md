@@ -38,12 +38,14 @@ To ensure interoperability, the information in the provided files shall be consi
 
 ### Waveform data
 
-The waveform data is the raw vibration recorded directly by the sensors. For convenience, the waveform data should be provided in physical units native to the instrument recording the data of $m$, ${m}/{s}$, or $m/s^2$ for displacement, velocity and acceleration respectively. 
+The waveform data is the raw vibration recorded directly by the sensors. For convenience, the waveform data should be provided in physical units native to the instrument recording the data of $m$, ${m}/{s}$, or $m/s^2$ for displacement, velocity and acceleration, respectively. 
+
+The vibration data shall be provided with the metadata required to interpret the waveform
 
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTA5MjA0MzRdfQ==
+eyJoaXN0b3J5IjpbLTY3NTQzMTA1Nl19
 -->
