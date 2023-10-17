@@ -131,9 +131,16 @@ stream_to_zarr_group(st, 'seismic_data_group.zarr')
 ```
 
 ### Catalog
-The catalog includes information related to an event or trigger or a series of events. We suggest storing the catalog information in a QuakeML like format adapted to &mu;seismic data (see QuakeML documentation [documentation](https://quake.ethz.ch/quakeml)). The QuakeML format was designed to store seismic data at a regional and global scale. Consequently, the QuakeML format has adopted a spherical coordinate system storing the location information in latitude and longitude. 
 
-Using Latitude and Longitude to describe the mining related events is possible but not convenient. It would require precisely knowing the series of transformations required to convert the position expressed in the local coordinate system into longitude and latitude. We suggest, overriding the Latitude and Longitude information and use x, y and z instead. The use of x, y and z notation instead of the right handed (easting, northing and elevation) or (northing, easting, down) tripplets is to provide flexibility notation and ensure consistency between the mine 
+The catalog includes information related to an event or trigger or a series of events. We suggest storing the catalog information in a QuakeML like format adapted to &mu;seismic data (see QuakeML documentation [documentation](https://quake.ethz.ch/quakeml)). The suggested changes affect:
+
+- The coor
+
+The QuakeML format was designed to store seismic data at a regional and global scale. Consequently, the QuakeML format has adopted a spherical coordinate system storing the location information in latitude and longitude. 
+
+Using Latitude and Longitude to describe the mining related events is possible but not convenient. It would require precisely knowing the series of transformations required to convert the position expressed in the local coordinate system into longitude and latitude. We suggest, overriding the Latitude and Longitude information and use x, y and z instead. The use of x, y and z notation instead of the right handed (easting, northing and elevation) or (northing, easting, down) tripplets is to provide flexibility notation and ensure consistency between the mine and the seismic system coordinate system.
+
+
 
 
 
@@ -152,7 +159,7 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDQ5MTQ0MjcsMTA4MTAxNzY2NiwxMT
+eyJoaXN0b3J5IjpbLTE4Mjk5NzQyMTcsMTA4MTAxNzY2NiwxMT
 I0MTE0MTkzLC03MTI0MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUw
 OTA5LDU1NDc1NzAwNywxNzE0OTk4MjQwLC00NjYyODA2NTAsMT
 YzMDE1MjcyNCwtMTM3MzcwMjM1NywtMTM4NTk3MDM1MF19
