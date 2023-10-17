@@ -143,16 +143,15 @@ The catalog includes information related to an event or trigger or a series of e
 
 There are two approaches to modifying the event types
 1. Redfine the schema and allow for event type related to mining to be stored in a &mu;QuakeML file; and
-2. Map the &mu;seismic type to the current %
+2. Map the &mu;seismic type to the current
 
 | Event Type (&mu;seismic)            | Event Type (QuakeML)        |
 |-------------------------------------|-----------------------------|
 | earthquake/large event              | earthquake                  |
 | seismic event                       | induced or triggered event  |
 | offsite event                       | atmospheric event           |
-| low quality event                   | cavity collapse             |
 | rock burst                          | rock burst                  |
-| fall of ground/rockfall             | mine collapse               |
+| fall of ground/rockfall             | cavity collapse             |
 | blast                               | explosion                   |
 | blast sequence                      | accidental explosion        |
 | development blast                   | industrial explosion        |
@@ -200,9 +199,9 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzYxNjkzNjgsLTE0MzE4OTAzOTMsLT
-ExNzcyMjc5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03MTI0
-MTkxOTEsMTU0NjIyNzE5MiwxMDE3NjUwOTA5LDU1NDc1NzAwNy
-wxNzE0OTk4MjQwLC00NjYyODA2NTAsMTYzMDE1MjcyNCwtMTM3
-MzcwMjM1NywtMTM4NTk3MDM1MF19
+eyJoaXN0b3J5IjpbLTQwNDcyNzc5MiwtMTQzMTg5MDM5MywtMT
+E3NzIyNzk0NywxMDgxMDE3NjY2LDExMjQxMTQxOTMsLTcxMjQx
+OTE5MSwxNTQ2MjI3MTkyLDEwMTc2NTA5MDksNTU0NzU3MDA3LD
+E3MTQ5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNzI0LC0xMzcz
+NzAyMzU3LC0xMzg1OTcwMzUwXX0=
 -->
