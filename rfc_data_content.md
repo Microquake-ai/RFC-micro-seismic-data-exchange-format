@@ -26,13 +26,13 @@ Microseismic data plays a important role in ensuring the safety and enabling the
 
 #### Goal
 
-The proposed data content is mainly designed to promote interoperability and innovations.
+The proposed data content and a packaging format to promote interoperability, consistency and innovations.
 
 ## Proposal
 
 ### Overview
 
-Our proposal concerns three categories of data, the waveforms, the catalog data and the inventory and system information.
+Our proposal concerns three categories of data, the waveforms, the catalog data and the inventory and system information. We propose storing this information in a unique `Zar
 
 To ensure interoperability, the information in the provided files shall be consistent. The sensor naming convention shall be the same all across, the locations of sensors and events shall be expressed using one single coordinate system, which should also be used for the grids, if applicable.
 
@@ -153,7 +153,7 @@ We propose to organize the catalog information as follows
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mjc2NDA1MTQsMTEyNDExNDE5MywtNz
+eyJoaXN0b3J5IjpbLTEzNDYwMjU1MTksMTEyNDExNDE5MywtNz
 EyNDE5MTkxLDE1NDYyMjcxOTIsMTAxNzY1MDkwOSw1NTQ3NTcw
 MDcsMTcxNDk5ODI0MCwtNDY2MjgwNjUwLDE2MzAxNTI3MjQsLT
 EzNzM3MDIzNTcsLTEzODU5NzAzNTBdfQ==
