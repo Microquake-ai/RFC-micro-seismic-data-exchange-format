@@ -63,7 +63,9 @@ The required metadata for each trace are:
 
 The _miniSEED_ format is widely adopted in seismology and is very convenient for storing seismic data. The _miniSEED_ format can accommodate traces from different instrument type (geophone, accelerometer, seismometer, etc.) acquired at a different sampling rate, with variable start times and end times. It is important to note, however, that to use _miniSEED_ the network, station, location, and channels code must adhere to a strict convention described below:
 
-- **Network Code**  
+- **Network Code** &mdash; Two (2) alphanumerical characters
+- **Station Code**: Five (5) alphanumerical characters
+- **Location Code**: Two (4)
 
 **Suggested data format:** We recommend using the _miniSEED_ format using a 4096 block size to package the waveform data. The _miniSEED_ format is widely adopted in seismology. It is an efficient, flexible and easy to read seismic data container. The _miniSEED_ format can accommodate traces from different instrument acquired at a different sampling rate, of different sampling rate, start times and end times. The format also efficient merging of data as the "blockettes" can usually be combined together and shuffled around. 
 
@@ -77,7 +79,7 @@ The catalog information
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzYyODE3ODUsNTU0NzU3MDA3LDE3MT
-Q5OTgyNDAsLTQ2NjI4MDY1MCwxNjMwMTUyNzI0LC0xMzczNzAy
-MzU3LC0xMzg1OTcwMzUwXX0=
+eyJoaXN0b3J5IjpbMjA4MzI1NjcyNiw1NTQ3NTcwMDcsMTcxND
+k5ODI0MCwtNDY2MjgwNjUwLDE2MzAxNTI3MjQsLTEzNzM3MDIz
+NTcsLTEzODU5NzAzNTBdfQ==
 -->
