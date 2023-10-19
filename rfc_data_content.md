@@ -97,7 +97,7 @@ We propose the following RFC process that should lead to the standard adoption. 
 
 Our proposal encompasses three categories of data: the waveforms, the catalog data, and the inventory and system information. It also concerns system metadata such as velocity models. 
 
-We propose using the `ASDF` format with a `.asdf` extension to store the waveforms, the catalog (QuakeML), and inventory (StationXML) information. The `ADSF` format provides a convenient and comprehensive mechanism to store the provenance and lineage information related to the data genesis and modification to provide traceability and data history. Note that the `ASDF` format also provides a convenient way to store auxiliary data including but not necessarily limited to:
+We propose using the `ASDF` format with a `.asdf` extension to store the waveforms, the catalog (QuakeML), and inventory (StationXML) information. The `ADSF` format provides a convenient and comprehensive mechanism to store the provenance and lineage information related to the data genesis and modification to provide traceability and data history. Note that the `ASDF` format also provides a convenient way to store auxiliary data that could, for instance, include including but not necessarily limited to:
 
 -   **Ambient Noise Correlations**: Pre-computed cross-correlations between stations, which can be essential for techniques like ambient noise tomography.
     
@@ -417,11 +417,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU3OTQyMzEsNzU2NTkxOTA5LDYyMTYxNj
-QwMSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMsLTIx
-NDU0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyND
-U5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMy
-LC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OT
-QzNTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3
-ODU4XX0=
+eyJoaXN0b3J5IjpbLTEwOTA5MTI2MzcsNzU2NTkxOTA5LDYyMT
+YxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMs
+LTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMT
+EyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1
+NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLT
+M4OTQzNTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1
+NzI3ODU4XX0=
 -->
