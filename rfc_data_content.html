@@ -426,6 +426,14 @@
 <li>Within the <code>AuxiliaryData</code> section of the ASDF file, we introduce a dedicated <code>Rays</code> directory.</li>
 <li>Individual rays are uniquely identified by a unique <code>resource_id</code> and each has its own sub-directory under <code>Rays</code> and adopt a naming convention linking them to the an instrument using the <code>network</code>, <code>station</code> and <code>channel</code> codes.</li>
 </ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode mathematica"><code class="sourceCode mathematica"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a>`AuxiliaryData</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a>│</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a>└───Rays</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true"></a>    │   Country = &quot;USA&quot;</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true"></a>    │   <span class="dt">time_</span>zone = &quot;PST&quot;</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true"></a>    │   <span class="fu">latitude</span> = <span class="dv">34</span><span class="fl">.0522</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true"></a>    │   <span class="fu">longitude</span> = <span class="dv">-118</span><span class="fl">.2437</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true"></a>    │   ...` </span></code></pre></div>
 <h5 id="ray-attributes">Ray Attributes:</h5>
 <p>Each ray’s sub-directory will include the following attributes:</p>
 <ul>
@@ -474,45 +482,45 @@
 <h4 id="initializing-a-grid">Initializing a Grid</h4>
 <p>The <code>Grid</code> object can be initialized using either a numpy array representing the grid data or by specifying the grid dimensions. When using the latter approach, the grid is initialized with a default or specified value.</p>
 <p>Let’s consider a simple example to illustrate this:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="im">from</span> uquake.core.grid.base <span class="im">import</span> Grid</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true"></a><span class="co"># Define grid header specifications</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true"></a></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true"></a>header <span class="op">=</span> {</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true"></a>    <span class="st">&quot;NX&quot;</span>: <span class="dv">100</span>,  </span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true"></a>    <span class="st">&quot;NY&quot;</span>: <span class="dv">100</span>,  </span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true"></a>    <span class="st">&quot;NZ&quot;</span>: <span class="dv">50</span>,   </span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true"></a>    <span class="st">&quot;ORIGX&quot;</span>: <span class="fl">0.0</span>,  </span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true"></a>    <span class="st">&quot;ORIGY&quot;</span>: <span class="fl">0.0</span>,  </span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true"></a>    <span class="st">&quot;ORIGZ&quot;</span>: <span class="fl">0.0</span>,  </span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true"></a>    <span class="st">&quot;SPACEX&quot;</span>: <span class="fl">0.1</span>,  </span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true"></a>    <span class="st">&quot;SPACEY&quot;</span>: <span class="fl">0.1</span>,  </span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true"></a>    <span class="st">&quot;SPACEZ&quot;</span>: <span class="fl">0.2</span>,  </span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true"></a>}</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true"></a></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true"></a><span class="co"># Initialize the grid using grid dimensions and set default value as 0</span></span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true"></a></span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true"></a>grid_dims <span class="op">=</span> (header[<span class="st">&quot;NX&quot;</span>], header[<span class="st">&quot;NY&quot;</span>], header[<span class="st">&quot;NZ&quot;</span>])</span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true"></a>spacing <span class="op">=</span> (header[<span class="st">&quot;SPACEX&quot;</span>], header[<span class="st">&quot;SPACEY&quot;</span>], header[<span class="st">&quot;SPACEZ&quot;</span>])</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true"></a>origin <span class="op">=</span> (header[<span class="st">&quot;ORIGX&quot;</span>], header[<span class="st">&quot;ORIGY&quot;</span>], header[<span class="st">&quot;ORIGZ&quot;</span>])</span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true"></a></span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true"></a>grid <span class="op">=</span> Grid(data_or_dims<span class="op">=</span>grid_dims, spacing<span class="op">=</span>spacing, origin<span class="op">=</span>origin, value<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true"></a></span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true"></a><span class="co"># Write the modified or new grid to a file</span></span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true"></a>grid.write(<span class="st">&quot;path_to_new_grid_file.grid&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="im">from</span> uquake.core.grid.base <span class="im">import</span> Grid</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a><span class="co"># Define grid header specifications</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true"></a>header <span class="op">=</span> {</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true"></a>    <span class="st">&quot;NX&quot;</span>: <span class="dv">100</span>,  </span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true"></a>    <span class="st">&quot;NY&quot;</span>: <span class="dv">100</span>,  </span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true"></a>    <span class="st">&quot;NZ&quot;</span>: <span class="dv">50</span>,   </span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true"></a>    <span class="st">&quot;ORIGX&quot;</span>: <span class="fl">0.0</span>,  </span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true"></a>    <span class="st">&quot;ORIGY&quot;</span>: <span class="fl">0.0</span>,  </span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true"></a>    <span class="st">&quot;ORIGZ&quot;</span>: <span class="fl">0.0</span>,  </span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true"></a>    <span class="st">&quot;SPACEX&quot;</span>: <span class="fl">0.1</span>,  </span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true"></a>    <span class="st">&quot;SPACEY&quot;</span>: <span class="fl">0.1</span>,  </span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true"></a>    <span class="st">&quot;SPACEZ&quot;</span>: <span class="fl">0.2</span>,  </span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true"></a>}</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true"></a></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true"></a><span class="co"># Initialize the grid using grid dimensions and set default value as 0</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true"></a></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true"></a>grid_dims <span class="op">=</span> (header[<span class="st">&quot;NX&quot;</span>], header[<span class="st">&quot;NY&quot;</span>], header[<span class="st">&quot;NZ&quot;</span>])</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true"></a>spacing <span class="op">=</span> (header[<span class="st">&quot;SPACEX&quot;</span>], header[<span class="st">&quot;SPACEY&quot;</span>], header[<span class="st">&quot;SPACEZ&quot;</span>])</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true"></a>origin <span class="op">=</span> (header[<span class="st">&quot;ORIGX&quot;</span>], header[<span class="st">&quot;ORIGY&quot;</span>], header[<span class="st">&quot;ORIGZ&quot;</span>])</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true"></a></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true"></a>grid <span class="op">=</span> Grid(data_or_dims<span class="op">=</span>grid_dims, spacing<span class="op">=</span>spacing, origin<span class="op">=</span>origin, value<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true"></a></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true"></a><span class="co"># Write the modified or new grid to a file</span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true"></a>grid.write(<span class="st">&quot;path_to_new_grid_file.grid&quot;</span>)</span></code></pre></div>
 <p>Here, we’ve initialized a 3D grid using the dimensions specified in the header. The grid is filled with a default value of 0.</p>
 <h4 id="reading-and-writing-grids">Reading and Writing Grids</h4>
 <p>The <code>Grid</code> object is equipped with methods to read and write grid data, making it easy to load existing grids or store newly created or modified grids.</p>
 <p>Here’s an example of how one might read from and write to a grid file:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="co"># all versions</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a><span class="im">from</span> uquake.core.grid <span class="im">import</span> read_grid</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a><span class="co"># Reading a grid from a file</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a>grid_from_file <span class="op">=</span> Grid.read(<span class="st">&quot;path_to_grid_file.grid&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="co"># from version 2.0.1</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a><span class="co"># Reading a grid from a file</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a>grid_from_file <span class="op">=</span> Grid.read(<span class="st">&quot;path_to_grid_file.grid&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="co"># all versions</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a><span class="im">from</span> uquake.core.grid <span class="im">import</span> read_grid</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a><span class="co"># Reading a grid from a file</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true"></a>grid_from_file <span class="op">=</span> Grid.read(<span class="st">&quot;path_to_grid_file.grid&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a><span class="co"># from version 2.0.1</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a><span class="co"># Reading a grid from a file</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a>grid_from_file <span class="op">=</span> Grid.read(<span class="st">&quot;path_to_grid_file.grid&quot;</span>) </span></code></pre></div>
 <p>This approach simplifies the process of handling gridded data in seismology by using the <code>uquake</code> library’s built-in functionalities.</p>
 <h2 id="rationale-1">Rationale</h2>
 <p>Understanding the motivations and reasons behind any proposed change is essential to ensure clarity, gain stakeholder buy-in, and ensure the technical merits of the proposal align with the broader goals.</p>
@@ -547,11 +555,11 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk5MTU1NDUyLDEyMDY4NzM2MzcsMTM5ND
-Q2OTY2NiwxMDc0MDA5Mzc4LDIwMjMyNDkxODgsLTEyMzUwMjI3
-OTMsLTY1NzE2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5MDksNj
-IxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAx
-MywtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC
-0xMTI0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0
-OTU2MzJdfQ==
+eyJoaXN0b3J5IjpbLTEwNzAxMjI0MTEsMTIwNjg3MzYzNywxMz
+k0NDY5NjY2LDEwNzQwMDkzNzgsMjAyMzI0OTE4OCwtMTIzNTAy
+Mjc5MywtNjU3MTY5NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOS
+w2MjE2MTY0MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1
+MDEzLC0yMTQ1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0OD
+QsLTExMjQ1OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5
+NDQ5NTYzMl19
 -->
