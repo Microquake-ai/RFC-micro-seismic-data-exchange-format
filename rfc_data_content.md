@@ -65,7 +65,7 @@ In summary, the goal is to provide a robust framework that not only addresses th
 
 #### Schedule:
 
--   **Drafting and Initial Publication**: Initial publication 
+-   **Drafting and Initial Publication**: Initial publication 2023-10-20
 -   **Review**: [Start Date] - [End Date]
 -   **Revision**: [Start Date] - [End Date]
 -   **Final Comment Period**: [Start Date] - [End Date]
@@ -403,11 +403,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMDYxOTM4NSw2MjE2MTY0MDEsMTgxMD
-Y2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMTQ1NDg1NDIx
-LC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1OTk5MzksMT
-QyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMiwtNjQyMjE4
-MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zODk0MzU5OTMsLT
-c1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMTk0NTcyNzg1OCwtMzEy
-MDI4MjM4XX0=
+eyJoaXN0b3J5IjpbNzU2NTkxOTA5LDYyMTYxNjQwMSwxODEwNj
+Y4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMsLTIxNDU0ODU0MjEs
+LTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5OTkzOSwxND
+I5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgx
+MjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OTQzNTk5MywtNz
+U0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3ODU4LC0zMTIw
+MjgyMzhdfQ==
 -->
