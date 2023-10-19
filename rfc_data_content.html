@@ -332,31 +332,9 @@
 <li><code>installation_date</code>: Date when the system was set up.</li>
 <li><code>removal_date</code>: Date when the system was removed (if applicable).</li>
 <li><code>monitoring_target</code>: The monitoring target (e.g. underground, open-pit, surface)</li>
-<li><code>system_type</code>: Type of seismic system (e.g., in-mine, open).</li>
-<li><code>SensorManufacturer</code>: The company or entity that made the seismic equipment.</li>
-<li><code>SensorModel</code>: Specific model details of the equipment.</li>
-<li><code>OperationalStatus</code>: Current status of the system (active, maintenance, decommissioned).</li>
-<li><code>OperationalMode</code>: Mode in which the system operates (continuous, triggered).</li>
 <li><code>Description</code>: Additional remarks or details about the site or instrumentation.</li>
 </ul>
 <h3 id="implementation-notes">Implementation Notes:</h3>
-<ol type="1">
-<li><p><strong>Creating SystemInfo in ASDF</strong>:</p>
-<ul>
-<li>Users should be prompted or have an interface to input these attributes when initializing or updating an ASDF file.</li>
-<li>Inclusion of all attributes is recommended, but mandatory fields should be limited to essential ones like <code>Country</code>, <code>Latitude</code>, <code>Longitude</code>, and <code>SiteName</code>.</li>
-</ul></li>
-<li><p><strong>Retrieving SystemInfo from ASDF</strong>:</p>
-<ul>
-<li>Reading tools should be equipped to fetch and display this system information, facilitating context-aware analysis.</li>
-</ul></li>
-<li><p><strong>Compatibility and Integration</strong>:</p>
-<ul>
-<li>The <code>SystemInfo</code> structure should be designed to seamlessly integrate with other data in the ASDF file, ensuring comprehensive data coverage.</li>
-</ul></li>
-</ol>
-<h3 id="conclusion">Conclusion</h3>
-<p>The introduction of the <code>SystemInfo</code> directory within ASDF’s <code>AuxiliaryData</code> section ensures that users have all necessary contextual information about the seismic system. This inclusion is pivotal for the correct interpretation, utilization, and analysis of the stored seismic data.</p>
 <h3 id="system-metadata-and-grid-data">System Metadata and Grid Data</h3>
 <p>To fully enable the interpretation of the seismic data, accessing information on the velocity models is essential. Other important although not as essential are the attenuation model if they exist and the density values or model. The velocity values/models are increasingly represented on a grid.</p>
 <p>In this section, we propose using a simple grid format for data exchange.</p>
@@ -512,7 +490,7 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkzMjY5MDU1LDIwMjMyNDkxODgsLTEyMz
+eyJoaXN0b3J5IjpbOTAxMTgxMDcyLDIwMjMyNDkxODgsLTEyMz
 UwMjI3OTMsLTY1NzE2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5
 MDksNjIxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMz
 kzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3
