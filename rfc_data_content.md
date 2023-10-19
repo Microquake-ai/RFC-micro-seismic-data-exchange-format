@@ -181,6 +181,20 @@ In this section we will conver a series of data types some are to be included as
 
 - **Grids** [NOT INCLUDED, SEPARATE FILE] &mdash; suited for velocity, velocity derivatives (e.g., slowness) attenuation and density
 
+ASDF Data Structure Overview
+```matematica
+└───Waveforms
+|   QuakeML
+|   AuxiliaryData
+│
+└───SystemInfo
+    │   Country = "USA"
+    │   time_zone = "PST"
+    │   latitude = 34.0522
+    │   longitude = -118.2437
+    │   ...` 
+```
+
 We made the explicit choice to use the QuakeML and StationXML for **catalog** and **inventory** information, aligning with prevailing standards in the seismic community. The principal advantage of this decision is the assured compatibility with a multitude of existing tools and software in the seismic domain. Furthermore, both QuakeML and StationXML are inherently flexible and adaptable. These formats not only offer comprehensive sets of parameters to detail seismic events and station metadata, but they are also designed to accommodate custom parameters and extensions. This flexibility has been instrumental in our initiative. We've leveraged the extensibility of these formats to incorporate specialized μseismic parameters or attributes, ensuring that QuakeML and StationXML are tailored to address the unique nuances and requirements of microseismic monitoring. This adaptation ensures that the data format remains both relevant to the broader seismic community and aptly suited for microseismic applications.
 
 However, like all choices, leveraging these formats comes with its challenges. While their use ensures widespread compatibility, the interpretation of file content may require nuanced processing and considerations. Some adaptations might be essential to cater specifically to the μseismic monitoring context, possibly involving the addition of auxiliary fields or annotations. The goal, throughout these modifications, remains to balance ease-of-use with the specificity required for μseismic data, ensuring that users can maximize the value derived from the data while minimizing the overhead of adaptations and interpretations.
@@ -292,7 +306,7 @@ To ensure accurate interpretation and utilization of seismic data, it's essentia
 The `SystemInfo` directory will house the following attributes:
 
 -   `country`: The nation where the system is located.
--   `time_zone`: Local time zone of the system or the offset from Coordinated Universal Time (UTC). The time zone must be a standard time zone as 
+-   `time_zone`: Local time zone of the system or the offset from Coordinated Universal Time (UTC). The time zone name must be found with the [IANA time zone database](https://www.iana.org/time-zones)
 -   `site_name`: Name or identifier of the seismic site.
 -   `latitude`: Geographic latitude of the system's location.
 -   `longitude`: Geographic longitude of the system's location.
@@ -578,11 +592,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY2NzczNDI3LDEzOTQ0Njk2NjYsMTA3ND
-AwOTM3OCwyMDIzMjQ5MTg4LC0xMjM1MDIyNzkzLC02NTcxNjk0
-NzYsLTE0NTA3NzY3NDMsNzU2NTkxOTA5LDYyMTYxNjQwMSwxOD
-EwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMsLTIxNDU0ODU0
-MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5OTkzOS
-wxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC02NDIy
-MTgxMjNdfQ==
+eyJoaXN0b3J5IjpbMTg4MDE4OTk0NiwxMzk0NDY5NjY2LDEwNz
+QwMDkzNzgsMjAyMzI0OTE4OCwtMTIzNTAyMjc5MywtNjU3MTY5
+NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2MTY0MDEsMT
+gxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMTQ1NDg1
+NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1OTk5Mz
+ksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMiwtNjQy
+MjE4MTIzXX0=
 -->
