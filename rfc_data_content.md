@@ -97,13 +97,13 @@ We propose the following RFC process that should lead to the standard adoption. 
 
 Our proposal encompasses three categories of data: the waveforms, the catalog data, and the inventory and system information. It also concerns system metadata such as velocity models. 
 
-We propose using the `ASDF` format with a `.asdf` extension to store the waveforms, the catalog (QuakeML), and inventory (StationXML) information. The `ADSF` format provides a convenient and comprehensive mechanism to store the provenance and lineage information related to the data genesis and modification to provide traceability and data history. Note that the `ASDF` format also provides a convenient way to store auxiliary data that could, for instance, include including but not necessarily limited to:
+We propose using the `ASDF` format with a `.asdf` extension to store the waveforms, the catalog (QuakeML), and inventory (StationXML) information. The `ADSF` format provides a convenient and comprehensive mechanism to store the provenance and lineage information related to the data genesis and modification to provide traceability and data history. Note that the `ASDF` format also provides a convenient way to store auxiliary data that could, for instance, include:
 
 -   **Ambient Noise Correlations**: Pre-computed cross-correlations between stations, which can be essential for techniques like ambient noise tomography.
     
 -   **Instrument Response**: Though typically part of the StationXML, having the actual instrument response curves stored as auxiliary data can facilitate more direct correction of the waveforms without referencing external databases.
 
-- **Ray Tracing and Ray Parameters**: 
+- **Rays and Ray Parameters from Ray Tracing**:  Storing detailed ray paths and relevant parameters is useful for higher order analyses such as travel time and attenuation tomography, and moment tensor inversion to name only those. comprehensive understanding of seismic wave propagation and the nuances of individual seismic events. For each event, origin, instrument, phase, and velocity model, the associated rays should be stored alongside key parameters such as takeoff angle, azimuth, incidence angle, ray path length, and time of arrival. Such information is invaluable for advanced seismic analysis methods, aiding in accurate event localization, source mechanism determination, and the assessment of velocity model validity. By integrating these data directly within the `ASDF` format, researchers can achieve a holistic understanding of the seismic event and the underlying geophysical processes, ensuring that they have all pertinent information at their fingertips without resorting to supplementary datasets or computations.
     
 -   **Processing Logs**: Detailed logs of processing steps performed on the data, which can be crucial for ensuring data quality and understanding potential issues or artifacts.
 
@@ -417,11 +417,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTA5MTI2MzcsNzU2NTkxOTA5LDYyMT
-YxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMs
-LTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMT
-EyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1
-NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLT
-M4OTQzNTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1
-NzI3ODU4XX0=
+eyJoaXN0b3J5IjpbLTExNzEyNDQzNyw3NTY1OTE5MDksNjIxNj
+E2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywt
+MjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMT
+I0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2
+MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMz
+g5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3
+Mjc4NThdfQ==
 -->
