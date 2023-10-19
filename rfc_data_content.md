@@ -177,8 +177,8 @@ The required metadata for each trace includes:
 #### Suggested Naming Convention and Usage
 
 - **Network Code**: The network code should represent a physical or logical network. A mine or mining complex can include multiple networks. The network name should be compact but be easily recognized and understood. For instance, the Oyu Tolgoi Hugo North Underground Lift 1 network can be represented by the following accronym: OTHNL1.
-- **Station Code**: We recommend associating the station code to an instrument or a group of instrument. The Station code should convey relevant information on the sensor location and provide context to the seismic system stakeholders. An example for an adequate naming, assuming an instrument is installed along the Haulage Level Access Drive 2, referred to as HLAD2, the code for the two stations can be HLAD2_01 and HLAD2_02.
-- **Location Code**: We suggest using the location code to refer to an instrument connected to a station. 
+- **Station Code**: We recommend associating the station code to an instrument or a group of instrument. The Station code should convey relevant information on the sensor location and provide context to the seismic system stakeholders. An example for an adequate station code, given an instrument is installed along the Haulage Level Access Drive 2, would be HLAD2.
+- **Location Code**: If the Station Code refers to a group of instruments, for instance, instruments installed in a long borehole, connected to the same acquisition station. 
 
 
 ### Catalog
@@ -423,11 +423,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTcxNDI2MDA1LDc1NjU5MTkwOSw2MjE2MT
-Y0MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0y
-MTQ1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMj
-Q1OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYz
-MiwtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zOD
-k0MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMTk0NTcy
-Nzg1OF19
+eyJoaXN0b3J5IjpbMTE1OTY2NTY0MCw3NTY1OTE5MDksNjIxNj
+E2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywt
+MjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMT
+I0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2
+MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMz
+g5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3
+Mjc4NThdfQ==
 -->
