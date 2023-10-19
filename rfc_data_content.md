@@ -163,6 +163,36 @@ This section is concerned about the cross-referencing of information related to 
 - **Station Code**: We recommend associating the station code to an instrument or a group of instrument. The Station code should convey relevant information on the sensor location and provide context to the seismic system stakeholders. An example for an adequate station code, given an instrument is installed along the Haulage Level Access Drive 2, would be HLAD2.
 - **Location Code**: If the Station Code refers to a group of instruments, for instance, instruments installed in a long borehole, connected to the same acquisition station, the location code can be used to differentiate the instrument within the group. The location code should be kept short. It can simply be a number converying the relative order or in the case of a borehole installation, a measure of the location along the hole.
 
+## Convention Used in this Document
+
+### Conventions in the Structure Overview
+
+The structure overview provides a hierarchical representation of the data storage for rays within the `AuxiliaryData` section of an ASDF file. To ensure clarity and ease of understanding, we've adopted specific conventions in the representation:
+
+1.  **Directory vs. Attribute**:
+    
+    -   Directories are depicted with a trailing arrow (`└───`) indicating a further branching or nesting within the structure.
+    -   Attributes are depicted with a colon (`:`) followed by a description of their expected data type or format, such as `{float}`, `{network code}`, or `{list of 3D coordinates}`.
+2.  **Naming Convention**:
+    
+    -   Static directory names, like `Ray`, are shown in plain text.
+    -   Dynamic directory names, such as those depending on identifiers (`Origin_{origin ResourceIdentifier}`), use curly braces `{}` to indicate a placeholder that will be replaced by actual data.
+3.  **Spatial Coordinate Representation**:
+    
+    -   Any 3D coordinate or vector is assumed to be in the format (x, y, z). Specific coordinate systems or units should be defined elsewhere in the documentation if necessary.
+4.  **Angle Convention**:
+    
+    -   All angles are measured in degrees.
+    -   Azimuthal angles use a convention of measurement from the North in a clockwise direction.
+5.  **Order Preservation**:
+    
+    -   Lists, like the list of nodes, are assumed to preserve the order of their elements. This is crucial for representing raypaths and ensuring their integrity.
+6.  **Indentation**:
+    
+    -   The structure uses indentation to depict hierarchy. Each level of indentation represents a deeper level in the hierarchy, allowing users to visually grasp the nesting and relationships between directories and attributes.
+
+By adhering to these conventions, the structure overview aims to provide a clear, intuitive, and consistent visualization of the data's organization within the ASDF file.
+
 ## Data Format and Adaptation
 ### Overview
 
@@ -667,11 +697,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDg2NTM1NjAsNDM5NzYzNTc0LDEyMD
-Y4NzM2MzcsMTM5NDQ2OTY2NiwxMDc0MDA5Mzc4LDIwMjMyNDkx
-ODgsLTEyMzUwMjI3OTMsLTY1NzE2OTQ3NiwtMTQ1MDc3Njc0My
-w3NTY1OTE5MDksNjIxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMz
-MDk1LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNC
-wtODAzNDE3NDg0LC0xMTI0NTk5OTM5LDE0MjkxOTI5MjYsMjkx
-Njg5MTM2XX0=
+eyJoaXN0b3J5IjpbMTkzMTg5MDQ1MywtMTAwODY1MzU2MCw0Mz
+k3NjM1NzQsMTIwNjg3MzYzNywxMzk0NDY5NjY2LDEwNzQwMDkz
+NzgsMjAyMzI0OTE4OCwtMTIzNTAyMjc5MywtNjU3MTY5NDc2LC
+0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2MTY0MDEsMTgxMDY2
+ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMTQ1NDg1NDIxLC
+0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1OTk5MzksMTQy
+OTE5MjkyNl19
 -->
