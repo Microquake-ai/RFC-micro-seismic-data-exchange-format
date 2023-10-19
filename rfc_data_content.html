@@ -61,7 +61,8 @@
 <p>Alongside the amplitude values, additional metadata describing the instrument recording the data and time series parameters should be provided for each trace. Each trace should be stored with its own metadata information.</p>
 <p>The required metadata for each trace includes:</p>
 <ul>
-<li><strong>Trace Identifier</strong>: A unique identifier for the trace (see Obspy <a href="https://docs.obspy.org/master/packages/autogen/obspy.core.event.resourceid.ResourceIdentifier.html">documentation</a> for information on the recommended <em>resource identifier</em> structure). The trace identifier format and convention should be normalized and align with the SEED naming convention including the standard part. Deviation regarding the nam</li>
+<li><strong>Trace Identifier</strong>: A unique identifier for the trace (see Obspy <a href="https://docs.obspy.org/master/packages/autogen/obspy.core.event.resourceid.ResourceIdentifier.html">documentation</a> for information on the recommended <em>resource identifier</em> structure). The trace identifier format and convention should be normalized and align with the SEED naming convention including the standard part. Deviation regarding the naming shall, howerver, be permitted to allow longer names to be utilized.<br />
+</li>
 <li><strong>Location Identification</strong>: The location identification convention described <a href="https://ds.iris.edu/ds/newsletter/vol1/no1/1/specification-of-seismograms-the-location-identifier/">here</a>. This convention has been adapted for μseismic monitoring in the mining context.
 <ul>
 <li><strong>Network Code [network_code]</strong> — Code representing the network.</li>
@@ -74,7 +75,8 @@
 <li><strong>Start Time [starttime]</strong> — The trace’s start time.</li>
 </ul>
 <h4 id="notes">Notes:</h4>
-<p><strong>Network, Station, and Location Codes</strong>: The mentioned convention is often not strictly adhered to by μseismic system providers. Flexibility in applying the convention is crucial. Typically, no distinction is made between the station and location, and each instrument is assigned a unique code that may or may not refer to the data acquisition station. In such cases, we suggest using the <strong>Station Code</strong> field to store the <em>instrument</em> code and populate the location code with 01 or 00. In a network, each combination of <strong>Station Code</strong> – <strong>Location Code</strong> – <strong>Channel Code</strong> should be unique.</p>
+<p>**Sen</p>
+<p><strong>Network, Station, and Location Codes</strong>: The mentioned convention is often not strictly adhered to by μseismic system providers. Flexibility in applying the convention is crucial. Typically, no distinction is made between the station and location, and each instrument is assigned a unique code that may or may not refer to the data acquisition station. In such cases, we suggest using the <strong>Station Code</strong> field to store the <em>instrument</em> code and populate the location code with 01 or 00. In a network, each combination of <strong>Station Code</strong>.<strong>Location Code</strong>.<strong>Channel Code</strong> should be unique.</p>
 <h3 id="catalog">Catalog</h3>
 <p>The catalog includes information related to an event, a trigger, or a series of events. We suggest storing the catalog information in a QuakeML-like format adapted to μseismic data (see QuakeML <a href="https://quake.ethz.ch/quakeml">documentation</a>). The suggested changes affect the following QuakeML objects:</p>
 <ul>
@@ -328,11 +330,11 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE0ODEyNjc2LDEzMzkzNTAxMywtMjE0NT
-Q4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5
-OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLT
-Y0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1
-OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NT
-gsLTMxMjAyODIzOCw0NjM2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0
-NDQwNTE1NF19
+eyJoaXN0b3J5IjpbMTA5MDQwNzYyMiwxMzM5MzUwMTMsLTIxND
+U0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5
+OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC
+02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OTQz
+NTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3OD
+U4LC0zMTIwMjgyMzgsNDYzNjg0NDk3LC0xNjE2MTczNTgyLDEw
+NDQ0MDUxNTRdfQ==
 -->
