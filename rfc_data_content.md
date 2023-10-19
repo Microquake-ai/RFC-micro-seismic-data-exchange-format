@@ -98,7 +98,7 @@ Alongside the amplitude values, additional metadata describing the instrument re
 
 The required metadata for each trace includes:
 
--   **Trace Identifier**: A unique identifier for the trace (see Obspy [documentation](https://docs.obspy.org/master/packages/autogen/obspy.core.event.resourceid.ResourceIdentifier.html) for information on the recommended _resource identifier_ structure). The trace identifier format and conv
+-   **Trace Identifier**: A unique identifier for the trace (see Obspy [documentation](https://docs.obspy.org/master/packages/autogen/obspy.core.event.resourceid.ResourceIdentifier.html) for information on the recommended _resource identifier_ structure). The trace identifier format and convention should be normalized and align with the SEED naming convention including the standard part. Deviation regarding the nam 
 -   **Location Identification**: The location identification convention described [here](https://ds.iris.edu/ds/newsletter/vol1/no1/1/specification-of-seismograms-the-location-identifier/). This convention has been adapted for μseismic monitoring in the mining context.
     -   **Network Code [network_code]** — Code representing the network.
     -   **Station Code [station_code]** — Code representing the station containing the digitizer.
@@ -354,11 +354,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTYwNjE4NDQsMTMzOTM1MDEzLC0yMT
-Q1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1
-OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMi
-wtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zODk0
-MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMTk0NTcyNz
-g1OCwtMzEyMDI4MjM4LDQ2MzY4NDQ5NywtMTYxNjE3MzU4Miwx
-MDQ0NDA1MTU0XX0=
+eyJoaXN0b3J5IjpbNDE0ODEyNjc2LDEzMzkzNTAxMywtMjE0NT
+Q4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5
+OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLT
+Y0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1
+OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NT
+gsLTMxMjAyODIzOCw0NjM2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0
+NDQwNTE1NF19
 -->
