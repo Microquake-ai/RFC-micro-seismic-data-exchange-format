@@ -114,7 +114,10 @@ The required metadata for each trace includes:
 
 **Network, Station, and Location Codes**: The mentioned convention is often not strictly adhered to by μseismic system providers. Flexibility in applying the convention is crucial. Typically, no distinction is made between the station and location, and each instrument is assigned a unique code that may or may not refer to the data acquisition station. In such cases, we suggest using the **Station Code** field to store the _instrument_ code and populate the location code with 01 or 00. In a network, each combination of **Station Code**.**Location Code**.**Channel Code** should be unique.
 
-#### Suggested Naming Convent
+#### Suggested Naming Convention and Usage
+
+- **Network**: The network should represent a physical or logical network. A mine or mining complex can include multiple networks.
+
 
 ### Catalog
 
@@ -358,11 +361,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzQyNjE0NTUsMTMzOTM1MDEzLC0yMT
-Q1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1
-OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMi
-wtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zODk0
-MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMTk0NTcyNz
-g1OCwtMzEyMDI4MjM4LDQ2MzY4NDQ5NywtMTYxNjE3MzU4Miwx
-MDQ0NDA1MTU0XX0=
+eyJoaXN0b3J5IjpbMjA1Nzk1MzM2OCwxMzM5MzUwMTMsLTIxND
+U0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5
+OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC
+02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OTQz
+NTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3OD
+U4LC0zMTIwMjgyMzgsNDYzNjg0NDk3LC0xNjE2MTczNTgyLDEw
+NDQ0MDUxNTRdfQ==
 -->
