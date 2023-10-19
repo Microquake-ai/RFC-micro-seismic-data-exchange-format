@@ -81,12 +81,11 @@
 <h2 id="proposal">Proposal</h2>
 <h3 id="overview">Overview</h3>
 <p>Our proposal encompasses three categories of data: the waveforms, the catalog data, and the inventory and system information. It also concerns system metadata such as velocity models.</p>
-<p>We propose using the <code>ASDF</code> format with a <code>.asdf</code> extension to store the waveforms, the catalog (QuakeML), and inventory (StationXML) information. The <code>ADSF</code> format provides a convenient and comprehensive mechanism to store the provenance and lineage in of the data to provide traceability and data history.Note that the <code>ASDF</code> format also provides a convenient way to store auxiliary data including but not necessarily limited to:</p>
+<p>We propose using the <code>ASDF</code> format with a <code>.asdf</code> extension to store the waveforms, the catalog (QuakeML), and inventory (StationXML) information. The <code>ADSF</code> format provides a convenient and comprehensive mechanism to store the provenance and lineage information related to the data genesis and modification to provide traceability and data history. Note that the <code>ASDF</code> format also provides a convenient way to store auxiliary data including but not necessarily limited to:</p>
 <ul>
 <li><p><strong>Ambient Noise Correlations</strong>: Pre-computed cross-correlations between stations, which can be essential for techniques like ambient noise tomography.</p></li>
-<li><p><strong>Adjoint Sources</strong>: Useful for full waveform inversion (FWI) methods, where the difference between observed and simulated waveforms is back-propagated into the subsurface to update model parameters.</p></li>
-<li><p><strong>Receiver Functions</strong>: Derived from teleseismic recordings, these provide insights into the subsurface structure, especially at the crust-mantle boundary.</p></li>
 <li><p><strong>Instrument Response</strong>: Though typically part of the StationXML, having the actual instrument response curves stored as auxiliary data can facilitate more direct correction of the waveforms without referencing external databases.</p></li>
+<li><p><strong>Ray Tracing and Ray Parameter</strong>:</p></li>
 <li><p><strong>Processing Logs</strong>: Detailed logs of processing steps performed on the data, which can be crucial for ensuring data quality and understanding potential issues or artifacts.</p></li>
 </ul>
 <p>To ensure interoperability, the information in the provided files must be consistent. The sensor naming convention shall remain consistent throughout. Additionally, the locations of sensors and events should be expressed using a unified coordinate system, which must also be used for grids, if applicable.</p>
@@ -395,7 +394,7 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4ODk0Nzc0Niw3NTY1OTE5MDksNjIxNj
+eyJoaXN0b3J5IjpbMjEzMzQ1NjAzNiw3NTY1OTE5MDksNjIxNj
 E2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywt
 MjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMT
 I0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2
