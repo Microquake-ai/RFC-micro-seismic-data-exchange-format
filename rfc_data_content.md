@@ -195,8 +195,9 @@ In addition to the trace identification information the following metadata must 
 
 The other parameters can be derived from the sampling rate, start time and the waveform data:
 
-- **Number of Point [npts]** &mdash; Number of sample points (default value is 0, which implies that no data is present).
-- **Sampling Interval [delta]** &mdash; 
+- **Number of Point [npts]** &mdash; Number of sample points (default value is 0, which implies that no data is present). Measured by counting the number of points in the time serie.
+- **Sampling Interval [delta]** &mdash; ample distance in seconds. Computed as the inverse of the sampling_rate ($1/sampling\_rate$).
+- 
 
 ### Catalog
 
@@ -492,11 +493,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE1ODQzMDEsLTEyMzUwMjI3OTMsLTY1Nz
-E2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5MDksNjIxNjE2NDAx
-LDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMjE0NT
-Q4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5
-OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLT
-Y0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1
-OTkzXX0=
+eyJoaXN0b3J5IjpbMTk0NzE3MzQ0MCwtMTIzNTAyMjc5MywtNj
+U3MTY5NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2MTY0
+MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMT
+Q1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1
+OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMi
+wtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zODk0
+MzU5OTNdfQ==
 -->
