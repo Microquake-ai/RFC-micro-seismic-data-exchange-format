@@ -192,8 +192,8 @@ ASDF File
 └─── StationXML
 └─── AuxiliaryData
    └─── SystemInfo
-   └─── EventConversionLookup
-   └─── Ray
+   └─── EventTypeConversionLookup
+   └─── Rays
    └─── AlternativeLocations   
 ```
 
@@ -601,7 +601,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTkxMDgxNjcsMTIwNjg3MzYzNywxMz
+eyJoaXN0b3J5IjpbLTEzNTYwNzE1OTIsMTIwNjg3MzYzNywxMz
 k0NDY5NjY2LDEwNzQwMDkzNzgsMjAyMzI0OTE4OCwtMTIzNTAy
 Mjc5MywtNjU3MTY5NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOS
 w2MjE2MTY0MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1
