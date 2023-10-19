@@ -199,8 +199,6 @@ ASDF File
    |
    └───EventConversionLookup
    |
-   └───
-   |
    └───Ray
    |
    └───AlternativeLocations   
@@ -300,7 +298,7 @@ In a typical seismic application, the StationXML format uses latitude and longit
 
 Thus, we recommend replacing the latitude and longitude fields in the StationXML format with `x`, `y`, and `z` coordinates for both the station and channel locations. This change aligns with the earlier modifications made for QuakeML, ensuring consistency across different components of the μseismic system.
 
-## RFC Section: System Information Storage in ASDF's Auxiliary Data
+## System Information Storage in ASDF's Auxiliary Data
 
 ### Background
 
@@ -326,6 +324,7 @@ The `SystemInfo` directory will house the following attributes:
 -   `installation_date`: Date when the system was set up.
 -   `removal_date`: Date when the system was removed (if applicable).
 -   `monitoring_target`: The monitoring target (e.g. underground, open-pit, surface)
+-  `p_velocity`: The 
 -   `Description`: Additional remarks or details about the site or instrumentation.
 
 ### Implementation Notes:
@@ -604,7 +603,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg3ODE2NDI5LDEzOTQ0Njk2NjYsMTA3ND
+eyJoaXN0b3J5IjpbMjU2NzY2MTczLDEzOTQ0Njk2NjYsMTA3ND
 AwOTM3OCwyMDIzMjQ5MTg4LC0xMjM1MDIyNzkzLC02NTcxNjk0
 NzYsLTE0NTA3NzY3NDMsNzU2NTkxOTA5LDYyMTYxNjQwMSwxOD
 EwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMsLTIxNDU0ODU0
