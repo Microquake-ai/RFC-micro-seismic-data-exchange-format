@@ -6,7 +6,7 @@
 ### Purpose
 The purpose of this document is to invite comments on a suggested format to allow for standardized and consistent access to μseismic data collected by mine μseismic monitoring systems. This format aims to enable a seamless and lossless exchange between different platforms. The objective of the proposed standard **does not** concern how seismic data are **internally managed** within each proprietary platform, although the capability of the present format would be suited for that purpose, it only focuses on how the data are exchanged.
 
-The proposed standard applies to a wide range of data including triggered event, continuous recording, and DAS monitoring. 
+The proposed standard applies to a wide range of data including triggered event, continuous recording, and DAS monitoring. It allows for different data types to be combined. 
 
 Access to the μseismic data is inconsistent among various vendors, and occasionally within different implementations by the same vendor. Variations arise from site to site, often driven by third-party requirements. Such inconsistencies lead to inefficiencies, complicating the integration of various systems that offer complementary products and services, and making data usage unnecessarily challenging.
 
@@ -367,11 +367,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NDQzMDQyNyw2MjE2MTY0MDEsMTgxMD
-Y2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMTQ1NDg1NDIx
-LC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1OTk5MzksMT
-QyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMiwtNjQyMjE4
-MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zODk0MzU5OTMsLT
-c1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMTk0NTcyNzg1OCwtMzEy
-MDI4MjM4XX0=
+eyJoaXN0b3J5IjpbNTE1MzQwMjcyLDYyMTYxNjQwMSwxODEwNj
+Y4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMsLTIxNDU0ODU0MjEs
+LTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5OTkzOSwxND
+I5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgx
+MjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OTQzNTk5MywtNz
+U0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3ODU4LC0zMTIw
+MjgyMzhdfQ==
 -->
