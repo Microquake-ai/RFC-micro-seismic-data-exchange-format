@@ -29,7 +29,7 @@
 <li><p><strong>Instrument Response</strong>: Though typically part of the StationXML, having the actual instrument response curves stored as auxiliary data can facilitate more direct correction of the waveforms without referencing external databases.</p></li>
 <li><p><strong>Processing Logs</strong>: Detailed logs of processing steps performed on the data, which can be crucial for ensuring data quality and understanding potential issues or artifacts.</p></li>
 </ul>
-<p>To ensure interoperability, the information in the provided files must be consistent. The sensor naming convention should remain consistent across all files. Additionally, the locations of sensors and events should be expressed using a unified coordinate system, which must also be used for grids, if applicable.</p>
+<p>To ensure interoperability, the information in the provided files must be consistent. The sensor naming convention shall remain consistent throughout. Additionally, the locations of sensors and events should be expressed using a unified coordinate system, which must also be used for grids, if applicable.</p>
 <h3 id="why-asdf-format">Why <code>ASDF</code> format?</h3>
 <p>The Adaptable Seismic Data Format (ASDF) was introduced in response to the need for an efficient and comprehensive format for seismic data storage and retrieval. Developed through collaborative research by experts in the seismology field, ASDF aims to address the complexities associated with managing diverse seismic datasets. The format has been designed with adaptability in mind, ensuring both ease of use and interoperability across various platforms. As a result of its well-structured architecture, ASDF has gained widespread acceptance within the seismology community.</p>
 <p>The <code>ASDF</code> format was designed to efficiently store and access large-scale array-oriented scientific data. Its design addresses the challenges posed by cloud and distributed storage, allowing for concurrent reads and writes. The format shines in scenarios where data needs to be analyzed in chunks without loading the entire dataset into memory, making it particularly apt for multidimensional arrays. With built-in support for compression and chunking, ASDF facilitates rapid data access regardless of the storage backend, whether it’s file systems, object storage, or databases.</p>
@@ -317,7 +317,7 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyODc0ODU1MCwxMzM5MzUwMTMsLTIxND
+eyJoaXN0b3J5IjpbLTYwMjc4MzM1OSwxMzM5MzUwMTMsLTIxND
 U0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5
 OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC
 02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OTQz
