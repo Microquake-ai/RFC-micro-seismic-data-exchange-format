@@ -23,6 +23,7 @@
 <h3 id="why-asdf-format">Why <code>ASDF</code> format?</h3>
 <p>The Adaptable Seismic Data Format (ASDF) was introduced in response to the need for an efficient and comprehensive format for seismic data storage and retrieval. Developed through collaborative research by experts in the seismology field, ASDF aims to address the complexities associated with managing diverse seismic datasets. The format has been designed with adaptability in mind, ensuring both ease of use and interoperability across various platforms. As a result of its well-structured architecture, ASDF has gained widespread acceptance within the seismology community.</p>
 <p>The <code>ASDF</code> format was designed to efficiently store and access large-scale array-oriented scientific data. Its design addresses the challenges posed by cloud and distributed storage, allowing for concurrent reads and writes. The format shines in scenarios where data needs to be analyzed in chunks without loading the entire dataset into memory, making it particularly apt for multidimensional arrays. With built-in support for compression and chunking, ASDF facilitates rapid data access regardless of the storage backend, whether it’s file systems, object storage, or databases.</p>
+<p>The ASDF (Adaptable Seismic Data Format) file structure is meticulously designed to cater to the specific needs of modern seismology. Central to its architecture is the seamless integration of seismic waveforms and associated metadata, ensuring the cohesiveness of data and information. The format organizes its content into two principal components: (1) the seismic waveforms, stored as time series data, and (2) the metadata, which incorporates station and event information using standardized formats such as StationXML and QuakeML. This harmonization ensures uniformity in the representation of seismic stations and earthquake event details. Processing histories, provenance details, as well as auxiliary data like adjoint sources and receiver functions, can also be embedded, further enhancing the format’s comprehensive nature. A distinguishing trait of ASDF is its optimization for parallel I/O operations, positioning it as a prime choice for high-performance computing environments. The principles, design considerations, and virtues of the ASDF architecture have been expansively documented in the Geophysical Journal International (Krischer et al., 2016) <a href="https://chat.openai.com/c/78d37cb0-1768-4534-8a30-dad9fe3d2f0c#user-content-fn-1%5E">1</a>.</p>
 <p>By adopting <code>ASDF</code>, we can store data and metadata in formats closely aligned with those widely accepted by the seismology community. It’s feasible to encapsulate waveforms, event catalogs, and system information within a single container, enabling standalone usage. Additionally, the format can be tailored to accommodate variations in the information required for triggered and continuous data.</p>
 <p>The benefits of using the <code>ASDF</code> format become particularly evident when considering the nature of waveform data. More broadly, the main advantages of employing the <code>ASDF</code> format to store seismic data and metadata include:</p>
 <ol type="1">
@@ -401,12 +402,14 @@
 </ol>
 <p>Whether you choose to leave an issue on GitHub or send an email, your feedback is invaluable. It aids in ensuring that the proposed micro-seismic data exchange format is robust, relevant, and addresses the needs of the community.</p>
 <p>Thank you for taking the time to review this RFC and for your contributions towards its continual improvement.</p>
+<h2 id="references">References</h2>
+<p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLTY0Mj
-IxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1OTkz
-LC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NTgsLT
-MxMjAyODIzOCw0NjM2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0NDQw
-NTE1NCwtMTY0NTkxNzA5NCw4NDAxNDUwNTksLTE0MzE4OTAzOT
-MsLTExNzcyMjc5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03
-MTI0MTkxOTFdfQ==
+eyJoaXN0b3J5IjpbLTIwNTA3NjE1NzAsMjkxNjg5MTM2LDE5OT
+Q0OTU2MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2
+OSwtMzg5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLT
+E5NDU3Mjc4NTgsLTMxMjAyODIzOCw0NjM2ODQ0OTcsLTE2MTYx
+NzM1ODIsMTA0NDQwNTE1NCwtMTY0NTkxNzA5NCw4NDAxNDUwNT
+ksLTE0MzE4OTAzOTMsLTExNzcyMjc5NDcsMTA4MTAxNzY2Niwx
+MTI0MTE0MTkzXX0=
 -->
