@@ -83,59 +83,6 @@ The required metadata for each trace includes:
 
 **Network, Station, and Location Codes**: The mentioned convention is often not strictly adhered to by μseismic system providers. Flexibility in applying the convention is crucial. Typically, no distinction is made between the station and location, and each instrument is assigned a unique code that may or may not refer to the data acquisition station. In such cases, we suggest using the **Station Code** field to store the _instrument_ code and populate the location code with 01 or 00. In a network, each combination of **Station Code** – **Location Code** – **Channel Code** should be unique.
 
-#### Waveform Data Packaging
-
-##### ASDF
-
-The IRIS DMC recommends using the `Zarr` formats (or TileDB) over the `HDF5` based formats, such as the `ASDF` format. The `Zarr` format can be conveniently used to store waveform data. We strongly encourage adhering to the naming convention presented in the previous section, giving each component a unique name composed as `network_code.station_code.location_code.channel_code`.
-
-**Note**: The `Zarr` file format can also incorporate the catalog and inventory information.
-
-Below is an example written in Python to store information from an _Obspy_ Stream object in a `.zarr` file:
-
-```python
-import zarr
-# import obspy
-import uquake  # the uquake library can be used instead of Obspy 
-
-def stream_to_zarr_group(stream, zarr_group_path):
-    """
-    Converts an ObsPy/uQuake stream to a Zarr group.
-    Each trace is stored as a separate Zarr array with its associated metadata.
-    :param stream: ObsPy/uQuake Stream object
-    :param zarr_group_path: Path to create/save the Zarr group
-    """
-
-    # Create or open a Zarr group
-    group = zarr.open_group(zarr_group_path, mode='a')
-
-    for tr in stream:
-
-        # Create Zarr array for this trace
-        arr = group.create_dataset(trace_id, data=tr.data, 
-        shape=(len(tr.data),), dtype='float32', overwrite=True)
-
-        # Store selected stats as Zarr attributes
-        for key in ['network_code', 'station_code', 'location_code', 
-                    'channel_code', 'sampling_rate', 'starttime', 'calib', 'resource_id']:
-            # Convert non-string objects to strings for easier storage and retrieval
-            arr.attrs[key] = tr.stats[key]
-
-# Load a sample ObsPy Stream (modify this to load your data)
-st = uquake.read()
-
-# Convert and store the stream in a Zarr group
-stream_to_zarr_group(st, 'seismic_data_group.zarr')
-```
-##### MiniSEED
-
-The _miniSEED_ format is another viable option. _MiniSEED_ is widely adopted in seismology and is exceptionally suitable for storing seismic data. The _miniSEED_ format can accommodate traces from various instrument types (geophone, accelerometer, seismometer, etc.), acquired at different sampling rates, with varying start and end times. However, it's essential to note that to use _miniSEED_, the network, station, location, and channel codes must adhere to a strict convention described below:
-
--   **Network Code** — Two (2) alphanumerical characters.
--   **Station Code**: Five (5) alphanumerical characters.
--   **Location Code**: Two (2) alphanumerical characters.
--   **Channel Code**: Three (3) alphanumerical characters, following the FDSN guidelines of August 2000.
-
 ### Catalog
 
 The catalog includes information related to an event, a trigger, or a series of events. We suggest storing the catalog information in a QuakeML-like format adapted to μseismic data (see QuakeML [documentation](https://quake.ethz.ch/quakeml)). The suggested changes affect the following QuakeML objects:
@@ -198,43 +145,6 @@ The QuakeML standard does not include objects suited to store the corner frequen
 
 The μQuake implementation stores the `corner_frequency`, the `energy_p`, `energy_s`, and associated error alongside the magnitude information in the extra parameter of the Magnitude object.
 
-#### Catalog Information Packaging
-
-##### Zarr
-
-The catalog information can easily be packaged with the waveform in a `Zarr` file. The QuakeML simply needs to be serialized using the json library. The example below shows how an `Obspy` or `uQuake` catalog can be stored in a `Zarr` file and retrieved:
-
-```python
-# import obspy
-import uquake # similar to obspy with the modifications previously 
-              # discussed above implemented
-import zarr
-import json
-
-# Sample Catalog
-cat = obspy.read_events()
-
-# 1. Serialize the Catalog to JSON
-json_string = cat.write(format="JSON", filename=None)
-
-# 2. Store the Serialized JSON in Zarr
-root = zarr.open_group("catalog.zarr", mode="w")
-root.array("catalog_data", data=json_string)
-
-# Reading Back from Zarr
-stored_json_string = root["catalog_data"][:].tobytes().decode()
-
-# 3. Deserialize back to Catalog object
-new_cat = obspy.read_events(filename=None, format="JSON", 
-data=stored_json_string)
-
-print(new_cat)
-```
-
-##### QuakeML
-
-The catalog can also be stored in the native XML format, which is QuakeML's traditional format. QuakeML, being a structured XML-based format, offers a robust platform for standardizing the description of seismic events and their associated parameters. For those familiar with the format and looking to integrate with other systems that recognize QuakeML, using the native XML format is advantageous. However, it's essential to be aware of the modifications made for the μseismic context to ensure compatibility.
-
 ### System or Inventory Information
 
 The system or inventory information is crucial for any seismic network as it provides comprehensive details about the stations and channels that are a part of that network. The StationXML format, which is an established standard in the seismic community, is designed to hold such inventory metadata.
@@ -247,43 +157,6 @@ In a typical seismic application, the StationXML format uses latitude and longit
 
 Thus, we recommend replacing the latitude and longitude fields in the StationXML format with `x`, `y`, and `z` coordinates for both the station and channel locations. This change aligns with the earlier modifications made for QuakeML, ensuring consistency across different components of the μseismic system.
 
-#### System/Inventory Information Packaging
-
-The inventory or system information of a seismic network, which details the stations and channels, can also be serialized and stored efficiently. We propose to options. The first option consist in storing the system or inventory information alongside the waveform and catalogue in a  `Zarr` file. The second option consist in directly using the `StationXML` format.
-
-##### Zarr
-
-Storing inventory information in a `Zarr` format offers flexibility, especially when dealing with large datasets. Like the catalog information, the StationXML data can be serialized using the json library and then stored in a `Zarr` file. This allows for efficient storage and quick retrieval of inventory data. An code example is provided below:
-
-```python
-# import Obspy
-import uquake # Similar to obspy but tailored for μseismic
-import zarr
-import json
-
-# Sample Inventory
-inventory = uquake.read_inventory()
-
-# 1. Serialize the Inventory to JSON
-json_string = inventory.write(format="JSON", filename=None)
-
-# 2. Store the Serialized JSON in Zarr
-root = zarr.open_group("inventory.zarr", mode="w")
-root.array("inventory_data", data=json_string)
-
-# Reading Back from Zarr
-stored_json_string = root["inventory_data"][:].tobytes().decode()
-
-# 3. Deserialize back to Inventory object
-new_inventory = uquake.read_inventory(filename=None, format="JSON", 
-data=stored_json_string)
-
-print(new_inventory)
-```
-
-##### StationXML
-
-StationXML is the conventional format for representing inventory information in the seismic community. Being a structured XML-based format, it provides a comprehensive framework for detailing stations and channels. When using StationXML, especially in a μseismic context, it's vital to ensure that the modifications made (such as the introduction of `x, y, z` coordinates and unit vector for channel orientation) are incorporated correctly.
 
 ### System Metadata and Grid Data
 
@@ -444,11 +317,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5ND
-Q5NTYzMiwtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5
-LC0zODk0MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMT
-k0NTcyNzg1OCwtMzEyMDI4MjM4LDQ2MzY4NDQ5NywtMTYxNjE3
-MzU4MiwxMDQ0NDA1MTU0LC0xNjQ1OTE3MDk0LDg0MDE0NTA1OS
-wtMTQzMTg5MDM5MywtMTE3NzIyNzk0NywxMDgxMDE3NjY2LDEx
-MjQxMTQxOTNdfQ==
+eyJoaXN0b3J5IjpbLTI1NzQzMTUzMiwxNDI5MTkyOTI2LDI5MT
+Y4OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2
+LC0xMjg4MTMxNjksLTM4OTQzNTk5MywtNzU0MzcxODE5LC0xOT
+g3MDQzMDk5LC0xOTQ1NzI3ODU4LC0zMTIwMjgyMzgsNDYzNjg0
+NDk3LC0xNjE2MTczNTgyLDEwNDQ0MDUxNTQsLTE2NDU5MTcwOT
+QsODQwMTQ1MDU5LC0xNDMxODkwMzkzLC0xMTc3MjI3OTQ3LDEw
+ODEwMTc2NjZdfQ==
 -->
