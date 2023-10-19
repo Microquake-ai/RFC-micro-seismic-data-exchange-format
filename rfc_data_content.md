@@ -34,7 +34,7 @@ The goal is to introduce a proposed data content and packaging format that foste
 
 ### Overview
 
-Our proposal encompasses three categories of data: the waveforms, the catalog data, and the inventory and system information. We propose storing this information in a single `Zarr` file with a `.zarr` extension.
+Our proposal encompasses three categories of data: the waveforms, the catalog data, and the inventory and system information. We propose storing this information in a single `ASDF` file with a `.asdf` extension.
 
 To ensure interoperability, the information in the provided files must be consistent. The sensor naming convention should remain consistent across all files. Additionally, the locations of sensors and events should be expressed using a unified coordinate system, which must also be used for grids, if applicable.
 
@@ -444,11 +444,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTA3NjE1NzAsMjkxNjg5MTM2LDE5OT
-Q0OTU2MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2
-OSwtMzg5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLT
-E5NDU3Mjc4NTgsLTMxMjAyODIzOCw0NjM2ODQ0OTcsLTE2MTYx
-NzM1ODIsMTA0NDQwNTE1NCwtMTY0NTkxNzA5NCw4NDAxNDUwNT
-ksLTE0MzE4OTAzOTMsLTExNzcyMjc5NDcsMTA4MTAxNzY2Niwx
-MTI0MTE0MTkzXX0=
+eyJoaXN0b3J5IjpbMTM3Nzk3MTQ4MCwyOTE2ODkxMzYsMTk5ND
+Q5NTYzMiwtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5
+LC0zODk0MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMT
+k0NTcyNzg1OCwtMzEyMDI4MjM4LDQ2MzY4NDQ5NywtMTYxNjE3
+MzU4MiwxMDQ0NDA1MTU0LC0xNjQ1OTE3MDk0LDg0MDE0NTA1OS
+wtMTQzMTg5MDM5MywtMTE3NzIyNzk0NywxMDgxMDE3NjY2LDEx
+MjQxMTQxOTNdfQ==
 -->
