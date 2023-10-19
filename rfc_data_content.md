@@ -65,7 +65,7 @@ In summary, the goal is to provide a robust framework that not only addresses th
 
 #### Schedule:
 
--   **Drafting and Initial Publication**: [Start Date] - [End Date]
+-   **Drafting and Initial Publication**: Initial publication 
 -   **Review**: [Start Date] - [End Date]
 -   **Revision**: [Start Date] - [End Date]
 -   **Final Comment Period**: [Start Date] - [End Date]
@@ -403,7 +403,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzE2NDUxOSw2MjE2MTY0MDEsMTgxMD
+eyJoaXN0b3J5IjpbLTUyMDYxOTM4NSw2MjE2MTY0MDEsMTgxMD
 Y2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMTQ1NDg1NDIx
 LC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1OTk5MzksMT
 QyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMiwtNjQyMjE4
