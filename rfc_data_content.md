@@ -183,7 +183,7 @@ In this section we will conver a series of data types some are to be included as
 
 ASDF Data Structure Overview
 ```matematica
-ASDF
+ASDF File
 |
 └───Waveforms
 |
@@ -195,8 +195,11 @@ ASDF
    │
    └───SystemInfo
    |
-   
-      
+   └───EventConversionLookup
+   |
+   └───Ray
+   |
+   └───PointCloud   
 ```
 
 We made the explicit choice to use the QuakeML and StationXML for **catalog** and **inventory** information, aligning with prevailing standards in the seismic community. The principal advantage of this decision is the assured compatibility with a multitude of existing tools and software in the seismic domain. Furthermore, both QuakeML and StationXML are inherently flexible and adaptable. These formats not only offer comprehensive sets of parameters to detail seismic events and station metadata, but they are also designed to accommodate custom parameters and extensions. This flexibility has been instrumental in our initiative. We've leveraged the extensibility of these formats to incorporate specialized μseismic parameters or attributes, ensuring that QuakeML and StationXML are tailored to address the unique nuances and requirements of microseismic monitoring. This adaptation ensures that the data format remains both relevant to the broader seismic community and aptly suited for microseismic applications.
@@ -596,11 +599,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwOTMyNTYwNywxMzk0NDY5NjY2LDEwNz
-QwMDkzNzgsMjAyMzI0OTE4OCwtMTIzNTAyMjc5MywtNjU3MTY5
-NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2MTY0MDEsMT
-gxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMTQ1NDg1
-NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1OTk5Mz
-ksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMiwtNjQy
-MjE4MTIzXX0=
+eyJoaXN0b3J5IjpbNzAzODIyNzgsMTM5NDQ2OTY2NiwxMDc0MD
+A5Mzc4LDIwMjMyNDkxODgsLTEyMzUwMjI3OTMsLTY1NzE2OTQ3
+NiwtMTQ1MDc3Njc0Myw3NTY1OTE5MDksNjIxNjE2NDAxLDE4MT
+A2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMjE0NTQ4NTQy
+MSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5OTM5LD
+E0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLTY0MjIx
+ODEyM119
 -->
