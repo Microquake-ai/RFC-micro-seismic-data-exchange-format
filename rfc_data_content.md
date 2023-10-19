@@ -305,9 +305,7 @@ grid_values = np.zeros((header["NX"], header["NY"], header["NZ"]))
 
 In this representation, the grid values are stored in a structured manner, allowing for easy indexing and operations. Each cell in the array corresponds to a grid point in the velocity model, with its value representing the velocity (or density or attenuation, depending on the grid type) at that point.
 
-### Ray and Ray Parameters
-
-## Data Format for Storing Ray Information in ASDF
+### Data Format for Storing Ray Information in ASDF
 
 ### Background
 
@@ -318,7 +316,7 @@ For efficient microseismic monitoring and analysis, the inclusion of ray tracing
 #### Directory Structure:
 
 -   Within the `AuxiliaryData` section of the ASDF file, we introduce a dedicated `Rays` directory.
--   Individual rays are uniquely identified by their `resource_id` and each has its own sub-directory under `Rays` and adopt a naming convention linking them to the an instrument using the `network`, `station` and `channel` codes.
+-   Individual rays are uniquely identified by a unique `resource_id` and each has its own sub-directory under `Rays` and adopt a naming convention linking them to the an instrument using the `network`, `station` and `channel` codes.
 
 #### Ray Attributes:
 
@@ -347,16 +345,12 @@ Each ray's sub-directory will include the following attributes:
     
     -   Users are encouraged to use existing ASDF software tools to initiate and modify the ASDF file structure.
     -   During ray storage, a serialization function or method will be required to transform the `Ray` object into the above-proposed ASDF-compatible structure.
+    
 2.  **Retrieving Rays from ASDF**:
-    
     -   A corresponding deserialization function or method will be essential to read rays from the ASDF format, converting them back into `Ray` objects.
+   
 3.  **Compatibility and Integration**:
-    
     -   The proposed structure ensures seamless integration with waveform and inventory data. The use of `network_code`, `station_code`, and `location_code` ensures that rays can be directly associated with specific waveform data and inventory components.
-
-### Conclusion
-
-This RFC section formalizes the data format for storing ray information within ASDF files. By adopting this standardized approach, users can effortlessly integrate ray tracing data alongside waveform and inventory data, facilitating efficient microseismic monitoring and subsequent analysis.
 
 
 
@@ -485,7 +479,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0MDAwODMzNSwtMTIzNTAyMjc5MywtNj
+eyJoaXN0b3J5IjpbMTk5MzY5OTk5MSwtMTIzNTAyMjc5MywtNj
 U3MTY5NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2MTY0
 MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMT
 Q1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1
