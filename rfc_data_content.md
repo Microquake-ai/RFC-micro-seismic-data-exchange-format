@@ -31,7 +31,7 @@ The standard focuses on the foundational elements and seismic information intrin
 
 #### Need for a New Standard
 
-The increase in microseismic data, particularly from expansive monitoring systems and new technologies like Distributed Acoustic Sensing (DAS), underscores the pressing need for a more efficient and unified data format. Currently, the varied nature of microseismic data formats hinders streamlined integration and analysis, posing challenges in managing and deriving value dataset collected by in-mine monitoring system. The lossy and incoherent nature of current data exchange formats are hindering innovation and make the utilization of &mu;seismic data unecessarily difficul. Given the critical importance of microseismic data in ensuring the safety and improving the operations of underground mining, establishing a standardized format and mechanism of echange becomes imperative. The propose standard objective is to facilitate more straightforward data access, efficient storage, and smoother data exchanges across different platforms fo.
+The increase in microseismic data, particularly from expansive monitoring systems and new technologies like Distributed Acoustic Sensing (DAS), underscores the pressing need for a more efficient and unified data format. Currently, the varied nature of microseismic data formats hinders streamlined integration and analysis, posing challenges in managing and deriving value dataset collected by in-mine monitoring system. The lossy and incoherent nature of current data exchange formats are hindering innovation and make the utilization of &mu;seismic data unecessarily difficul. Given the critical importance of microseismic data in ensuring the safety and improving the operations of underground mining, establishing a standardized format and mechanism of echange becomes imperative. The propose standard objective is to facilitate more straightforward data access, efficient storage, and smoother data exchanges across different platforms for a variety of data types.
 
 #### Goal
 
@@ -367,11 +367,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2Nzc2NTgsNjIxNjE2NDAxLDE4MTA2Nj
-g1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwt
-MTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5OTM5LDE0Mj
-kxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLTY0MjIxODEy
-Myw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1OTkzLC03NT
-QzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NTgsLTMxMjAy
-ODIzOF19
+eyJoaXN0b3J5IjpbLTExNjM5ODYzMTUsNjIxNjE2NDAxLDE4MT
+A2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMjE0NTQ4NTQy
+MSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5OTM5LD
+E0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLTY0MjIx
+ODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1OTkzLC
+03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NTgsLTMx
+MjAyODIzOF19
 -->
