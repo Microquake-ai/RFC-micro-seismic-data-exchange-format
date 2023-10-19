@@ -177,7 +177,7 @@ The required metadata for each trace includes:
 #### Suggested Naming Convention and Usage
 
 - **Network Code**: The network code should represent a physical or logical network. A mine or mining complex can include multiple networks. The network name should be compact but be easily recognized and understood. For instance, the Oyu Tolgoi Hugo North Underground Lift 1 network can be represented by the following accronym: OTHNL1.
-- **Station Code**: We recommend associating the station code to an instrument or a group of instrument. The Station code should convey relevant information on the sensor location and pr the seismic system stakeholder the location of a junction box where the data acquisition is talking place. The name should provide clear indication of where the JB is located within a mine. We suggest using the naming convention adopted at the operation. For example, assuming there are two junction box location in the Haulage Level Access Drive 2 referred to as HLAD2, the code for the two stations can be HLAD2_01 and HLAD2_02.
+- **Station Code**: We recommend associating the station code to an instrument or a group of instrument. The Station code should convey relevant information on the sensor location and provide context to the seismic system stakeholders. An example for an adequate naming, assuming an instrument is installed along the Haulage Level Access Drive 2, referred to as HLAD2, the code for the two stations can be HLAD2_01 and HLAD2_02.
 - **Location Code**: We suggest using the location code to refer to an instrument connected to a station. 
 
 
@@ -423,11 +423,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzA3OTg0NzUsNzU2NTkxOTA5LDYyMT
-YxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMs
-LTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMT
-EyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1
-NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLT
-M4OTQzNTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1
-NzI3ODU4XX0=
+eyJoaXN0b3J5IjpbOTcxNDI2MDA1LDc1NjU5MTkwOSw2MjE2MT
+Y0MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0y
+MTQ1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMj
+Q1OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYz
+MiwtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zOD
+k0MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMTk0NTcy
+Nzg1OF19
 -->
