@@ -322,12 +322,12 @@
 <h3 id="ray-and-ray-parameters">Ray and Ray Parameters</h3>
 <h2 id="data-format-for-storing-ray-information-in-asdf">Data Format for Storing Ray Information in ASDF</h2>
 <h3 id="background">Background</h3>
-<p>For efficient microseismic monitoring and analysis, the inclusion of ray tracing data alongside waveform and inventory data is pivotal. In keeping with the extensibility and flexibility features of the ASDF format, we propose a systematic structure to house this ray information.</p>
+<p>For efficient microseismic monitoring and analysis, the inclusion of ray tracing data alongside waveform and inventory data is beneficial. In keeping with the extensibility and flexibility features of the ASDF format, we propose a systematic structure to store the ray information.</p>
 <h3 id="proposed-data-structure">Proposed Data Structure</h3>
 <h4 id="directory-structure">Directory Structure:</h4>
 <ul>
 <li>Within the <code>AuxiliaryData</code> section of the ASDF file, we introduce a dedicated <code>Rays</code> directory.</li>
-<li>Individual rays are uniquely identified by their <code>resource_id</code> and each has its own sub-directory under <code>Rays</code>.</li>
+<li>Individual rays are uniquely identified by their <code>resource_id</code> and each has its own sub-directory under <code>Rays</code> and adopt a naming convention linking them to the wave.</li>
 </ul>
 <h4 id="ray-attributes">Ray Attributes:</h4>
 <p>Each ray’s sub-directory will house the following attributes:</p>
@@ -451,11 +451,11 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzUwMjI3OTMsLTY1NzE2OTQ3NiwtMT
-Q1MDc3Njc0Myw3NTY1OTE5MDksNjIxNjE2NDAxLDE4MTA2Njg1
-MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwtMT
-g3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5OTM5LDE0Mjkx
-OTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLTY0MjIxODEyMy
-w5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1OTkzLC03NTQz
-NzE4MTldfQ==
+eyJoaXN0b3J5IjpbLTE4ODg5OTYwNDgsLTEyMzUwMjI3OTMsLT
+Y1NzE2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5MDksNjIxNjE2
+NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMj
+E0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0
+NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2Mz
+IsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5
+NDM1OTkzXX0=
 -->
