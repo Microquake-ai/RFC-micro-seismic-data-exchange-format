@@ -171,13 +171,13 @@ In this section we will conver a series of data types some are to be included as
 
 - **ASDF Core**
   - [REQUIRED] **Waveforms** 
-  - **Catalog**
-  - **Inventory/System** [REQUIRED]
+  - [REQUIRED FOR EVENT DATA, NOT INCLUDED FOR CONTINUOUS DATA] **Catalog**
+  - [REQUIRED] **Inventory/System** 
 - **ASDF Auxiliary**
-  - **System Information** &mdash; important system information not included in the StationXML
-  - **Ray and Ray Parameters** &mdash; from ray tracing
-  - **Point Cloud Data** &mdash; from Montecarlo or Jacknife analyses
-  -  **Lookup Table for Event Type Conversion**  &mdash; as described later in the document we suggest a mapping between the event type prescribed by the QuakeML standardard ant the event types encoutered in mining.
+  - [REQUIRED] **System Information** &mdash; important system information not included in the StationXML
+  - [REQUIRED/READ ONLY] **Lookup Table for Event Type Conversion**  &mdash; as described later in the document we suggest a mapping between the event type prescribed by the QuakeML standardard ant the event types encoutered in mining.
+  - [OPTIONAL] **Ray and Ray Parameters** &mdash; from ray tracing
+  - [OPTIONAL] **Point Cloud Data** &mdash; from Montecarlo or Jacknife analyses
 
 - **Grids** [NOT INCLUDED, SEPARATE FILE] &mdash; suited for velocity, velocity derivatives (e.g., slowness) attenuation and density
 
@@ -497,7 +497,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1Mzc3NDc5MiwtMTIzNTAyMjc5MywtNj
+eyJoaXN0b3J5IjpbMjAyMzI0OTE4OCwtMTIzNTAyMjc5MywtNj
 U3MTY5NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2MTY0
 MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMT
 Q1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1
