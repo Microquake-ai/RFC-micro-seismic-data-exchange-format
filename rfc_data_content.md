@@ -450,20 +450,20 @@ Within the `AuxiliaryData` section of an ASDF file, we store comprehensive ray i
 `AuxiliaryData
 │
 └─── Ray
-	
-     └─── Origin [origin ResourceIdentifier]
-	      └─── Arrival [arrival ResourceIdentifier]
-	           |  network
-	           |  station
-	           |  location
-	           |  nodes
-	           |  length
-	           |  incidence_vector
-	           |  back_azimuth
-	           |  incidence_angle
-	           |  takeoff_angle
-	           |  azimuth
-	           |  takeoff_vector
+	 └─── Event [event ResourceIdentifier]
+          └─── Origin [origin ResourceIdentifier]
+	           └─── Arrival [arrival ResourceIdentifier]
+	                |  network
+	                |  station
+	                |  location
+	                |  nodes
+	                |  length
+	                |  incidence_vector
+	                |  back_azimuth
+	                |  incidence_angle
+	                |  takeoff_angle
+	                |  azimuth
+	                |  takeoff_vector
 	           
 	     
 ```
@@ -628,7 +628,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3NjE5NTU1OSw0Mzk3NjM1NzQsMTIwNj
+eyJoaXN0b3J5IjpbLTQ3NjY4OTgyOCw0Mzk3NjM1NzQsMTIwNj
 g3MzYzNywxMzk0NDY5NjY2LDEwNzQwMDkzNzgsMjAyMzI0OTE4
 OCwtMTIzNTAyMjc5MywtNjU3MTY5NDc2LC0xNDUwNzc2NzQzLD
 c1NjU5MTkwOSw2MjE2MTY0MDEsMTgxMDY2ODUzNiw3MTk2MzMw
