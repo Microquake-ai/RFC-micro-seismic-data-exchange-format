@@ -185,7 +185,14 @@ However, like all choices, leveraging these formats comes with its challenges. W
 
 The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of $m$, $m/s$​, or $m/s^2$ for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC counts as integers is more suitable. Storing the ADC count as integers allows for the more efficient use of compression algorithm and will allow the data to be more compact.
 
-Alongside the amplitude values, additional metadata describing the instrument recording the data and time series parameters should be provided for each trace. Each trace should be stored with its own metadata information adopting the convention described in p
+Alongside the amplitude values, additional metadata describing the instrument recording the data and time series parameters should be provided for each trace. Each trace should be stored with its own metadata information adopting the convention described in the previous section.
+
+In addition to the trace identification information the following metadata must be present and accurately described the timeserie parameters
+
+- **Sampling Rate [sampling_rate]** — The signal's sampling rate in samples per second.
+- **Calibration Factor [calib]** — This value is optional and defaults to 1.0 if not provided. It represents the calibration factor should the sensor deviate from the typical response.
+-   **Start Time [starttime]** — The trace's start time.
+-   **Length
 
 ### Catalog
 
@@ -481,7 +488,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MTY4MDY2NSwtMTIzNTAyMjc5MywtNj
+eyJoaXN0b3J5IjpbLTI4Mzc1OTQ5NywtMTIzNTAyMjc5MywtNj
 U3MTY5NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2MTY0
 MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMT
 Q1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1
