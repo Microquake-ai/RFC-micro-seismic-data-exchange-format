@@ -81,15 +81,15 @@ We propose the following RFC process that should lead to the standard adoption. 
     -   **Start**: 2023-04
     -   **End**: 2023-06
  
-5.  **Adoption**: The adoption mechanism has to be determined. There is currently no body governing microseismic monitoring. This might take a week, considering potential debates or presentations that might be required.   
+5.  **Adoption**: The adoption mechanism has to be determined. There is currently no body governing microseismic monitoring.   
     -   **Date**: 2023-06
     
-6.  **Official Publication**: After finalizing the decision, a week is allocated for any final edits, formatting, and dissemination of the RFC.
+6.  **Official Publication**: After finalizing the adoption, a week is allocated for any final edits, formatting, and dissemination of the standard.
     -   **Date**: 2023-07
     
 7.  **Implementation and Review Cycle**: As before, this is a longer-term step and its start would be dependent on the decisions made and the complexity of the implementation.
-    -   **Start**: 2023-07 (to give systems and teams time to adjust) and onward
-    -   **Review Cycle**: Every 6 months (or another interval that makes sense based on the nature of the RFC and its implications)
+    -   **Start**: 2023-07
+    -   **Review Cycle**: Every 6 months (or another interval that makes sense based on the nature of the standard and its implications)
 
 ## Proposal
 
@@ -97,7 +97,7 @@ We propose the following RFC process that should lead to the standard adoption. 
 
 Our proposal encompasses three categories of data: the waveforms, the catalog data, and the inventory and system information. It also concerns system metadata such as velocity models. 
 
-We propose using the `ASDF` format with a `.asdf` extension to store the waveforms, the catalog (QuakeML), and inventory (StationXML) information. Note that the `ASDF` format also provides a convenient way to store auxiliary data such as:
+We propose using the `ASDF` format with a `.asdf` extension to store the waveforms, the catalog (QuakeML), and inventory (StationXML) information. Note that the `ASDF` format also provides a convenient way to store auxiliary data including but not necessarily limited to:
 
 -   **Ambient Noise Correlations**: Pre-computed cross-correlations between stations, which can be essential for techniques like ambient noise tomography.
     
@@ -421,11 +421,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzY2ODE0MzMsNzU2NTkxOTA5LDYyMT
-YxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMs
-LTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMT
-EyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1
-NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLT
-M4OTQzNTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1
-NzI3ODU4XX0=
+eyJoaXN0b3J5IjpbMzM2NjY0ODAxLDc1NjU5MTkwOSw2MjE2MT
+Y0MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0y
+MTQ1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMj
+Q1OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYz
+MiwtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zOD
+k0MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMTk0NTcy
+Nzg1OF19
 -->
