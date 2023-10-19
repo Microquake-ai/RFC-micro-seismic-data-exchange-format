@@ -445,12 +445,11 @@ For efficient microseismic monitoring and analysis, the inclusion of ray tracing
 ```mathematica
 `AuxiliaryData
 │
-└───Rays
-    │   Country = "USA"
-    │   time_zone = "PST"
-    │   latitude = 34.0522
-    │   longitude = -118.2437
-    │   ...` 
+└─── Ray
+     └─── Origin [origin
+	      └─── Arrival
+	           
+	     
 ```
 
 ##### Ray Attributes:
@@ -613,11 +612,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzAxMjI0MTEsMTIwNjg3MzYzNywxMz
-k0NDY5NjY2LDEwNzQwMDkzNzgsMjAyMzI0OTE4OCwtMTIzNTAy
-Mjc5MywtNjU3MTY5NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOS
-w2MjE2MTY0MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1
-MDEzLC0yMTQ1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0OD
-QsLTExMjQ1OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5
-NDQ5NTYzMl19
+eyJoaXN0b3J5IjpbLTE5MDYwMjU2OCwxMjA2ODczNjM3LDEzOT
+Q0Njk2NjYsMTA3NDAwOTM3OCwyMDIzMjQ5MTg4LC0xMjM1MDIy
+NzkzLC02NTcxNjk0NzYsLTE0NTA3NzY3NDMsNzU2NTkxOTA5LD
+YyMTYxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUw
+MTMsLTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NC
+wtMTEyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0
+NDk1NjMyXX0=
 -->
