@@ -428,25 +428,50 @@
 </ul>
 <p>Within the <code>AuxiliaryData</code> section of an ASDF file, we store comprehensive ray information. This data is structured hierarchically, enabling organized storage and efficient retrieval of ray details pertaining to specific seismic events, origin and arrival.</p>
 <h4 id="structure-overview">Structure Overview:</h4>
-<div class="sourceCode" id="cb7"><pre class="sourceCode mathematica"><code class="sourceCode mathematica"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a>`AuxiliaryData</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a>│</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a>└─── Ray</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true"></a>     └─── Event [event ResourceIdentifier]</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true"></a>          └─── Origin [origin ResourceIdentifier]</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true"></a>               └─── Arrival [arrival ResourceIdentifier]</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true"></a>                    |  network</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true"></a>                    |  station</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true"></a>                    |  location</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true"></a>                    |  nodes</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true"></a>                    |  <span class="fu">length</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true"></a>                    |  <span class="dt">incidence_</span>vector</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true"></a>                    |  <span class="dt">back_</span>azimuth</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true"></a>                    |  <span class="dt">incidence_</span>angle</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true"></a>                    |  <span class="dt">takeoff_</span>angle</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true"></a>                    |  azimuth</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true"></a>                    |  <span class="dt">takeoff_</span>vector</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true"></a>               </span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true"></a>         </span></code></pre></div>
+<pre><code>`AuxiliaryData
+│
+└─── Ray
+     └─── Event [event ResourceIdentifier]
+          └─── Origin [origin ResourceIdentifier]
+               └─── Arrival [arrival ResourceIdentifier]
+                    |  network
+                    |  station
+                    |  location
+                    |  nodes
+                    |  length
+                    |  incidence_vector
+                    |  back_azimuth
+                    |  incidence_angle
+                    |  takeoff_angle
+                    |  azimuth
+                    |  takeoff_vector
+               
+         </code></pre>
+<h4 id="attributes-description">Attributes Description:</h4>
+<ul>
+<li><p><strong>Event [event ResourceIdentifier]</strong>: A unique identifier representing the seismic event</p></li>
+<li><p><strong>Origin [origin ResourceIdentifier]</strong>: A unique identifier representing the seismic event’s origin. It provides context for the associated ray data.</p></li>
+<li><p><strong>Arrival [arrival ResourceIdentifier]</strong>: This identifier is linked to the seismic phase arrival at a particular station for the given origin.</p>
+<ul>
+<li><p><strong>network (string)</strong>: The network code where the seismic data was registered.</p></li>
+<li><p><strong>station (string)</strong>: Station code identifying the specific station within the network.</p></li>
+<li><p><strong>location (string)</strong>: Location code within the station, representing specific sensor placements or data processing paths.</p></li>
+<li><p><strong>nodes (list of 3D coordinates)</strong>: Sequential list of points that describe the raypath through the Earth. Each point represents a position (x, y, z) in 3D space.</p></li>
+<li><p><strong>length (float)</strong>: Total length of the raypath, calculated by summing the distances between consecutive nodes.</p></li>
+<li><p><strong>incidence_vector (3D vector)</strong>: Unit vector representing the direction of the incoming ray at the station.</p></li>
+<li><p><strong>back_azimuth (float)</strong>: Angle in degrees from the North (clockwise) pointing towards the seismic event’s origin from the station.</p></li>
+<li><p><strong>incidence_angle (float)</strong>: Angle in degrees between the ray’s incoming direction and the vertical (downward) direction at the station.</p></li>
+<li><p><strong>takeoff_angle (float)</strong>: Angle in degrees between the ray’s outgoing direction (from the source) and the vertical.</p></li>
+<li><p><strong>azimuth (float)</strong>: Angle in degrees from the North (clockwise) representing the ray’s direction at the source location.</p></li>
+<li><p><strong>takeoff_vector (3D vector)</strong>: Unit vector representing the direction of the ray as it departs the source location.</p></li>
+</ul></li>
+</ul>
+<h4 id="additional-notes">Additional Notes:</h4>
+<ul>
+<li><p>The structure allows for efficient querying based on either the origin or arrival identifiers.</p></li>
+<li><p>All angles are expressed in degrees, and the convention for azimuthal angles is from North in a clockwise direction.</p></li>
+<li><p>The nodes list should be stored in a manner that preserves the order, ensuring the integrity of the raypath representation.</p></li>
+</ul>
 <h5 id="ray-attributes">Ray Attributes:</h5>
 <p>Each ray’s sub-directory will include the following attributes:</p>
 <ul>
@@ -568,11 +593,11 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NjY4OTgyOCw0Mzk3NjM1NzQsMTIwNj
-g3MzYzNywxMzk0NDY5NjY2LDEwNzQwMDkzNzgsMjAyMzI0OTE4
-OCwtMTIzNTAyMjc5MywtNjU3MTY5NDc2LC0xNDUwNzc2NzQzLD
-c1NjU5MTkwOSw2MjE2MTY0MDEsMTgxMDY2ODUzNiw3MTk2MzMw
-OTUsMTMzOTM1MDEzLC0yMTQ1NDg1NDIxLC0xODczNjQyODI0LC
-04MDM0MTc0ODQsLTExMjQ1OTk5MzksMTQyOTE5MjkyNiwyOTE2
-ODkxMzZdfQ==
+eyJoaXN0b3J5IjpbLTEwMDg2NTM1NjAsNDM5NzYzNTc0LDEyMD
+Y4NzM2MzcsMTM5NDQ2OTY2NiwxMDc0MDA5Mzc4LDIwMjMyNDkx
+ODgsLTEyMzUwMjI3OTMsLTY1NzE2OTQ3NiwtMTQ1MDc3Njc0My
+w3NTY1OTE5MDksNjIxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMz
+MDk1LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNC
+wtODAzNDE3NDg0LC0xMTI0NTk5OTM5LDE0MjkxOTI5MjYsMjkx
+Njg5MTM2XX0=
 -->
