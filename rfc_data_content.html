@@ -33,7 +33,7 @@
 <li><p><strong>Metadata Storage</strong>: ASDF permits the inclusion of metadata directly within the dataset. This feature ensures that seismic trace metadata, acquisition details, and processing histories can coexist alongside the waveform data, providing a comprehensive context for the stored seismic information.</p></li>
 </ol>
 <h3 id="waveform-data">Waveform Data</h3>
-<p>The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of m, ��sm​, or �/�2m/s2 for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC count is more suitable. Storing the ADC count as integers allows for the use of the Steim1 and Steim2 differential compression algorithms.</p>
+<p>The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of <span class="math inline"><em>m</em></span>, <span class="math inline"><em>m</em>/<em>s</em></span>​, or <span class="math inline"><em>m</em>/<em>s</em><sup>2</sup></span> for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC count is more suitable. Storing the ADC count as integers allows for the use of the Steim1 and Steim2 differential compression algorithms.</p>
 <p>Alongside the amplitude values, additional metadata describing the instrument recording the data and time series parameters should be provided for each trace. Each trace should be stored with its own metadata information.</p>
 <p>The required metadata for each trace includes:</p>
 <ul>
@@ -52,7 +52,7 @@
 <h4 id="notes">Notes:</h4>
 <p><strong>Network, Station, and Location Codes</strong>: The mentioned convention is often not strictly adhered to by μseismic system providers. Flexibility in applying the convention is crucial. Typically, no distinction is made between the station and location, and each instrument is assigned a unique code that may or may not refer to the data acquisition station. In such cases, we suggest using the <strong>Station Code</strong> field to store the <em>instrument</em> code and populate the location code with 01 or 00. In a network, each combination of <strong>Station Code</strong> – <strong>Location Code</strong> – <strong>Channel Code</strong> should be unique.</p>
 <h4 id="waveform-data-packaging">Waveform Data Packaging</h4>
-<h5 id="zarr">Zarr</h5>
+<h5 id="asdf">ASDF</h5>
 <p>The IRIS DMC recommends using the <code>Zarr</code> formats (or TileDB) over the <code>HDF5</code> based formats, such as the <code>ASDF</code> format. The <code>Zarr</code> format can be conveniently used to store waveform data. We strongly encourage adhering to the naming convention presented in the previous section, giving each component a unique name composed as <code>network_code.station_code.location_code.channel_code</code>.</p>
 <p><strong>Note</strong>: The <code>Zarr</code> file format can also incorporate the catalog and inventory information.</p>
 <p>Below is an example written in Python to store information from an <em>Obspy</em> Stream object in a <code>.zarr</code> file:</p>
@@ -236,7 +236,7 @@
 <p>The QuakeML standard does not include objects suited to store the corner frequency. The energy could be stored in the amplitude or station_magnitude object. However, this isn’t convenient, as it’s preferable for the magnitude and energy information to be used in tandem.</p>
 <p>The μQuake implementation stores the <code>corner_frequency</code>, the <code>energy_p</code>, <code>energy_s</code>, and associated error alongside the magnitude information in the extra parameter of the Magnitude object.</p>
 <h4 id="catalog-information-packaging">Catalog Information Packaging</h4>
-<h5 id="zarr-1">Zarr</h5>
+<h5 id="zarr">Zarr</h5>
 <p>The catalog information can easily be packaged with the waveform in a <code>Zarr</code> file. The QuakeML simply needs to be serialized using the json library. The example below shows how an <code>Obspy</code> or <code>uQuake</code> catalog can be stored in a <code>Zarr</code> file and retrieved:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="co"># import obspy</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="im">import</span> uquake <span class="co"># similar to obspy with the modifications previously </span></span>
@@ -272,7 +272,7 @@
 <p>Thus, we recommend replacing the latitude and longitude fields in the StationXML format with <code>x</code>, <code>y</code>, and <code>z</code> coordinates for both the station and channel locations. This change aligns with the earlier modifications made for QuakeML, ensuring consistency across different components of the μseismic system.</p>
 <h4 id="systeminventory-information-packaging">System/Inventory Information Packaging</h4>
 <p>The inventory or system information of a seismic network, which details the stations and channels, can also be serialized and stored efficiently. We propose to options. The first option consist in storing the system or inventory information alongside the waveform and catalogue in a <code>Zarr</code> file. The second option consist in directly using the <code>StationXML</code> format.</p>
-<h5 id="zarr-2">Zarr</h5>
+<h5 id="zarr-1">Zarr</h5>
 <p>Storing inventory information in a <code>Zarr</code> format offers flexibility, especially when dealing with large datasets. Like the catalog information, the StationXML data can be serialized using the json library and then stored in a <code>Zarr</code> file. This allows for efficient storage and quick retrieval of inventory data. An code example is provided below:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="co"># import Obspy</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="im">import</span> uquake <span class="co"># Similar to obspy but tailored for μseismic</span></span>
@@ -402,11 +402,11 @@
 <p>Whether you choose to leave an issue on GitHub or send an email, your feedback is invaluable. It aids in ensuring that the proposed micro-seismic data exchange format is robust, relevant, and addresses the needs of the community.</p>
 <p>Thank you for taking the time to review this RFC and for your contributions towards its continual improvement.</p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjE0NDg3MzUsLTY0MjIxODEyMyw5OD
-Y5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1OTkzLC03NTQzNzE4
-MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NTgsLTMxMjAyODIzOC
-w0NjM2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0NDQwNTE1NCwtMTY0
-NTkxNzA5NCw4NDAxNDUwNTksLTE0MzE4OTAzOTMsLTExNzcyMj
-c5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03MTI0MTkxOTEs
-MTU0NjIyNzE5Ml19
+eyJoaXN0b3J5IjpbMTk5NDQ5NTYzMiwtNjQyMjE4MTIzLDk4Nj
+k1MTY3NiwtMTI4ODEzMTY5LC0zODk0MzU5OTMsLTc1NDM3MTgx
+OSwtMTk4NzA0MzA5OSwtMTk0NTcyNzg1OCwtMzEyMDI4MjM4LD
+Q2MzY4NDQ5NywtMTYxNjE3MzU4MiwxMDQ0NDA1MTU0LC0xNjQ1
+OTE3MDk0LDg0MDE0NTA1OSwtMTQzMTg5MDM5MywtMTE3NzIyNz
+k0NywxMDgxMDE3NjY2LDExMjQxMTQxOTMsLTcxMjQxOTE5MSwx
+NTQ2MjI3MTkyXX0=
 -->
