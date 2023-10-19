@@ -77,7 +77,10 @@
 <h4 id="notes">Notes:</h4>
 <p><strong>Naming Convention</strong>: The full name of a component or channel is usually created as follows: <strong>channel name</strong> = <strong>network code</strong>.<strong>station code</strong>.<strong>location code</strong>.<strong>channel code</strong>.</p>
 <p><strong>Network, Station, and Location Codes</strong>: The mentioned convention is often not strictly adhered to by μseismic system providers. Flexibility in applying the convention is crucial. Typically, no distinction is made between the station and location, and each instrument is assigned a unique code that may or may not refer to the data acquisition station. In such cases, we suggest using the <strong>Station Code</strong> field to store the <em>instrument</em> code and populate the location code with 01 or 00. In a network, each combination of <strong>Station Code</strong>.<strong>Location Code</strong>.<strong>Channel Code</strong> should be unique.</p>
-<h4 id="suggested-naming-convent">Suggested Naming Convent</h4>
+<h4 id="suggested-naming-convention-and-usage">Suggested Naming Convention and Usage</h4>
+<ul>
+<li><strong>Network</strong>: The network should represent a physical or logical network. A mine or mining complex can include multiple networks.</li>
+</ul>
 <h3 id="catalog">Catalog</h3>
 <p>The catalog includes information related to an event, a trigger, or a series of events. We suggest storing the catalog information in a QuakeML-like format adapted to μseismic data (see QuakeML <a href="https://quake.ethz.ch/quakeml">documentation</a>). The suggested changes affect the following QuakeML objects:</p>
 <ul>
@@ -331,11 +334,11 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzQyNjE0NTUsMTMzOTM1MDEzLC0yMT
-Q1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1
-OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMi
-wtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zODk0
-MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMTk0NTcyNz
-g1OCwtMzEyMDI4MjM4LDQ2MzY4NDQ5NywtMTYxNjE3MzU4Miwx
-MDQ0NDA1MTU0XX0=
+eyJoaXN0b3J5IjpbMjA1Nzk1MzM2OCwxMzM5MzUwMTMsLTIxND
+U0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5
+OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC
+02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OTQz
+NTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3OD
+U4LC0zMTIwMjgyMzgsNDYzNjg0NDk3LC0xNjE2MTczNTgyLDEw
+NDQ0MDUxNTRdfQ==
 -->
