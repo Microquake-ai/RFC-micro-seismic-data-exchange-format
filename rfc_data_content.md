@@ -147,6 +147,8 @@ In this section we will conver four types of data:
 - **Catalog**
 - **Inventory/System**
 - **Grids**
+- **Ray and Ray Parameters** &mdash; from ray tracing
+- **Point Cloud Data** &mdash; from Montecarlo or J
 
 ### Waveform Data
 
@@ -421,11 +423,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTE0NzU0MTYsNzU2NTkxOTA5LDYyMT
-YxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMs
-LTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMT
-EyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1
-NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLT
-M4OTQzNTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1
-NzI3ODU4XX0=
+eyJoaXN0b3J5IjpbLTU4NjgyODA5LDc1NjU5MTkwOSw2MjE2MT
+Y0MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0y
+MTQ1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMj
+Q1OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYz
+MiwtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zOD
+k0MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMTk0NTcy
+Nzg1OF19
 -->
