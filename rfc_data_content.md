@@ -105,7 +105,9 @@ We propose using the `ASDF` format with a `.asdf` extension to store the wavefor
 
 - **Rays and Ray Parameters from Ray Tracing**:  Storing detailed ray paths and relevant parameters is useful for higher order analyses such as travel time and attenuation tomography, and moment tensor inversion to name only those. By integrating these data directly within the `ASDF` format, researchers can achieve a holistic understanding of the seismic event and the underlying geophysical processes, ensuring that they have all pertinent information at their fingertips without resorting to supplementary datasets or computations.
 
-- **Velocity and Velocity Grids**: If relevant the velocity and velocity model could be stored alongside the 
+- **Velocity Information**: If relevant the velocity and velocity model could be stored alongside the seismic data. 
+
+- **Alternative location**: Alternative location obtain from statistical analyses includeassociated to a specific 
     
 -   **Processing Logs**: Detailed logs of processing steps performed on the data, which can be crucial for ensuring data quality and understanding potential issues or artifacts.
 
@@ -419,11 +421,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk5ODMxNjk2LDc1NjU5MTkwOSw2MjE2MT
-Y0MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0y
-MTQ1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMj
-Q1OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYz
-MiwtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zOD
-k0MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMTk0NTcy
-Nzg1OF19
+eyJoaXN0b3J5IjpbLTE4NjM0NDAwMSw3NTY1OTE5MDksNjIxNj
+E2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywt
+MjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMT
+I0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2
+MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMz
+g5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3
+Mjc4NThdfQ==
 -->
