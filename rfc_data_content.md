@@ -192,7 +192,10 @@ In addition to the trace identification information the following metadata must 
 - **Sampling Rate [sampling_rate]** — The signal's sampling rate in samples per second.
 - **Calibration Factor [calib]** — This value is optional and defaults to 1.0 if not provided. It represents the calibration factor should the sensor deviate from the typical response.
 -   **Start Time [starttime]** — The trace's start time.
--   **Length
+
+The other parameters can be derived from the sampling rate, start time and the waveform data:
+
+- **Number of Point [npts
 
 ### Catalog
 
@@ -488,7 +491,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4Mzc1OTQ5NywtMTIzNTAyMjc5MywtNj
+eyJoaXN0b3J5IjpbLTY5MTQxOTQ5NCwtMTIzNTAyMjc5MywtNj
 U3MTY5NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2MTY0
 MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMT
 Q1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1
