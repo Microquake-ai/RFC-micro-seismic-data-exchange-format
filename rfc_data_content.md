@@ -118,7 +118,7 @@ The required metadata for each trace includes:
 
 - **Network Code**: The network code should represent a physical or logical network. A mine or mining complex can include multiple networks. The network name should be compact but be easily recognized and understood. For instance, the Oyu Tolgoi Hugo North Underground Lift 1 network can be represented by the following accronym: OTHNL1.
 - **Station Code**: We recommend associating the station code to the location of a junction box where the data acquisition is talking place. The name should provide clear indication of where the JB is located within a mine. We suggest using the naming convention adopted at the operation. For example, assuming there are two junction box location in the Haulage Level Access Drive 2 referred to as HLAD2, the code for the two stations can be HLAD2_01 and HLAD2_02.
-- **Location Code**: We suggest using the location c
+- **Location Code**: We suggest using the location code to refer to an instrument connected to a station. 
 
 
 ### Catalog
@@ -363,7 +363,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwNzQwMDQyLDEzMzkzNTAxMywtMjE0NT
+eyJoaXN0b3J5IjpbNzE5NjMzMDk1LDEzMzkzNTAxMywtMjE0NT
 Q4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5
 OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLT
 Y0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1
