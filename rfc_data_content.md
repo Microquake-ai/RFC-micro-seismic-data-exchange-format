@@ -117,7 +117,7 @@ The required metadata for each trace includes:
 #### Suggested Naming Convention and Usage
 
 - **Network Code**: The network code should represent a physical or logical network. A mine or mining complex can include multiple networks. The network name should be compact but be easily recognized and understood. For instance, the Oyu Tolgoi Hugo North Underground Lift 1 network can be represented by the following accronym: OTHNL1.
-- **Station Code**
+- **Station Code**: We recommend associating the station code to the location of a junction box where the data acquisition is talking place. For example, a station installed in the main decline could be named 
 
 
 ### Catalog
@@ -362,11 +362,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1Mjc3NTQ4MCwxMzM5MzUwMTMsLTIxND
-U0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5
-OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC
-02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OTQz
-NTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3OD
-U4LC0zMTIwMjgyMzgsNDYzNjg0NDk3LC0xNjE2MTczNTgyLDEw
-NDQ0MDUxNTRdfQ==
+eyJoaXN0b3J5IjpbLTE4Njg2MDIzOTUsMTMzOTM1MDEzLC0yMT
+Q1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1
+OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMi
+wtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zODk0
+MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMTk0NTcyNz
+g1OCwtMzEyMDI4MjM4LDQ2MzY4NDQ5NywtMTYxNjE3MzU4Miwx
+MDQ0NDA1MTU0XX0=
 -->
