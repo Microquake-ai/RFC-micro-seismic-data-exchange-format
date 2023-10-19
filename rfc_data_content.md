@@ -312,21 +312,20 @@ Inside `SystemInfo`, each attribute (like `Country`, `TimeZone`, `Latitude`, etc
 
 For example:
 
-mathematicaCopy code
-
+```mathematica
 `AuxiliaryData
 │
 └───SystemInfo
     │   Country = "USA"
-    │   TimeZone = "PST"
-    │   Latitude = 34.0522
-    │   Longitude = -118.2437
+    │   time_zone = "PST"
+    │   latitude = 34.0522
+    │   longitude = -118.2437
     │   ...` 
+```
 
 ### Code Examples
 
 To interact with ASDF, we can use Python with the `pyasdf` library. Here's a hypothetical code snippet to add `SystemInfo` to an ASDF file:
-
 
 ```python
 import pyasdf
@@ -338,14 +337,14 @@ with pyasdf.ASDFDataSet("path_to_asdf_file.h5", mode="a") as ds:
     system_info = ds.create_auxiliary_data_group("SystemInfo")
 
     # Add data to this group
-    system_info.create_dataset(name="Country", data="USA")
-    system_info.create_dataset(name="TimeZone", data="PST")
-    system_info.create_dataset(name="Latitude", data=34.0522)
-    system_info.create_dataset(name="Longitude", data=-118.2437)
+    system_info.create_dataset(name="country", data="USA")
+    system_info.create_dataset(name="time_zone", data="PST")
+    system_info.create_dataset(name="latitude", data=34.0522)
+    system_info.create_dataset(name="longitude", data=-118.2437)
     # ... similarly for other attributes
 
 # Check the data
-with pyasdf.ASDFDataSet("path_to_asdf_file.h5") as ds:
+with pyasdf.ASDFDataSet("path_to_asdf_file.asdf") as ds:
     print(ds.auxiliary_data.SystemInfo.Country[:])  # Should print 'USA'` 
 ```
 
@@ -353,8 +352,8 @@ For reading the `SystemInfo`:
 ```python
 import pyasdf
 
-with pyasdf.ASDFDataSet("path_to_asdf_file.h5") as ds:
-    country = ds.auxiliary_data.SystemInfo.Country[:]
+with pyasdf.ASDFDataSet("path_to_asdf_file.asdf") as ds:
+    country = ds.auxiliary_data.system_iInfo.country[:]
     timezone = ds.auxiliary_data.SystemInfo.TimeZone[:]
     latitude = ds.auxiliary_data.SystemInfo.Latitude[:]
     longitude = ds.auxiliary_data.SystemInfo.Longitude[:]
@@ -581,11 +580,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ1Nzc1MTM0LDEwNzQwMDkzNzgsMjAyMz
-I0OTE4OCwtMTIzNTAyMjc5MywtNjU3MTY5NDc2LC0xNDUwNzc2
-NzQzLDc1NjU5MTkwOSw2MjE2MTY0MDEsMTgxMDY2ODUzNiw3MT
-k2MzMwOTUsMTMzOTM1MDEzLC0yMTQ1NDg1NDIxLC0xODczNjQy
-ODI0LC04MDM0MTc0ODQsLTExMjQ1OTk5MzksMTQyOTE5MjkyNi
-wyOTE2ODkxMzYsMTk5NDQ5NTYzMiwtNjQyMjE4MTIzLDk4Njk1
-MTY3Nl19
+eyJoaXN0b3J5IjpbMTkyNDkwMjcwMiwxMDc0MDA5Mzc4LDIwMj
+MyNDkxODgsLTEyMzUwMjI3OTMsLTY1NzE2OTQ3NiwtMTQ1MDc3
+Njc0Myw3NTY1OTE5MDksNjIxNjE2NDAxLDE4MTA2Njg1MzYsNz
+E5NjMzMDk1LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0
+MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5OTM5LDE0MjkxOTI5Mj
+YsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLTY0MjIxODEyMyw5ODY5
+NTE2NzZdfQ==
 -->
