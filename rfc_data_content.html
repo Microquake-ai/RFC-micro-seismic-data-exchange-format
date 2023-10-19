@@ -327,10 +327,10 @@
 <h4 id="directory-structure">Directory Structure:</h4>
 <ul>
 <li>Within the <code>AuxiliaryData</code> section of the ASDF file, we introduce a dedicated <code>Rays</code> directory.</li>
-<li>Individual rays are uniquely identified by their <code>resource_id</code> and each has its own sub-directory under <code>Rays</code> and adopt a naming convention linking them to the wave.</li>
+<li>Individual rays are uniquely identified by their <code>resource_id</code> and each has its own sub-directory under <code>Rays</code> and adopt a naming convention linking them to the an instrument using the <code>network</code>, <code>station</code> and <code>channel</code> codes.</li>
 </ul>
 <h4 id="ray-attributes">Ray Attributes:</h4>
-<p>Each ray’s sub-directory will house the following attributes:</p>
+<p>Each ray’s sub-directory will include the following attributes:</p>
 <ul>
 <li><code>network_code</code>: Identifier for the network. Standard naming conventions of seismic networks are to be employed.</li>
 <li><code>station_code</code>: Identifier for the station. This aligns with the standard naming conventions employed for seismic stations.</li>
@@ -341,7 +341,7 @@
 <li><code>takeoff_angle</code>: Takeoff angle in degrees.</li>
 <li><code>travel_time</code>: Travel time between the seismic source and the recording site in seconds.</li>
 <li><code>earth_model_id</code>: A <code>ResourceIdentifier</code> representing the velocity model used.</li>
-<li><code>length</code>: Computed length of the ray.</li>
+<li><code>length</code>: Computed length of the ray</li>
 <li><code>baz</code>: Computed back azimuth of the ray.</li>
 <li><code>incidence_angle</code>: Computed incidence angle of the ray.</li>
 </ul>
@@ -451,11 +451,11 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODg5OTYwNDgsLTEyMzUwMjI3OTMsLT
-Y1NzE2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5MDksNjIxNjE2
-NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMj
-E0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0
-NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2Mz
-IsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5
-NDM1OTkzXX0=
+eyJoaXN0b3J5IjpbNDY4ODYxMzIsLTEyMzUwMjI3OTMsLTY1Nz
+E2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5MDksNjIxNjE2NDAx
+LDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMjE0NT
+Q4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5
+OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLT
+Y0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1
+OTkzXX0=
 -->
