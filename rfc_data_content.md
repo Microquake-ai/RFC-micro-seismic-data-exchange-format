@@ -305,11 +305,62 @@ grid_values = np.zeros((header["NX"], header["NY"], header["NZ"]))
 
 In this representation, the grid values are stored in a structured manner, allowing for easy indexing and operations. Each cell in the array corresponds to a grid point in the velocity model, with its value representing the velocity (or density or attenuation, depending on the grid type) at that point.
 
-#### Ray and Ray Parameters** 
+### Ray and Ray Parameters
+
+## Data Format for Storing Ray Information in ASDF
+
+### Background
+
+For efficient microseismic monitoring and analysis, the inclusion of ray tracing data alongside waveform and inventory data is pivotal. In keeping with the extensibility and flexibility features of the ASDF format, we propose a systematic structure to house this ray information.
+
+### Proposed Data Structure
+
+#### Directory Structure:
+
+-   Within the `AuxiliaryData` section of the ASDF file, we introduce a dedicated `Rays` directory.
+-   Individual rays are uniquely identified by their `resource_id` and each has its own sub-directory under `Rays`.
+
+#### Ray Attributes:
+
+Each ray's sub-directory will house the following attributes:
+
+-   `network_code`: Identifier for the network. Standard naming conventions of seismic networks are to be employed.
+-   `station_code`: Identifier for the station. This aligns with the standard naming conventions employed for seismic stations.
+-   `location_code`: A code that uniquely identifies different data streams at a single station. It allows users to distinguish between data from closely spaced instruments or multiple data collection strategies.
+-   `arrival_id`: The unique `ResourceIdentifier` of the associated seismic arrival.
+-   `phase`: The seismic phase ("P" or "S").
+-   `azimuth`: Azimuth in degrees.
+-   `takeoff_angle`: Takeoff angle in degrees.
+-   `travel_time`: Travel time between the seismic source and the recording site in seconds.
+-   `earth_model_id`: A `ResourceIdentifier` representing the velocity model used.
+-   `length`: Computed length of the ray.
+-   `baz`: Computed back azimuth of the ray.
+-   `incidence_angle`: Computed incidence angle of the ray.
+
+#### Ray Datasets:
+
+-   A dataset named `nodes` in each ray's sub-directory, storing the array of nodes that describe the ray path.
+
+### Implementation Notes:
+
+1.  **Creating Rays in ASDF**:
+    
+    -   Users are encouraged to use existing ASDF software tools to initiate and modify the ASDF file structure.
+    -   During ray storage, a serialization function or method will be required to transform the `Ray` object into the above-proposed ASDF-compatible structure.
+2.  **Retrieving Rays from ASDF**:
+    
+    -   A corresponding deserialization function or method will be essential to read rays from the ASDF format, converting them back into `Ray` objects.
+3.  **Compatibility and Integration**:
+    
+    -   The proposed structure ensures seamless integration with waveform and inventory data. The use of `network_code`, `station_code`, and `location_code` ensures that rays can be directly associated with specific waveform data and inventory components.
+
+### Conclusion
+
+This RFC section formalizes the data format for storing ray information within ASDF files. By adopting this standardized approach, users can effortlessly integrate ray tracing data alongside waveform and inventory data, facilitating efficient microseismic monitoring and subsequent analysis.
 
 
 
-#### Point Cloud Data**
+#### Point Cloud Data
 #### Lookup Table for Event Type Conversion
 
 ## Implementation using the &mu;Quake Python Library
@@ -434,11 +485,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1NzE2OTQ3NiwtMTQ1MDc3Njc0Myw3NT
-Y1OTE5MDksNjIxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1
-LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtOD
-AzNDE3NDg0LC0xMTI0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5
-MTM2LDE5OTQ0OTU2MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLT
-EyODgxMzE2OSwtMzg5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcw
-NDMwOTldfQ==
+eyJoaXN0b3J5IjpbLTEyMzUwMjI3OTMsLTY1NzE2OTQ3NiwtMT
+Q1MDc3Njc0Myw3NTY1OTE5MDksNjIxNjE2NDAxLDE4MTA2Njg1
+MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwtMT
+g3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5OTM5LDE0Mjkx
+OTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLTY0MjIxODEyMy
+w5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1OTkzLC03NTQz
+NzE4MTldfQ==
 -->
