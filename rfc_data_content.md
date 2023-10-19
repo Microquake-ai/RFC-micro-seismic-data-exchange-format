@@ -306,6 +306,9 @@ grid_values = np.zeros((header["NX"], header["NY"], header["NZ"]))
 In this representation, the grid values are stored in a structured manner, allowing for easy indexing and operations. Each cell in the array corresponds to a grid point in the velocity model, with its value representing the velocity (or density or attenuation, depending on the grid type) at that point.
 
 #### Ray and Ray Parameters** 
+
+
+
 #### Point Cloud Data**
 #### Lookup Table for Event Type Conversion
 
@@ -431,11 +434,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjc5MTk3NTgsLTE0NTA3NzY3NDMsNz
-U2NTkxOTA5LDYyMTYxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5
-NSwxMzM5MzUwMTMsLTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLT
-gwMzQxNzQ4NCwtMTEyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4
-OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC
-0xMjg4MTMxNjksLTM4OTQzNTk5MywtNzU0MzcxODE5LC0xOTg3
-MDQzMDk5XX0=
+eyJoaXN0b3J5IjpbLTY1NzE2OTQ3NiwtMTQ1MDc3Njc0Myw3NT
+Y1OTE5MDksNjIxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1
+LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtOD
+AzNDE3NDg0LC0xMTI0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5
+MTM2LDE5OTQ0OTU2MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLT
+EyODgxMzE2OSwtMzg5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcw
+NDMwOTldfQ==
 -->
