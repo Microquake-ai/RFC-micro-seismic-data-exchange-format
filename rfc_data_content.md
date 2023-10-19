@@ -29,12 +29,9 @@ The document focuses on the foundational elements and seismic information intrin
 
 The increase in microseismic data, particularly from expansive monitoring systems and new technologies like Distributed Acoustic Sensing (DAS), underscores the pressing need for a more efficient and unified data format. Currently, the varied nature of microseismic data formats hinders streamlined integration and analysis, posing challenges in managing and deriving value from large datasets. Given the critical importance of microseismic data in ensuring the safety and improving the operations of underground mining, establishing a standardized format becomes imperative. This standard would facilitate more straightforward data access, efficient storage, and smoother data exchanges across different platforms.
 
-
-
 #### Goal
 
 The goal is to introduce a proposed data content and packaging format that fosters interoperability, consistency, and innovation.
-
 
 ## Proposal
 
@@ -331,11 +328,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTEwMTQxOTQsMTMzOTM1MDEzLC0yMT
-Q1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1
-OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMi
-wtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zODk0
-MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMTk0NTcyNz
-g1OCwtMzEyMDI4MjM4LDQ2MzY4NDQ5NywtMTYxNjE3MzU4Miwx
-MDQ0NDA1MTU0XX0=
+eyJoaXN0b3J5IjpbMjc0MDk2MjgwLDEzMzkzNTAxMywtMjE0NT
+Q4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5
+OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLT
+Y0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1
+OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NT
+gsLTMxMjAyODIzOCw0NjM2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0
+NDQwNTE1NF19
 -->
