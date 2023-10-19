@@ -12,13 +12,16 @@ In light of recent advancements in μseismic monitoring technology, the imperati
 
 This document proposes a file structure and format. At this stage, we seek alignment on the content of the information transferred and consensus on the container format.
 
+
 ### Scope
 
-The scope of this document is to define the content and nature of &mu;seismic information provided to third parties and to suggest a format for packaging this information. It focuses on the foundational elements and seismic information intrinsic to &mu;seismic monitoring. The pertinent information can be divided into three categories:
+With the increasing volume of μseismic data collected, especially in modern expansive monitoring systems and with technologies like Distributed Acoustic Sensing (DAS), there is a need for efficient management and handling of this data. The scope of this document is to define the content and nature of μseismic information provided to third parties and to suggest a format that facilitates efficient storage, retrieval, and exchange, even for vast datasets.
 
-- **Waveform** &mdash; This includes the raw, unprocessed waveform for both continuous and triggered data.
-- **Catalog Information** &mdash; This covers event information derived from waveform data processing.
-- **Inventory or System Information** &mdash; Details about the instruments (sensors and data acquisition modules) used in the data acquisition chain are included here, along with other critical data processing information, such as velocity, density, and attenuation values or models.
+The document focuses on the foundational elements and seismic information intrinsic to μseismic monitoring. The pertinent information can be divided into three categories:
+
+-   **Waveform** — This includes the raw, unprocessed waveform for both continuous and triggered data.
+-   **Catalog Information** — This covers event information derived from waveform data processing.
+-   **Inventory or System Information** — Details about the instruments (sensors and data acquisition modules) used in the data acquisition chain are included here, along with other critical data processing information, such as velocity, density, and attenuation values or models.
 
 ### Rationale
 
@@ -326,11 +329,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0NjIwNTIxLDEzMzkzNTAxMywtMjE0NT
-Q4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5
-OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLT
-Y0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1
-OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NT
-gsLTMxMjAyODIzOCw0NjM2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0
-NDQwNTE1NF19
+eyJoaXN0b3J5IjpbMTc1MDg5NTYyNiwxMzM5MzUwMTMsLTIxND
+U0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5
+OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC
+02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OTQz
+NTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3OD
+U4LC0zMTIwMjgyMzgsNDYzNjg0NDk3LC0xNjE2MTczNTgyLDEw
+NDQ0MDUxNTRdfQ==
 -->
