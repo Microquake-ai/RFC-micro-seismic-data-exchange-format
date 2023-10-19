@@ -150,7 +150,9 @@ In this section we will conver four types of data:
 - **Ray and Ray Parameters** &mdash; from ray tracing
 - **Point Cloud Data** &mdash; from Montecarlo or Jacknife analyses
 
-We made the explicit choice to use the QuakeML and StationXML for **catalogue** and **inventory** information to ensure compatibility with existing tools and software. This approach has advantages and disadvantages. The main advantage being that the format can be used as is and remain compatible with widely adopted tools. The main disadvantages is that the interpretation of the file content requires additional processing and cosideration. 
+We made the explicit choice to use the QuakeML and StationXML for **catalog** and **inventory** information, thereby aligning with prevailing standards in the seismic community. Using these established formats guarantees compatibility with a plethora of existing tools, software, and workflows. The key strength of QuakeML and StationXML is their flexibility and extensibility. These formats offer rich sets of parameters, facilitating detailed descriptions of seismic events and station metadata. Additionally, both QuakeML and StationXML are designed to accommodate custom parameters and extensions, allowing for the inclusion of specialized μseismic parameters or attributes not originally envisioned in their baseline specifications.
+
+However, like all choices, leveraging these formats comes with its challenges. While their use ensures widespread compatibility, the interpretation of file content may require nuanced processing and considerations. Some adaptations might be essential to cater specifically to the μseismic monitoring context, possibly involving the addition of auxiliary fields or annotations. The goal, throughout these modifications, remains to balance ease-of-use with the specificity required for μseismic data, ensuring that users can maximize the value derived from the data while minimizing the overhead of adaptations and interpretations.
 
 ### Waveform Data
 
@@ -424,11 +426,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTA3NzY3NDMsNzU2NTkxOTA5LDYyMT
-YxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMs
-LTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMT
-EyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1
-NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLT
-M4OTQzNTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1
-NzI3ODU4XX0=
+eyJoaXN0b3J5IjpbLTE3MDMxNzQzMTgsLTE0NTA3NzY3NDMsNz
+U2NTkxOTA5LDYyMTYxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5
+NSwxMzM5MzUwMTMsLTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLT
+gwMzQxNzQ4NCwtMTEyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4
+OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC
+0xMjg4MTMxNjksLTM4OTQzNTk5MywtNzU0MzcxODE5LC0xOTg3
+MDQzMDk5XX0=
 -->
