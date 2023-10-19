@@ -319,8 +319,55 @@
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="co"># For demonstration purposes, initializing a 2D array with NXxNYxNZ dimensions</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>grid_values <span class="op">=</span> np.zeros((header[<span class="st">&quot;NX&quot;</span>], header[<span class="st">&quot;NY&quot;</span>], header[<span class="st">&quot;NZ&quot;</span>]))</span></code></pre></div>
 <p>In this representation, the grid values are stored in a structured manner, allowing for easy indexing and operations. Each cell in the array corresponds to a grid point in the velocity model, with its value representing the velocity (or density or attenuation, depending on the grid type) at that point.</p>
-<h4 id="ray-and-ray-parameters">Ray and Ray Parameters**</h4>
-<h4 id="point-cloud-data">Point Cloud Data**</h4>
+<h3 id="ray-and-ray-parameters">Ray and Ray Parameters</h3>
+<h2 id="data-format-for-storing-ray-information-in-asdf">Data Format for Storing Ray Information in ASDF</h2>
+<h3 id="background">Background</h3>
+<p>For efficient microseismic monitoring and analysis, the inclusion of ray tracing data alongside waveform and inventory data is pivotal. In keeping with the extensibility and flexibility features of the ASDF format, we propose a systematic structure to house this ray information.</p>
+<h3 id="proposed-data-structure">Proposed Data Structure</h3>
+<h4 id="directory-structure">Directory Structure:</h4>
+<ul>
+<li>Within the <code>AuxiliaryData</code> section of the ASDF file, we introduce a dedicated <code>Rays</code> directory.</li>
+<li>Individual rays are uniquely identified by their <code>resource_id</code> and each has its own sub-directory under <code>Rays</code>.</li>
+</ul>
+<h4 id="ray-attributes">Ray Attributes:</h4>
+<p>Each ray’s sub-directory will house the following attributes:</p>
+<ul>
+<li><code>network_code</code>: Identifier for the network. Standard naming conventions of seismic networks are to be employed.</li>
+<li><code>station_code</code>: Identifier for the station. This aligns with the standard naming conventions employed for seismic stations.</li>
+<li><code>location_code</code>: A code that uniquely identifies different data streams at a single station. It allows users to distinguish between data from closely spaced instruments or multiple data collection strategies.</li>
+<li><code>arrival_id</code>: The unique <code>ResourceIdentifier</code> of the associated seismic arrival.</li>
+<li><code>phase</code>: The seismic phase (“P” or “S”).</li>
+<li><code>azimuth</code>: Azimuth in degrees.</li>
+<li><code>takeoff_angle</code>: Takeoff angle in degrees.</li>
+<li><code>travel_time</code>: Travel time between the seismic source and the recording site in seconds.</li>
+<li><code>earth_model_id</code>: A <code>ResourceIdentifier</code> representing the velocity model used.</li>
+<li><code>length</code>: Computed length of the ray.</li>
+<li><code>baz</code>: Computed back azimuth of the ray.</li>
+<li><code>incidence_angle</code>: Computed incidence angle of the ray.</li>
+</ul>
+<h4 id="ray-datasets">Ray Datasets:</h4>
+<ul>
+<li>A dataset named <code>nodes</code> in each ray’s sub-directory, storing the array of nodes that describe the ray path.</li>
+</ul>
+<h3 id="implementation-notes">Implementation Notes:</h3>
+<ol type="1">
+<li><p><strong>Creating Rays in ASDF</strong>:</p>
+<ul>
+<li>Users are encouraged to use existing ASDF software tools to initiate and modify the ASDF file structure.</li>
+<li>During ray storage, a serialization function or method will be required to transform the <code>Ray</code> object into the above-proposed ASDF-compatible structure.</li>
+</ul></li>
+<li><p><strong>Retrieving Rays from ASDF</strong>:</p>
+<ul>
+<li>A corresponding deserialization function or method will be essential to read rays from the ASDF format, converting them back into <code>Ray</code> objects.</li>
+</ul></li>
+<li><p><strong>Compatibility and Integration</strong>:</p>
+<ul>
+<li>The proposed structure ensures seamless integration with waveform and inventory data. The use of <code>network_code</code>, <code>station_code</code>, and <code>location_code</code> ensures that rays can be directly associated with specific waveform data and inventory components.</li>
+</ul></li>
+</ol>
+<h3 id="conclusion">Conclusion</h3>
+<p>This RFC section formalizes the data format for storing ray information within ASDF files. By adopting this standardized approach, users can effortlessly integrate ray tracing data alongside waveform and inventory data, facilitating efficient microseismic monitoring and subsequent analysis.</p>
+<h4 id="point-cloud-data">Point Cloud Data</h4>
 <h4 id="lookup-table-for-event-type-conversion">Lookup Table for Event Type Conversion</h4>
 <h2 id="implementation-using-the-μquake-python-library">Implementation using the μQuake Python Library</h2>
 <p>Within the context of this RFC, which proposes specific adaptations and formats tailored to microseismic monitoring, the <code>uquake</code> library stands as a practical implementation of these recommendations. Developed in Python and built upon ObsPy, <code>uquake</code> has been specially crafted to cater to the distinctive needs of microseismic monitoring in mining environments. This includes, amongst other capabilities, the handling of local coordinate systems and unique event types frequently observed in mine microseismic monitoring. For those seeking an immediate and tangible application of the proposed data format recommendations from this RFC, <code>uquake</code> offers a ready solution. It is open source, distributed under AGPL license and publicly available and can be easily accessed and installed via pip using <code>pip install uquake</code>.</p>
@@ -404,11 +451,11 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1NzE2OTQ3NiwtMTQ1MDc3Njc0Myw3NT
-Y1OTE5MDksNjIxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1
-LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtOD
-AzNDE3NDg0LC0xMTI0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5
-MTM2LDE5OTQ0OTU2MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLT
-EyODgxMzE2OSwtMzg5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcw
-NDMwOTldfQ==
+eyJoaXN0b3J5IjpbLTEyMzUwMjI3OTMsLTY1NzE2OTQ3NiwtMT
+Q1MDc3Njc0Myw3NTY1OTE5MDksNjIxNjE2NDAxLDE4MTA2Njg1
+MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwtMT
+g3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5OTM5LDE0Mjkx
+OTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLTY0MjIxODEyMy
+w5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1OTkzLC03NTQz
+NzE4MTldfQ==
 -->
