@@ -164,10 +164,9 @@ This section is concerned about the cross-referencing of information related to 
 - **Location Code**: If the Station Code refers to a group of instruments, for instance, instruments installed in a long borehole, connected to the same acquisition station, the location code can be used to differentiate the instrument within the group. The location code should be kept short. It can simply be a number converying the relative order or in the case of a borehole installation, a measure of the location along the hole.
 
 ## Convention Used in this Document
+Conventions in the Structure Overview
 
-### Conventions in the Structure Overview
-
-The structure overview provides a hierarchical representation of the data storage for rays within the `AuxiliaryData` section of an ASDF file. To ensure clarity and ease of understanding, we've adopted specific conventions in the representation:
+The structure overview provides a hierarchical representation of the data storage for the hierarchical component stored in ASDF or HDF5 files. To ensure clarity and ease of understanding, we've adopted specific conventions in the representation that is described below.
 
 1.  **Directory vs. Attribute**:
     
@@ -192,6 +191,7 @@ The structure overview provides a hierarchical representation of the data storag
     -   The structure uses indentation to depict hierarchy. Each level of indentation represents a deeper level in the hierarchy, allowing users to visually grasp the nesting and relationships between directories and attributes.
 
 By adhering to these conventions, the structure overview aims to provide a clear, intuitive, and consistent visualization of the data's organization within the ASDF file.
+
 
 ## Data Format and Adaptation
 ### Overview
@@ -697,11 +697,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzMTg5MDQ1MywtMTAwODY1MzU2MCw0Mz
-k3NjM1NzQsMTIwNjg3MzYzNywxMzk0NDY5NjY2LDEwNzQwMDkz
-NzgsMjAyMzI0OTE4OCwtMTIzNTAyMjc5MywtNjU3MTY5NDc2LC
-0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2MTY0MDEsMTgxMDY2
-ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMTQ1NDg1NDIxLC
-0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1OTk5MzksMTQy
-OTE5MjkyNl19
+eyJoaXN0b3J5IjpbLTE1MDE3MDI2MDcsLTEwMDg2NTM1NjAsND
+M5NzYzNTc0LDEyMDY4NzM2MzcsMTM5NDQ2OTY2NiwxMDc0MDA5
+Mzc4LDIwMjMyNDkxODgsLTEyMzUwMjI3OTMsLTY1NzE2OTQ3Ni
+wtMTQ1MDc3Njc0Myw3NTY1OTE5MDksNjIxNjE2NDAxLDE4MTA2
+Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMjE0NTQ4NTQyMS
+wtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5OTM5LDE0
+MjkxOTI5MjZdfQ==
 -->
