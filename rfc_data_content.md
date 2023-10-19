@@ -170,11 +170,11 @@ The key is to ensure consistencies between the data and information to allow eff
 In this section we will conver a series of data types some are to be included as part of the ASDF file some provided as additional files:
 
 - **ASDF Core**
-  - **Waveforms** [REQUIRED]
-  - **Catalog** [REQUIRED FOR EVENT DATA, NOT INCLUDED FOR CONTINUOUS DATA]
+  - [REQUIRED] **Waveforms** 
+  - **Catalog**
   - **Inventory/System** [REQUIRED]
 - **ASDF Auxiliary**
-  - **System Information**
+  - **System Information** &mdash; important system information not included in the StationXML
   - **Ray and Ray Parameters** &mdash; from ray tracing
   - **Point Cloud Data** &mdash; from Montecarlo or Jacknife analyses
   -  **Lookup Table for Event Type Conversion**  &mdash; as described later in the document we suggest a mapping between the event type prescribed by the QuakeML standardard ant the event types encoutered in mining.
@@ -497,11 +497,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM0Mjc5MjU4LC0xMjM1MDIyNzkzLC02NT
-cxNjk0NzYsLTE0NTA3NzY3NDMsNzU2NTkxOTA5LDYyMTYxNjQw
-MSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMsLTIxND
-U0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5
-OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC
-02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OTQz
-NTk5M119
+eyJoaXN0b3J5IjpbLTI1Mzc3NDc5MiwtMTIzNTAyMjc5MywtNj
+U3MTY5NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2MTY0
+MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMT
+Q1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1
+OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMi
+wtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zODk0
+MzU5OTNdfQ==
 -->
