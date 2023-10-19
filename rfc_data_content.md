@@ -189,13 +189,14 @@ Alongside the amplitude values, additional metadata describing the instrument re
 
 In addition to the trace identification information the following metadata must be present and accurately described the timeserie parameters
 
-- **Sampling Rate [sampling_rate]** — The signal's sampling rate in samples per second.
-- **Calibration Factor [calib]** — This value is optional and defaults to 1.0 if not provided. It represents the calibration factor should the sensor deviate from the typical response.
--   **Start Time [starttime]** — The trace's start time.
+- **Sampling Rate [sampling_rate]** &mdash; The signal's sampling rate in samples per second.
+- **Calibration Factor [calib]** &mdash; This value is optional and defaults to 1.0 if not provided. It represents the calibration factor should the sensor deviate from the typical response.
+-   **Start Time [starttime]** &mdash; The trace's start time.
 
 The other parameters can be derived from the sampling rate, start time and the waveform data:
 
-- **Number of Point [npts
+- **Number of Point [npts]** &mdash; Number of sample points (default value is 0, which implies that no data is present).
+- **Sampling Interval [delta]** &mdash; 
 
 ### Catalog
 
@@ -491,11 +492,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5MTQxOTQ5NCwtMTIzNTAyMjc5MywtNj
-U3MTY5NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2MTY0
-MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMT
-Q1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1
-OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMi
-wtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zODk0
-MzU5OTNdfQ==
+eyJoaXN0b3J5IjpbMzE1ODQzMDEsLTEyMzUwMjI3OTMsLTY1Nz
+E2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5MDksNjIxNjE2NDAx
+LDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMjE0NT
+Q4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5
+OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLT
+Y0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1
+OTkzXX0=
 -->
