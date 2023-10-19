@@ -14,7 +14,6 @@ In light of recent advancements in μseismic monitoring technology, the imperati
 
 This document proposes a file structure and format. At this stage, we seek alignment on the content of the information transferred and consensus on the container format.
 
-
 ### Scope
 
 With the increasing volume of μseismic data collected, especially in modern expansive monitoring systems and with technologies like Distributed Acoustic Sensing (DAS), there is a need for efficient management and handling of this data. The scope of this proposed standard is to define the content and nature of μseismic information provided to third parties and to suggest a format that facilitates efficient storage, retrieval, and exchange, of complete information required to further analyse the data.
@@ -164,7 +163,8 @@ This section is concerned about the cross-referencing of information related to 
 - **Location Code**: If the Station Code refers to a group of instruments, for instance, instruments installed in a long borehole, connected to the same acquisition station, the location code can be used to differentiate the instrument within the group. The location code should be kept short. It can simply be a number converying the relative order or in the case of a borehole installation, a measure of the location along the hole.
 
 ## Convention Used in this Document
-Conventions in the Structure Overview
+
+### Conventions in the Structure Overview
 
 The structure overview provides a hierarchical representation of the data storage for the hierarchical component stored in ASDF or HDF5 files. To ensure clarity and ease of understanding, we've adopted specific conventions in the representation that is described below.
 
@@ -697,11 +697,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDE3MDI2MDcsLTEwMDg2NTM1NjAsND
-M5NzYzNTc0LDEyMDY4NzM2MzcsMTM5NDQ2OTY2NiwxMDc0MDA5
-Mzc4LDIwMjMyNDkxODgsLTEyMzUwMjI3OTMsLTY1NzE2OTQ3Ni
-wtMTQ1MDc3Njc0Myw3NTY1OTE5MDksNjIxNjE2NDAxLDE4MTA2
-Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMjE0NTQ4NTQyMS
-wtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5OTM5LDE0
-MjkxOTI5MjZdfQ==
+eyJoaXN0b3J5IjpbLTEyMTQyMTI2NTQsLTE1MDE3MDI2MDcsLT
+EwMDg2NTM1NjAsNDM5NzYzNTc0LDEyMDY4NzM2MzcsMTM5NDQ2
+OTY2NiwxMDc0MDA5Mzc4LDIwMjMyNDkxODgsLTEyMzUwMjI3OT
+MsLTY1NzE2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5MDksNjIx
+NjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMy
+wtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0x
+MTI0NTk5OTM5XX0=
 -->
