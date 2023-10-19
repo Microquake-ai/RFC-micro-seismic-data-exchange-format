@@ -17,7 +17,7 @@ This document proposes a file structure and format. At this stage, we seek align
 
 ### Scope
 
-With the increasing volume of μseismic data collected, especially in modern expansive monitoring systems and with technologies like Distributed Acoustic Sensing (DAS), there is a need for efficient management and handling of this data. The scope of this document is to define the content and nature of μseismic information provided to third parties and to suggest a format that facilitates efficient storage, retrieval, and exchange, of complete information required to further analyse the data. The scope extends to providing an computationally efficient mechanism to store and retrieve large volume of data that are prescribed by increasingly expansive system and the adoption of the DAS technology. It is also part of the scope to provide a storage mechanism that is flexible and extensible that would apply to the brad range of 
+With the increasing volume of μseismic data collected, especially in modern expansive monitoring systems and with technologies like Distributed Acoustic Sensing (DAS), there is a need for efficient management and handling of this data. The scope of this proposed standard is to define the content and nature of μseismic information provided to third parties and to suggest a format that facilitates efficient storage, retrieval, and exchange, of complete information required to further analyse the data. The propose format  computationally efficient mechanism to store and retrieve large volume of data that are prescribed by increasingly expansive system and the adoption of the DAS technology. It is also part of the scope to provide a storage mechanism that is flexible and extensible that would apply to both triggered and continous data.
 
 The document focuses on the foundational elements and seismic information intrinsic to μseismic monitoring. The pertinent information can be divided into three categories:
 
@@ -30,8 +30,6 @@ The document focuses on the foundational elements and seismic information intrin
 #### Need for a New Standard
 
 The increase in microseismic data, particularly from expansive monitoring systems and new technologies like Distributed Acoustic Sensing (DAS), underscores the pressing need for a more efficient and unified data format. Currently, the varied nature of microseismic data formats hinders streamlined integration and analysis, posing challenges in managing and deriving value dataset collected by in-mine monitoring system. Given the critical importance of microseismic data in ensuring the safety and improving the operations of underground mining, establishing a standardized format and mechanism of echange becomes imperative. This standard would facilitate more straightforward data access, efficient storage, and smoother data exchanges across different platforms.
-
-Standardization in naming conventions, specifically for microseismic monitoring systems, is also vital. A uniform naming approach aids rapid identification, allowing different entity to access across a variety of sites and process relevant microseismic datasets without ambiguity. With the evolving complexity of microseismic monitoring in mining operations, a standardized naming system ensures clarity and coherence among different systems.
 
 #### Goal
 
@@ -367,11 +365,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDc5MTQ5OTAsNjIxNjE2NDAxLDE4MT
-A2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMjE0NTQ4NTQy
-MSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5OTM5LD
-E0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLTY0MjIx
-ODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1OTkzLC
-03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NTgsLTMx
-MjAyODIzOF19
+eyJoaXN0b3J5IjpbMTQ4OTczNTY1LDYyMTYxNjQwMSwxODEwNj
+Y4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMsLTIxNDU0ODU0MjEs
+LTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5OTkzOSwxND
+I5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgx
+MjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OTQzNTk5MywtNz
+U0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3ODU4LC0zMTIw
+MjgyMzhdfQ==
 -->
