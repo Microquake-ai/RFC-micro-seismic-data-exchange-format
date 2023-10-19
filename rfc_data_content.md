@@ -189,16 +189,15 @@ Alongside the amplitude values, additional metadata describing the instrument re
 
 In addition to the trace identification information the following metadata must be present and accurately described the timeserie parameters
 
-- **Sampling Rate [sampling_rate]** &mdash; The signal's sampling rate in samples per second.
-- **Calibration Factor [calib]** &mdash; This value is optional and defaults to 1.0 if not provided. It represents the calibration factor should the sensor deviate from the typical response.
--   **Start Time [starttime]** &mdash; Date and time of the first data sample given in UTC
+- **Sampling Rate [`sampling_rate`]** &mdash; The signal's sampling rate in samples per second.
+- **Calibration Factor [`calib`]** &mdash; This value is optional and defaults to 1.0 if not provided. It represents the calibration factor should the sensor deviate from the typical response.
+-   **Start Time [`starttime`]** &mdash; Date and time of the first data sample given in UTC
 
 The other parameters can be derived from the sampling rate, start time and the waveform data:
 
-- **Number of Point [npts]** &mdash; Number of sample points. Measured by counting the number of points in the time serie.
-- **Sampling Interval [delta]** &mdash; sample distance in seconds. Computed as the inverse of the sampling_rate ($1/sampling\_rate$).
-- **End Time [endtime]** &mdash; Date and time of the last data sample given in UTC  `endtime = star`
-- 
+- **Number of Point [`npts`]** &mdash; Number of sample points. Measured by counting the number of points in the time serie.
+- **Sampling Interval [`delta`]** &mdash; sample distance in seconds. Computed as the inverse of the sampling_rate (`1/sampling_rate`).
+- **End Time [`endtime`]** &mdash; Date and time of the last data sample given in UTC  `endtime = startime + npts * delta`
 
 ### Catalog
 
@@ -494,7 +493,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNDEzNzY3NiwtMTIzNTAyMjc5MywtNj
+eyJoaXN0b3J5IjpbMTYyMjc5NjUzMCwtMTIzNTAyMjc5MywtNj
 U3MTY5NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2MTY0
 MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMT
 Q1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1
