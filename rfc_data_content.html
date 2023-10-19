@@ -20,20 +20,20 @@
 <h3 id="overview">Overview</h3>
 <p>Our proposal encompasses three categories of data: the waveforms, the catalog data, and the inventory and system information. We propose storing this information in a single <code>Zarr</code> file with a <code>.zarr</code> extension.</p>
 <p>To ensure interoperability, the information in the provided files must be consistent. The sensor naming convention should remain consistent across all files. Additionally, the locations of sensors and events should be expressed using a unified coordinate system, which must also be used for grids, if applicable.</p>
-<h3 id="why-zarr-format">Why <code>Zarr</code> format?</h3>
-<p>The recommendation to use the <code>Zarr</code> format for packaging the information came from personnel at the IRIS data center. IRIS now encourages submissions in the <code>TimeDB</code> or <code>Zarr</code> format. Storing data in <code>TileDB</code> requires a database engine, necessitating additional components to be installed alongside the server.</p>
-<p>The <code>Zarr</code> format was designed to efficiently store and access large-scale array-oriented scientific data. Its design addresses the challenges posed by cloud and distributed storage, allowing for concurrent reads and writes. The format shines in scenarios where data needs to be analyzed in chunks without loading the entire dataset into memory, making it particularly apt for multidimensional arrays. With built-in support for compression and chunking, Zarr facilitates rapid data access regardless of the storage backend, whether it’s file systems, object storage, or databases.</p>
-<p>By adopting <code>Zarr</code>, we can store data and metadata in formats closely aligned with those widely accepted by the seismology community. It’s feasible to encapsulate waveforms, event catalogs, and system information within a single container, enabling standalone usage. Additionally, the format can be tailored to accommodate variations in the information required for triggered and continuous data.</p>
-<p>The benefits of using the <code>Zarr</code> format become particularly evident when considering the nature of waveform data. More broadly, the main advantages of employing the <code>Zarr</code> format to store seismic data and metadata include:</p>
+<h3 id="why-asdf-format">Why <code>ASDF</code> format?</h3>
+<p>The recommendation to use the <code>ASDF</code> format for packaging the information came from personnel at the IRIS data center. IRIS now encourages submissions in the <code>TimeDB</code> or <code>ASDF</code> format. Storing data in <code>TileDB</code> requires a database engine, necessitating additional components to be installed alongside the server.</p>
+<p>The <code>ASDF</code> format was designed to efficiently store and access large-scale array-oriented scientific data. Its design addresses the challenges posed by cloud and distributed storage, allowing for concurrent reads and writes. The format shines in scenarios where data needs to be analyzed in chunks without loading the entire dataset into memory, making it particularly apt for multidimensional arrays. With built-in support for compression and chunking, ASDF facilitates rapid data access regardless of the storage backend, whether it’s file systems, object storage, or databases.</p>
+<p>By adopting <code>ASDF</code>, we can store data and metadata in formats closely aligned with those widely accepted by the seismology community. It’s feasible to encapsulate waveforms, event catalogs, and system information within a single container, enabling standalone usage. Additionally, the format can be tailored to accommodate variations in the information required for triggered and continuous data.</p>
+<p>The benefits of using the <code>ASDF</code> format become particularly evident when considering the nature of waveform data. More broadly, the main advantages of employing the <code>ASDF</code> format to store seismic data and metadata include:</p>
 <ol type="1">
-<li><p><strong>Chunked Storage and Access</strong>: Zarr’s inherent design supports chunking, allowing users to efficiently read or write small sections of large seismic datasets without accessing the entire file. This feature is especially advantageous for processing extensive continuous seismic recordings.</p></li>
-<li><p><strong>Concurrent Reads and Writes</strong>: Built with cloud and distributed storage environments in mind, Zarr facilitates simultaneous reads and writes by multiple processes or users without conflicts, promoting collaborative analysis.</p></li>
-<li><p><strong>Flexible Compression</strong>: Zarr is compatible with various compression algorithms. This flexibility ensures that extensive seismic data can be compactly stored while still ensuring rapid access times.</p></li>
-<li><p><strong>Multidimensional Support</strong>: Seismic data often presents itself in multi-dimensional arrays (e.g., time, depth, latitude, longitude). Zarr natively supports these multi-dimensional datasets, simplifying data organization and access.</p></li>
-<li><p><strong>Metadata Storage</strong>: Zarr permits the inclusion of metadata directly within the dataset. This feature ensures that seismic trace metadata, acquisition details, and processing histories can coexist alongside the waveform data, providing a comprehensive context for the stored seismic information.</p></li>
+<li><p><strong>Chunked Storage and Access</strong>: ASDF’s inherent design supports chunking, allowing users to efficiently read or write small sections of large seismic datasets without accessing the entire file. This feature is especially advantageous for processing extensive continuous seismic recordings.</p></li>
+<li><p><strong>Concurrent Reads and Writes</strong>: Built with cloud and distributed storage environments in mind, ASDF facilitates simultaneous reads and writes by multiple processes or users without conflicts, promoting collaborative analysis.</p></li>
+<li><p><strong>Flexible Compression</strong>: ASDF is compatible with various compression algorithms. This flexibility ensures that extensive seismic data can be compactly stored while still ensuring rapid access times.</p></li>
+<li><p><strong>Multidimensional Support</strong>: Seismic data often presents itself in multi-dimensional arrays (e.g., time, depth, latitude, longitude). ASDF natively supports these multi-dimensional datasets, simplifying data organization and access.</p></li>
+<li><p><strong>Metadata Storage</strong>: ASDF permits the inclusion of metadata directly within the dataset. This feature ensures that seismic trace metadata, acquisition details, and processing histories can coexist alongside the waveform data, providing a comprehensive context for the stored seismic information.</p></li>
 </ol>
 <h3 id="waveform-data">Waveform Data</h3>
-<p>The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of �m, ��sm​, or �/�2m/s2 for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC count is more suitable. Storing the ADC count as integers allows for the use of the Steim1 and Steim2 differential compression algorithms.</p>
+<p>The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of m, ��sm​, or �/�2m/s2 for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC count is more suitable. Storing the ADC count as integers allows for the use of the Steim1 and Steim2 differential compression algorithms.</p>
 <p>Alongside the amplitude values, additional metadata describing the instrument recording the data and time series parameters should be provided for each trace. Each trace should be stored with its own metadata information.</p>
 <p>The required metadata for each trace includes:</p>
 <ul>
@@ -402,11 +402,11 @@
 <p>Whether you choose to leave an issue on GitHub or send an email, your feedback is invaluable. It aids in ensuring that the proposed micro-seismic data exchange format is robust, relevant, and addresses the needs of the community.</p>
 <p>Thank you for taking the time to review this RFC and for your contributions towards its continual improvement.</p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyOD
-gxMzE2OSwtMzg5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcwNDMw
-OTksLTE5NDU3Mjc4NTgsLTMxMjAyODIzOCw0NjM2ODQ0OTcsLT
-E2MTYxNzM1ODIsMTA0NDQwNTE1NCwtMTY0NTkxNzA5NCw4NDAx
-NDUwNTksLTE0MzE4OTAzOTMsLTExNzcyMjc5NDcsMTA4MTAxNz
-Y2NiwxMTI0MTE0MTkzLC03MTI0MTkxOTEsMTU0NjIyNzE5Miwx
-MDE3NjUwOTA5XX0=
+eyJoaXN0b3J5IjpbLTE0NjE0NDg3MzUsLTY0MjIxODEyMyw5OD
+Y5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1OTkzLC03NTQzNzE4
+MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NTgsLTMxMjAyODIzOC
+w0NjM2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0NDQwNTE1NCwtMTY0
+NTkxNzA5NCw4NDAxNDUwNTksLTE0MzE4OTAzOTMsLTExNzcyMj
+c5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03MTI0MTkxOTEs
+MTU0NjIyNzE5Ml19
 -->
