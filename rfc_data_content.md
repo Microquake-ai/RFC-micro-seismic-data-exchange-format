@@ -179,7 +179,7 @@ In this section we will cover a series of data types some are to be included as 
   - [REQUIRED/READ ONLY] **Lookup Table for Event Type Conversion**  &mdash; as described later in the document we suggest a mapping between the event type prescribed by the QuakeML standardard ant the event types encoutered in mining.
   - [REQUIRED] **Processing Logs** 
   - [OPTIONAL] **Ray and Ray Parameters** &mdash; from ray tracing
-  - [OPTIONAL] **Point Cloud Data** &mdash; from Montecarlo or Jacknife analyses
+  - [OPTIONAL] **Alternative Location** &mdash; from Montecarlo or Jacknife analyses
 
 - **Grids** [NOT INCLUDED, SEPARATE FILE] &mdash; suited for velocity, velocity derivatives (e.g., slowness) attenuation and density
 
@@ -199,9 +199,11 @@ ASDF File
    |
    └───EventConversionLookup
    |
+   └───
+   |
    └───Ray
    |
-   └───PointCloud   
+   └───AlternativeLocations   
 ```
 
 
@@ -602,11 +604,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTI2ODcyNTIsMTM5NDQ2OTY2NiwxMD
-c0MDA5Mzc4LDIwMjMyNDkxODgsLTEyMzUwMjI3OTMsLTY1NzE2
-OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5MDksNjIxNjE2NDAxLD
-E4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMjE0NTQ4
-NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5OT
-M5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLTY0
-MjIxODEyM119
+eyJoaXN0b3J5IjpbOTg3ODE2NDI5LDEzOTQ0Njk2NjYsMTA3ND
+AwOTM3OCwyMDIzMjQ5MTg4LC0xMjM1MDIyNzkzLC02NTcxNjk0
+NzYsLTE0NTA3NzY3NDMsNzU2NTkxOTA5LDYyMTYxNjQwMSwxOD
+EwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMsLTIxNDU0ODU0
+MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5OTkzOS
+wxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC02NDIy
+MTgxMjNdfQ==
 -->
