@@ -166,8 +166,6 @@
    |
    └───EventConversionLookup
    |
-   └───
-   |
    └───Ray
    |
    └───AlternativeLocations   </code></pre>
@@ -329,7 +327,7 @@
 <h4 id="station-channel-coordinates">Station &amp; Channel — Coordinates</h4>
 <p>In a typical seismic application, the StationXML format uses latitude and longitude to describe the geographical position of stations and channels. While this makes sense for global and regional seismic networks, it’s not as intuitive or convenient for the μseismic monitoring within a mining setup. In such a scenario, the geographical location is often best described using a local coordinate system.</p>
 <p>Thus, we recommend replacing the latitude and longitude fields in the StationXML format with <code>x</code>, <code>y</code>, and <code>z</code> coordinates for both the station and channel locations. This change aligns with the earlier modifications made for QuakeML, ensuring consistency across different components of the μseismic system.</p>
-<h2 id="rfc-section-system-information-storage-in-asdfs-auxiliary-data">RFC Section: System Information Storage in ASDF’s Auxiliary Data</h2>
+<h2 id="system-information-storage-in-asdfs-auxiliary-data">System Information Storage in ASDF’s Auxiliary Data</h2>
 <h3 id="background">Background</h3>
 <p>To ensure accurate interpretation and utilization of seismic data, it’s essential to provide comprehensive system information. This information offers the necessary context about the recording environment, location, and equipment specifics, which can be pivotal in analysis phases.</p>
 <h3 id="proposed-data-structure">Proposed Data Structure</h3>
@@ -350,6 +348,7 @@
 <li><code>installation_date</code>: Date when the system was set up.</li>
 <li><code>removal_date</code>: Date when the system was removed (if applicable).</li>
 <li><code>monitoring_target</code>: The monitoring target (e.g. underground, open-pit, surface)</li>
+<li><code>p_velocity</code>: The</li>
 <li><code>Description</code>: Additional remarks or details about the site or instrumentation.</li>
 </ul>
 <h3 id="implementation-notes">Implementation Notes:</h3>
@@ -549,7 +548,7 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg3ODE2NDI5LDEzOTQ0Njk2NjYsMTA3ND
+eyJoaXN0b3J5IjpbMjU2NzY2MTczLDEzOTQ0Njk2NjYsMTA3ND
 AwOTM3OCwyMDIzMjQ5MTg4LC0xMjM1MDIyNzkzLC02NTcxNjk0
 NzYsLTE0NTA3NzY3NDMsNzU2NTkxOTA5LDYyMTYxNjQwMSwxOD
 EwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMsLTIxNDU0ODU0
