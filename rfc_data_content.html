@@ -332,8 +332,7 @@
 </ul>
 <h3 id="implementation-notes">Implementation Notes:</h3>
 <h3 id="data-structure-inside-asdf-for-systeminfo">Data Structure Inside ASDF for SystemInfo</h3>
-<p>Within an ASDF file, the <code>AuxiliaryData</code> section can have various directories, and one such directory could be <code>SystemInfo</code>.</p>
-<p>Inside <code>SystemInfo</code>, each attribute (like <code>Country</code>, <code>TimeZone</code>, <code>Latitude</code>, etc.) can be a dataset. Datasets in HDF5 (and thus ASDF) are essentially multidimensional arrays of data elements, accompanied by metadata. For many of our attributes, these datasets would just be single values (like a single string for <code>Country</code>), but the structure allows for more complex data if needed.</p>
+<p>Inside <code>SystemInfo</code>, each attribute (like <code>country</code>, <code>time_zone</code>, <code>latitude</code>, etc.) are a dataset. Datasets in HDF5 (and thus ASDF) are essentially multidimensional arrays of data elements, accompanied by metadata. For many of our attributes, these datasets would just be single values (like a single string for <code>country</code>), but the structure allows for more complex data if needed.</p>
 <p>For example:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode mathematica"><code class="sourceCode mathematica"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a>`AuxiliaryData</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>│</span>
@@ -367,7 +366,7 @@
 <div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="im">import</span> pyasdf</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="cf">with</span> pyasdf.ASDFDataSet(<span class="st">&quot;path_to_asdf_file.asdf&quot;</span>) <span class="im">as</span> ds:</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>    country <span class="op">=</span> ds.auxiliary_data.system_iInfo.country[:]</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>    country <span class="op">=</span> ds.auxiliary_data.SystemInfo.country[:]</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>    timezone <span class="op">=</span> ds.auxiliary_data.SystemInfo.TimeZone[:]</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>    latitude <span class="op">=</span> ds.auxiliary_data.SystemInfo.Latitude[:]</span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a>    longitude <span class="op">=</span> ds.auxiliary_data.SystemInfo.Longitude[:]</span>
@@ -528,7 +527,7 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNDkwMjcwMiwxMDc0MDA5Mzc4LDIwMj
+eyJoaXN0b3J5IjpbMTM5NDQ2OTY2NiwxMDc0MDA5Mzc4LDIwMj
 MyNDkxODgsLTEyMzUwMjI3OTMsLTY1NzE2OTQ3NiwtMTQ1MDc3
 Njc0Myw3NTY1OTE5MDksNjIxNjE2NDAxLDE4MTA2Njg1MzYsNz
 E5NjMzMDk1LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0
