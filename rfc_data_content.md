@@ -17,7 +17,9 @@ This document proposes a file structure and format. At this stage, we seek align
 
 ### Scope
 
-With the increasing volume of μseismic data collected, especially in modern expansive monitoring systems and with technologies like Distributed Acoustic Sensing (DAS), there is a need for efficient management and handling of this data. The scope of this proposed standard is to define the content and nature of μseismic information provided to third parties and to suggest a format that facilitates efficient storage, retrieval, and exchange, of complete information required to further analyse the data. The propose format  computationally efficient mechanism to store and retrieve large volume of data that are prescribed by increasingly expansive system and the adoption of the DAS technology. It is also part of the scope to provide a storage mechanism that is flexible and extensible that would apply to both triggered and continous data.
+With the increasing volume of μseismic data collected, especially in modern expansive monitoring systems and with technologies like Distributed Acoustic Sensing (DAS), there is a need for efficient management and handling of this data. The scope of this proposed standard is to define the content and nature of μseismic information provided to third parties and to suggest a format that facilitates efficient storage, retrieval, and exchange, of complete information required to further analyse the data.
+
+Computational efficiency in storing and retrieving large volume of data that are prescribed by increasingly expansive system and the adoption of the DAS technology, is central. The ability to provide a storage mechanism flexible and extensible enough to store both triggered and continous data is another criterion.
 
 The document focuses on the foundational elements and seismic information intrinsic to μseismic monitoring. The pertinent information can be divided into three categories:
 
@@ -365,11 +367,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4OTczNTY1LDYyMTYxNjQwMSwxODEwNj
-Y4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMsLTIxNDU0ODU0MjEs
-LTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5OTkzOSwxND
-I5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgx
-MjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OTQzNTk5MywtNz
-U0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3ODU4LC0zMTIw
-MjgyMzhdfQ==
+eyJoaXN0b3J5IjpbMzEzNzYzMjYsNjIxNjE2NDAxLDE4MTA2Nj
+g1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwt
+MTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5OTM5LDE0Mj
+kxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLTY0MjIxODEy
+Myw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1OTkzLC03NT
+QzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NTgsLTMxMjAy
+ODIzOF19
 -->
