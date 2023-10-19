@@ -51,7 +51,7 @@ In summary, the goal is to provide a robust framework that not only addresses th
 
 ### RFC Process and Schedule
 
-We propose the following RFC process that should lead to the standard adoption. It is unclear at this time where and by who the standar
+We propose the following RFC process that should lead to the standard adoption. It is unclear at this time where and by who the standard will be published. 
 
 #### Process:
 
@@ -59,9 +59,9 @@ We propose the following RFC process that should lead to the standard adoption. 
 2.  **Publication**: Making the RFC available for a wider audience for review and comment.
 3.  **Review**: A period of review where stakeholders provide feedback.
 4.  **Revision**: Updates to the RFC based on feedback received.
-5.  **Final Comment Period**: A last opportunity for feedback before a decision is made.
-6.  **Decision**: Formal decision on the adoption of the RFC.
-7.  **Publication**: If accepted, the RFC is officially published.
+5.  **Final Comment Period**: A last opportunity for feedback before a the final standard is published.
+6.  **Adoption**: Adoption of the RFC.
+7.  **Publication**: If adopte, the Standard is officially published.
 8.  **Implementation**: Introduction of the recommended practices or standards from the RFC.
 9.  **Review Cycle**: Periodic reviews of the RFC's effectiveness post-implementation.
 
@@ -421,11 +421,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4MjM4NTYyNiw3NTY1OTE5MDksNjIxNj
-E2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywt
-MjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMT
-I0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2
-MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMz
-g5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3
-Mjc4NThdfQ==
+eyJoaXN0b3J5IjpbNjM0OTc2NjMsNzU2NTkxOTA5LDYyMTYxNj
+QwMSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMsLTIx
+NDU0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyND
+U5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMy
+LC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OT
+QzNTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3
+ODU4XX0=
 -->
