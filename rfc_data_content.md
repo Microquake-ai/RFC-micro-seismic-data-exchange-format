@@ -67,27 +67,26 @@ In summary, the goal is to provide a robust framework that not only addresses th
 
 -   1.  **Drafting and Initial Publication**: Completed as of 2023-10-20.
     
-2.  **Review**: Given the complexities and the necessity to involve various stakeholders, we'll allocate four months for this step. This will ensure that all participants have ample time to understand, discuss, and provide thoughtful feedback.
-    -   **Start**: 2023-10-20
-    -   **End**: 2023-02-20
+2.  **Review**: Given the complexities and the necessity to involve various stakeholders, we suggest allocating four months to the review. This will ensure that all participants have ample time to understand, discuss, and provide thoughtful feedback.
+    -   **Start**: 2023-11
+    -   **End**: 2023-03
    
 3.  **Revision**: Considering the extended review period and potential for substantial feedback, one months will be set aside for revisions.
-    -   **Start**: 2023-02-21
-    -   **End**: 2023-03-21
+    -   **Start**: 2023-03
+    -   **End**: 2023-04
    
 4.  **Final Comment Period**: This phase allows stakeholders another chance to review the revised RFC and provide final comments. Two months seems reasonable for this step, given the extended timeline for other phases. 
     -   **Start**: 2023-03-22
     -   **End**: 2023-05-22
  
 5.  **Decision**: This is when a governing body or committee meets to decide on the RFC. This might take a week, considering potential debates or presentations that might be required.   
-    -   **Date**: 2023-05-29
+    -   **Date**: 2023-06
     
 6.  **Official Publication**: After finalizing the decision, a week is allocated for any final edits, formatting, and dissemination of the RFC.
-
-    -   **Date**: 2023-06-05
-7.  **Implementation and Review Cycle**: As before, this is a longer-term step and its start would be dependent on the decisions made and the complexity of the implementation.
+    -   **Date**: 2023-07
     
-    -   **Start**: 2023-07-05 (to give systems and teams time to adjust) and onward
+7.  **Implementation and Review Cycle**: As before, this is a longer-term step and its start would be dependent on the decisions made and the complexity of the implementation.
+    -   **Start**: 2023-07 (to give systems and teams time to adjust) and onward
     -   **Review Cycle**: Every 6 months (or another interval that makes sense based on the nature of the RFC and its implications)
 
 ## Proposal
@@ -420,7 +419,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5MTc3NjEyOCw3NTY1OTE5MDksNjIxNj
+eyJoaXN0b3J5IjpbLTExNTE1NTMyNyw3NTY1OTE5MDksNjIxNj
 E2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywt
 MjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMT
 I0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2
