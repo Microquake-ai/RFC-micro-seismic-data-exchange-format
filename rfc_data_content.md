@@ -449,6 +449,7 @@ Each ray's sub-directory will include the following attributes:
 -   `network_code`: Identifier for the network. Standard naming conventions of seismic networks are to be employed.
 -   `station_code`: Identifier for the station. This aligns with the standard naming conventions employed for seismic stations.
 -   `location_code`: A code that uniquely identifies different data streams at a single station. It allows users to distinguish between data from closely spaced instruments or multiple data collection strategies.
+-   `origin_id`: The unique `ResourceIdentifier`
 -   `arrival_id`: The unique `ResourceIdentifier` of the associated seismic arrival included in the QuakeML section of the ASDF file.
 -   `phase`: The seismic phase ("P" or "S").
 -   `azimuth`: Azimuth in degrees.
@@ -601,11 +602,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTYwNzE1OTIsMTIwNjg3MzYzNywxMz
-k0NDY5NjY2LDEwNzQwMDkzNzgsMjAyMzI0OTE4OCwtMTIzNTAy
-Mjc5MywtNjU3MTY5NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOS
-w2MjE2MTY0MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1
-MDEzLC0yMTQ1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0OD
-QsLTExMjQ1OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5
-NDQ5NTYzMl19
+eyJoaXN0b3J5IjpbNjk5MTU1NDUyLDEyMDY4NzM2MzcsMTM5ND
+Q2OTY2NiwxMDc0MDA5Mzc4LDIwMjMyNDkxODgsLTEyMzUwMjI3
+OTMsLTY1NzE2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5MDksNj
+IxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAx
+MywtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC
+0xMTI0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0
+OTU2MzJdfQ==
 -->
