@@ -253,7 +253,7 @@ The system or inventory information is crucial for any seismic network as it pro
 
 However, when tailoring the use of StationXML to the μseismic domain, especially in the mining context, certain modifications are required to better fit the data's unique characteristics and requirements.
 
-#### Station & Channel Coordinates
+#### Station & Channel &mdash; Coordinates
 
 In a typical seismic application, the StationXML format uses latitude and longitude to describe the geographical position of stations and channels. While this makes sense for global and regional seismic networks, it's not as intuitive or convenient for the μseismic monitoring within a mining setup. In such a scenario, the geographical location is often best described using a local coordinate system.
 
@@ -304,6 +304,10 @@ grid_values = np.zeros((header["NX"], header["NY"], header["NZ"]))
 ```
 
 In this representation, the grid values are stored in a structured manner, allowing for easy indexing and operations. Each cell in the array corresponds to a grid point in the velocity model, with its value representing the velocity (or density or attenuation, depending on the grid type) at that point.
+
+#### Ray and Ray Parameters** 
+#### Point Cloud Data**
+#### Lookup Table for Event Type Conversion**  &mdash; as described later in the document we suggest a mapping between the event type prescribed by the QuakeML standardard ant the event types encoutered in mining.
 
 ## Implementation using the &mu;Quake Python Library
 
@@ -427,11 +431,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzI3MTE0NSwtMTQ1MDc3Njc0Myw3NT
-Y1OTE5MDksNjIxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1
-LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtOD
-AzNDE3NDg0LC0xMTI0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5
-MTM2LDE5OTQ0OTU2MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLT
-EyODgxMzE2OSwtMzg5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcw
-NDMwOTldfQ==
+eyJoaXN0b3J5IjpbLTQ4NTQwNzYxLC0xNDUwNzc2NzQzLDc1Nj
+U5MTkwOSw2MjE2MTY0MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUs
+MTMzOTM1MDEzLC0yMTQ1NDg1NDIxLC0xODczNjQyODI0LC04MD
+M0MTc0ODQsLTExMjQ1OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkx
+MzYsMTk5NDQ5NTYzMiwtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMT
+I4ODEzMTY5LC0zODk0MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0
+MzA5OV19
 -->
