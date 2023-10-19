@@ -38,29 +38,30 @@ Our proposal encompasses three categories of data: the waveforms, the catalog da
 
 To ensure interoperability, the information in the provided files must be consistent. The sensor naming convention should remain consistent across all files. Additionally, the locations of sensors and events should be expressed using a unified coordinate system, which must also be used for grids, if applicable.
 
-### Why `Zarr` format?
 
-The recommendation to use the `Zarr` format for packaging the information came from personnel at the IRIS data center. IRIS now encourages submissions in the `TimeDB` or `Zarr` format. Storing data in `TileDB` requires a database engine, necessitating additional components to be installed alongside the server.
+### Why `ASDF` format?
 
-The `Zarr` format was designed to efficiently store and access large-scale array-oriented scientific data. Its design addresses the challenges posed by cloud and distributed storage, allowing for concurrent reads and writes. The format shines in scenarios where data needs to be analyzed in chunks without loading the entire dataset into memory, making it particularly apt for multidimensional arrays. With built-in support for compression and chunking, Zarr facilitates rapid data access regardless of the storage backend, whether it's file systems, object storage, or databases.
+The recommendation to use the `ASDF` format for packaging the information came from personnel at the IRIS data center. IRIS now encourages submissions in the `TimeDB` or `ASDF` format. Storing data in `TileDB` requires a database engine, necessitating additional components to be installed alongside the server.
 
-By adopting `Zarr`, we can store data and metadata in formats closely aligned with those widely accepted by the seismology community. It's feasible to encapsulate waveforms, event catalogs, and system information within a single container, enabling standalone usage. Additionally, the format can be tailored to accommodate variations in the information required for triggered and continuous data.
+The `ASDF` format was designed to efficiently store and access large-scale array-oriented scientific data. Its design addresses the challenges posed by cloud and distributed storage, allowing for concurrent reads and writes. The format shines in scenarios where data needs to be analyzed in chunks without loading the entire dataset into memory, making it particularly apt for multidimensional arrays. With built-in support for compression and chunking, ASDF facilitates rapid data access regardless of the storage backend, whether it's file systems, object storage, or databases.
 
-The benefits of using the `Zarr` format become particularly evident when considering the nature of waveform data. More broadly, the main advantages of employing the `Zarr` format to store seismic data and metadata include:
+By adopting `ASDF`, we can store data and metadata in formats closely aligned with those widely accepted by the seismology community. It's feasible to encapsulate waveforms, event catalogs, and system information within a single container, enabling standalone usage. Additionally, the format can be tailored to accommodate variations in the information required for triggered and continuous data.
 
-1.  **Chunked Storage and Access**: Zarr's inherent design supports chunking, allowing users to efficiently read or write small sections of large seismic datasets without accessing the entire file. This feature is especially advantageous for processing extensive continuous seismic recordings.
+The benefits of using the `ASDF` format become particularly evident when considering the nature of waveform data. More broadly, the main advantages of employing the `ASDF` format to store seismic data and metadata include:
+
+1.  **Chunked Storage and Access**: ASDF's inherent design supports chunking, allowing users to efficiently read or write small sections of large seismic datasets without accessing the entire file. This feature is especially advantageous for processing extensive continuous seismic recordings.
     
-2.  **Concurrent Reads and Writes**: Built with cloud and distributed storage environments in mind, Zarr facilitates simultaneous reads and writes by multiple processes or users without conflicts, promoting collaborative analysis.
+2.  **Concurrent Reads and Writes**: Built with cloud and distributed storage environments in mind, ASDF facilitates simultaneous reads and writes by multiple processes or users without conflicts, promoting collaborative analysis.
     
-3.  **Flexible Compression**: Zarr is compatible with various compression algorithms. This flexibility ensures that extensive seismic data can be compactly stored while still ensuring rapid access times.
+3.  **Flexible Compression**: ASDF is compatible with various compression algorithms. This flexibility ensures that extensive seismic data can be compactly stored while still ensuring rapid access times.
     
-4.  **Multidimensional Support**: Seismic data often presents itself in multi-dimensional arrays (e.g., time, depth, latitude, longitude). Zarr natively supports these multi-dimensional datasets, simplifying data organization and access.
+4.  **Multidimensional Support**: Seismic data often presents itself in multi-dimensional arrays (e.g., time, depth, latitude, longitude). ASDF natively supports these multi-dimensional datasets, simplifying data organization and access.
     
-5.  **Metadata Storage**: Zarr permits the inclusion of metadata directly within the dataset. This feature ensures that seismic trace metadata, acquisition details, and processing histories can coexist alongside the waveform data, providing a comprehensive context for the stored seismic information.
+5.  **Metadata Storage**: ASDF permits the inclusion of metadata directly within the dataset. This feature ensures that seismic trace metadata, acquisition details, and processing histories can coexist alongside the waveform data, providing a comprehensive context for the stored seismic information.
 
 ### Waveform Data
 
-The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of �m, ��sm​, or �/�2m/s2 for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC count is more suitable. Storing the ADC count as integers allows for the use of the Steim1 and Steim2 differential compression algorithms.
+The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of m, ��sm​, or �/�2m/s2 for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC count is more suitable. Storing the ADC count as integers allows for the use of the Steim1 and Steim2 differential compression algorithms.
 
 Alongside the amplitude values, additional metadata describing the instrument recording the data and time series parameters should be provided for each trace. Each trace should be stored with its own metadata information.
 
@@ -437,11 +438,11 @@ Thank you for taking the time to review this RFC and for your contributions towa
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyOD
-gxMzE2OSwtMzg5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcwNDMw
-OTksLTE5NDU3Mjc4NTgsLTMxMjAyODIzOCw0NjM2ODQ0OTcsLT
-E2MTYxNzM1ODIsMTA0NDQwNTE1NCwtMTY0NTkxNzA5NCw4NDAx
-NDUwNTksLTE0MzE4OTAzOTMsLTExNzcyMjc5NDcsMTA4MTAxNz
-Y2NiwxMTI0MTE0MTkzLC03MTI0MTkxOTEsMTU0NjIyNzE5Miwx
-MDE3NjUwOTA5XX0=
+eyJoaXN0b3J5IjpbLTE0NjE0NDg3MzUsLTY0MjIxODEyMyw5OD
+Y5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1OTkzLC03NTQzNzE4
+MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NTgsLTMxMjAyODIzOC
+w0NjM2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0NDQwNTE1NCwtMTY0
+NTkxNzA5NCw4NDAxNDUwNTksLTE0MzE4OTAzOTMsLTExNzcyMj
+c5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03MTI0MTkxOTEs
+MTU0NjIyNzE5Ml19
 -->
