@@ -66,7 +66,7 @@ We propose the following RFC process that should lead to the standard adoption. 
 
 #### Schedule:
 
--   1.  **Drafting and Initial Publication**: Completed as of 2023-10-20.
+-   1.  **Drafting and Initial Publication**: In progress.
     
 2.  **Review**: Given the complexities and the necessity to involve various stakeholders, we suggest allocating four months to the review. This will ensure that all participants have ample time to understand, discuss, and provide thoughtful feedback.
     -   **Start**: 2023-11
@@ -697,11 +697,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTQyMTI2NTQsLTE1MDE3MDI2MDcsLT
-EwMDg2NTM1NjAsNDM5NzYzNTc0LDEyMDY4NzM2MzcsMTM5NDQ2
-OTY2NiwxMDc0MDA5Mzc4LDIwMjMyNDkxODgsLTEyMzUwMjI3OT
-MsLTY1NzE2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5MDksNjIx
-NjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMy
-wtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0x
-MTI0NTk5OTM5XX0=
+eyJoaXN0b3J5IjpbLTU2NTkyMzIzNiwtMTUwMTcwMjYwNywtMT
+AwODY1MzU2MCw0Mzk3NjM1NzQsMTIwNjg3MzYzNywxMzk0NDY5
+NjY2LDEwNzQwMDkzNzgsMjAyMzI0OTE4OCwtMTIzNTAyMjc5My
+wtNjU3MTY5NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2
+MTY0MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC
+0yMTQ1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTEx
+MjQ1OTk5MzldfQ==
 -->
