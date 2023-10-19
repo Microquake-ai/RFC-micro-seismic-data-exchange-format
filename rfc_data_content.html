@@ -117,7 +117,7 @@
 <li><strong>Grids</strong> — suited for velocity, velocity derivatives (e.g., slowness) attenuation and density</li>
 <li><strong>Ray and Ray Parameters</strong> — from ray tracing</li>
 <li><strong>Point Cloud Data</strong> — from Montecarlo or Jacknife analyses</li>
-<li><strong>Lookup Table for Event Type Conversion</strong> — as described later in the document we suggest a mapp</li>
+<li><strong>Lookup Table for Event Type Conversion</strong> — as described later in the document we suggest a mapping between the event type prescribed by the QuakeML standardard ant the event types encoutered in mining.</li>
 </ul>
 <p>We made the explicit choice to use the QuakeML and StationXML for <strong>catalog</strong> and <strong>inventory</strong> information, aligning with prevailing standards in the seismic community. The principal advantage of this decision is the assured compatibility with a multitude of existing tools and software in the seismic domain. Furthermore, both QuakeML and StationXML are inherently flexible and adaptable. These formats not only offer comprehensive sets of parameters to detail seismic events and station metadata, but they are also designed to accommodate custom parameters and extensions. This flexibility has been instrumental in our initiative. We’ve leveraged the extensibility of these formats to incorporate specialized μseismic parameters or attributes, ensuring that QuakeML and StationXML are tailored to address the unique nuances and requirements of microseismic monitoring. This adaptation ensures that the data format remains both relevant to the broader seismic community and aptly suited for microseismic applications.</p>
 <p>However, like all choices, leveraging these formats comes with its challenges. While their use ensures widespread compatibility, the interpretation of file content may require nuanced processing and considerations. Some adaptations might be essential to cater specifically to the μseismic monitoring context, possibly involving the addition of auxiliary fields or annotations. The goal, throughout these modifications, remains to balance ease-of-use with the specificity required for μseismic data, ensuring that users can maximize the value derived from the data while minimizing the overhead of adaptations and interpretations.</p>
@@ -401,7 +401,7 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2MDg1MzM2NSwtMTQ1MDc3Njc0Myw3NT
+eyJoaXN0b3J5IjpbLTIwMzI3MTE0NSwtMTQ1MDc3Njc0Myw3NT
 Y1OTE5MDksNjIxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1
 LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtOD
 AzNDE3NDg0LC0xMTI0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5
