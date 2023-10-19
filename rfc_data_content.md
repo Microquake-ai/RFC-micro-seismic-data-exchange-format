@@ -97,15 +97,13 @@ We propose the following RFC process that should lead to the standard adoption. 
 
 Our proposal encompasses three categories of data: the waveforms, the catalog data, and the inventory and system information. It also concerns system metadata such as velocity models. 
 
-We propose using the `ASDF` format with a `.asdf` extension to store the waveforms, the catalog (QuakeML), and inventory (StationXML) information. The `ADSF` format provides a convenient and comprehensive mechanism to store the provenance and lineage in of the data to provide traceability and data history.Note that the `ASDF` format also provides a convenient way to store auxiliary data including but not necessarily limited to:
+We propose using the `ASDF` format with a `.asdf` extension to store the waveforms, the catalog (QuakeML), and inventory (StationXML) information. The `ADSF` format provides a convenient and comprehensive mechanism to store the provenance and lineage information related to the data genesis and modification to provide traceability and data history. Note that the `ASDF` format also provides a convenient way to store auxiliary data including but not necessarily limited to:
 
 -   **Ambient Noise Correlations**: Pre-computed cross-correlations between stations, which can be essential for techniques like ambient noise tomography.
     
--   **Adjoint Sources**: Useful for full waveform inversion (FWI) methods, where the difference between observed and simulated waveforms is back-propagated into the subsurface to update model parameters.
-    
--   **Receiver Functions**: Derived from teleseismic recordings, these provide insights into the subsurface structure, especially at the crust-mantle boundary.
-    
 -   **Instrument Response**: Though typically part of the StationXML, having the actual instrument response curves stored as auxiliary data can facilitate more direct correction of the waveforms without referencing external databases.
+
+- **Ray Tracing and Ray Parameter**: 
     
 -   **Processing Logs**: Detailed logs of processing steps performed on the data, which can be crucial for ensuring data quality and understanding potential issues or artifacts.
 
@@ -419,7 +417,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4ODk0Nzc0Niw3NTY1OTE5MDksNjIxNj
+eyJoaXN0b3J5IjpbMjEzMzQ1NjAzNiw3NTY1OTE5MDksNjIxNj
 E2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywt
 MjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMT
 I0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2
