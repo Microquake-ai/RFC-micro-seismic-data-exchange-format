@@ -35,8 +35,6 @@
 <li><p><strong>Efficiency in File Management</strong>: ASDF offers a significant reduction in the number of files required for various tasks. A single ASDF file can effectively replace tens to hundreds of thousands of individual waveform files. This consolidation not only results in raw performance and organizational advantages but also addresses challenges like file count quota limits, especially on supercomputing platforms. Furthermore, the format supports efficient parallel I/O on suitable hardware, making it ideal for scalable parallel data processing workflows.</p></li>
 <li><p><strong>Versatile Data Type Support</strong>: Beyond seismograms, ASDF is adept at accommodating diverse data types prevalent in seismology. Whether it’s spectral estimations, cross-correlations, adjoint sources, receiver functions, or other data types, ASDF ensures organized, self-describing storage. This versatility ensures that seismologists can maintain a consistent data storage paradigm across various facets of their research.</p></li>
 </ol>
-<h3 id="implementation-using-the-μquake-python-library">Implementation using the μQuake Python Library</h3>
-<p>Within the context of this RFC, which proposes specific adaptations and formats tailored to microseismic monitoring, the <code>uquake</code> library stands as a practical implementation of these recommendations. Developed in Python and built upon ObsPy, <code>uquake</code> has been specially crafted to cater to the distinctive needs of microseismic monitoring in mining environments. This includes, amongst other capabilities, the handling of local coordinate systems and unique event types frequently observed in mine microseismic monitoring. For those seeking an immediate and tangible application of the proposed data format recommendations from this RFC, <code>uquake</code> offers a ready solution. It is open source, distributed under AGPL license and publicly available and can be easily accessed and installed via pip using <code>pip install uquake</code>.</p>
 <h3 id="waveform-data">Waveform Data</h3>
 <p>The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of <span class="math inline"><em>m</em></span>, <span class="math inline"><em>m</em>/<em>s</em></span>​, or <span class="math inline"><em>m</em>/<em>s</em><sup>2</sup></span> for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC count is more suitable. Storing the ADC count as integers allows for the use of the Steim1 and Steim2 differential compression algorithms.</p>
 <p>Alongside the amplitude values, additional metadata describing the instrument recording the data and time series parameters should be provided for each trace. Each trace should be stored with its own metadata information.</p>
@@ -227,7 +225,8 @@
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="co"># For demonstration purposes, initializing a 2D array with NXxNYxNZ dimensions</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>grid_values <span class="op">=</span> np.zeros((header[<span class="st">&quot;NX&quot;</span>], header[<span class="st">&quot;NY&quot;</span>], header[<span class="st">&quot;NZ&quot;</span>]))</span></code></pre></div>
 <p>In this representation, the grid values are stored in a structured manner, allowing for easy indexing and operations. Each cell in the array corresponds to a grid point in the velocity model, with its value representing the velocity (or density or attenuation, depending on the grid type) at that point.</p>
-<h4 id="implementation">Implementation</h4>
+<h2 id="implementation-using-the-μquake-python-library">Implementation using the μQuake Python Library</h2>
+<p>Within the context of this RFC, which proposes specific adaptations and formats tailored to microseismic monitoring, the <code>uquake</code> library stands as a practical implementation of these recommendations. Developed in Python and built upon ObsPy, <code>uquake</code> has been specially crafted to cater to the distinctive needs of microseismic monitoring in mining environments. This includes, amongst other capabilities, the handling of local coordinate systems and unique event types frequently observed in mine microseismic monitoring. For those seeking an immediate and tangible application of the proposed data format recommendations from this RFC, <code>uquake</code> offers a ready solution. It is open source, distributed under AGPL license and publicly available and can be easily accessed and installed via pip using <code>pip install uquake</code>.</p>
 <h3 id="implementation-using-uquake">Implementation using <code>uquake</code></h3>
 <p>The <code>uquake</code> library provides the necessary tools to handle gridded data in seismology. One of the primary objects to manage such grid data is the <code>Grid</code> class from <code>uquake.core.grid.base</code>. This class is designed to hold regular grids and can be employed for both 2D and 3D data structures.</p>
 <h4 id="initializing-a-grid">Initializing a Grid</h4>
@@ -306,11 +305,11 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyODcyODgzNSwtODAzNDE3NDg0LC0xMT
-I0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2
-MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMz
-g5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3
-Mjc4NTgsLTMxMjAyODIzOCw0NjM2ODQ0OTcsLTE2MTYxNzM1OD
-IsMTA0NDQwNTE1NCwtMTY0NTkxNzA5NCw4NDAxNDUwNTksLTE0
-MzE4OTAzOTNdfQ==
+eyJoaXN0b3J5IjpbLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMT
+EyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1
+NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLT
+M4OTQzNTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1
+NzI3ODU4LC0zMTIwMjgyMzgsNDYzNjg0NDk3LC0xNjE2MTczNT
+gyLDEwNDQ0MDUxNTQsLTE2NDU5MTcwOTQsODQwMTQ1MDU5LC0x
+NDMxODkwMzkzXX0=
 -->
