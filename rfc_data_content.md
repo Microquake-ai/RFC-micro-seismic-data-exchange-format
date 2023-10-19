@@ -137,11 +137,11 @@ The benefits of using the `ASDF` format become particularly evident when conside
 
 This format is particularly suited to meet the requirements of tomorrow.
 
-## Naming Convention
+## Naming Convention and Cross Referencing
 
-To enable effortless cross referecing between the f
+To enable effortless cross referecing between the different elements contained in the file adopting an consistent and standard naming convention is important. 
 
-The required metadata for each trace includes:
+T
 
 -   **Trace Identifier**: A unique identifier for the trace (see Obspy [documentation](https://docs.obspy.org/master/packages/autogen/obspy.core.event.resourceid.ResourceIdentifier.html) for information on the recommended _resource identifier_ structure). The trace identifier format and convention should be normalized and align with the SEED naming convention including the standard part. Deviation regarding the naming shall, howerver, be permitted to allow longer names to be utilized.  
 -   **Location Identification**: The location identification convention described [here](https://ds.iris.edu/ds/newsletter/vol1/no1/1/specification-of-seismograms-the-location-identifier/). This convention has been adapted for μseismic monitoring in the mining context.
@@ -485,11 +485,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMDc4Njc5MCwtMTIzNTAyMjc5MywtNj
-U3MTY5NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2MTY0
-MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMT
-Q1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1
-OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMi
-wtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zODk0
-MzU5OTNdfQ==
+eyJoaXN0b3J5IjpbLTE5OTI3MzkzOTMsLTEyMzUwMjI3OTMsLT
+Y1NzE2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5MDksNjIxNjE2
+NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMj
+E0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0
+NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2Mz
+IsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5
+NDM1OTkzXX0=
 -->
