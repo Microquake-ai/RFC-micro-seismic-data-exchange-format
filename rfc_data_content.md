@@ -207,6 +207,10 @@ In this representation, the grid values are stored in a structured manner, allow
 
 Within the context of this RFC, which proposes specific adaptations and formats tailored to microseismic monitoring, the `uquake` library stands as a practical implementation of these recommendations. Developed in Python and built upon ObsPy, `uquake` has been specially crafted to cater to the distinctive needs of microseismic monitoring in mining environments. This includes, amongst other capabilities, the handling of local coordinate systems and unique event types frequently observed in mine microseismic monitoring. For those seeking an immediate and tangible application of the proposed data format recommendations from this RFC, `uquake` offers a ready solution. It is open source, distributed under AGPL license and publicly available and can be easily accessed and installed via pip using `pip install uquake`.
 
+Note that there are alternative libraries addressing the same issues &mu;Quake tackles. The author is, howerver, less familiar with the alternatives. Notable alternatives are
+
+
+
 ### Implementation using `uquake`
 
 The `uquake` library provides the necessary tools to handle gridded data in seismology. One of the primary objects to manage such grid data is the `Grid` class from `uquake.core.grid.base`. This class is designed to hold regular grids and can be employed for both 2D and 3D data structures.
@@ -320,11 +324,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMT
-EyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1
-NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLT
-M4OTQzNTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1
-NzI3ODU4LC0zMTIwMjgyMzgsNDYzNjg0NDk3LC0xNjE2MTczNT
-gyLDEwNDQ0MDUxNTQsLTE2NDU5MTcwOTQsODQwMTQ1MDU5LC0x
-NDMxODkwMzkzXX0=
+eyJoaXN0b3J5IjpbLTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLT
+gwMzQxNzQ4NCwtMTEyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4
+OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC
+0xMjg4MTMxNjksLTM4OTQzNTk5MywtNzU0MzcxODE5LC0xOTg3
+MDQzMDk5LC0xOTQ1NzI3ODU4LC0zMTIwMjgyMzgsNDYzNjg0ND
+k3LC0xNjE2MTczNTgyLDEwNDQ0MDUxNTQsLTE2NDU5MTcwOTQs
+ODQwMTQ1MDU5XX0=
 -->
