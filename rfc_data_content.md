@@ -446,7 +446,7 @@ Within the `AuxiliaryData` section of an ASDF file, we store comprehensive ray i
 
 #### Structure Overview:
 
-```mathematica
+```
 `AuxiliaryData
 │
 └─── Ray
@@ -467,6 +467,45 @@ Within the `AuxiliaryData` section of an ASDF file, we store comprehensive ray i
 	           
 	     
 ```
+#### Attributes Description:
+
+-   **Event [event ResourceIdentifier]**: A unique identifier representing the seismic event
+
+-   **Origin [origin ResourceIdentifier]**: A unique identifier representing the seismic event's origin. It provides context for the associated ray data.
+    
+-   **Arrival [arrival ResourceIdentifier]**: This identifier is linked to the seismic phase arrival at a particular station for the given origin.
+    
+    -   **network (string)**: The network code where the seismic data was registered.
+        
+    -   **station (string)**: Station code identifying the specific station within the network.
+        
+    -   **location (string)**: Location code within the station, representing specific sensor placements or data processing paths.
+        
+    -   **nodes (list of 3D coordinates)**: Sequential list of points that describe the raypath through the Earth. Each point represents a position (x, y, z) in 3D space.
+        
+    -   **length (float)**: Total length of the raypath, calculated by summing the distances between consecutive nodes.
+        
+    -   **incidence_vector (3D vector)**: Unit vector representing the direction of the incoming ray at the station.
+        
+    -   **back_azimuth (float)**: Angle in degrees from the North (clockwise) pointing towards the seismic event's origin from the station.
+        
+    -   **incidence_angle (float)**: Angle in degrees between the ray's incoming direction and the vertical (downward) direction at the station.
+        
+    -   **takeoff_angle (float)**: Angle in degrees between the ray's outgoing direction (from the source) and the vertical.
+        
+    -   **azimuth (float)**: Angle in degrees from the North (clockwise) representing the ray's direction at the source location.
+        
+    -   **takeoff_vector (3D vector)**: Unit vector representing the direction of the ray as it departs the source location.
+        
+
+#### Additional Notes:
+
+-   The structure allows for efficient querying based on either the origin or arrival identifiers.
+    
+-   All angles are expressed in degrees, and the convention for azimuthal angles is from North in a clockwise direction.
+    
+-   The nodes list should be stored in a manner that preserves the order, ensuring the integrity of the raypath representation.
+
 
 ##### Ray Attributes:
 
@@ -628,11 +667,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NjY4OTgyOCw0Mzk3NjM1NzQsMTIwNj
-g3MzYzNywxMzk0NDY5NjY2LDEwNzQwMDkzNzgsMjAyMzI0OTE4
-OCwtMTIzNTAyMjc5MywtNjU3MTY5NDc2LC0xNDUwNzc2NzQzLD
-c1NjU5MTkwOSw2MjE2MTY0MDEsMTgxMDY2ODUzNiw3MTk2MzMw
-OTUsMTMzOTM1MDEzLC0yMTQ1NDg1NDIxLC0xODczNjQyODI0LC
-04MDM0MTc0ODQsLTExMjQ1OTk5MzksMTQyOTE5MjkyNiwyOTE2
-ODkxMzZdfQ==
+eyJoaXN0b3J5IjpbLTEwMDg2NTM1NjAsNDM5NzYzNTc0LDEyMD
+Y4NzM2MzcsMTM5NDQ2OTY2NiwxMDc0MDA5Mzc4LDIwMjMyNDkx
+ODgsLTEyMzUwMjI3OTMsLTY1NzE2OTQ3NiwtMTQ1MDc3Njc0My
+w3NTY1OTE5MDksNjIxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMz
+MDk1LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNC
+wtODAzNDE3NDg0LC0xMTI0NTk5OTM5LDE0MjkxOTI5MjYsMjkx
+Njg5MTM2XX0=
 -->
