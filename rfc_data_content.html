@@ -36,6 +36,7 @@
 <li><p><strong>Versatile Data Type Support</strong>: Beyond seismograms, ASDF is adept at accommodating diverse data types prevalent in seismology. Whether it’s spectral estimations, cross-correlations, adjoint sources, receiver functions, or other data types, ASDF ensures organized, self-describing storage. This versatility ensures that seismologists can maintain a consistent data storage paradigm across various facets of their research.</p></li>
 </ol>
 <h3 id="implementation-using-the-μquake-python-library">Implementation using the μQuake Python Library</h3>
+<p>Within the context of this RFC, which proposes specific adaptations and formats tailored to microseismic monitoring, the <code>uquake</code> library stands as a practical implementation of these recommendations. Developed in Python and built upon ObsPy, <code>uquake</code> has been specially crafted to cater to the distinctive needs of microseismic monitoring in mining environments. This includes, amongst other capabilities, the handling of local coordinate systems and unique event types frequently observed in mine microseismic monitoring. For those seeking an immediate and tangible application of the proposed data format recommendations from this RFC, <code>uquake</code> offers a ready solution. It is open source, distributed under AGPL license and publicly available and can be easily accessed and installed via pip using <code>pip install uquake</code>.</p>
 <h3 id="waveform-data">Waveform Data</h3>
 <p>The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of <span class="math inline"><em>m</em></span>, <span class="math inline"><em>m</em>/<em>s</em></span>​, or <span class="math inline"><em>m</em>/<em>s</em><sup>2</sup></span> for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC count is more suitable. Storing the ADC count as integers allows for the use of the Steim1 and Steim2 differential compression algorithms.</p>
 <p>Alongside the amplitude values, additional metadata describing the instrument recording the data and time series parameters should be provided for each trace. Each trace should be stored with its own metadata information.</p>
@@ -305,11 +306,11 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwMzQxNzQ4NCwtMTEyNDU5OTkzOSwxND
-I5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgx
-MjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OTQzNTk5MywtNz
-U0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3ODU4LC0zMTIw
-MjgyMzgsNDYzNjg0NDk3LC0xNjE2MTczNTgyLDEwNDQ0MDUxNT
-QsLTE2NDU5MTcwOTQsODQwMTQ1MDU5LC0xNDMxODkwMzkzLC0x
-MTc3MjI3OTQ3XX0=
+eyJoaXN0b3J5IjpbMTEyODcyODgzNSwtODAzNDE3NDg0LC0xMT
+I0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2
+MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMz
+g5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3
+Mjc4NTgsLTMxMjAyODIzOCw0NjM2ODQ0OTcsLTE2MTYxNzM1OD
+IsMTA0NDQwNTE1NCwtMTY0NTkxNzA5NCw4NDAxNDUwNTksLTE0
+MzE4OTAzOTNdfQ==
 -->
