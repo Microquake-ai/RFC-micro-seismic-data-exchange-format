@@ -48,9 +48,16 @@
 </ol>
 <p>This format is particularly suited to meet the requirements of tomorrow.</p>
 <h3 id="data-format-and-adaptation">Data Format and Adaptation</h3>
-<p>The key is to ensure consistencies between the data and information to allow efficient cross-referencing, retrieval and usage</p>
+<p>The key is to ensure consistencies between the data and information to allow efficient cross-referencing, retrieval and usage.</p>
+<p>In this section we will conver four types of data:</p>
+<ul>
+<li><strong>Waveforms</strong></li>
+<li><strong>Catalog</strong></li>
+<li><strong>Inventory/System</strong></li>
+<li><strong>Grids</strong></li>
+</ul>
 <h3 id="waveform-data">Waveform Data</h3>
-<p>The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of <span class="math inline"><em>m</em></span>, <span class="math inline"><em>m</em>/<em>s</em></span>​, or <span class="math inline"><em>m</em>/<em>s</em><sup>2</sup></span> for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC count is more suitable. Storing the ADC count as integers allows for the use of the Steim1 and Steim2 differential compression algorithms.</p>
+<p>The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of <span class="math inline"><em>m</em></span>, <span class="math inline"><em>m</em>/<em>s</em></span>​, or <span class="math inline"><em>m</em>/<em>s</em><sup>2</sup></span> for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC counts in is more suitable. Storing the ADC count as integers allows for the use of the Steim1 and Steim2 differential compression algorithms.</p>
 <p>Alongside the amplitude values, additional metadata describing the instrument recording the data and time series parameters should be provided for each trace. Each trace should be stored with its own metadata information.</p>
 <p>The required metadata for each trace includes:</p>
 <ul>
@@ -321,11 +328,11 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQzNTAxNDIwLDEzMzkzNTAxMywtMjE0NT
-Q4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5
-OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLT
-Y0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1
-OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NT
-gsLTMxMjAyODIzOCw0NjM2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0
-NDQwNTE1NF19
+eyJoaXN0b3J5IjpbMTkwMDE0ODc3OSwxMzM5MzUwMTMsLTIxND
+U0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5
+OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC
+02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OTQz
+NTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3OD
+U4LC0zMTIwMjgyMzgsNDYzNjg0NDk3LC0xNjE2MTczNTgyLDEw
+NDQ0MDUxNTRdfQ==
 -->
