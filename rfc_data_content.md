@@ -307,7 +307,7 @@ In this representation, the grid values are stored in a structured manner, allow
 
 #### Ray and Ray Parameters** 
 #### Point Cloud Data**
-#### Lookup Table for Event Type Conversion**  &mdash; as described later in the document we suggest a mapping between the event type prescribed by the QuakeML standardard ant the event types encoutered in mining.
+#### Lookup Table for Event Type Conversion
 
 ## Implementation using the &mu;Quake Python Library
 
@@ -431,11 +431,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4NTQwNzYxLC0xNDUwNzc2NzQzLDc1Nj
-U5MTkwOSw2MjE2MTY0MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUs
-MTMzOTM1MDEzLC0yMTQ1NDg1NDIxLC0xODczNjQyODI0LC04MD
-M0MTc0ODQsLTExMjQ1OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkx
-MzYsMTk5NDQ5NTYzMiwtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMT
-I4ODEzMTY5LC0zODk0MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0
-MzA5OV19
+eyJoaXN0b3J5IjpbLTIwMjc5MTk3NTgsLTE0NTA3NzY3NDMsNz
+U2NTkxOTA5LDYyMTYxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5
+NSwxMzM5MzUwMTMsLTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLT
+gwMzQxNzQ4NCwtMTEyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4
+OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC
+0xMjg4MTMxNjksLTM4OTQzNTk5MywtNzU0MzcxODE5LC0xOTg3
+MDQzMDk5XX0=
 -->
