@@ -81,6 +81,8 @@ This format is particularly suited to meet the requirements of tomorrow.
 
 ### Data Format and Adaptation
 
+The key is to ensure consistencies between the data and information to allow efficient cross-referencing, retrieval and usage
+
 ### Waveform Data
 
 The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of $m$, $m/s$​, or $m/s^2$ for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC count is more suitable. Storing the ADC count as integers allows for the use of the Steim1 and Steim2 differential compression algorithms.
@@ -345,11 +347,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1NjE4MDQxNywxMzM5MzUwMTMsLTIxND
-U0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5
-OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC
-02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OTQz
-NTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3OD
-U4LC0zMTIwMjgyMzgsNDYzNjg0NDk3LC0xNjE2MTczNTgyLDEw
-NDQ0MDUxNTRdfQ==
+eyJoaXN0b3J5IjpbNDQzNTAxNDIwLDEzMzkzNTAxMywtMjE0NT
+Q4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5
+OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLT
+Y0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1
+OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NT
+gsLTMxMjAyODIzOCw0NjM2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0
+NDQwNTE1NF19
 -->
