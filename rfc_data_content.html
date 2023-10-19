@@ -117,8 +117,9 @@
 <li><strong>Grids</strong> — suited for velocity, velocity derivatives (e.g., slowness) attenuation and density</li>
 <li><strong>Ray and Ray Parameters</strong> — from ray tracing</li>
 <li><strong>Point Cloud Data</strong> — from Montecarlo or Jacknife analyses</li>
+<li><strong>Lookup Table for Event Type Conversion</strong> — as described later in the document we suggest a mapp</li>
 </ul>
-<p>We made the explicit choice to use the QuakeML and StationXML for <strong>catalog</strong> and <strong>inventory</strong> information, thereby aligning with prevailing standards in the seismic community. Using these established formats guarantees compatibility with a plethora of existing tools, software, and workflows. The key strength of QuakeML and StationXML is their flexibility and extensibility. These formats offer rich sets of parameters, facilitating detailed descriptions of seismic events and station metadata. Additionally, both QuakeML and StationXML are designed to accommodate custom parameters and extensions, allowing for the inclusion of specialized μseismic parameters or attributes not originally envisioned in their baseline specifications.</p>
+<p>We made the explicit choice to use the QuakeML and StationXML for <strong>catalog</strong> and <strong>inventory</strong> information, aligning with prevailing standards in the seismic community. The principal advantage of this decision is the assured compatibility with a multitude of existing tools and software in the seismic domain. Furthermore, both QuakeML and StationXML are inherently flexible and adaptable. These formats not only offer comprehensive sets of parameters to detail seismic events and station metadata, but they are also designed to accommodate custom parameters and extensions. This flexibility has been instrumental in our initiative. We’ve leveraged the extensibility of these formats to incorporate specialized μseismic parameters or attributes, ensuring that QuakeML and StationXML are tailored to address the unique nuances and requirements of microseismic monitoring. This adaptation ensures that the data format remains both relevant to the broader seismic community and aptly suited for microseismic applications.</p>
 <p>However, like all choices, leveraging these formats comes with its challenges. While their use ensures widespread compatibility, the interpretation of file content may require nuanced processing and considerations. Some adaptations might be essential to cater specifically to the μseismic monitoring context, possibly involving the addition of auxiliary fields or annotations. The goal, throughout these modifications, remains to balance ease-of-use with the specificity required for μseismic data, ensuring that users can maximize the value derived from the data while minimizing the overhead of adaptations and interpretations.</p>
 <h3 id="waveform-data">Waveform Data</h3>
 <p>The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of <span class="math inline"><em>m</em></span>, <span class="math inline"><em>m</em>/<em>s</em></span>​, or <span class="math inline"><em>m</em>/<em>s</em><sup>2</sup></span> for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC counts as integers is more suitable. Storing the ADC count as integers allows for the more efficient use of compression algorithm and will allow the data to be more compact.</p>
@@ -400,11 +401,11 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDMxNzQzMTgsLTE0NTA3NzY3NDMsNz
-U2NTkxOTA5LDYyMTYxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5
-NSwxMzM5MzUwMTMsLTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLT
-gwMzQxNzQ4NCwtMTEyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4
-OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC
-0xMjg4MTMxNjksLTM4OTQzNTk5MywtNzU0MzcxODE5LC0xOTg3
-MDQzMDk5XX0=
+eyJoaXN0b3J5IjpbLTk2MDg1MzM2NSwtMTQ1MDc3Njc0Myw3NT
+Y1OTE5MDksNjIxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1
+LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtOD
+AzNDE3NDg0LC0xMTI0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5
+MTM2LDE5OTQ0OTU2MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLT
+EyODgxMzE2OSwtMzg5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcw
+NDMwOTldfQ==
 -->
