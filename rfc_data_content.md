@@ -149,8 +149,9 @@ In this section we will conver four types of data:
 - **Grids** &mdash; suited for velocity, velocity derivatives (e.g., slowness) attenuation and density
 - **Ray and Ray Parameters** &mdash; from ray tracing
 - **Point Cloud Data** &mdash; from Montecarlo or Jacknife analyses
+-  **Lookup Table for Event Type Conversion**  &mdash; as described later in the document we suggest a mapp
 
-We made the explicit choice to use the QuakeML and StationXML for **catalog** and **inventory** information, thereby aligning with prevailing standards in the seismic community. Using these established formats guarantees compatibility with a plethora of existing tools, software, and workflows. The key strength of QuakeML and StationXML is their flexibility and extensibility. These formats offer rich sets of parameters, facilitating detailed descriptions of seismic events and station metadata. Additionally, both QuakeML and StationXML are designed to accommodate custom parameters and extensions, allowing for the inclusion of specialized μseismic parameters or attributes not originally envisioned in their baseline specifications.
+We made the explicit choice to use the QuakeML and StationXML for **catalog** and **inventory** information, aligning with prevailing standards in the seismic community. The principal advantage of this decision is the assured compatibility with a multitude of existing tools and software in the seismic domain. Furthermore, both QuakeML and StationXML are inherently flexible and adaptable. These formats not only offer comprehensive sets of parameters to detail seismic events and station metadata, but they are also designed to accommodate custom parameters and extensions. This flexibility has been instrumental in our initiative. We've leveraged the extensibility of these formats to incorporate specialized μseismic parameters or attributes, ensuring that QuakeML and StationXML are tailored to address the unique nuances and requirements of microseismic monitoring. This adaptation ensures that the data format remains both relevant to the broader seismic community and aptly suited for microseismic applications.
 
 However, like all choices, leveraging these formats comes with its challenges. While their use ensures widespread compatibility, the interpretation of file content may require nuanced processing and considerations. Some adaptations might be essential to cater specifically to the μseismic monitoring context, possibly involving the addition of auxiliary fields or annotations. The goal, throughout these modifications, remains to balance ease-of-use with the specificity required for μseismic data, ensuring that users can maximize the value derived from the data while minimizing the overhead of adaptations and interpretations.
 
@@ -426,11 +427,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDMxNzQzMTgsLTE0NTA3NzY3NDMsNz
-U2NTkxOTA5LDYyMTYxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5
-NSwxMzM5MzUwMTMsLTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLT
-gwMzQxNzQ4NCwtMTEyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4
-OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC
-0xMjg4MTMxNjksLTM4OTQzNTk5MywtNzU0MzcxODE5LC0xOTg3
-MDQzMDk5XX0=
+eyJoaXN0b3J5IjpbLTk2MDg1MzM2NSwtMTQ1MDc3Njc0Myw3NT
+Y1OTE5MDksNjIxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1
+LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtOD
+AzNDE3NDg0LC0xMTI0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5
+MTM2LDE5OTQ0OTU2MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLT
+EyODgxMzE2OSwtMzg5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcw
+NDMwOTldfQ==
 -->
