@@ -442,6 +442,17 @@ For efficient microseismic monitoring and analysis, the inclusion of ray tracing
 -   Within the `AuxiliaryData` section of the ASDF file, we introduce a dedicated `Rays` directory.
 -   Individual rays are uniquely identified by a unique `resource_id` and each has its own sub-directory under `Rays` and adopt a naming convention linking them to the an instrument using the `network`, `station` and `channel` codes.
 
+```mathematica
+`AuxiliaryData
+│
+└───Rays
+    │   Country = "USA"
+    │   time_zone = "PST"
+    │   latitude = 34.0522
+    │   longitude = -118.2437
+    │   ...` 
+```
+
 ##### Ray Attributes:
 
 Each ray's sub-directory will include the following attributes:
@@ -602,11 +613,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk5MTU1NDUyLDEyMDY4NzM2MzcsMTM5ND
-Q2OTY2NiwxMDc0MDA5Mzc4LDIwMjMyNDkxODgsLTEyMzUwMjI3
-OTMsLTY1NzE2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5MDksNj
-IxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAx
-MywtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC
-0xMTI0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0
-OTU2MzJdfQ==
+eyJoaXN0b3J5IjpbLTEwNzAxMjI0MTEsMTIwNjg3MzYzNywxMz
+k0NDY5NjY2LDEwNzQwMDkzNzgsMjAyMzI0OTE4OCwtMTIzNTAy
+Mjc5MywtNjU3MTY5NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOS
+w2MjE2MTY0MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1
+MDEzLC0yMTQ1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0OD
+QsLTExMjQ1OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5
+NDQ5NTYzMl19
 -->
