@@ -118,6 +118,7 @@
 <li><strong>Ray and Ray Parameters</strong> — from ray tracing</li>
 <li><strong>Point Cloud Data</strong> — from Montecarlo or Jacknife analyses</li>
 </ul>
+<p>We made the explicit choice to adapt standard format ensuring compa</p>
 <h3 id="waveform-data">Waveform Data</h3>
 <p>The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of <span class="math inline"><em>m</em></span>, <span class="math inline"><em>m</em>/<em>s</em></span>​, or <span class="math inline"><em>m</em>/<em>s</em><sup>2</sup></span> for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC counts as integers is more suitable. Storing the ADC count as integers allows for the more efficient use of compression algorithm and will allow the data to be more compact.</p>
 <p>Alongside the amplitude values, additional metadata describing the instrument recording the data and time series parameters should be provided for each trace. Each trace should be stored with its own metadata information.</p>
@@ -143,7 +144,7 @@
 <ul>
 <li><strong>Network Code</strong>: The network code should represent a physical or logical network. A mine or mining complex can include multiple networks. The network name should be compact but be easily recognized and understood. For instance, the Oyu Tolgoi Hugo North Underground Lift 1 network can be represented by the following accronym: OTHNL1.</li>
 <li><strong>Station Code</strong>: We recommend associating the station code to an instrument or a group of instrument. The Station code should convey relevant information on the sensor location and provide context to the seismic system stakeholders. An example for an adequate station code, given an instrument is installed along the Haulage Level Access Drive 2, would be HLAD2.</li>
-<li><strong>Location Code</strong>: If the Station Code refers to a group of instruments, for instance, instruments installed in a long borehole, connected to the same acquisition station, the location code can be used to differentiate the instrument within the group. The location code should be kept short. It can simply be a number converying the relative order or</li>
+<li><strong>Location Code</strong>: If the Station Code refers to a group of instruments, for instance, instruments installed in a long borehole, connected to the same acquisition station, the location code can be used to differentiate the instrument within the group. The location code should be kept short. It can simply be a number converying the relative order or in the case of a borehole installation, a measure of the location along the hole.</li>
 </ul>
 <h3 id="catalog">Catalog</h3>
 <p>The catalog includes information related to an event, a trigger, or a series of events. We suggest storing the catalog information in a QuakeML-like format adapted to μseismic data (see QuakeML <a href="https://quake.ethz.ch/quakeml">documentation</a>). The suggested changes affect the following QuakeML objects:</p>
@@ -398,11 +399,11 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc4ODYxNzg4LDc1NjU5MTkwOSw2MjE2MT
-Y0MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0y
-MTQ1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMj
-Q1OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYz
-MiwtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zOD
-k0MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMTk0NTcy
-Nzg1OF19
+eyJoaXN0b3J5IjpbLTEzMTQ5NDMxNjMsNzU2NTkxOTA5LDYyMT
+YxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMs
+LTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMT
+EyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1
+NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLT
+M4OTQzNTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1
+NzI3ODU4XX0=
 -->
