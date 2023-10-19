@@ -321,7 +321,7 @@
 <p>In this representation, the grid values are stored in a structured manner, allowing for easy indexing and operations. Each cell in the array corresponds to a grid point in the velocity model, with its value representing the velocity (or density or attenuation, depending on the grid type) at that point.</p>
 <h4 id="ray-and-ray-parameters">Ray and Ray Parameters**</h4>
 <h4 id="point-cloud-data">Point Cloud Data**</h4>
-<h4 id="lookup-table-for-event-type-conversion-as-described-later-in-the-document-we-suggest-a-mapping-between-the-event-type-prescribed-by-the-quakeml-standardard-ant-the-event-types-encoutered-in-mining.">Lookup Table for Event Type Conversion** — as described later in the document we suggest a mapping between the event type prescribed by the QuakeML standardard ant the event types encoutered in mining.</h4>
+<h4 id="lookup-table-for-event-type-conversion">Lookup Table for Event Type Conversion</h4>
 <h2 id="implementation-using-the-μquake-python-library">Implementation using the μQuake Python Library</h2>
 <p>Within the context of this RFC, which proposes specific adaptations and formats tailored to microseismic monitoring, the <code>uquake</code> library stands as a practical implementation of these recommendations. Developed in Python and built upon ObsPy, <code>uquake</code> has been specially crafted to cater to the distinctive needs of microseismic monitoring in mining environments. This includes, amongst other capabilities, the handling of local coordinate systems and unique event types frequently observed in mine microseismic monitoring. For those seeking an immediate and tangible application of the proposed data format recommendations from this RFC, <code>uquake</code> offers a ready solution. It is open source, distributed under AGPL license and publicly available and can be easily accessed and installed via pip using <code>pip install uquake</code>.</p>
 <p>Note that there are alternative libraries addressing the same issues μQuake tackles. The author is, howerver, less familiar with the alternatives. Notable alternatives are</p>
@@ -404,11 +404,11 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4NTQwNzYxLC0xNDUwNzc2NzQzLDc1Nj
-U5MTkwOSw2MjE2MTY0MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUs
-MTMzOTM1MDEzLC0yMTQ1NDg1NDIxLC0xODczNjQyODI0LC04MD
-M0MTc0ODQsLTExMjQ1OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkx
-MzYsMTk5NDQ5NTYzMiwtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMT
-I4ODEzMTY5LC0zODk0MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0
-MzA5OV19
+eyJoaXN0b3J5IjpbLTIwMjc5MTk3NTgsLTE0NTA3NzY3NDMsNz
+U2NTkxOTA5LDYyMTYxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5
+NSwxMzM5MzUwMTMsLTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLT
+gwMzQxNzQ4NCwtMTEyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4
+OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC
+0xMjg4MTMxNjksLTM4OTQzNTk5MywtNzU0MzcxODE5LC0xOTg3
+MDQzMDk5XX0=
 -->
