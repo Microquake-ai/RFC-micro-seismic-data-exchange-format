@@ -3,11 +3,12 @@
 
 ## Introduction
 
-### Purpose
+### 
+The purpose of this document is to invite comments on a suggested format to allow for standardized and consistent access to μseismic data collected by mine μseismic systems. This format aims to enable a seamless and lossless exchange between different platforms.
 
-The purpose of this document is to invite comments on a suggested format to allow for standardized and consistent access to &mu;seismic data collected by mine &mu;seismic systems. This format aims to enable a seamless and lossless exchange between different platforms.
+Access to the μseismic data is inconsistent among various vendors, and occasionally within different implementations by the same vendor. Variations arise from site to site, often driven by third-party requirements. Such inconsistencies lead to inefficiencies, complicating the integration of various systems that offer complementary products and services, and making data usage unnecessarily challenging.
 
-Access to the &mu;seismic data is inconsistent among various vendors, and occasionally within different implementations by the same vendor. Variations arise from site to site, often driven by third-party requirements. Such inconsistencies lead to inefficiencies, complicating the integration of various systems that offer complementary products and services, and making data usage unnecessarily challenging.
+In light of recent advancements in μseismic monitoring technology, the imperative for a standardized format becomes even more salient. The microseismic monitoring landscape is evolving, marked by the deployment of increasingly expansive monitoring systems. These systems, given their extensive scale, inherently produce voluminous data sets. Furthermore, the incursion of Distributed Acoustic Sensing (DAS) in mining adds another layer of complexity, both in terms of data volume and diversity. DAS, with its high spatial resolution and continuous monitoring capability, generates data at an unprecedented scale. A robust and standardized format is crucial to efficiently manage, process, and interpret these burgeoning data streams, ensuring that the rich information they provide can be harnessed effectively and cohesively.
 
 This document proposes a file structure and format. At this stage, we seek alignment on the content of the information transferred and consensus on the container format.
 
@@ -325,11 +326,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzOTM1MDEzLC0yMTQ1NDg1NDIxLC0xOD
-czNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1OTk5MzksMTQyOTE5
-MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMiwtNjQyMjE4MTIzLD
-k4Njk1MTY3NiwtMTI4ODEzMTY5LC0zODk0MzU5OTMsLTc1NDM3
-MTgxOSwtMTk4NzA0MzA5OSwtMTk0NTcyNzg1OCwtMzEyMDI4Mj
-M4LDQ2MzY4NDQ5NywtMTYxNjE3MzU4MiwxMDQ0NDA1MTU0LC0x
-NjQ1OTE3MDk0XX0=
+eyJoaXN0b3J5IjpbLTk0NjIwNTIxLDEzMzkzNTAxMywtMjE0NT
+Q4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5
+OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLT
+Y0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1
+OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NT
+gsLTMxMjAyODIzOCw0NjM2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0
+NDQwNTE1NF19
 -->
