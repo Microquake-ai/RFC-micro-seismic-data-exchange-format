@@ -327,8 +327,9 @@ The `SystemInfo` directory will house the following attributes:
 -   `p_velocity`: The P-wave velocity (relevant when homogeneous velocity model is used)
 -   `s_velocity`: The S-wave velocity (relevant when homogeneous velocity model is used)
 -   `density`: Rock mass density (usually set to 2700 $kg/m^3$)
--   `p-quality factor`: P quality factor
--   `s-quality factor`: S quality factor
+-   `p_quality`: P quality factor
+-   `s_quality`: S quality factor
+-   `system_vendor`: Seismic System Vendor
 -   `Description`: Additional remarks or details about the site or instrumentation.
 
 ### Implementation Notes:
@@ -607,11 +608,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg2MTcwNDc2LDEzOTQ0Njk2NjYsMTA3ND
-AwOTM3OCwyMDIzMjQ5MTg4LC0xMjM1MDIyNzkzLC02NTcxNjk0
-NzYsLTE0NTA3NzY3NDMsNzU2NTkxOTA5LDYyMTYxNjQwMSwxOD
-EwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMsLTIxNDU0ODU0
-MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5OTkzOS
-wxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC02NDIy
-MTgxMjNdfQ==
+eyJoaXN0b3J5IjpbMTIwNjg3MzYzNywxMzk0NDY5NjY2LDEwNz
+QwMDkzNzgsMjAyMzI0OTE4OCwtMTIzNTAyMjc5MywtNjU3MTY5
+NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2MTY0MDEsMT
+gxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMTQ1NDg1
+NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1OTk5Mz
+ksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMiwtNjQy
+MjE4MTIzXX0=
 -->
