@@ -299,10 +299,11 @@ The `SystemInfo` directory will house the following attributes:
 -   `site_name`: Name or identifier of the seismic site.
 -   `latitude`: Geographic latitude of the system's location.
 -   `longitude`: Geographic longitude of the system's location.
--   `elevation`: Altitude of the system.
--   `InstallationDate`: Date when the system was set up.
--   `RemovalDate`: Date when the system was removed (if applicable).
--   `SystemType`: Type of seismic system (e.g., broadband, short-period).
+-   `depth`: Altitude of the system.
+-   `installation_date`: Date when the system was set up.
+-   `removal_date`: Date when the system was removed (if applicable).
+-   `monitoring_target`: The monitoring target (e.g. underground, open-pit, surface)
+-   `system_type`: Type of seismic system (e.g., in-mine, open).
 -   `SensorManufacturer`: The company or entity that made the seismic equipment.
 -   `SensorModel`: Specific model details of the equipment.
 -   `OperationalStatus`: Current status of the system (active, maintenance, decommissioned).
@@ -544,7 +545,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwNDA3NTcwLDIwMjMyNDkxODgsLTEyMz
+eyJoaXN0b3J5IjpbNzkzMjY5MDU1LDIwMjMyNDkxODgsLTEyMz
 UwMjI3OTMsLTY1NzE2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5
 MDksNjIxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMz
 kzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3
