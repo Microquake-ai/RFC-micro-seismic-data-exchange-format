@@ -311,14 +311,14 @@ In this representation, the grid values are stored in a structured manner, allow
 
 ### Background
 
-For efficient microseismic monitoring and analysis, the inclusion of ray tracing data alongside waveform and inventory data is pivotal. In keeping with the extensibility and flexibility features of the ASDF format, we propose a systematic structure to house this ray information.
+For efficient microseismic monitoring and analysis, the inclusion of ray tracing data alongside waveform and inventory data is beneficial. In keeping with the extensibility and flexibility features of the ASDF format, we propose a systematic structure to store the ray information.
 
 ### Proposed Data Structure
 
 #### Directory Structure:
 
 -   Within the `AuxiliaryData` section of the ASDF file, we introduce a dedicated `Rays` directory.
--   Individual rays are uniquely identified by their `resource_id` and each has its own sub-directory under `Rays`.
+-   Individual rays are uniquely identified by their `resource_id` and each has its own sub-directory under `Rays` and adopt a naming convention linking them to the wave.
 
 #### Ray Attributes:
 
@@ -485,11 +485,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzUwMjI3OTMsLTY1NzE2OTQ3NiwtMT
-Q1MDc3Njc0Myw3NTY1OTE5MDksNjIxNjE2NDAxLDE4MTA2Njg1
-MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwtMT
-g3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5OTM5LDE0Mjkx
-OTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLTY0MjIxODEyMy
-w5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1OTkzLC03NTQz
-NzE4MTldfQ==
+eyJoaXN0b3J5IjpbLTE4ODg5OTYwNDgsLTEyMzUwMjI3OTMsLT
+Y1NzE2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5MDksNjIxNjE2
+NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMj
+E0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0
+NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2Mz
+IsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5
+NDM1OTkzXX0=
 -->
