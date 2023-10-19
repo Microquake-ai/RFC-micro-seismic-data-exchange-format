@@ -60,9 +60,6 @@ The benefits of using the `ASDF` format become particularly evident when conside
     
 5.  **Versatile Data Type Support**: Beyond seismograms, ASDF is adept at accommodating diverse data types prevalent in seismology. Whether it's spectral estimations, cross-correlations, adjoint sources, receiver functions, or other data types, ASDF ensures organized, self-describing storage. This versatility ensures that seismologists can maintain a consistent data storage paradigm across various facets of their research.
 
-### Implementation using the &mu;Quake Python Library
-
-Within the context of this RFC, which proposes specific adaptations and formats tailored to microseismic monitoring, the `uquake` library stands as a practical implementation of these recommendations. Developed in Python and built upon ObsPy, `uquake` has been specially crafted to cater to the distinctive needs of microseismic monitoring in mining environments. This includes, amongst other capabilities, the handling of local coordinate systems and unique event types frequently observed in mine microseismic monitoring. For those seeking an immediate and tangible application of the proposed data format recommendations from this RFC, `uquake` offers a ready solution. It is open source, distributed under AGPL license and publicly available and can be easily accessed and installed via pip using `pip install uquake`.
 
 ### Waveform Data
 
@@ -206,7 +203,9 @@ grid_values = np.zeros((header["NX"], header["NY"], header["NZ"]))
 
 In this representation, the grid values are stored in a structured manner, allowing for easy indexing and operations. Each cell in the array corresponds to a grid point in the velocity model, with its value representing the velocity (or density or attenuation, depending on the grid type) at that point.
 
-#### Implementation
+## Implementation using the &mu;Quake Python Library
+
+Within the context of this RFC, which proposes specific adaptations and formats tailored to microseismic monitoring, the `uquake` library stands as a practical implementation of these recommendations. Developed in Python and built upon ObsPy, `uquake` has been specially crafted to cater to the distinctive needs of microseismic monitoring in mining environments. This includes, amongst other capabilities, the handling of local coordinate systems and unique event types frequently observed in mine microseismic monitoring. For those seeking an immediate and tangible application of the proposed data format recommendations from this RFC, `uquake` offers a ready solution. It is open source, distributed under AGPL license and publicly available and can be easily accessed and installed via pip using `pip install uquake`.
 
 ### Implementation using `uquake`
 
@@ -321,11 +320,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyODcyODgzNSwtODAzNDE3NDg0LC0xMT
-I0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2
-MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMz
-g5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3
-Mjc4NTgsLTMxMjAyODIzOCw0NjM2ODQ0OTcsLTE2MTYxNzM1OD
-IsMTA0NDQwNTE1NCwtMTY0NTkxNzA5NCw4NDAxNDUwNTksLTE0
-MzE4OTAzOTNdfQ==
+eyJoaXN0b3J5IjpbLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMT
+EyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1
+NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLT
+M4OTQzNTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1
+NzI3ODU4LC0zMTIwMjgyMzgsNDYzNjg0NDk3LC0xNjE2MTczNT
+gyLDEwNDQ0MDUxNTQsLTE2NDU5MTcwOTQsODQwMTQ1MDU5LC0x
+NDMxODkwMzkzXX0=
 -->
