@@ -292,7 +292,7 @@ To ensure accurate interpretation and utilization of seismic data, it's essentia
 The `SystemInfo` directory will house the following attributes:
 
 -   `country`: The nation where the system is located.
--   `time_zone`: Local time zone of the system or the offset from Coordinated Universal Time (UTC).
+-   `time_zone`: Local time zone of the system or the offset from Coordinated Universal Time (UTC). The time zone must be a standard time zone as 
 -   `site_name`: Name or identifier of the seismic site.
 -   `latitude`: Geographic latitude of the system's location.
 -   `longitude`: Geographic longitude of the system's location.
@@ -578,11 +578,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NDQ2OTY2NiwxMDc0MDA5Mzc4LDIwMj
-MyNDkxODgsLTEyMzUwMjI3OTMsLTY1NzE2OTQ3NiwtMTQ1MDc3
-Njc0Myw3NTY1OTE5MDksNjIxNjE2NDAxLDE4MTA2Njg1MzYsNz
-E5NjMzMDk1LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0
-MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5OTM5LDE0MjkxOTI5Mj
-YsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLTY0MjIxODEyMyw5ODY5
-NTE2NzZdfQ==
+eyJoaXN0b3J5IjpbODY2NzczNDI3LDEzOTQ0Njk2NjYsMTA3ND
+AwOTM3OCwyMDIzMjQ5MTg4LC0xMjM1MDIyNzkzLC02NTcxNjk0
+NzYsLTE0NTA3NzY3NDMsNzU2NTkxOTA5LDYyMTYxNjQwMSwxOD
+EwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMsLTIxNDU0ODU0
+MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5OTkzOS
+wxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC02NDIy
+MTgxMjNdfQ==
 -->
