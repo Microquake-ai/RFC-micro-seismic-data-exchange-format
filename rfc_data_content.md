@@ -303,29 +303,9 @@ The `SystemInfo` directory will house the following attributes:
 -   `installation_date`: Date when the system was set up.
 -   `removal_date`: Date when the system was removed (if applicable).
 -   `monitoring_target`: The monitoring target (e.g. underground, open-pit, surface)
--   `system_type`: Type of seismic system (e.g., in-mine, open).
--   `SensorManufacturer`: The company or entity that made the seismic equipment.
--   `SensorModel`: Specific model details of the equipment.
--   `OperationalStatus`: Current status of the system (active, maintenance, decommissioned).
--   `OperationalMode`: Mode in which the system operates (continuous, triggered).
 -   `Description`: Additional remarks or details about the site or instrumentation.
 
 ### Implementation Notes:
-
-1.  **Creating SystemInfo in ASDF**:
-    
-    -   Users should be prompted or have an interface to input these attributes when initializing or updating an ASDF file.
-    -   Inclusion of all attributes is recommended, but mandatory fields should be limited to essential ones like `Country`, `Latitude`, `Longitude`, and `SiteName`.
-2.  **Retrieving SystemInfo from ASDF**:
-    
-    -   Reading tools should be equipped to fetch and display this system information, facilitating context-aware analysis.
-3.  **Compatibility and Integration**:
-    
-    -   The `SystemInfo` structure should be designed to seamlessly integrate with other data in the ASDF file, ensuring comprehensive data coverage.
-
-### Conclusion
-
-The introduction of the `SystemInfo` directory within ASDF's `AuxiliaryData` section ensures that users have all necessary contextual information about the seismic system. This inclusion is pivotal for the correct interpretation, utilization, and analysis of the stored seismic data.
 
 
 ### System Metadata and Grid Data
@@ -545,7 +525,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkzMjY5MDU1LDIwMjMyNDkxODgsLTEyMz
+eyJoaXN0b3J5IjpbOTAxMTgxMDcyLDIwMjMyNDkxODgsLTEyMz
 UwMjI3OTMsLTY1NzE2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5
 MDksNjIxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMz
 kzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3
