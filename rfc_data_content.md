@@ -277,6 +277,56 @@ In a typical seismic application, the StationXML format uses latitude and longit
 
 Thus, we recommend replacing the latitude and longitude fields in the StationXML format with `x`, `y`, and `z` coordinates for both the station and channel locations. This change aligns with the earlier modifications made for QuakeML, ensuring consistency across different components of the μseismic system.
 
+## RFC Section: System Information Storage in ASDF's Auxiliary Data
+
+### Background
+
+To ensure accurate interpretation and utilization of seismic data, it's essential to provide comprehensive system information. This information offers the necessary context about the recording environment, location, and equipment specifics, which can be pivotal in analysis phases.
+
+### Proposed Data Structure
+
+#### Directory Structure:
+
+-   Within the `AuxiliaryData` section of the ASDF file, we introduce a dedicated `SystemInfo` directory.
+-   This directory will consolidate all relevant information about the seismic system setup.
+
+#### System Attributes:
+
+The `SystemInfo` directory will house the following attributes:
+
+-   `Country`: The nation where the system is located.
+-   `TimeZone`: Local time zone of the system.
+-   `UTC_Offset`: The offset from Coordinated Universal Time (UTC).
+-   `SiteName`: Name or identifier of the seismic site.
+-   `Latitude`: Geographic latitude of the system's location.
+-   `Longitude`: Geographic longitude of the system's location.
+-   `Elevation/Depth`: Altitude or depth of the system.
+-   `InstallationDate`: Date when the system was set up.
+-   `RemovalDate`: Date when the system was removed (if applicable).
+-   `SystemType`: Type of seismic system (e.g., broadband, short-period).
+-   `SensorManufacturer`: The company or entity that made the seismic equipment.
+-   `SensorModel`: Specific model details of the equipment.
+-   `Operational Status`: Current status of the system (active, maintenance, decommissioned).
+-   `OperationalMode`: Mode in which the system operates (continuous, triggered).
+-   `Description`: Additional remarks or details about the site or instrumentation.
+
+### Implementation Notes:
+
+1.  **Creating SystemInfo in ASDF**:
+    
+    -   Users should be prompted or have an interface to input these attributes when initializing or updating an ASDF file.
+    -   Inclusion of all attributes is recommended, but mandatory fields should be limited to essential ones like `Country`, `Latitude`, `Longitude`, and `SiteName`.
+2.  **Retrieving SystemInfo from ASDF**:
+    
+    -   Reading tools should be equipped to fetch and display this system information, facilitating context-aware analysis.
+3.  **Compatibility and Integration**:
+    
+    -   The `SystemInfo` structure should be designed to seamlessly integrate with other data in the ASDF file, ensuring comprehensive data coverage.
+
+### Conclusion
+
+The introduction of the `SystemInfo` directory within ASDF's `AuxiliaryData` section ensures that users have all necessary contextual information about the seismic system. This inclusion is pivotal for the correct interpretation, utilization, and analysis of the stored seismic data.
+
 
 ### System Metadata and Grid Data
 
@@ -369,8 +419,6 @@ Each ray's sub-directory will include the following attributes:
    
 3.  **Compatibility and Integration**:
     -   The proposed structure ensures seamless integration with waveform and inventory data. The use of `network_code`, `station_code`, and `location_code` ensures that rays can be directly associated with specific waveform data and inventory components.
-
-
 
 #### Point Cloud Data
 #### Lookup Table for Event Type Conversion
@@ -497,11 +545,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMzI0OTE4OCwtMTIzNTAyMjc5MywtNj
-U3MTY5NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2MTY0
-MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMT
-Q1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1
-OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMi
-wtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zODk0
-MzU5OTNdfQ==
+eyJoaXN0b3J5IjpbMTQxODkwNDI5NiwyMDIzMjQ5MTg4LC0xMj
+M1MDIyNzkzLC02NTcxNjk0NzYsLTE0NTA3NzY3NDMsNzU2NTkx
+OTA5LDYyMTYxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMz
+M5MzUwMTMsLTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQx
+NzQ4NCwtMTEyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNi
+wxOTk0NDk1NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4
+MTMxNjldfQ==
 -->
