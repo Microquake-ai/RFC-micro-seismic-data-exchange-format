@@ -304,6 +304,65 @@ The `SystemInfo` directory will house the following attributes:
 
 ### Implementation Notes:
 
+### Data Structure Inside ASDF for SystemInfo
+
+Within an ASDF file, the `AuxiliaryData` section can have various directories, and one such directory could be `SystemInfo`.
+
+Inside `SystemInfo`, each attribute (like `Country`, `TimeZone`, `Latitude`, etc.) can be a dataset. Datasets in HDF5 (and thus ASDF) are essentially multidimensional arrays of data elements, accompanied by metadata. For many of our attributes, these datasets would just be single values (like a single string for `Country`), but the structure allows for more complex data if needed.
+
+For example:
+
+mathematicaCopy code
+
+`AuxiliaryData
+│
+└───SystemInfo
+    │   Country = "USA"
+    │   TimeZone = "PST"
+    │   Latitude = 34.0522
+    │   Longitude = -118.2437
+    │   ...` 
+
+### Code Examples
+
+To interact with ASDF, we can use Python with the `pyasdf` library. Here's a hypothetical code snippet to add `SystemInfo` to an ASDF file:
+
+
+```python
+import pyasdf
+
+# Load an existing ASDF dataset or create a new one
+with pyasdf.ASDFDataSet("path_to_asdf_file.h5", mode="a") as ds:
+
+    # Create a new auxiliary data group for SystemInfo
+    system_info = ds.create_auxiliary_data_group("SystemInfo")
+
+    # Add data to this group
+    system_info.create_dataset(name="Country", data="USA")
+    system_info.create_dataset(name="TimeZone", data="PST")
+    system_info.create_dataset(name="Latitude", data=34.0522)
+    system_info.create_dataset(name="Longitude", data=-118.2437)
+    # ... similarly for other attributes
+
+# Check the data
+with pyasdf.ASDFDataSet("path_to_asdf_file.h5") as ds:
+    print(ds.auxiliary_data.SystemInfo.Country[:])  # Should print 'USA'` 
+```
+
+For reading the `SystemInfo`:
+```python
+import pyasdf
+
+with pyasdf.ASDFDataSet("path_to_asdf_file.h5") as ds:
+    country = ds.auxiliary_data.SystemInfo.Country[:]
+    timezone = ds.auxiliary_data.SystemInfo.TimeZone[:]
+    latitude = ds.auxiliary_data.SystemInfo.Latitude[:]
+    longitude = ds.auxiliary_data.SystemInfo.Longitude[:]
+    # ... and so on` 
+```
+
+It's important to note that this example assumes the `pyasdf` library has (or will have) methods named as described. In practice, depending on the actual `pyasdf` version and methods available, there may be variations in how you interact with the file. Always refer to the documentation of the library for accurate and up-to-date information.
+
 
 ### System Metadata and Grid Data
 
@@ -522,11 +581,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3NDAwOTM3OCwyMDIzMjQ5MTg4LC0xMj
-M1MDIyNzkzLC02NTcxNjk0NzYsLTE0NTA3NzY3NDMsNzU2NTkx
-OTA5LDYyMTYxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMz
-M5MzUwMTMsLTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQx
-NzQ4NCwtMTEyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNi
-wxOTk0NDk1NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4
-MTMxNjldfQ==
+eyJoaXN0b3J5IjpbOTQ1Nzc1MTM0LDEwNzQwMDkzNzgsMjAyMz
+I0OTE4OCwtMTIzNTAyMjc5MywtNjU3MTY5NDc2LC0xNDUwNzc2
+NzQzLDc1NjU5MTkwOSw2MjE2MTY0MDEsMTgxMDY2ODUzNiw3MT
+k2MzMwOTUsMTMzOTM1MDEzLC0yMTQ1NDg1NDIxLC0xODczNjQy
+ODI0LC04MDM0MTc0ODQsLTExMjQ1OTk5MzksMTQyOTE5MjkyNi
+wyOTE2ODkxMzYsMTk5NDQ5NTYzMiwtNjQyMjE4MTIzLDk4Njk1
+MTY3Nl19
 -->
