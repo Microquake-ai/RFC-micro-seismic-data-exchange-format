@@ -169,9 +169,9 @@ The key is to ensure consistencies between the data and information to allow eff
 
 In this section we will conver four types of data:
 
-- **Waveforms**
-- **Catalog**
-- **Inventory/System**
+- **Waveforms** [REQUIRED]
+- **Catalog** [REQUIRED FOR EVENT DATA, NOT INCLUDED FOR CONTINUOUS DATA]
+- **Inventory/System** [REQUIRED
 - **Grids** &mdash; suited for velocity, velocity derivatives (e.g., slowness) attenuation and density
 - **Ray and Ray Parameters** &mdash; from ray tracing
 - **Point Cloud Data** &mdash; from Montecarlo or Jacknife analyses
@@ -493,11 +493,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyMjc5NjUzMCwtMTIzNTAyMjc5MywtNj
-U3MTY5NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2MTY0
-MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMT
-Q1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1
-OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMi
-wtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zODk0
-MzU5OTNdfQ==
+eyJoaXN0b3J5IjpbLTU3ODc0NTc0LC0xMjM1MDIyNzkzLC02NT
+cxNjk0NzYsLTE0NTA3NzY3NDMsNzU2NTkxOTA5LDYyMTYxNjQw
+MSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMsLTIxND
+U0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5
+OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC
+02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OTQz
+NTk5M119
 -->
