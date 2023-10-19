@@ -294,19 +294,18 @@ To ensure accurate interpretation and utilization of seismic data, it's essentia
 
 The `SystemInfo` directory will house the following attributes:
 
--   `Country`: The nation where the system is located.
--   `TimeZone`: Local time zone of the system.
--   `UTC_Offset`: The offset from Coordinated Universal Time (UTC).
--   `SiteName`: Name or identifier of the seismic site.
--   `Latitude`: Geographic latitude of the system's location.
--   `Longitude`: Geographic longitude of the system's location.
--   `Elevation/Depth`: Altitude or depth of the system.
+-   `country`: The nation where the system is located.
+-   `time_zone`: Local time zone of the system or the offset from Coordinated Universal Time (UTC).
+-   `site_name`: Name or identifier of the seismic site.
+-   `latitude`: Geographic latitude of the system's location.
+-   `longitude`: Geographic longitude of the system's location.
+-   `elevation`: Altitude of the system.
 -   `InstallationDate`: Date when the system was set up.
 -   `RemovalDate`: Date when the system was removed (if applicable).
 -   `SystemType`: Type of seismic system (e.g., broadband, short-period).
 -   `SensorManufacturer`: The company or entity that made the seismic equipment.
 -   `SensorModel`: Specific model details of the equipment.
--   `Operational Status`: Current status of the system (active, maintenance, decommissioned).
+-   `OperationalStatus`: Current status of the system (active, maintenance, decommissioned).
 -   `OperationalMode`: Mode in which the system operates (continuous, triggered).
 -   `Description`: Additional remarks or details about the site or instrumentation.
 
@@ -545,11 +544,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxODkwNDI5NiwyMDIzMjQ5MTg4LC0xMj
-M1MDIyNzkzLC02NTcxNjk0NzYsLTE0NTA3NzY3NDMsNzU2NTkx
-OTA5LDYyMTYxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMz
-M5MzUwMTMsLTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQx
-NzQ4NCwtMTEyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNi
-wxOTk0NDk1NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4
-MTMxNjldfQ==
+eyJoaXN0b3J5IjpbMTUwNDA3NTcwLDIwMjMyNDkxODgsLTEyMz
+UwMjI3OTMsLTY1NzE2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5
+MDksNjIxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMz
+kzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3
+NDg0LC0xMTI0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LD
+E5OTQ0OTU2MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgx
+MzE2OV19
 -->
