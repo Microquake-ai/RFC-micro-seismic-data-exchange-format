@@ -279,7 +279,7 @@ Understanding the motivations and reasons behind any proposed change is essentia
     
 4.  **Latitude and Longitude to X, Y, Z Conversion**: Given that most mining operations work on local coordinate systems rather than global ones, expressing positions in terms of x, y, and z becomes not just convenient, but also essential. This shift eliminates the need for complex transformations and ensures data is immediately useful for local operations and analysis.
     
-5.  **Choice of Data Packaging Formats**: The proposal to utilize `Zarr` for packaging catalog information and waveform data, and the native XML format for QuakeML, was driven by their respective capabilities and industry adoption. `Zarr` offers efficient storage and retrieval mechanisms, especially for large datasets, while the native XML format ensures compatibility with systems traditionally designed to handle QuakeML.
+5.  **Choice of Data Packaging Formats**: The proposal to utilize ASDF for packaging catalog information and waveform data, and the native XML format for QuakeML, was driven by their respective capabilities and industry adoption. ASDF offers efficient storage and retrieval mechanisms, especially for large datasets, while the native XML format ensures compatibility with systems traditionally designed to handle QuakeML.
 
 In summary, the proposed changes and implementations in this RFC stem from a direct need to address the unique challenges posed by μseismic monitoring, especially in mining contexts. They reflect both the evolution of seismic data interpretation methodologies and the tools used in the industry. Through these proposals, we aim to establish a more streamlined, precise, and standardized approach to μseismic data management and interpretation.
 
@@ -317,7 +317,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1NzQzMTUzMiwxNDI5MTkyOTI2LDI5MT
+eyJoaXN0b3J5IjpbMTQ1NTI3MzYxMCwxNDI5MTkyOTI2LDI5MT
 Y4OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2
 LC0xMjg4MTMxNjksLTM4OTQzNTk5MywtNzU0MzcxODE5LC0xOT
 g3MDQzMDk5LC0xOTQ1NzI3ODU4LC0zMTIwMjgyMzgsNDYzNjg0
