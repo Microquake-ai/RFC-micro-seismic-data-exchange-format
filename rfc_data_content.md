@@ -19,11 +19,11 @@ This document proposes a file structure and format. At this stage, we seek align
 
 With the increasing volume of μseismic data collected, especially in modern expansive monitoring systems and with technologies like Distributed Acoustic Sensing (DAS), there is a need for efficient management and handling of this data. The scope of this proposed standard is to define the content and nature of μseismic information provided to third parties and to suggest a format that facilitates efficient storage, retrieval, and exchange, of complete information required to further analyse the data.
 
-Computational efficiency in storing and retrieving large volume of data that are prescribed by increasingly expansive system and the adoption of the DAS technology, is central. The ability to provide a storage mechanism flexible and extensible enough to store both triggered and continous data is another criterion.
+Computational efficiency in storing and retrieving large volume of data that are prescribed by increasingly expansive system and the adoption of the DAS technology, is central. The ability to provide a storage mechanism flexible and extensible enough to package both triggered and continous data is another objective.
 
-The document focuses on the foundational elements and seismic information intrinsic to μseismic monitoring. The pertinent information can be divided into three categories:
+The standard focuses on the foundational elements and seismic information intrinsic to μseismic monitoring including:
 
--   **Waveform** — This includes the raw, unprocessed waveform for both continuous and triggered data.
+-   **Waveforms** — This includes the raw, unprocessed waveform for both continuous and triggered data.
 -   **Catalog Information** — This covers event information derived from waveform data processing.
 -   **Inventory or System Information** — Details about the instruments (sensors and data acquisition modules) used in the data acquisition chain are included here, along with other critical data processing information, such as velocity, density, and attenuation values or models.
 
@@ -31,7 +31,7 @@ The document focuses on the foundational elements and seismic information intrin
 
 #### Need for a New Standard
 
-The increase in microseismic data, particularly from expansive monitoring systems and new technologies like Distributed Acoustic Sensing (DAS), underscores the pressing need for a more efficient and unified data format. Currently, the varied nature of microseismic data formats hinders streamlined integration and analysis, posing challenges in managing and deriving value dataset collected by in-mine monitoring system. Given the critical importance of microseismic data in ensuring the safety and improving the operations of underground mining, establishing a standardized format and mechanism of echange becomes imperative. This standard would facilitate more straightforward data access, efficient storage, and smoother data exchanges across different platforms.
+The increase in microseismic data, particularly from expansive monitoring systems and new technologies like Distributed Acoustic Sensing (DAS), underscores the pressing need for a more efficient and unified data format. Currently, the varied nature of microseismic data formats hinders streamlined integration and analysis, posing challenges in managing and deriving value dataset collected by in-mine monitoring system. The lossy nature of current exGiven the critical importance of microseismic data in ensuring the safety and improving the operations of underground mining, establishing a standardized format and mechanism of echange becomes imperative. This standard would facilitate more straightforward data access, efficient storage, and smoother data exchanges across different platforms.
 
 #### Goal
 
@@ -367,11 +367,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzEzNzYzMjYsNjIxNjE2NDAxLDE4MTA2Nj
-g1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwt
-MTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5OTM5LDE0Mj
-kxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLTY0MjIxODEy
-Myw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1OTkzLC03NT
-QzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NTgsLTMxMjAy
-ODIzOF19
+eyJoaXN0b3J5IjpbLTYwNjg3OTAwNCw2MjE2MTY0MDEsMTgxMD
+Y2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMTQ1NDg1NDIx
+LC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1OTk5MzksMT
+QyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMiwtNjQyMjE4
+MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zODk0MzU5OTMsLT
+c1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMTk0NTcyNzg1OCwtMzEy
+MDI4MjM4XX0=
 -->
