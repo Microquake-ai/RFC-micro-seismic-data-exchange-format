@@ -163,7 +163,7 @@ This section is concerned about the cross-referencing of information related to 
 - **Station Code**: We recommend associating the station code to an instrument or a group of instrument. The Station code should convey relevant information on the sensor location and provide context to the seismic system stakeholders. An example for an adequate station code, given an instrument is installed along the Haulage Level Access Drive 2, would be HLAD2.
 - **Location Code**: If the Station Code refers to a group of instruments, for instance, instruments installed in a long borehole, connected to the same acquisition station, the location code can be used to differentiate the instrument within the group. The location code should be kept short. It can simply be a number converying the relative order or in the case of a borehole installation, a measure of the location along the hole.
 
-### Data Format and Adaptation
+## Data Format and Adaptation
 
 The key is to ensure consistencies between the data and information to allow efficient cross-referencing, retrieval and usage.
 
@@ -185,7 +185,9 @@ We made the explicit choice to use the QuakeML and StationXML for **catalog** an
 
 However, like all choices, leveraging these formats comes with its challenges. While their use ensures widespread compatibility, the interpretation of file content may require nuanced processing and considerations. Some adaptations might be essential to cater specifically to the μseismic monitoring context, possibly involving the addition of auxiliary fields or annotations. The goal, throughout these modifications, remains to balance ease-of-use with the specificity required for μseismic data, ensuring that users can maximize the value derived from the data while minimizing the overhead of adaptations and interpretations.
 
-### Waveform Data
+### ASDF Core
+
+#### Waveform Data
 
 The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of $m$, $m/s$​, or $m/s^2$ for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC counts as integers is more suitable. Storing the ADC count as integers allows for the more efficient use of compression algorithm and will allow the data to be more compact.
 
@@ -203,7 +205,7 @@ The other parameters can be derived from the sampling rate, start time and the w
 - **Sampling Interval [`delta`]** &mdash; sample distance in seconds. Computed as the inverse of the sampling_rate (`1/sampling_rate`).
 - **End Time [`endtime`]** &mdash; Date and time of the last data sample given in UTC  `endtime = startime + npts * delta`
 
-### Catalog
+#### Catalog
 
 The catalog includes information related to an event, a trigger, or a series of events. We suggest storing the catalog information in a QuakeML-like format adapted to μseismic data (see QuakeML [documentation](https://quake.ethz.ch/quakeml)). The suggested changes affect the following QuakeML objects:
 
@@ -211,12 +213,7 @@ The catalog includes information related to an event, a trigger, or a series of 
 -   **Origin** — The position is expressed in latitude and longitude. This will need to be changed to x, y, and z.
 -   **Magnitude** — The magnitude object would benefit from adding fields to store the corner frequency, as well as P-wave and S-wave Energy. This allows for a broad range of source parameters to be computed on the fly, rather than stored in the magnitude object. This approach is typically used in mine seismology.
 
-#### Event — Event Type
-
-There are two approaches to modifying the event types:
-
-1.  Redefine the schema and allow for event types related to mining to be stored in a μQuakeML file; and
-2.  Map each μseismic type to an existing QuakeML event type.
+To kee
 
 | Event Type (&mu;seismic)            | Event Type (QuakeML)        |
 |-------------------------------------|-----------------------------|
@@ -525,11 +522,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTAxMTgxMDcyLDIwMjMyNDkxODgsLTEyMz
-UwMjI3OTMsLTY1NzE2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5
-MDksNjIxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMz
-kzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3
-NDg0LC0xMTI0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LD
-E5OTQ0OTU2MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgx
-MzE2OV19
+eyJoaXN0b3J5IjpbLTYzNDI3MzU1MywyMDIzMjQ5MTg4LC0xMj
+M1MDIyNzkzLC02NTcxNjk0NzYsLTE0NTA3NzY3NDMsNzU2NTkx
+OTA5LDYyMTYxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMz
+M5MzUwMTMsLTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQx
+NzQ4NCwtMTEyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNi
+wxOTk0NDk1NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4
+MTMxNjldfQ==
 -->
