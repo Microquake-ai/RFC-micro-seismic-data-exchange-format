@@ -74,7 +74,7 @@ The required metadata for each trace includes:
     -   **Network Code [network_code]** — Code representing the network.
     -   **Station Code [station_code]** — Code representing the station containing the digitizer.
     -   **Location Code [location_code]** — Code representing the instrument.
-    -   **Channel Code [channel_code]** — The three (3) alphanumerical code representing the channel shall follow the FDSN standard naming convention of August 2000 described in the SEED document [Appendix A](http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf). For instance, a typical $14 Hz$ or 15 Hz$ omnidirectional geophone code would be GH?, where ? would be replaced by the appropriate component orientation code.
+    -   **Channel Code [channel_code]** — The three (3) alphanumerical code representing the channel shall follow the FDSN standard naming convention of August 2000 described in the SEED document [Appendix A](http://www.fdsn.org/pdf/SEEDManual_V2.4_Appendix-A.pdf). For instance, a typical 14 Hz or 15 Hz omnidirectional geophone code would be GH?, where ? would be replaced by the appropriate component orientation code.
 -   **Sampling Rate [sampling_rate]** — The signal's sampling rate in samples per second.
 -   **Calibration Factor [calib]** — This value is optional and defaults to 1.0 if not provided. It represents the calibration factor should the sensor deviate from the typical response.
 -   **Start Time [starttime]** — The trace's start time.
@@ -444,11 +444,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQzMjUzNDg2LDI5MTY4OTEzNiwxOTk0ND
-k1NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjks
-LTM4OTQzNTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOT
-Q1NzI3ODU4LC0zMTIwMjgyMzgsNDYzNjg0NDk3LC0xNjE2MTcz
-NTgyLDEwNDQ0MDUxNTQsLTE2NDU5MTcwOTQsODQwMTQ1MDU5LC
-0xNDMxODkwMzkzLC0xMTc3MjI3OTQ3LDEwODEwMTc2NjYsMTEy
-NDExNDE5M119
+eyJoaXN0b3J5IjpbMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5ND
+Q5NTYzMiwtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5
+LC0zODk0MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMT
+k0NTcyNzg1OCwtMzEyMDI4MjM4LDQ2MzY4NDQ5NywtMTYxNjE3
+MzU4MiwxMDQ0NDA1MTU0LC0xNjQ1OTE3MDk0LDg0MDE0NTA1OS
+wtMTQzMTg5MDM5MywtMTE3NzIyNzk0NywxMDgxMDE3NjY2LDEx
+MjQxMTQxOTNdfQ==
 -->
