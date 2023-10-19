@@ -107,7 +107,7 @@ We propose using the `ASDF` format with a `.asdf` extension to store the wavefor
 
 - **Velocity Information**: If relevant the velocity and velocity model could be stored alongside the seismic data. 
 
-- **Alternative location**: Alternative location obtain from statistical analyses includeassociated to a specific 
+- **Alternative location**: Alternative locations obtain from statistical analyses including jacknife or Montecarlo associated, could provide benefit to correctly assess the system performance.
     
 -   **Processing Logs**: Detailed logs of processing steps performed on the data, which can be crucial for ensuring data quality and understanding potential issues or artifacts.
 
@@ -421,11 +421,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjM0NDAwMSw3NTY1OTE5MDksNjIxNj
-E2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywt
-MjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMT
-I0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2
-MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMz
-g5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3
-Mjc4NThdfQ==
+eyJoaXN0b3J5IjpbLTE5NTE0NzU0MTYsNzU2NTkxOTA5LDYyMT
+YxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMs
+LTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMT
+EyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1
+NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLT
+M4OTQzNTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1
+NzI3ODU4XX0=
 -->
