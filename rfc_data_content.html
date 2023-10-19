@@ -54,51 +54,6 @@
 </ul>
 <h4 id="notes">Notes:</h4>
 <p><strong>Network, Station, and Location Codes</strong>: The mentioned convention is often not strictly adhered to by μseismic system providers. Flexibility in applying the convention is crucial. Typically, no distinction is made between the station and location, and each instrument is assigned a unique code that may or may not refer to the data acquisition station. In such cases, we suggest using the <strong>Station Code</strong> field to store the <em>instrument</em> code and populate the location code with 01 or 00. In a network, each combination of <strong>Station Code</strong> – <strong>Location Code</strong> – <strong>Channel Code</strong> should be unique.</p>
-<h4 id="waveform-data-packaging">Waveform Data Packaging</h4>
-<h5 id="asdf">ASDF</h5>
-<p>The IRIS DMC recommends using the <code>Zarr</code> formats (or TileDB) over the <code>HDF5</code> based formats, such as the <code>ASDF</code> format. The <code>Zarr</code> format can be conveniently used to store waveform data. We strongly encourage adhering to the naming convention presented in the previous section, giving each component a unique name composed as <code>network_code.station_code.location_code.channel_code</code>.</p>
-<p><strong>Note</strong>: The <code>Zarr</code> file format can also incorporate the catalog and inventory information.</p>
-<p>Below is an example written in Python to store information from an <em>Obspy</em> Stream object in a <code>.zarr</code> file:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="im">import</span> zarr</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="co"># import obspy</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="im">import</span> uquake  <span class="co"># the uquake library can be used instead of Obspy </span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a><span class="kw">def</span> stream_to_zarr_group(stream, zarr_group_path):</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>    <span class="co">&quot;&quot;&quot;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a><span class="co">    Converts an ObsPy/uQuake stream to a Zarr group.</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a><span class="co">    Each trace is stored as a separate Zarr array with its associated metadata.</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a><span class="co">    :param stream: ObsPy/uQuake Stream object</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a><span class="co">    :param zarr_group_path: Path to create/save the Zarr group</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a><span class="co">    &quot;&quot;&quot;</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>    <span class="co"># Create or open a Zarr group</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a>    group <span class="op">=</span> zarr.open_group(zarr_group_path, mode<span class="op">=</span><span class="st">&#39;a&#39;</span>)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a>    <span class="cf">for</span> tr <span class="kw">in</span> stream:</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a>        <span class="co"># Create Zarr array for this trace</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true"></a>        arr <span class="op">=</span> group.create_dataset(trace_id, data<span class="op">=</span>tr.data, </span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true"></a>        shape<span class="op">=</span>(<span class="bu">len</span>(tr.data),), dtype<span class="op">=</span><span class="st">&#39;float32&#39;</span>, overwrite<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true"></a>        <span class="co"># Store selected stats as Zarr attributes</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true"></a>        <span class="cf">for</span> key <span class="kw">in</span> [<span class="st">&#39;network_code&#39;</span>, <span class="st">&#39;station_code&#39;</span>, <span class="st">&#39;location_code&#39;</span>, </span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true"></a>                    <span class="st">&#39;channel_code&#39;</span>, <span class="st">&#39;sampling_rate&#39;</span>, <span class="st">&#39;starttime&#39;</span>, <span class="st">&#39;calib&#39;</span>, <span class="st">&#39;resource_id&#39;</span>]:</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true"></a>            <span class="co"># Convert non-string objects to strings for easier storage and retrieval</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true"></a>            arr.attrs[key] <span class="op">=</span> tr.stats[key]</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true"></a><span class="co"># Load a sample ObsPy Stream (modify this to load your data)</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true"></a>st <span class="op">=</span> uquake.read()</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true"></a><span class="co"># Convert and store the stream in a Zarr group</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true"></a>stream_to_zarr_group(st, <span class="st">&#39;seismic_data_group.zarr&#39;</span>)</span></code></pre></div>
-<h5 id="miniseed">MiniSEED</h5>
-<p>The <em>miniSEED</em> format is another viable option. <em>MiniSEED</em> is widely adopted in seismology and is exceptionally suitable for storing seismic data. The <em>miniSEED</em> format can accommodate traces from various instrument types (geophone, accelerometer, seismometer, etc.), acquired at different sampling rates, with varying start and end times. However, it’s essential to note that to use <em>miniSEED</em>, the network, station, location, and channel codes must adhere to a strict convention described below:</p>
-<ul>
-<li><strong>Network Code</strong> — Two (2) alphanumerical characters.</li>
-<li><strong>Station Code</strong>: Five (5) alphanumerical characters.</li>
-<li><strong>Location Code</strong>: Two (2) alphanumerical characters.</li>
-<li><strong>Channel Code</strong>: Three (3) alphanumerical characters, following the FDSN guidelines of August 2000.</li>
-</ul>
 <h3 id="catalog">Catalog</h3>
 <p>The catalog includes information related to an event, a trigger, or a series of events. We suggest storing the catalog information in a QuakeML-like format adapted to μseismic data (see QuakeML <a href="https://quake.ethz.ch/quakeml">documentation</a>). The suggested changes affect the following QuakeML objects:</p>
 <ul>
@@ -238,70 +193,12 @@
 <h4 id="magnitude-corner-frequency-and-energy">Magnitude — Corner Frequency, and Energy</h4>
 <p>The QuakeML standard does not include objects suited to store the corner frequency. The energy could be stored in the amplitude or station_magnitude object. However, this isn’t convenient, as it’s preferable for the magnitude and energy information to be used in tandem.</p>
 <p>The μQuake implementation stores the <code>corner_frequency</code>, the <code>energy_p</code>, <code>energy_s</code>, and associated error alongside the magnitude information in the extra parameter of the Magnitude object.</p>
-<h4 id="catalog-information-packaging">Catalog Information Packaging</h4>
-<h5 id="zarr">Zarr</h5>
-<p>The catalog information can easily be packaged with the waveform in a <code>Zarr</code> file. The QuakeML simply needs to be serialized using the json library. The example below shows how an <code>Obspy</code> or <code>uQuake</code> catalog can be stored in a <code>Zarr</code> file and retrieved:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="co"># import obspy</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="im">import</span> uquake <span class="co"># similar to obspy with the modifications previously </span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>              <span class="co"># discussed above implemented</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a><span class="im">import</span> zarr</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a><span class="im">import</span> json</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a><span class="co"># Sample Catalog</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>cat <span class="op">=</span> obspy.read_events()</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a><span class="co"># 1. Serialize the Catalog to JSON</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a>json_string <span class="op">=</span> cat.write(<span class="bu">format</span><span class="op">=</span><span class="st">&quot;JSON&quot;</span>, filename<span class="op">=</span><span class="va">None</span>)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a><span class="co"># 2. Store the Serialized JSON in Zarr</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true"></a>root <span class="op">=</span> zarr.open_group(<span class="st">&quot;catalog.zarr&quot;</span>, mode<span class="op">=</span><span class="st">&quot;w&quot;</span>)</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true"></a>root.array(<span class="st">&quot;catalog_data&quot;</span>, data<span class="op">=</span>json_string)</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true"></a><span class="co"># Reading Back from Zarr</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true"></a>stored_json_string <span class="op">=</span> root[<span class="st">&quot;catalog_data&quot;</span>][:].tobytes().decode()</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true"></a><span class="co"># 3. Deserialize back to Catalog object</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true"></a>new_cat <span class="op">=</span> obspy.read_events(filename<span class="op">=</span><span class="va">None</span>, <span class="bu">format</span><span class="op">=</span><span class="st">&quot;JSON&quot;</span>, </span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true"></a>data<span class="op">=</span>stored_json_string)</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true"></a></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true"></a><span class="bu">print</span>(new_cat)</span></code></pre></div>
-<h5 id="quakeml">QuakeML</h5>
-<p>The catalog can also be stored in the native XML format, which is QuakeML’s traditional format. QuakeML, being a structured XML-based format, offers a robust platform for standardizing the description of seismic events and their associated parameters. For those familiar with the format and looking to integrate with other systems that recognize QuakeML, using the native XML format is advantageous. However, it’s essential to be aware of the modifications made for the μseismic context to ensure compatibility.</p>
 <h3 id="system-or-inventory-information">System or Inventory Information</h3>
 <p>The system or inventory information is crucial for any seismic network as it provides comprehensive details about the stations and channels that are a part of that network. The StationXML format, which is an established standard in the seismic community, is designed to hold such inventory metadata.</p>
 <p>However, when tailoring the use of StationXML to the μseismic domain, especially in the mining context, certain modifications are required to better fit the data’s unique characteristics and requirements.</p>
 <h4 id="station-channel-coordinates">Station &amp; Channel Coordinates</h4>
 <p>In a typical seismic application, the StationXML format uses latitude and longitude to describe the geographical position of stations and channels. While this makes sense for global and regional seismic networks, it’s not as intuitive or convenient for the μseismic monitoring within a mining setup. In such a scenario, the geographical location is often best described using a local coordinate system.</p>
 <p>Thus, we recommend replacing the latitude and longitude fields in the StationXML format with <code>x</code>, <code>y</code>, and <code>z</code> coordinates for both the station and channel locations. This change aligns with the earlier modifications made for QuakeML, ensuring consistency across different components of the μseismic system.</p>
-<h4 id="systeminventory-information-packaging">System/Inventory Information Packaging</h4>
-<p>The inventory or system information of a seismic network, which details the stations and channels, can also be serialized and stored efficiently. We propose to options. The first option consist in storing the system or inventory information alongside the waveform and catalogue in a <code>Zarr</code> file. The second option consist in directly using the <code>StationXML</code> format.</p>
-<h5 id="zarr-1">Zarr</h5>
-<p>Storing inventory information in a <code>Zarr</code> format offers flexibility, especially when dealing with large datasets. Like the catalog information, the StationXML data can be serialized using the json library and then stored in a <code>Zarr</code> file. This allows for efficient storage and quick retrieval of inventory data. An code example is provided below:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="co"># import Obspy</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="im">import</span> uquake <span class="co"># Similar to obspy but tailored for μseismic</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="im">import</span> zarr</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a><span class="im">import</span> json</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a><span class="co"># Sample Inventory</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a>inventory <span class="op">=</span> uquake.read_inventory()</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a><span class="co"># 1. Serialize the Inventory to JSON</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a>json_string <span class="op">=</span> inventory.write(<span class="bu">format</span><span class="op">=</span><span class="st">&quot;JSON&quot;</span>, filename<span class="op">=</span><span class="va">None</span>)</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a><span class="co"># 2. Store the Serialized JSON in Zarr</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true"></a>root <span class="op">=</span> zarr.open_group(<span class="st">&quot;inventory.zarr&quot;</span>, mode<span class="op">=</span><span class="st">&quot;w&quot;</span>)</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true"></a>root.array(<span class="st">&quot;inventory_data&quot;</span>, data<span class="op">=</span>json_string)</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true"></a></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true"></a><span class="co"># Reading Back from Zarr</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true"></a>stored_json_string <span class="op">=</span> root[<span class="st">&quot;inventory_data&quot;</span>][:].tobytes().decode()</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true"></a></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true"></a><span class="co"># 3. Deserialize back to Inventory object</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true"></a>new_inventory <span class="op">=</span> uquake.read_inventory(filename<span class="op">=</span><span class="va">None</span>, <span class="bu">format</span><span class="op">=</span><span class="st">&quot;JSON&quot;</span>, </span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true"></a>data<span class="op">=</span>stored_json_string)</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true"></a></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true"></a><span class="bu">print</span>(new_inventory)</span></code></pre></div>
-<h5 id="stationxml">StationXML</h5>
-<p>StationXML is the conventional format for representing inventory information in the seismic community. Being a structured XML-based format, it provides a comprehensive framework for detailing stations and channels. When using StationXML, especially in a μseismic context, it’s vital to ensure that the modifications made (such as the introduction of <code>x, y, z</code> coordinates and unit vector for channel orientation) are incorporated correctly.</p>
 <h3 id="system-metadata-and-grid-data">System Metadata and Grid Data</h3>
 <p>To fully enable the interpretation of the seismic data, accessing information on the velocity models is essential. Other important although not as essential are the attenuation model if they exist and the density values or model. The velocity values/models are increasingly represented on a grid.</p>
 <p>In this section, we propose using a simple grid format for data exchange.</p>
@@ -309,24 +206,24 @@
 <p>The grid format is structured to represent the velocity model in a systematic, gridded layout. It comprises two main components: the header, which contains metadata about the grid, and the grid values that reflect the actual data.</p>
 <h5 id="header">Header</h5>
 <p>The header is a crucial section that offers insights into the grid’s specifications, such as its dimensions, the starting point (origin) of the grid, and the intervals or spacings between grid points. A sample header in Python dictionary format might look like:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a>header <span class="op">=</span> {</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>    <span class="st">&quot;NX&quot;</span>: <span class="dv">100</span>,            <span class="co"># Number of grid points in the X direction</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>    <span class="st">&quot;NY&quot;</span>: <span class="dv">100</span>,            <span class="co"># Number of grid points in the Y direction</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a>    <span class="st">&quot;NZ&quot;</span>: <span class="dv">50</span>,             <span class="co"># Number of grid points in the Z direction</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a>    <span class="st">&quot;ORIGX&quot;</span>: <span class="fl">0.0</span>,         <span class="co"># X coordinate of the grid origin</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a>    <span class="st">&quot;ORIGY&quot;</span>: <span class="fl">0.0</span>,         <span class="co"># Y coordinate of the grid origin</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a>    <span class="st">&quot;ORIGZ&quot;</span>: <span class="fl">0.0</span>,         <span class="co"># Z coordinate of the grid origin</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a>    <span class="st">&quot;SPACEX&quot;</span>: <span class="fl">0.1</span>,        <span class="co"># Grid spacing in the X direction</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a>    <span class="st">&quot;SPACEY&quot;</span>: <span class="fl">0.1</span>,        <span class="co"># Grid spacing in the Y direction</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true"></a>    <span class="st">&quot;SPACEZ&quot;</span>: <span class="fl">0.2</span>,        <span class="co"># Grid spacing in the Z direction</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a>header <span class="op">=</span> {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>    <span class="st">&quot;NX&quot;</span>: <span class="dv">100</span>,            <span class="co"># Number of grid points in the X direction</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>    <span class="st">&quot;NY&quot;</span>: <span class="dv">100</span>,            <span class="co"># Number of grid points in the Y direction</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>    <span class="st">&quot;NZ&quot;</span>: <span class="dv">50</span>,             <span class="co"># Number of grid points in the Z direction</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>    <span class="st">&quot;ORIGX&quot;</span>: <span class="fl">0.0</span>,         <span class="co"># X coordinate of the grid origin</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>    <span class="st">&quot;ORIGY&quot;</span>: <span class="fl">0.0</span>,         <span class="co"># Y coordinate of the grid origin</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>    <span class="st">&quot;ORIGZ&quot;</span>: <span class="fl">0.0</span>,         <span class="co"># Z coordinate of the grid origin</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>    <span class="st">&quot;SPACEX&quot;</span>: <span class="fl">0.1</span>,        <span class="co"># Grid spacing in the X direction</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>    <span class="st">&quot;SPACEY&quot;</span>: <span class="fl">0.1</span>,        <span class="co"># Grid spacing in the Y direction</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>    <span class="st">&quot;SPACEZ&quot;</span>: <span class="fl">0.2</span>,        <span class="co"># Grid spacing in the Z direction</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>}</span></code></pre></div>
 <p>This dictionary effectively captures the grid’s spatial boundaries, intervals, and the type of data contained.</p>
 <h5 id="grid-data">Grid Data</h5>
 <p>The grid data values follow the header. Organized in a sequence, they represent their positions within the grid. For simplicity and efficiency, these values can be represented as a 2D numpy array:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a><span class="co"># For demonstration purposes, initializing a 2D array with NXxNYxNZ dimensions</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a>grid_values <span class="op">=</span> np.zeros((header[<span class="st">&quot;NX&quot;</span>], header[<span class="st">&quot;NY&quot;</span>], header[<span class="st">&quot;NZ&quot;</span>]))</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="co"># For demonstration purposes, initializing a 2D array with NXxNYxNZ dimensions</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>grid_values <span class="op">=</span> np.zeros((header[<span class="st">&quot;NX&quot;</span>], header[<span class="st">&quot;NY&quot;</span>], header[<span class="st">&quot;NZ&quot;</span>]))</span></code></pre></div>
 <p>In this representation, the grid values are stored in a structured manner, allowing for easy indexing and operations. Each cell in the array corresponds to a grid point in the velocity model, with its value representing the velocity (or density or attenuation, depending on the grid type) at that point.</p>
 <h4 id="implementation">Implementation</h4>
 <h3 id="implementation-using-uquake">Implementation using <code>uquake</code></h3>
@@ -334,45 +231,45 @@
 <h4 id="initializing-a-grid">Initializing a Grid</h4>
 <p>The <code>Grid</code> object can be initialized using either a numpy array representing the grid data or by specifying the grid dimensions. When using the latter approach, the grid is initialized with a default or specified value.</p>
 <p>Let’s consider a simple example to illustrate this:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="im">from</span> uquake.core.grid.base <span class="im">import</span> Grid</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a><span class="co"># Define grid header specifications</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true"></a></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true"></a>header <span class="op">=</span> {</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true"></a>    <span class="st">&quot;NX&quot;</span>: <span class="dv">100</span>,  </span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true"></a>    <span class="st">&quot;NY&quot;</span>: <span class="dv">100</span>,  </span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true"></a>    <span class="st">&quot;NZ&quot;</span>: <span class="dv">50</span>,   </span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true"></a>    <span class="st">&quot;ORIGX&quot;</span>: <span class="fl">0.0</span>,  </span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true"></a>    <span class="st">&quot;ORIGY&quot;</span>: <span class="fl">0.0</span>,  </span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true"></a>    <span class="st">&quot;ORIGZ&quot;</span>: <span class="fl">0.0</span>,  </span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true"></a>    <span class="st">&quot;SPACEX&quot;</span>: <span class="fl">0.1</span>,  </span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true"></a>    <span class="st">&quot;SPACEY&quot;</span>: <span class="fl">0.1</span>,  </span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true"></a>    <span class="st">&quot;SPACEZ&quot;</span>: <span class="fl">0.2</span>,  </span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true"></a>}</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true"></a></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true"></a><span class="co"># Initialize the grid using grid dimensions and set default value as 0</span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true"></a></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true"></a>grid_dims <span class="op">=</span> (header[<span class="st">&quot;NX&quot;</span>], header[<span class="st">&quot;NY&quot;</span>], header[<span class="st">&quot;NZ&quot;</span>])</span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true"></a>spacing <span class="op">=</span> (header[<span class="st">&quot;SPACEX&quot;</span>], header[<span class="st">&quot;SPACEY&quot;</span>], header[<span class="st">&quot;SPACEZ&quot;</span>])</span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true"></a>origin <span class="op">=</span> (header[<span class="st">&quot;ORIGX&quot;</span>], header[<span class="st">&quot;ORIGY&quot;</span>], header[<span class="st">&quot;ORIGZ&quot;</span>])</span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true"></a></span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true"></a>grid <span class="op">=</span> Grid(data_or_dims<span class="op">=</span>grid_dims, spacing<span class="op">=</span>spacing, origin<span class="op">=</span>origin, value<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true"></a></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true"></a><span class="co"># Write the modified or new grid to a file</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true"></a>grid.write(<span class="st">&quot;path_to_new_grid_file.grid&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="im">from</span> uquake.core.grid.base <span class="im">import</span> Grid</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a><span class="co"># Define grid header specifications</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>header <span class="op">=</span> {</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a>    <span class="st">&quot;NX&quot;</span>: <span class="dv">100</span>,  </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a>    <span class="st">&quot;NY&quot;</span>: <span class="dv">100</span>,  </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a>    <span class="st">&quot;NZ&quot;</span>: <span class="dv">50</span>,   </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a>    <span class="st">&quot;ORIGX&quot;</span>: <span class="fl">0.0</span>,  </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a>    <span class="st">&quot;ORIGY&quot;</span>: <span class="fl">0.0</span>,  </span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a>    <span class="st">&quot;ORIGZ&quot;</span>: <span class="fl">0.0</span>,  </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true"></a>    <span class="st">&quot;SPACEX&quot;</span>: <span class="fl">0.1</span>,  </span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true"></a>    <span class="st">&quot;SPACEY&quot;</span>: <span class="fl">0.1</span>,  </span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true"></a>    <span class="st">&quot;SPACEZ&quot;</span>: <span class="fl">0.2</span>,  </span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true"></a>}</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true"></a><span class="co"># Initialize the grid using grid dimensions and set default value as 0</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true"></a>grid_dims <span class="op">=</span> (header[<span class="st">&quot;NX&quot;</span>], header[<span class="st">&quot;NY&quot;</span>], header[<span class="st">&quot;NZ&quot;</span>])</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true"></a>spacing <span class="op">=</span> (header[<span class="st">&quot;SPACEX&quot;</span>], header[<span class="st">&quot;SPACEY&quot;</span>], header[<span class="st">&quot;SPACEZ&quot;</span>])</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true"></a>origin <span class="op">=</span> (header[<span class="st">&quot;ORIGX&quot;</span>], header[<span class="st">&quot;ORIGY&quot;</span>], header[<span class="st">&quot;ORIGZ&quot;</span>])</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true"></a>grid <span class="op">=</span> Grid(data_or_dims<span class="op">=</span>grid_dims, spacing<span class="op">=</span>spacing, origin<span class="op">=</span>origin, value<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true"></a><span class="co"># Write the modified or new grid to a file</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true"></a>grid.write(<span class="st">&quot;path_to_new_grid_file.grid&quot;</span>)</span></code></pre></div>
 <p>Here, we’ve initialized a 3D grid using the dimensions specified in the header. The grid is filled with a default value of 0.</p>
 <h4 id="reading-and-writing-grids">Reading and Writing Grids</h4>
 <p>The <code>Grid</code> object is equipped with methods to read and write grid data, making it easy to load existing grids or store newly created or modified grids.</p>
 <p>Here’s an example of how one might read from and write to a grid file:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="co"># all versions</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a><span class="im">from</span> uquake.core.grid <span class="im">import</span> read_grid</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true"></a><span class="co"># Reading a grid from a file</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true"></a>grid_from_file <span class="op">=</span> Grid.read(<span class="st">&quot;path_to_grid_file.grid&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="co"># from version 2.0.1</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a><span class="co"># Reading a grid from a file</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a>grid_from_file <span class="op">=</span> Grid.read(<span class="st">&quot;path_to_grid_file.grid&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="co"># all versions</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a><span class="im">from</span> uquake.core.grid <span class="im">import</span> read_grid</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a><span class="co"># Reading a grid from a file</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a>grid_from_file <span class="op">=</span> Grid.read(<span class="st">&quot;path_to_grid_file.grid&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="co"># from version 2.0.1</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a><span class="co"># Reading a grid from a file</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a>grid_from_file <span class="op">=</span> Grid.read(<span class="st">&quot;path_to_grid_file.grid&quot;</span>) </span></code></pre></div>
 <p>This approach simplifies the process of handling gridded data in seismology by using the <code>uquake</code> library’s built-in functionalities.</p>
 <h2 id="rationale-1">Rationale</h2>
 <p>Understanding the motivations and reasons behind any proposed change is essential to ensure clarity, gain stakeholder buy-in, and ensure the technical merits of the proposal align with the broader goals.</p>
@@ -407,11 +304,11 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5ND
-Q5NTYzMiwtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5
-LC0zODk0MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMT
-k0NTcyNzg1OCwtMzEyMDI4MjM4LDQ2MzY4NDQ5NywtMTYxNjE3
-MzU4MiwxMDQ0NDA1MTU0LC0xNjQ1OTE3MDk0LDg0MDE0NTA1OS
-wtMTQzMTg5MDM5MywtMTE3NzIyNzk0NywxMDgxMDE3NjY2LDEx
-MjQxMTQxOTNdfQ==
+eyJoaXN0b3J5IjpbLTI1NzQzMTUzMiwxNDI5MTkyOTI2LDI5MT
+Y4OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2
+LC0xMjg4MTMxNjksLTM4OTQzNTk5MywtNzU0MzcxODE5LC0xOT
+g3MDQzMDk5LC0xOTQ1NzI3ODU4LC0zMTIwMjgyMzgsNDYzNjg0
+NDk3LC0xNjE2MTczNTgyLDEwNDQ0MDUxNTQsLTE2NDU5MTcwOT
+QsODQwMTQ1MDU5LC0xNDMxODkwMzkzLC0xMTc3MjI3OTQ3LDEw
+ODEwMTc2NjZdfQ==
 -->
