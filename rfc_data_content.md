@@ -164,10 +164,9 @@ This section is concerned about the cross-referencing of information related to 
 - **Location Code**: If the Station Code refers to a group of instruments, for instance, instruments installed in a long borehole, connected to the same acquisition station, the location code can be used to differentiate the instrument within the group. The location code should be kept short. It can simply be a number converying the relative order or in the case of a borehole installation, a measure of the location along the hole.
 
 ## Data Format and Adaptation
+### Overview
 
-The key is to ensure consistencies between the data and information to allow efficient cross-referencing, retrieval and usage.
-
-There should be one ASDF file per event or chunk of continuous data.
+The key is to ensure consistencies between the data and information to allow efficient cross-referencing, retrieval and usage. The ASDF file will serve a s main container. There should be one ASDF file per event or chunk of continuous data. Grid information should not be included in the ASDF file but rather be stored in specific
 
 In this section we will cover a series of data types some are to be included as part of the ASDF file some provided as additional files:
 
@@ -602,11 +601,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTAyMjYwNzcsMTM5NDQ2OTY2NiwxMD
-c0MDA5Mzc4LDIwMjMyNDkxODgsLTEyMzUwMjI3OTMsLTY1NzE2
-OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5MDksNjIxNjE2NDAxLD
-E4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMjE0NTQ4
-NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5OT
-M5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLTY0
-MjIxODEyM119
+eyJoaXN0b3J5IjpbMjA5MTYyODc3MiwxMzk0NDY5NjY2LDEwNz
+QwMDkzNzgsMjAyMzI0OTE4OCwtMTIzNTAyMjc5MywtNjU3MTY5
+NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2MTY0MDEsMT
+gxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMTQ1NDg1
+NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1OTk5Mz
+ksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMiwtNjQy
+MjE4MTIzXX0=
 -->
