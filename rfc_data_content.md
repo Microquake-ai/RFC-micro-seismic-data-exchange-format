@@ -29,7 +29,7 @@ The document focuses on the foundational elements and seismic information intrin
 
 The increase in microseismic data, particularly from expansive monitoring systems and new technologies like Distributed Acoustic Sensing (DAS), underscores the pressing need for a more efficient and unified data format. Currently, the varied nature of microseismic data formats hinders streamlined integration and analysis, posing challenges in managing and deriving value from large datasets. Given the critical importance of microseismic data in ensuring the safety and improving the operations of underground mining, establishing a standardized format becomes imperative. This standard would facilitate more straightforward data access, efficient storage, and smoother data exchanges across different platforms.
 
-The standardization of naming convention is also important to ensure consistency between system and site. 
+Standardization in naming conventions, specifically for microseismic monitoring systems, is also vital. A uniform naming approach aids rapid identification, allowing different entity to access and process relevant microseismic datasets without ambiguity. With the evolving complexity of microseismic monitoring in mining operations, a standardized naming system ensures clarity and coherence among different teams, departments, and even external partners. This becomes particularly essential in situations demanding swift decision-making, where a clear naming convention can streamline operations. As microseismic monitoring systems integrate more advanced technologies and automated components, a consistent naming scheme will be instrumental in ensuring smooth system integrations, efficient data retrievals, and hassle-free system updates. Therefore, this RFC emphasizes the necessity for not only a unified microseismic data format but also a consistent naming approach tailored for microseismic monitoring systems and sites.
 
 #### Goal
 
@@ -365,11 +365,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOT
-M1MDEzLC0yMTQ1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0
-ODQsLTExMjQ1OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMT
-k5NDQ5NTYzMiwtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEz
-MTY5LC0zODk0MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0MzA5OS
-wtMTk0NTcyNzg1OCwtMzEyMDI4MjM4LDQ2MzY4NDQ5NywtMTYx
-NjE3MzU4Ml19
+eyJoaXN0b3J5IjpbMjAzMzYyNTE0NSwxODEwNjY4NTM2LDcxOT
+YzMzA5NSwxMzM5MzUwMTMsLTIxNDU0ODU0MjEsLTE4NzM2NDI4
+MjQsLTgwMzQxNzQ4NCwtMTEyNDU5OTkzOSwxNDI5MTkyOTI2LD
+I5MTY4OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgxMjMsOTg2OTUx
+Njc2LC0xMjg4MTMxNjksLTM4OTQzNTk5MywtNzU0MzcxODE5LC
+0xOTg3MDQzMDk5LC0xOTQ1NzI3ODU4LC0zMTIwMjgyMzgsNDYz
+Njg0NDk3XX0=
 -->
