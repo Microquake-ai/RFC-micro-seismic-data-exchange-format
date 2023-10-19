@@ -319,15 +319,14 @@
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="co"># For demonstration purposes, initializing a 2D array with NXxNYxNZ dimensions</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>grid_values <span class="op">=</span> np.zeros((header[<span class="st">&quot;NX&quot;</span>], header[<span class="st">&quot;NY&quot;</span>], header[<span class="st">&quot;NZ&quot;</span>]))</span></code></pre></div>
 <p>In this representation, the grid values are stored in a structured manner, allowing for easy indexing and operations. Each cell in the array corresponds to a grid point in the velocity model, with its value representing the velocity (or density or attenuation, depending on the grid type) at that point.</p>
-<h3 id="ray-and-ray-parameters">Ray and Ray Parameters</h3>
-<h2 id="data-format-for-storing-ray-information-in-asdf">Data Format for Storing Ray Information in ASDF</h2>
+<h3 id="data-format-for-storing-ray-information-in-asdf">Data Format for Storing Ray Information in ASDF</h3>
 <h3 id="background">Background</h3>
 <p>For efficient microseismic monitoring and analysis, the inclusion of ray tracing data alongside waveform and inventory data is beneficial. In keeping with the extensibility and flexibility features of the ASDF format, we propose a systematic structure to store the ray information.</p>
 <h3 id="proposed-data-structure">Proposed Data Structure</h3>
 <h4 id="directory-structure">Directory Structure:</h4>
 <ul>
 <li>Within the <code>AuxiliaryData</code> section of the ASDF file, we introduce a dedicated <code>Rays</code> directory.</li>
-<li>Individual rays are uniquely identified by their <code>resource_id</code> and each has its own sub-directory under <code>Rays</code> and adopt a naming convention linking them to the an instrument using the <code>network</code>, <code>station</code> and <code>channel</code> codes.</li>
+<li>Individual rays are uniquely identified by a unique <code>resource_id</code> and each has its own sub-directory under <code>Rays</code> and adopt a naming convention linking them to the an instrument using the <code>network</code>, <code>station</code> and <code>channel</code> codes.</li>
 </ul>
 <h4 id="ray-attributes">Ray Attributes:</h4>
 <p>Each ray’s sub-directory will include the following attributes:</p>
@@ -365,8 +364,6 @@
 <li>The proposed structure ensures seamless integration with waveform and inventory data. The use of <code>network_code</code>, <code>station_code</code>, and <code>location_code</code> ensures that rays can be directly associated with specific waveform data and inventory components.</li>
 </ul></li>
 </ol>
-<h3 id="conclusion">Conclusion</h3>
-<p>This RFC section formalizes the data format for storing ray information within ASDF files. By adopting this standardized approach, users can effortlessly integrate ray tracing data alongside waveform and inventory data, facilitating efficient microseismic monitoring and subsequent analysis.</p>
 <h4 id="point-cloud-data">Point Cloud Data</h4>
 <h4 id="lookup-table-for-event-type-conversion">Lookup Table for Event Type Conversion</h4>
 <h2 id="implementation-using-the-μquake-python-library">Implementation using the μQuake Python Library</h2>
@@ -451,7 +448,7 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0MDAwODMzNSwtMTIzNTAyMjc5MywtNj
+eyJoaXN0b3J5IjpbMTk5MzY5OTk5MSwtMTIzNTAyMjc5MywtNj
 U3MTY5NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2MTY0
 MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMT
 Q1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1
