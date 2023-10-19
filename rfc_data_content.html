@@ -137,15 +137,15 @@
 <li><strong>ASDF Core</strong>
 <ul>
 <li>[REQUIRED] <strong>Waveforms</strong></li>
-<li><strong>Catalog</strong></li>
-<li><strong>Inventory/System</strong> [REQUIRED]</li>
+<li>[REQUIRED FOR EVENT DATA, NOT INCLUDED FOR CONTINUOUS DATA] <strong>Catalog</strong></li>
+<li>[REQUIRED] <strong>Inventory/System</strong></li>
 </ul></li>
 <li><strong>ASDF Auxiliary</strong>
 <ul>
-<li><strong>System Information</strong> — important system information not included in the StationXML</li>
-<li><strong>Ray and Ray Parameters</strong> — from ray tracing</li>
-<li><strong>Point Cloud Data</strong> — from Montecarlo or Jacknife analyses</li>
-<li><strong>Lookup Table for Event Type Conversion</strong> — as described later in the document we suggest a mapping between the event type prescribed by the QuakeML standardard ant the event types encoutered in mining.</li>
+<li>[REQUIRED] <strong>System Information</strong> — important system information not included in the StationXML</li>
+<li>[REQUIRED/READ ONLY] <strong>Lookup Table for Event Type Conversion</strong> — as described later in the document we suggest a mapping between the event type prescribed by the QuakeML standardard ant the event types encoutered in mining.</li>
+<li>[OPTIONAL] <strong>Ray and Ray Parameters</strong> — from ray tracing</li>
+<li>[OPTIONAL] <strong>Point Cloud Data</strong> — from Montecarlo or Jacknife analyses</li>
 </ul></li>
 <li><strong>Grids</strong> [NOT INCLUDED, SEPARATE FILE] — suited for velocity, velocity derivatives (e.g., slowness) attenuation and density</li>
 </ul>
@@ -466,7 +466,7 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1Mzc3NDc5MiwtMTIzNTAyMjc5MywtNj
+eyJoaXN0b3J5IjpbMjAyMzI0OTE4OCwtMTIzNTAyMjc5MywtNj
 U3MTY5NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2MTY0
 MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMT
 Q1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1
