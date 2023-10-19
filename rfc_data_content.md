@@ -41,7 +41,7 @@ To ensure interoperability, the information in the provided files must be consis
 
 ### Why `ASDF` format?
 
-The recommendation to use the `ASDF` format for packaging the information came from personnel at the IRIS data center. IRIS now encourages submissions in the `TimeDB` or `ASDF` format. Storing data in `TileDB` requires a database engine, necessitating additional components to be installed alongside the server.
+The Adaptable Seismic Data Format (ASDF) was introduced in response to the need for an efficient and comprehensive format for seismic data storage and retrieval. Developed through collaborative research by experts in the seismology field, ASDF aims to address the complexities associated with managing diverse seismic datasets. The format has been designed with adaptability in mind, ensuring both ease of use and interoperability across various platforms. As a result of its well-structured architecture, ASDF has gained widespread acceptance within the seismology community. 
 
 The `ASDF` format was designed to efficiently store and access large-scale array-oriented scientific data. Its design addresses the challenges posed by cloud and distributed storage, allowing for concurrent reads and writes. The format shines in scenarios where data needs to be analyzed in chunks without loading the entire dataset into memory, making it particularly apt for multidimensional arrays. With built-in support for compression and chunking, ASDF facilitates rapid data access regardless of the storage backend, whether it's file systems, object storage, or databases.
 
@@ -438,11 +438,11 @@ Thank you for taking the time to review this RFC and for your contributions towa
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NDQ5NTYzMiwtNjQyMjE4MTIzLDk4Nj
-k1MTY3NiwtMTI4ODEzMTY5LC0zODk0MzU5OTMsLTc1NDM3MTgx
-OSwtMTk4NzA0MzA5OSwtMTk0NTcyNzg1OCwtMzEyMDI4MjM4LD
-Q2MzY4NDQ5NywtMTYxNjE3MzU4MiwxMDQ0NDA1MTU0LC0xNjQ1
-OTE3MDk0LDg0MDE0NTA1OSwtMTQzMTg5MDM5MywtMTE3NzIyNz
-k0NywxMDgxMDE3NjY2LDExMjQxMTQxOTMsLTcxMjQxOTE5MSwx
-NTQ2MjI3MTkyXX0=
+eyJoaXN0b3J5IjpbMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLTY0Mj
+IxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1OTkz
+LC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NTgsLT
+MxMjAyODIzOCw0NjM2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0NDQw
+NTE1NCwtMTY0NTkxNzA5NCw4NDAxNDUwNTksLTE0MzE4OTAzOT
+MsLTExNzcyMjc5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03
+MTI0MTkxOTFdfQ==
 -->
