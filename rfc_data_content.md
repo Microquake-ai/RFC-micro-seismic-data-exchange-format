@@ -150,7 +150,7 @@ In this section we will conver four types of data:
 - **Ray and Ray Parameters** &mdash; from ray tracing
 - **Point Cloud Data** &mdash; from Montecarlo or Jacknife analyses
 
-We made the explicit choice to use the QuakeML and StationXML for **catalogue** and **inventory** information to ensure compatibility with existing tools and software. This approach has advantages and disadvantages. The main advantage being that the format can be used as is and remain compatible with widely adopted tools. The main disadvantages is that Another option would be to redefine those file format to fully adapt them to microseismic monitoring. 
+We made the explicit choice to use the QuakeML and StationXML for **catalogue** and **inventory** information to ensure compatibility with existing tools and software. This approach has advantages and disadvantages. The main advantage being that the format can be used as is and remain compatible with widely adopted tools. The main disadvantages is that the interpretation of the file content requires additional processing and cosideration. 
 
 ### Waveform Data
 
@@ -424,11 +424,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3MzEwOTY4MCw3NTY1OTE5MDksNjIxNj
-E2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywt
-MjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMT
-I0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2
-MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMz
-g5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3
-Mjc4NThdfQ==
+eyJoaXN0b3J5IjpbLTE0NTA3NzY3NDMsNzU2NTkxOTA5LDYyMT
+YxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMs
+LTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMT
+EyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1
+NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLT
+M4OTQzNTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1
+NzI3ODU4XX0=
 -->
