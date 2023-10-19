@@ -278,7 +278,7 @@
 <li><p><strong>Use of a Grid for Velocity Models</strong>: Seismic data interpretation largely hinges on the accuracy and clarity of velocity models. The industry trend has shifted towards grid representations of these models due to their higher precision and ease of use. Implementing a standard grid format for data exchange promotes interoperability and standardization across systems and tools.</p></li>
 <li><p><strong>Introduction of the <code>uquake</code> Library</strong>: The seismic domain has various software libraries that cater to specific needs. The choice of <code>uquake</code> was driven by its capabilities to manage the proposed data structures efficiently and its extensibility to cater to future modifications. By embedding support for the newly proposed data structures directly within <code>uquake</code>, users can expect a seamless experience and avoid the complexities associated with multi-tool workflows.</p></li>
 <li><p><strong>Latitude and Longitude to X, Y, Z Conversion</strong>: Given that most mining operations work on local coordinate systems rather than global ones, expressing positions in terms of x, y, and z becomes not just convenient, but also essential. This shift eliminates the need for complex transformations and ensures data is immediately useful for local operations and analysis.</p></li>
-<li><p><strong>Choice of Data Packaging Formats</strong>: The proposal to utilize <code>Zarr</code> for packaging catalog information and waveform data, and the native XML format for QuakeML, was driven by their respective capabilities and industry adoption. <code>Zarr</code> offers efficient storage and retrieval mechanisms, especially for large datasets, while the native XML format ensures compatibility with systems traditionally designed to handle QuakeML.</p></li>
+<li><p><strong>Choice of Data Packaging Formats</strong>: The proposal to utilize ASDF for packaging catalog information and waveform data, and the native XML format for QuakeML, was driven by their respective capabilities and industry adoption. ASDF offers efficient storage and retrieval mechanisms, especially for large datasets, while the native XML format ensures compatibility with systems traditionally designed to handle QuakeML.</p></li>
 </ol>
 <p>In summary, the proposed changes and implementations in this RFC stem from a direct need to address the unique challenges posed by μseismic monitoring, especially in mining contexts. They reflect both the evolution of seismic data interpretation methodologies and the tools used in the industry. Through these proposals, we aim to establish a more streamlined, precise, and standardized approach to μseismic data management and interpretation.</p>
 <h3 id="feedback-mechanism">Feedback Mechanism</h3>
@@ -304,7 +304,7 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1NzQzMTUzMiwxNDI5MTkyOTI2LDI5MT
+eyJoaXN0b3J5IjpbMTQ1NTI3MzYxMCwxNDI5MTkyOTI2LDI5MT
 Y4OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2
 LC0xMjg4MTMxNjksLTM4OTQzNTk5MywtNzU0MzcxODE5LC0xOT
 g3MDQzMDk5LC0xOTQ1NzI3ODU4LC0zMTIwMjgyMzgsNDYzNjg0
