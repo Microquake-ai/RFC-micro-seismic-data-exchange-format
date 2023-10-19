@@ -184,7 +184,7 @@ In this section we will cover a series of data types some are to be included as 
 - **Grids** [NOT INCLUDED, SEPARATE FILE] &mdash; suited for velocity, velocity derivatives (e.g., slowness) attenuation, density, and travel times.
 
 ASDF Data Structure Overview
-```matematica
+```css
 ASDF File
 |
 └─── Waveforms
@@ -442,10 +442,15 @@ For efficient microseismic monitoring and analysis, the inclusion of ray tracing
 -   Within the `AuxiliaryData` section of the ASDF file, we introduce a dedicated `Rays` directory.
 -   Individual rays are uniquely identified by a unique `resource_id` and each has its own sub-directory under `Rays` and adopt a naming convention linking them to the an instrument using the `network`, `station` and `channel` codes.
 
+Within the `AuxiliaryData` section of an ASDF file, we store comprehensive ray information. This data is structured hierarchically, enabling organized storage and efficient retrieval of ray details pertaining to specific seismic events, origin and arrival.
+
+#### Structure Overview:
+
 ```mathematica
 `AuxiliaryData
 │
 └─── Ray
+	
      └─── Origin [origin ResourceIdentifier]
 	      └─── Arrival [arrival ResourceIdentifier]
 	           |  network
@@ -623,11 +628,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM5NzYzNTc0LDEyMDY4NzM2MzcsMTM5ND
-Q2OTY2NiwxMDc0MDA5Mzc4LDIwMjMyNDkxODgsLTEyMzUwMjI3
-OTMsLTY1NzE2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5MDksNj
-IxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAx
-MywtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC
-0xMTI0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0
-OTU2MzJdfQ==
+eyJoaXN0b3J5IjpbLTg3NjE5NTU1OSw0Mzk3NjM1NzQsMTIwNj
+g3MzYzNywxMzk0NDY5NjY2LDEwNzQwMDkzNzgsMjAyMzI0OTE4
+OCwtMTIzNTAyMjc5MywtNjU3MTY5NDc2LC0xNDUwNzc2NzQzLD
+c1NjU5MTkwOSw2MjE2MTY0MDEsMTgxMDY2ODUzNiw3MTk2MzMw
+OTUsMTMzOTM1MDEzLC0yMTQ1NDg1NDIxLC0xODczNjQyODI0LC
+04MDM0MTc0ODQsLTExMjQ1OTk5MzksMTQyOTE5MjkyNiwyOTE2
+ODkxMzZdfQ==
 -->
