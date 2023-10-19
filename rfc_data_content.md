@@ -146,9 +146,9 @@ In this section we will conver four types of data:
 - **Waveforms**
 - **Catalog**
 - **Inventory/System**
-- **Grids**
+- **Grids** &mdash; suited for velocity, velocity derivatives (e.g., slowness) attenuation and density
 - **Ray and Ray Parameters** &mdash; from ray tracing
-- **Point Cloud Data** &mdash; from Montecarlo or J
+- **Point Cloud Data** &mdash; from Montecarlo or Jacknife analyses
 
 ### Waveform Data
 
@@ -423,11 +423,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4NjgyODA5LDc1NjU5MTkwOSw2MjE2MT
-Y0MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0y
-MTQ1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMj
-Q1OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYz
-MiwtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zOD
-k0MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMTk0NTcy
-Nzg1OF19
+eyJoaXN0b3J5IjpbLTEyMDA1ODE2OSw3NTY1OTE5MDksNjIxNj
+E2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywt
+MjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMT
+I0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2
+MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMz
+g5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3
+Mjc4NThdfQ==
 -->
