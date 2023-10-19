@@ -107,23 +107,8 @@
 <li><p><strong>Versatile Data Type Support</strong>: Beyond seismograms, ASDF is adept at accommodating diverse data types prevalent in seismology. Whether it’s spectral estimations, cross-correlations, adjoint sources, receiver functions, or other data types, ASDF ensures organized, self-describing storage. This versatility ensures that seismologists can maintain a consistent data storage paradigm across various facets of their research.</p></li>
 </ol>
 <p>This format is particularly suited to meet the requirements of tomorrow.</p>
-<h3 id="data-format-and-adaptation">Data Format and Adaptation</h3>
-<p>The key is to ensure consistencies between the data and information to allow efficient cross-referencing, retrieval and usage.</p>
-<p>In this section we will conver four types of data:</p>
-<ul>
-<li><strong>Waveforms</strong></li>
-<li><strong>Catalog</strong></li>
-<li><strong>Inventory/System</strong></li>
-<li><strong>Grids</strong> — suited for velocity, velocity derivatives (e.g., slowness) attenuation and density</li>
-<li><strong>Ray and Ray Parameters</strong> — from ray tracing</li>
-<li><strong>Point Cloud Data</strong> — from Montecarlo or Jacknife analyses</li>
-<li><strong>Lookup Table for Event Type Conversion</strong> — as described later in the document we suggest a mapping between the event type prescribed by the QuakeML standardard ant the event types encoutered in mining.</li>
-</ul>
-<p>We made the explicit choice to use the QuakeML and StationXML for <strong>catalog</strong> and <strong>inventory</strong> information, aligning with prevailing standards in the seismic community. The principal advantage of this decision is the assured compatibility with a multitude of existing tools and software in the seismic domain. Furthermore, both QuakeML and StationXML are inherently flexible and adaptable. These formats not only offer comprehensive sets of parameters to detail seismic events and station metadata, but they are also designed to accommodate custom parameters and extensions. This flexibility has been instrumental in our initiative. We’ve leveraged the extensibility of these formats to incorporate specialized μseismic parameters or attributes, ensuring that QuakeML and StationXML are tailored to address the unique nuances and requirements of microseismic monitoring. This adaptation ensures that the data format remains both relevant to the broader seismic community and aptly suited for microseismic applications.</p>
-<p>However, like all choices, leveraging these formats comes with its challenges. While their use ensures widespread compatibility, the interpretation of file content may require nuanced processing and considerations. Some adaptations might be essential to cater specifically to the μseismic monitoring context, possibly involving the addition of auxiliary fields or annotations. The goal, throughout these modifications, remains to balance ease-of-use with the specificity required for μseismic data, ensuring that users can maximize the value derived from the data while minimizing the overhead of adaptations and interpretations.</p>
-<h3 id="waveform-data">Waveform Data</h3>
-<p>The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of <span class="math inline"><em>m</em></span>, <span class="math inline"><em>m</em>/<em>s</em></span>​, or <span class="math inline"><em>m</em>/<em>s</em><sup>2</sup></span> for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC counts as integers is more suitable. Storing the ADC count as integers allows for the more efficient use of compression algorithm and will allow the data to be more compact.</p>
-<p>Alongside the amplitude values, additional metadata describing the instrument recording the data and time series parameters should be provided for each trace. Each trace should be stored with its own metadata information.</p>
+<h2 id="naming-convention">Naming Convention</h2>
+<p>To enable effortless cross referecing between the f</p>
 <p>The required metadata for each trace includes:</p>
 <ul>
 <li><strong>Trace Identifier</strong>: A unique identifier for the trace (see Obspy <a href="https://docs.obspy.org/master/packages/autogen/obspy.core.event.resourceid.ResourceIdentifier.html">documentation</a> for information on the recommended <em>resource identifier</em> structure). The trace identifier format and convention should be normalized and align with the SEED naming convention including the standard part. Deviation regarding the naming shall, howerver, be permitted to allow longer names to be utilized.<br />
@@ -148,6 +133,23 @@
 <li><strong>Station Code</strong>: We recommend associating the station code to an instrument or a group of instrument. The Station code should convey relevant information on the sensor location and provide context to the seismic system stakeholders. An example for an adequate station code, given an instrument is installed along the Haulage Level Access Drive 2, would be HLAD2.</li>
 <li><strong>Location Code</strong>: If the Station Code refers to a group of instruments, for instance, instruments installed in a long borehole, connected to the same acquisition station, the location code can be used to differentiate the instrument within the group. The location code should be kept short. It can simply be a number converying the relative order or in the case of a borehole installation, a measure of the location along the hole.</li>
 </ul>
+<h3 id="data-format-and-adaptation">Data Format and Adaptation</h3>
+<p>The key is to ensure consistencies between the data and information to allow efficient cross-referencing, retrieval and usage.</p>
+<p>In this section we will conver four types of data:</p>
+<ul>
+<li><strong>Waveforms</strong></li>
+<li><strong>Catalog</strong></li>
+<li><strong>Inventory/System</strong></li>
+<li><strong>Grids</strong> — suited for velocity, velocity derivatives (e.g., slowness) attenuation and density</li>
+<li><strong>Ray and Ray Parameters</strong> — from ray tracing</li>
+<li><strong>Point Cloud Data</strong> — from Montecarlo or Jacknife analyses</li>
+<li><strong>Lookup Table for Event Type Conversion</strong> — as described later in the document we suggest a mapping between the event type prescribed by the QuakeML standardard ant the event types encoutered in mining.</li>
+</ul>
+<p>We made the explicit choice to use the QuakeML and StationXML for <strong>catalog</strong> and <strong>inventory</strong> information, aligning with prevailing standards in the seismic community. The principal advantage of this decision is the assured compatibility with a multitude of existing tools and software in the seismic domain. Furthermore, both QuakeML and StationXML are inherently flexible and adaptable. These formats not only offer comprehensive sets of parameters to detail seismic events and station metadata, but they are also designed to accommodate custom parameters and extensions. This flexibility has been instrumental in our initiative. We’ve leveraged the extensibility of these formats to incorporate specialized μseismic parameters or attributes, ensuring that QuakeML and StationXML are tailored to address the unique nuances and requirements of microseismic monitoring. This adaptation ensures that the data format remains both relevant to the broader seismic community and aptly suited for microseismic applications.</p>
+<p>However, like all choices, leveraging these formats comes with its challenges. While their use ensures widespread compatibility, the interpretation of file content may require nuanced processing and considerations. Some adaptations might be essential to cater specifically to the μseismic monitoring context, possibly involving the addition of auxiliary fields or annotations. The goal, throughout these modifications, remains to balance ease-of-use with the specificity required for μseismic data, ensuring that users can maximize the value derived from the data while minimizing the overhead of adaptations and interpretations.</p>
+<h3 id="waveform-data">Waveform Data</h3>
+<p>The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of <span class="math inline"><em>m</em></span>, <span class="math inline"><em>m</em>/<em>s</em></span>​, or <span class="math inline"><em>m</em>/<em>s</em><sup>2</sup></span> for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC counts as integers is more suitable. Storing the ADC count as integers allows for the more efficient use of compression algorithm and will allow the data to be more compact.</p>
+<p>Alongside the amplitude values, additional metadata describing the instrument recording the data and time series parameters should be provided for each trace. Each trace should be stored with its own metadata information.</p>
 <h3 id="catalog">Catalog</h3>
 <p>The catalog includes information related to an event, a trigger, or a series of events. We suggest storing the catalog information in a QuakeML-like format adapted to μseismic data (see QuakeML <a href="https://quake.ethz.ch/quakeml">documentation</a>). The suggested changes affect the following QuakeML objects:</p>
 <ul>
@@ -448,11 +450,11 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgyOTY5NjkzLC0xMjM1MDIyNzkzLC02NT
-cxNjk0NzYsLTE0NTA3NzY3NDMsNzU2NTkxOTA5LDYyMTYxNjQw
-MSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMsLTIxND
-U0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5
-OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC
-02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OTQz
-NTk5M119
+eyJoaXN0b3J5IjpbMTYxMDc4Njc5MCwtMTIzNTAyMjc5MywtNj
+U3MTY5NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2MTY0
+MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMT
+Q1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1
+OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMi
+wtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zODk0
+MzU5OTNdfQ==
 -->
