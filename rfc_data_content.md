@@ -306,9 +306,7 @@ The `SystemInfo` directory will house the following attributes:
 
 ### Data Structure Inside ASDF for SystemInfo
 
-Within an ASDF file, the `AuxiliaryData` section can have various directories, and one such directory could be `SystemInfo`.
-
-Inside `SystemInfo`, each attribute (like `Country`, `TimeZone`, `Latitude`, etc.) can be a dataset. Datasets in HDF5 (and thus ASDF) are essentially multidimensional arrays of data elements, accompanied by metadata. For many of our attributes, these datasets would just be single values (like a single string for `Country`), but the structure allows for more complex data if needed.
+Inside `SystemInfo`, each attribute (like `country`, `time_zone`, `latitude`, etc.) are a dataset. Datasets in HDF5 (and thus ASDF) are essentially multidimensional arrays of data elements, accompanied by metadata. For many of our attributes, these datasets would just be single values (like a single string for `country`), but the structure allows for more complex data if needed.
 
 For example:
 
@@ -353,7 +351,7 @@ For reading the `SystemInfo`:
 import pyasdf
 
 with pyasdf.ASDFDataSet("path_to_asdf_file.asdf") as ds:
-    country = ds.auxiliary_data.system_iInfo.country[:]
+    country = ds.auxiliary_data.SystemInfo.country[:]
     timezone = ds.auxiliary_data.SystemInfo.TimeZone[:]
     latitude = ds.auxiliary_data.SystemInfo.Latitude[:]
     longitude = ds.auxiliary_data.SystemInfo.Longitude[:]
@@ -580,7 +578,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNDkwMjcwMiwxMDc0MDA5Mzc4LDIwMj
+eyJoaXN0b3J5IjpbMTM5NDQ2OTY2NiwxMDc0MDA5Mzc4LDIwMj
 MyNDkxODgsLTEyMzUwMjI3OTMsLTY1NzE2OTQ3NiwtMTQ1MDc3
 Njc0Myw3NTY1OTE5MDksNjIxNjE2NDAxLDE4MTA2Njg1MzYsNz
 E5NjMzMDk1LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0
