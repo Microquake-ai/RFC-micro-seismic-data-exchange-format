@@ -61,7 +61,7 @@ The benefits of using the `ASDF` format become particularly evident when conside
 
 ### Waveform Data
 
-The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of m, ��sm​, or �/�2m/s2 for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC count is more suitable. Storing the ADC count as integers allows for the use of the Steim1 and Steim2 differential compression algorithms.
+The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of $m$, $m/s$​, or $m/s^2$ for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC count is more suitable. Storing the ADC count as integers allows for the use of the Steim1 and Steim2 differential compression algorithms.
 
 Alongside the amplitude values, additional metadata describing the instrument recording the data and time series parameters should be provided for each trace. Each trace should be stored with its own metadata information.
 
@@ -83,7 +83,7 @@ The required metadata for each trace includes:
 
 #### Waveform Data Packaging
 
-##### Zarr
+##### ASDF
 
 The IRIS DMC recommends using the `Zarr` formats (or TileDB) over the `HDF5` based formats, such as the `ASDF` format. The `Zarr` format can be conveniently used to store waveform data. We strongly encourage adhering to the naming convention presented in the previous section, giving each component a unique name composed as `network_code.station_code.location_code.channel_code`.
 
@@ -438,11 +438,11 @@ Thank you for taking the time to review this RFC and for your contributions towa
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjE0NDg3MzUsLTY0MjIxODEyMyw5OD
-Y5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1OTkzLC03NTQzNzE4
-MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NTgsLTMxMjAyODIzOC
-w0NjM2ODQ0OTcsLTE2MTYxNzM1ODIsMTA0NDQwNTE1NCwtMTY0
-NTkxNzA5NCw4NDAxNDUwNTksLTE0MzE4OTAzOTMsLTExNzcyMj
-c5NDcsMTA4MTAxNzY2NiwxMTI0MTE0MTkzLC03MTI0MTkxOTEs
-MTU0NjIyNzE5Ml19
+eyJoaXN0b3J5IjpbMTk5NDQ5NTYzMiwtNjQyMjE4MTIzLDk4Nj
+k1MTY3NiwtMTI4ODEzMTY5LC0zODk0MzU5OTMsLTc1NDM3MTgx
+OSwtMTk4NzA0MzA5OSwtMTk0NTcyNzg1OCwtMzEyMDI4MjM4LD
+Q2MzY4NDQ5NywtMTYxNjE3MzU4MiwxMDQ0NDA1MTU0LC0xNjQ1
+OTE3MDk0LDg0MDE0NTA1OSwtMTQzMTg5MDM5MywtMTE3NzIyNz
+k0NywxMDgxMDE3NjY2LDExMjQxMTQxOTMsLTcxMjQxOTE5MSwx
+NTQ2MjI3MTkyXX0=
 -->
