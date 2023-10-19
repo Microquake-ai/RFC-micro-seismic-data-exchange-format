@@ -149,7 +149,7 @@ In this section we will conver four types of data:
 - **Grids** &mdash; suited for velocity, velocity derivatives (e.g., slowness) attenuation and density
 - **Ray and Ray Parameters** &mdash; from ray tracing
 - **Point Cloud Data** &mdash; from Montecarlo or Jacknife analyses
--  **Lookup Table for Event Type Conversion**  &mdash; as described later in the document we suggest a mapp
+-  **Lookup Table for Event Type Conversion**  &mdash; as described later in the document we suggest a mapping between the event type prescribed by the QuakeML standardard ant the event types encoutered in mining.
 
 We made the explicit choice to use the QuakeML and StationXML for **catalog** and **inventory** information, aligning with prevailing standards in the seismic community. The principal advantage of this decision is the assured compatibility with a multitude of existing tools and software in the seismic domain. Furthermore, both QuakeML and StationXML are inherently flexible and adaptable. These formats not only offer comprehensive sets of parameters to detail seismic events and station metadata, but they are also designed to accommodate custom parameters and extensions. This flexibility has been instrumental in our initiative. We've leveraged the extensibility of these formats to incorporate specialized μseismic parameters or attributes, ensuring that QuakeML and StationXML are tailored to address the unique nuances and requirements of microseismic monitoring. This adaptation ensures that the data format remains both relevant to the broader seismic community and aptly suited for microseismic applications.
 
@@ -233,7 +233,7 @@ There are two approaches to modifying the event types:
 
 The above mapping is implemented in the μQuake library.
 
-#### Origin — Coordinate System
+#### Origin &mdash; Coordinate System
 
 The QuakeML format was designed to store seismic data at a regional and global scale. Consequently, the QuakeML format has adopted a spherical coordinate system, storing location information in latitude and longitude.
 
@@ -241,7 +241,7 @@ Using latitude and longitude to describe mining-related events is possible but n
 
 The μQuake implementation exploits the QuakeML extra parameters to store the x, y, and z values and associated errors.
 
-#### Magnitude — Corner Frequency, and Energy
+#### Magnitude &mdash; Corner Frequency, and Energy
 
 The QuakeML standard does not include objects suited to store the corner frequency. The energy could be stored in the amplitude or station_magnitude object. However, this isn't convenient, as it's preferable for the magnitude and energy information to be used in tandem.
 
@@ -427,7 +427,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2MDg1MzM2NSwtMTQ1MDc3Njc0Myw3NT
+eyJoaXN0b3J5IjpbLTIwMzI3MTE0NSwtMTQ1MDc3Njc0Myw3NT
 Y1OTE5MDksNjIxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1
 LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtOD
 AzNDE3NDg0LC0xMTI0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5
