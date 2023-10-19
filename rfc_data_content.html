@@ -130,7 +130,7 @@
 <li><strong>Station Code</strong>: We recommend associating the station code to an instrument or a group of instrument. The Station code should convey relevant information on the sensor location and provide context to the seismic system stakeholders. An example for an adequate station code, given an instrument is installed along the Haulage Level Access Drive 2, would be HLAD2.</li>
 <li><strong>Location Code</strong>: If the Station Code refers to a group of instruments, for instance, instruments installed in a long borehole, connected to the same acquisition station, the location code can be used to differentiate the instrument within the group. The location code should be kept short. It can simply be a number converying the relative order or in the case of a borehole installation, a measure of the location along the hole.</li>
 </ul>
-<h3 id="data-format-and-adaptation">Data Format and Adaptation</h3>
+<h2 id="data-format-and-adaptation">Data Format and Adaptation</h2>
 <p>The key is to ensure consistencies between the data and information to allow efficient cross-referencing, retrieval and usage.</p>
 <p>In this section we will conver a series of data types some are to be included as part of the ASDF file some provided as additional files:</p>
 <ul>
@@ -151,7 +151,8 @@
 </ul>
 <p>We made the explicit choice to use the QuakeML and StationXML for <strong>catalog</strong> and <strong>inventory</strong> information, aligning with prevailing standards in the seismic community. The principal advantage of this decision is the assured compatibility with a multitude of existing tools and software in the seismic domain. Furthermore, both QuakeML and StationXML are inherently flexible and adaptable. These formats not only offer comprehensive sets of parameters to detail seismic events and station metadata, but they are also designed to accommodate custom parameters and extensions. This flexibility has been instrumental in our initiative. We’ve leveraged the extensibility of these formats to incorporate specialized μseismic parameters or attributes, ensuring that QuakeML and StationXML are tailored to address the unique nuances and requirements of microseismic monitoring. This adaptation ensures that the data format remains both relevant to the broader seismic community and aptly suited for microseismic applications.</p>
 <p>However, like all choices, leveraging these formats comes with its challenges. While their use ensures widespread compatibility, the interpretation of file content may require nuanced processing and considerations. Some adaptations might be essential to cater specifically to the μseismic monitoring context, possibly involving the addition of auxiliary fields or annotations. The goal, throughout these modifications, remains to balance ease-of-use with the specificity required for μseismic data, ensuring that users can maximize the value derived from the data while minimizing the overhead of adaptations and interpretations.</p>
-<h3 id="waveform-data">Waveform Data</h3>
+<h3 id="asdf-core">ASDF Core</h3>
+<h4 id="waveform-data">Waveform Data</h4>
 <p>The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of <span class="math inline"><em>m</em></span>, <span class="math inline"><em>m</em>/<em>s</em></span>​, or <span class="math inline"><em>m</em>/<em>s</em><sup>2</sup></span> for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC counts as integers is more suitable. Storing the ADC count as integers allows for the more efficient use of compression algorithm and will allow the data to be more compact.</p>
 <p>Alongside the amplitude values, additional metadata describing the instrument recording the data and time series parameters should be provided for each trace. Each trace should be stored with its own metadata information adopting the convention described in the previous section.</p>
 <p>In addition to the trace identification information the following metadata must be present and accurately described the timeserie parameters</p>
@@ -166,19 +167,14 @@
 <li><strong>Sampling Interval [<code>delta</code>]</strong> — sample distance in seconds. Computed as the inverse of the sampling_rate (<code>1/sampling_rate</code>).</li>
 <li><strong>End Time [<code>endtime</code>]</strong> — Date and time of the last data sample given in UTC <code>endtime = startime + npts * delta</code></li>
 </ul>
-<h3 id="catalog">Catalog</h3>
+<h4 id="catalog">Catalog</h4>
 <p>The catalog includes information related to an event, a trigger, or a series of events. We suggest storing the catalog information in a QuakeML-like format adapted to μseismic data (see QuakeML <a href="https://quake.ethz.ch/quakeml">documentation</a>). The suggested changes affect the following QuakeML objects:</p>
 <ul>
 <li><strong>Event</strong> — The event_type field is restricted to specific values that are not suited for μseismic monitoring.</li>
 <li><strong>Origin</strong> — The position is expressed in latitude and longitude. This will need to be changed to x, y, and z.</li>
 <li><strong>Magnitude</strong> — The magnitude object would benefit from adding fields to store the corner frequency, as well as P-wave and S-wave Energy. This allows for a broad range of source parameters to be computed on the fly, rather than stored in the magnitude object. This approach is typically used in mine seismology.</li>
 </ul>
-<h4 id="event-event-type">Event — Event Type</h4>
-<p>There are two approaches to modifying the event types:</p>
-<ol type="1">
-<li>Redefine the schema and allow for event types related to mining to be stored in a μQuakeML file; and</li>
-<li>Map each μseismic type to an existing QuakeML event type.</li>
-</ol>
+<p>To kee</p>
 <table>
 <thead>
 <tr class="header">
@@ -490,11 +486,11 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTAxMTgxMDcyLDIwMjMyNDkxODgsLTEyMz
-UwMjI3OTMsLTY1NzE2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5
-MDksNjIxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMz
-kzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3
-NDg0LC0xMTI0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LD
-E5OTQ0OTU2MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgx
-MzE2OV19
+eyJoaXN0b3J5IjpbLTYzNDI3MzU1MywyMDIzMjQ5MTg4LC0xMj
+M1MDIyNzkzLC02NTcxNjk0NzYsLTE0NTA3NzY3NDMsNzU2NTkx
+OTA5LDYyMTYxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMz
+M5MzUwMTMsLTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQx
+NzQ4NCwtMTEyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNi
+wxOTk0NDk1NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4
+MTMxNjldfQ==
 -->
