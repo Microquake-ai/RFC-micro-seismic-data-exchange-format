@@ -47,8 +47,31 @@ To this end, this proposal seeks to:
     
 -   **Facilitate Innovation**: With a consistent, standardized foundation in place, researchers, developers, and industry professionals will be better poised to innovate, iterate, and develop new tools, methodologies, and solutions that harness the full potential of microseismic data.
     
+In summary, the goal is to provide a robust framework that not only addresses the present challenges posed by varied data formats but also anticipates and caters to the evolving needs of the microseismic monitoring industry. Through this proposed standard, we endeavor to usher in an era of streamlined data access, management, and exchange that can truly capitalize on the advancements in microseismic monitoring technology.
 
-In sum, the goal is to provide a robust framework that not only addresses the present challenges posed by varied data formats but also anticipates and caters to the evolving needs of the microseismic monitoring industry. Through this proposed standard, we endeavor to usher in an era of streamlined data access, management, and exchange that can truly capitalize on the advancements in microseismic monitoring technology.
+### RFC Process and Schedule
+
+#### Process:
+
+1.  **Drafting**: Development of the initial RFC document.
+2.  **Publication**: Making the RFC available for a wider audience for review and comment.
+3.  **Review**: A period of review where stakeholders provide feedback.
+4.  **Revision**: Updates to the RFC based on feedback received.
+5.  **Final Comment Period**: A last opportunity for feedback before a decision is made.
+6.  **Decision**: Formal decision on the adoption of the RFC.
+7.  **Publication**: If accepted, the RFC is officially published.
+8.  **Implementation**: Introduction of the recommended practices or standards from the RFC.
+9.  **Review Cycle**: Periodic reviews of the RFC's effectiveness post-implementation.
+
+#### Schedule:
+
+-   **Drafting and Initial Publication**: [Start Date] - [End Date]
+-   **Review**: [Start Date] - [End Date]
+-   **Revision**: [Start Date] - [End Date]
+-   **Final Comment Period**: [Start Date] - [End Date]
+-   **Decision**: [Specific Date]
+-   **Official Publication**: [Specific Date]
+-   **Implementation and Review Cycle**: [Start Date] and onward, with periodic reviews every [specific time frame, e.g., "6 months"].
 
 ## Proposal
 
@@ -380,7 +403,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MjY1ODI3OCw2MjE2MTY0MDEsMTgxMD
+eyJoaXN0b3J5IjpbLTE2MzE2NDUxOSw2MjE2MTY0MDEsMTgxMD
 Y2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMTQ1NDg1NDIx
 LC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1OTk5MzksMT
 QyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMiwtNjQyMjE4
