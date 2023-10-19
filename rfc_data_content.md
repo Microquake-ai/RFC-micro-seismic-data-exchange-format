@@ -181,27 +181,20 @@ In this section we will cover a series of data types some are to be included as 
   - [OPTIONAL] **Ray and Ray Parameters** &mdash; from ray tracing
   - [OPTIONAL] **Alternative Location** &mdash; from Montecarlo or Jacknife analyses
 
-- **Grids** [NOT INCLUDED, SEPARATE FILE] &mdash; suited for velocity, velocity derivatives (e.g., slowness) attenuation and density
+- **Grids** [NOT INCLUDED, SEPARATE FILE] &mdash; suited for velocity, velocity derivatives (e.g., slowness) attenuation, density, and travel times.
 
 ASDF Data Structure Overview
 ```matematica
 ASDF File
 |
-└───Waveforms
-|
-└───QuakeML
-|
-└───StationXML
-|
-└───AuxiliaryData
-   │
-   └───SystemInfo
-   |
-   └───EventConversionLookup
-   |
-   └───Ray
-   |
-   └───AlternativeLocations   
+└─── Waveforms
+└─── QuakeML
+└─── StationXML
+└─── AuxiliaryData
+   └─── SystemInfo
+   └─── EventConversionLookup
+   └─── Ray
+   └─── AlternativeLocations   
 ```
 
 
@@ -608,11 +601,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwNjg3MzYzNywxMzk0NDY5NjY2LDEwNz
-QwMDkzNzgsMjAyMzI0OTE4OCwtMTIzNTAyMjc5MywtNjU3MTY5
-NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOSw2MjE2MTY0MDEsMT
-gxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMTQ1NDg1
-NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1OTk5Mz
-ksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMiwtNjQy
-MjE4MTIzXX0=
+eyJoaXN0b3J5IjpbLTIxMTkxMDgxNjcsMTIwNjg3MzYzNywxMz
+k0NDY5NjY2LDEwNzQwMDkzNzgsMjAyMzI0OTE4OCwtMTIzNTAy
+Mjc5MywtNjU3MTY5NDc2LC0xNDUwNzc2NzQzLDc1NjU5MTkwOS
+w2MjE2MTY0MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1
+MDEzLC0yMTQ1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0OD
+QsLTExMjQ1OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5
+NDQ5NTYzMl19
 -->
