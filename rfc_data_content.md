@@ -318,11 +318,11 @@ For efficient microseismic monitoring and analysis, the inclusion of ray tracing
 #### Directory Structure:
 
 -   Within the `AuxiliaryData` section of the ASDF file, we introduce a dedicated `Rays` directory.
--   Individual rays are uniquely identified by their `resource_id` and each has its own sub-directory under `Rays` and adopt a naming convention linking them to the wave.
+-   Individual rays are uniquely identified by their `resource_id` and each has its own sub-directory under `Rays` and adopt a naming convention linking them to the an instrument using the `network`, `station` and `channel` codes.
 
 #### Ray Attributes:
 
-Each ray's sub-directory will house the following attributes:
+Each ray's sub-directory will include the following attributes:
 
 -   `network_code`: Identifier for the network. Standard naming conventions of seismic networks are to be employed.
 -   `station_code`: Identifier for the station. This aligns with the standard naming conventions employed for seismic stations.
@@ -333,7 +333,7 @@ Each ray's sub-directory will house the following attributes:
 -   `takeoff_angle`: Takeoff angle in degrees.
 -   `travel_time`: Travel time between the seismic source and the recording site in seconds.
 -   `earth_model_id`: A `ResourceIdentifier` representing the velocity model used.
--   `length`: Computed length of the ray.
+-   `length`: Computed length of the ray
 -   `baz`: Computed back azimuth of the ray.
 -   `incidence_angle`: Computed incidence angle of the ray.
 
@@ -485,11 +485,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODg5OTYwNDgsLTEyMzUwMjI3OTMsLT
-Y1NzE2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5MDksNjIxNjE2
-NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMj
-E0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0
-NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2Mz
-IsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5
-NDM1OTkzXX0=
+eyJoaXN0b3J5IjpbNDY4ODYxMzIsLTEyMzUwMjI3OTMsLTY1Nz
+E2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5MDksNjIxNjE2NDAx
+LDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMjE0NT
+Q4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5
+OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLT
+Y0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1
+OTkzXX0=
 -->
