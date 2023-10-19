@@ -35,7 +35,7 @@ The increase in microseismic data, particularly from expansive monitoring system
 
 #### Goal
 
-The primary objective of this RFC is to introduce a proposed data content, packaging format, and naming conventions that foster interoperability, consistency, and innovation in the realm of microseismic monitoring. Recognizing the crucial role that microseismic data plays in the safety and efficiency of underground mining operations, it is important to address the disparities that currently plague the industry in terms of data access and exchange.
+The primary objective of this RFC is to introduce a proposed data content, packaging format, and naming conventions that are aimed at enhancing interoperability, consistency, and innovation within the sphere of microseismic monitoring. As we acknowledge the integral role of microseismic data in underground mining operations' safety and efficiency, this proposal serves as a step forward in harmonizing and optimizing the way in which data is accessed, managed, and exchanged across diverse platforms in the industry.
 
 To this end, this proposal seeks to:
 
@@ -380,11 +380,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTg5MDcxOTksNjIxNjE2NDAxLDE4MT
-A2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywtMjE0NTQ4NTQy
-MSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5OTM5LD
-E0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLTY0MjIx
-ODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1OTkzLC
-03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3Mjc4NTgsLTMx
-MjAyODIzOF19
+eyJoaXN0b3J5IjpbLTU1MjY1ODI3OCw2MjE2MTY0MDEsMTgxMD
+Y2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMTQ1NDg1NDIx
+LC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1OTk5MzksMT
+QyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMiwtNjQyMjE4
+MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zODk0MzU5OTMsLT
+c1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMTk0NTcyNzg1OCwtMzEy
+MDI4MjM4XX0=
 -->
