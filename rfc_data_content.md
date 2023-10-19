@@ -61,7 +61,7 @@ We propose the following RFC process that should lead to the standard adoption. 
 4.  **Revision**: Updates to the RFC based on feedback received.
 5.  **Final Comment Period**: A last opportunity for feedback before a the final standard is published.
 6.  **Adoption**: Adoption of the RFC.
-7.  **Publication**: If adopte, the Standard is officially published.
+7.  **Publication**: If adopted, the Standard is officially published.
 8.  **Implementation**: Introduction of the recommended practices or standards from the RFC.
 9.  **Review Cycle**: Periodic reviews of the RFC's effectiveness post-implementation.
 
@@ -81,7 +81,7 @@ We propose the following RFC process that should lead to the standard adoption. 
     -   **Start**: 2023-04
     -   **End**: 2023-06
  
-5.  **Decision**: This is when a governing body or committee meets to decide on the RFC. This might take a week, considering potential debates or presentations that might be required.   
+5.  **Adoption**: The adoption mechanism has to be determined. There is currently no body governing microseismic monitoring. This might take a week, considering potential debates or presentations that might be required.   
     -   **Date**: 2023-06
     
 6.  **Official Publication**: After finalizing the decision, a week is allocated for any final edits, formatting, and dissemination of the RFC.
@@ -421,11 +421,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM0OTc2NjMsNzU2NTkxOTA5LDYyMTYxNj
-QwMSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMsLTIx
-NDU0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyND
-U5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMy
-LC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OT
-QzNTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3
-ODU4XX0=
+eyJoaXN0b3J5IjpbLTE1NzY2ODE0MzMsNzU2NTkxOTA5LDYyMT
+YxNjQwMSwxODEwNjY4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMs
+LTIxNDU0ODU0MjEsLTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMT
+EyNDU5OTkzOSwxNDI5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1
+NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLT
+M4OTQzNTk5MywtNzU0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1
+NzI3ODU4XX0=
 -->
