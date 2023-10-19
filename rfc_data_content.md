@@ -453,11 +453,12 @@ For efficient microseismic monitoring and analysis, the inclusion of ray tracing
 	           |  location
 	           |  nodes
 	           |  length
+	           |  incidence_vector
 	           |  back_azimuth
 	           |  incidence_angle
 	           |  takeoff_angle
 	           |  azimuth
-	           | 
+	           |  takeoff_vector
 	           
 	     
 ```
@@ -622,7 +623,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg2MDU3OTU0LDEyMDY4NzM2MzcsMTM5ND
+eyJoaXN0b3J5IjpbNDM5NzYzNTc0LDEyMDY4NzM2MzcsMTM5ND
 Q2OTY2NiwxMDc0MDA5Mzc4LDIwMjMyNDkxODgsLTEyMzUwMjI3
 OTMsLTY1NzE2OTQ3NiwtMTQ1MDc3Njc0Myw3NTY1OTE5MDksNj
 IxNjE2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAx
