@@ -209,7 +209,8 @@ Within the context of this RFC, which proposes specific adaptations and formats 
 
 Note that there are alternative libraries addressing the same issues &mu;Quake tackles. The author is, howerver, less familiar with the alternatives. Notable alternatives are
 
-T[Obsplus](https://github.com/niosh-mining/obsplus)
+The Niosh [Obsplus](https://github.com/niosh-mining/obsplus)
+[DASCORE](https://github.com/DASDAE/dascore)
 
 ### Implementation using `uquake`
 
@@ -324,11 +325,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjQzODQ3NTEsLTIxNDU0ODU0MjEsLT
-E4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5OTkzOSwxNDI5
-MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgxMj
-MsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OTQzNTk5MywtNzU0
-MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3ODU4LC0zMTIwMj
-gyMzgsNDYzNjg0NDk3LC0xNjE2MTczNTgyLDEwNDQ0MDUxNTQs
-LTE2NDU5MTcwOTRdfQ==
+eyJoaXN0b3J5IjpbMTMzOTM1MDEzLC0yMTQ1NDg1NDIxLC0xOD
+czNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1OTk5MzksMTQyOTE5
+MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMiwtNjQyMjE4MTIzLD
+k4Njk1MTY3NiwtMTI4ODEzMTY5LC0zODk0MzU5OTMsLTc1NDM3
+MTgxOSwtMTk4NzA0MzA5OSwtMTk0NTcyNzg1OCwtMzEyMDI4Mj
+M4LDQ2MzY4NDQ5NywtMTYxNjE3MzU4MiwxMDQ0NDA1MTU0LC0x
+NjQ1OTE3MDk0XX0=
 -->
