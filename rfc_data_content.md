@@ -3,8 +3,8 @@
 
 ## Introduction
 
-### 
-The purpose of this document is to invite comments on a suggested format to allow for standardized and consistent access to μseismic data collected by mine μseismic systems. This format aims to enable a seamless and lossless exchange between different platforms.
+### Purpose
+The purpose of this document is to invite comments on a suggested format to allow for standardized and consistent access to μseismic data collected by mine μseismic systems. This format aims to enable a seamless and lossless exchange between different platforms. The objective of the proposed standard does not concern how seismic data are internally managed internally within each platform, although the capability of the present format would be suited for that purpose. 
 
 Access to the μseismic data is inconsistent among various vendors, and occasionally within different implementations by the same vendor. Variations arise from site to site, often driven by third-party requirements. Such inconsistencies lead to inefficiencies, complicating the integration of various systems that offer complementary products and services, and making data usage unnecessarily challenging.
 
@@ -365,11 +365,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjIxNjE2NDAxLDE4MTA2Njg1MzYsNzE5Nj
-MzMDk1LDEzMzkzNTAxMywtMjE0NTQ4NTQyMSwtMTg3MzY0Mjgy
-NCwtODAzNDE3NDg0LC0xMTI0NTk5OTM5LDE0MjkxOTI5MjYsMj
-kxNjg5MTM2LDE5OTQ0OTU2MzIsLTY0MjIxODEyMyw5ODY5NTE2
-NzYsLTEyODgxMzE2OSwtMzg5NDM1OTkzLC03NTQzNzE4MTksLT
-E5ODcwNDMwOTksLTE5NDU3Mjc4NTgsLTMxMjAyODIzOCw0NjM2
-ODQ0OTddfQ==
+eyJoaXN0b3J5IjpbLTk0MTk5OTI4Niw2MjE2MTY0MDEsMTgxMD
+Y2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0yMTQ1NDg1NDIx
+LC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMjQ1OTk5MzksMT
+QyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYzMiwtNjQyMjE4
+MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zODk0MzU5OTMsLT
+c1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMTk0NTcyNzg1OCwtMzEy
+MDI4MjM4XX0=
 -->
