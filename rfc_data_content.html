@@ -118,7 +118,7 @@
 <li><strong>Ray and Ray Parameters</strong> — from ray tracing</li>
 <li><strong>Point Cloud Data</strong> — from Montecarlo or Jacknife analyses</li>
 </ul>
-<p>We made the explicit choice to use the QuakeML and StationXML for <strong>catalogue</strong> and <strong>inventory</strong> information to ensure compatibility with existing tools and software. Another option would be to redefine those file for</p>
+<p>We made the explicit choice to use the QuakeML and StationXML for <strong>catalogue</strong> and <strong>inventory</strong> information to ensure compatibility with existing tools and software. This approach has advantages and disadvantages. The main advantage being that the format can be used as is and remain compatible with widely adopted tools. The main disadvantages is that Another option would be to redefine those file format to fully adapt them to microseismic monitoring.</p>
 <h3 id="waveform-data">Waveform Data</h3>
 <p>The waveform data represents the raw vibrations recorded directly by the sensors. For convenience, waveform data can be provided in physical units native to the instrument recording the data of <span class="math inline"><em>m</em></span>, <span class="math inline"><em>m</em>/<em>s</em></span>​, or <span class="math inline"><em>m</em>/<em>s</em><sup>2</sup></span> for displacement, velocity, and acceleration, respectively. However, if size is a concern, storing the ADC counts as integers is more suitable. Storing the ADC count as integers allows for the more efficient use of compression algorithm and will allow the data to be more compact.</p>
 <p>Alongside the amplitude values, additional metadata describing the instrument recording the data and time series parameters should be provided for each trace. Each trace should be stored with its own metadata information.</p>
@@ -399,11 +399,11 @@
 <h2 id="references">References</h2>
 <p>Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., &amp; Tromp, J. (2016). An Adaptable Seismic Data Format. Geophysical Journal International, 207(2), 1003–1011. <a href="https://academic.oup.com/gji/article/207/2/1003/2583765">Link</a></p>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTkxMjAyNzk1LDc1NjU5MTkwOSw2MjE2MT
-Y0MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0y
-MTQ1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMj
-Q1OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYz
-MiwtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zOD
-k0MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMTk0NTcy
-Nzg1OF19
+eyJoaXN0b3J5IjpbLTI3MzEwOTY4MCw3NTY1OTE5MDksNjIxNj
+E2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywt
+MjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMT
+I0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2
+MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMz
+g5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3
+Mjc4NThdfQ==
 -->
