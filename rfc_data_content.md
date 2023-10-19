@@ -271,15 +271,15 @@ This approach simplifies the process of handling gridded data in seismology by u
 
 Understanding the motivations and reasons behind any proposed change is essential to ensure clarity, gain stakeholder buy-in, and ensure the technical merits of the proposal align with the broader goals.
 
-1.  **Adapting QuakeML for μseismic Data**: Traditional QuakeML formats, while robust for standard seismology needs, are not fully suited to address the nuances of μseismic data. The unique requirements of μseismic monitoring, especially in mining contexts, necessitate modifications to the existing format. By making these adjustments, the system becomes more flexible and directly applicable to the μseismic domain, allowing for better data representation and interpretation.
+1. **Choice of Data Packaging Formats**: The decision to employ ASDF for the encapsulation of both catalog information and waveform data, combined with the inherent XML structure for QuakeML, is rooted in their respective proficiencies and widespread acceptance within the industry. ASDF provides an efficient mechanism for storing and fetching data, especially when dealing with substantial datasets. Concurrently, the integral XML structure guarantees interoperability with systems customarily developed for QuakeML processing.
+
+2.  **Adapting QuakeML for μseismic Data**: Traditional QuakeML formats, while robust for standard seismology needs, are not fully suited to address the nuances of μseismic data. The unique requirements of μseismic monitoring, especially in mining contexts, necessitate modifications to the existing format. By making these adjustments, the system becomes more flexible and directly applicable to the μseismic domain, allowing for better data representation and interpretation.
     
-2.  **Use of a Grid for Velocity Models**: Seismic data interpretation largely hinges on the accuracy and clarity of velocity models. The industry trend has shifted towards grid representations of these models due to their higher precision and ease of use. Implementing a standard grid format for data exchange promotes interoperability and standardization across systems and tools.
+3.  **Use of a Grid for Velocity Models**: Seismic data interpretation largely hinges on the accuracy and clarity of velocity models. The industry trend has shifted towards grid representations of these models due to their higher precision and ease of use. Implementing a standard grid format for data exchange promotes interoperability and standardization across systems and tools.
     
-3.  **Introduction of the `uquake` Library**: The seismic domain has various software libraries that cater to specific needs. The choice of `uquake` was driven by its capabilities to manage the proposed data structures efficiently and its extensibility to cater to future modifications. By embedding support for the newly proposed data structures directly within `uquake`, users can expect a seamless experience and avoid the complexities associated with multi-tool workflows.
+4.  **Introduction of the `uquake` Library**: The seismic domain has various software libraries that cater to specific needs. The choice of `uquake` was driven by its capabilities to manage the proposed data structures efficiently and its extensibility to cater to future modifications. By embedding support for the newly proposed data structures directly within `uquake`, users can expect a seamless experience and avoid the complexities associated with multi-tool workflows.
     
-4.  **Latitude and Longitude to X, Y, Z Conversion**: Given that most mining operations work on local coordinate systems rather than global ones, expressing positions in terms of x, y, and z becomes not just convenient, but also essential. This shift eliminates the need for complex transformations and ensures data is immediately useful for local operations and analysis.
-    
-5.  **Choice of Data Packaging Formats**: The proposal to utilize ASDF for packaging catalog information and waveform data, and the native XML format for QuakeML, was driven by their respective capabilities and industry adoption. ASDF offers efficient storage and retrieval mechanisms, especially for large datasets, while the native XML format ensures compatibility with systems traditionally designed to handle QuakeML.
+5.  **Latitude and Longitude to X, Y, Z Conversion**: Given that most mining operations work on local coordinate systems rather than global ones, expressing positions in terms of x, y, and z becomes not just convenient, but also essential. This shift eliminates the need for complex transformations and ensures data is immediately useful for local operations and analysis.
 
 In summary, the proposed changes and implementations in this RFC stem from a direct need to address the unique challenges posed by μseismic monitoring, especially in mining contexts. They reflect both the evolution of seismic data interpretation methodologies and the tools used in the industry. Through these proposals, we aim to establish a more streamlined, precise, and standardized approach to μseismic data management and interpretation.
 
@@ -294,6 +294,7 @@ Feedback and contributions from the community are essential to refining and impr
     -   Click on `New Issue` to create a new issue.
     -   Provide a concise title and detailed description of your feedback, suggestions, or concerns.
     -   Once submitted, the issue will be visible to the community, and the project maintainers will review and address it as appropriate.
+ 
 2.  **Email**:
     
     -   If you prefer a more direct approach or have feedback that you'd like to keep private, you can send an email to [rfc_format@microquake.ai](mailto:rfc_format@microquake.ai).
@@ -317,11 +318,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NTI3MzYxMCwxNDI5MTkyOTI2LDI5MT
-Y4OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgxMjMsOTg2OTUxNjc2
-LC0xMjg4MTMxNjksLTM4OTQzNTk5MywtNzU0MzcxODE5LC0xOT
-g3MDQzMDk5LC0xOTQ1NzI3ODU4LC0zMTIwMjgyMzgsNDYzNjg0
-NDk3LC0xNjE2MTczNTgyLDEwNDQ0MDUxNTQsLTE2NDU5MTcwOT
-QsODQwMTQ1MDU5LC0xNDMxODkwMzkzLC0xMTc3MjI3OTQ3LDEw
-ODEwMTc2NjZdfQ==
+eyJoaXN0b3J5IjpbLTExMjQ1OTk5MzksMTQyOTE5MjkyNiwyOT
+E2ODkxMzYsMTk5NDQ5NTYzMiwtNjQyMjE4MTIzLDk4Njk1MTY3
+NiwtMTI4ODEzMTY5LC0zODk0MzU5OTMsLTc1NDM3MTgxOSwtMT
+k4NzA0MzA5OSwtMTk0NTcyNzg1OCwtMzEyMDI4MjM4LDQ2MzY4
+NDQ5NywtMTYxNjE3MzU4MiwxMDQ0NDA1MTU0LC0xNjQ1OTE3MD
+k0LDg0MDE0NTA1OSwtMTQzMTg5MDM5MywtMTE3NzIyNzk0Nywx
+MDgxMDE3NjY2XX0=
 -->
