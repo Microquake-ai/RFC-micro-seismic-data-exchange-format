@@ -51,6 +51,8 @@ In summary, the goal is to provide a robust framework that not only addresses th
 
 ### RFC Process and Schedule
 
+We propose the following RFC process that should lead to the standard adoption. It is unclear at this time where and by who the standar
+
 #### Process:
 
 1.  **Drafting**: Development of the initial RFC document.
@@ -76,8 +78,8 @@ In summary, the goal is to provide a robust framework that not only addresses th
     -   **End**: 2023-04
    
 4.  **Final Comment Period**: This phase allows stakeholders another chance to review the revised RFC and provide final comments. Two months seems reasonable for this step, given the extended timeline for other phases. 
-    -   **Start**: 2023-03-22
-    -   **End**: 2023-05-22
+    -   **Start**: 2023-04
+    -   **End**: 2023-06
  
 5.  **Decision**: This is when a governing body or committee meets to decide on the RFC. This might take a week, considering potential debates or presentations that might be required.   
     -   **Date**: 2023-06
@@ -419,7 +421,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTE1NTMyNyw3NTY1OTE5MDksNjIxNj
+eyJoaXN0b3J5IjpbMjA4MjM4NTYyNiw3NTY1OTE5MDksNjIxNj
 E2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywt
 MjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMT
 I0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2
