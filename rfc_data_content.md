@@ -65,13 +65,30 @@ In summary, the goal is to provide a robust framework that not only addresses th
 
 #### Schedule:
 
--   **Drafting and Initial Publication**: Initial publication 2023-10-20
--   **Review**: [Start Date] - [End Date]
--   **Revision**: [Start Date] - [End Date]
--   **Final Comment Period**: [Start Date] - [End Date]
--   **Decision**: [Specific Date]
--   **Official Publication**: [Specific Date]
--   **Implementation and Review Cycle**: [Start Date] and onward, with periodic reviews every [specific time frame, e.g., "6 months"].
+-   1.  **Drafting and Initial Publication**: Completed as of 2023-10-20.
+    
+2.  **Review**: Given the complexities and the necessity to involve various stakeholders, we'll allocate four months for this step. This will ensure that all participants have ample time to understand, discuss, and provide thoughtful feedback.
+    -   **Start**: 2023-10-20
+    -   **End**: 2023-02-20
+   
+3.  **Revision**: Considering the extended review period and potential for substantial feedback, one months will be set aside for revisions.
+    -   **Start**: 2023-02-21
+    -   **End**: 2023-03-21
+   
+4.  **Final Comment Period**: This phase allows stakeholders another chance to review the revised RFC and provide final comments. Two months seems reasonable for this step, given the extended timeline for other phases. 
+    -   **Start**: 2023-03-22
+    -   **End**: 2023-05-22
+ 
+5.  **Decision**: This is when a governing body or committee meets to decide on the RFC. This might take a week, considering potential debates or presentations that might be required.   
+    -   **Date**: 2023-05-29
+    
+6.  **Official Publication**: After finalizing the decision, a week is allocated for any final edits, formatting, and dissemination of the RFC.
+
+    -   **Date**: 2023-06-05
+7.  **Implementation and Review Cycle**: As before, this is a longer-term step and its start would be dependent on the decisions made and the complexity of the implementation.
+    
+    -   **Start**: 2023-07-05 (to give systems and teams time to adjust) and onward
+    -   **Review Cycle**: Every 6 months (or another interval that makes sense based on the nature of the RFC and its implications)
 
 ## Proposal
 
@@ -403,11 +420,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU2NTkxOTA5LDYyMTYxNjQwMSwxODEwNj
-Y4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMsLTIxNDU0ODU0MjEs
-LTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5OTkzOSwxND
-I5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgx
-MjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OTQzNTk5MywtNz
-U0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3ODU4LC0zMTIw
-MjgyMzhdfQ==
+eyJoaXN0b3J5IjpbLTM5MTc3NjEyOCw3NTY1OTE5MDksNjIxNj
+E2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywt
+MjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMT
+I0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2
+MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMz
+g5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3
+Mjc4NThdfQ==
 -->
