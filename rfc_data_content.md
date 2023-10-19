@@ -110,7 +110,7 @@ The required metadata for each trace includes:
 
 #### Notes:
 
-**Naming Convention**: The full name of a component or channel is usually created as follows: **channel name** = **network code**.**station code**.**location code**.**channel code**
+**Naming Convention**: The full name of a component or channel is usually created as follows: **channel name** = **network code**.**station code**.**location code**.**channel code**. 
 
 **Network, Station, and Location Codes**: The mentioned convention is often not strictly adhered to by μseismic system providers. Flexibility in applying the convention is crucial. Typically, no distinction is made between the station and location, and each instrument is assigned a unique code that may or may not refer to the data acquisition station. In such cases, we suggest using the **Station Code** field to store the _instrument_ code and populate the location code with 01 or 00. In a network, each combination of **Station Code**.**Location Code**.**Channel Code** should be unique.
 
@@ -356,7 +356,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQwNjU2MDY3LDEzMzkzNTAxMywtMjE0NT
+eyJoaXN0b3J5IjpbNjQwNzc3NTI1LDEzMzkzNTAxMywtMjE0NT
 Q4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMTI0NTk5
 OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2MzIsLT
 Y0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMzg5NDM1
