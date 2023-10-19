@@ -29,7 +29,7 @@ The document focuses on the foundational elements and seismic information intrin
 
 #### Need for a New Standard
 
-The increase in microseismic data, particularly from expansive monitoring systems and new technologies like Distributed Acoustic Sensing (DAS), underscores the pressing need for a more efficient and unified data format. Currently, the varied nature of microseismic data formats hinders streamlined integration and analysis, posing challenges in managing and deriving value from large datasets. Given the critical importance of microseismic data in ensuring the safety and improving the operations of underground mining, establishing a standardized format becomes imperative. This standard would facilitate more straightforward data access, efficient storage, and smoother data exchanges across different platforms.
+The increase in microseismic data, particularly from expansive monitoring systems and new technologies like Distributed Acoustic Sensing (DAS), underscores the pressing need for a more efficient and unified data format. Currently, the varied nature of microseismic data formats hinders streamlined integration and analysis, posing challenges in managing and deriving value dataset collected by in-mine monitoring system. Given the critical importance of microseismic data in ensuring the safety and improving the operations of underground mining, establishing a standardized format and mechanism of echange becomes imperative. This standard would facilitate more straightforward data access, efficient storage, and smoother data exchanges across different platforms.
 
 Standardization in naming conventions, specifically for microseismic monitoring systems, is also vital. A uniform naming approach aids rapid identification, allowing different entity to access across a variety of sites and process relevant microseismic datasets without ambiguity. With the evolving complexity of microseismic monitoring in mining operations, a standardized naming system ensures clarity and coherence among different systems.
 
@@ -367,7 +367,7 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE1MzQwMjcyLDYyMTYxNjQwMSwxODEwNj
+eyJoaXN0b3J5IjpbNzI4MzY3OTY4LDYyMTYxNjQwMSwxODEwNj
 Y4NTM2LDcxOTYzMzA5NSwxMzM5MzUwMTMsLTIxNDU0ODU0MjEs
 LTE4NzM2NDI4MjQsLTgwMzQxNzQ4NCwtMTEyNDU5OTkzOSwxND
 I5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgx
