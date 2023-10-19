@@ -97,7 +97,7 @@ We propose the following RFC process that should lead to the standard adoption. 
 
 Our proposal encompasses three categories of data: the waveforms, the catalog data, and the inventory and system information. It also concerns system metadata such as velocity models. 
 
-We propose using the `ASDF` format with a `.asdf` extension to store the waveforms, the catalog (QuakeML), and inventory (StationXML) information. Note that the `ASDF` format also provides a convenient way to store auxiliary data including but not necessarily limited to:
+We propose using the `ASDF` format with a `.asdf` extension to store the waveforms, the catalog (QuakeML), and inventory (StationXML) information. The `ADSF` format provides a convenient and comprehensive mechanism to store the provenance and lineage in of the data to provide traceability and data history.Note that the `ASDF` format also provides a convenient way to store auxiliary data including but not necessarily limited to:
 
 -   **Ambient Noise Correlations**: Pre-computed cross-correlations between stations, which can be essential for techniques like ambient noise tomography.
     
@@ -108,8 +108,6 @@ We propose using the `ASDF` format with a `.asdf` extension to store the wavefor
 -   **Instrument Response**: Though typically part of the StationXML, having the actual instrument response curves stored as auxiliary data can facilitate more direct correction of the waveforms without referencing external databases.
     
 -   **Processing Logs**: Detailed logs of processing steps performed on the data, which can be crucial for ensuring data quality and understanding potential issues or artifacts.
-
-and provenance information to provide traceability and data history.
 
 To ensure interoperability, the information in the provided files must be consistent. The sensor naming convention shall remain consistent throughout. Additionally, the locations of sensors and events should be expressed using a unified coordinate system, which must also be used for grids, if applicable.
 
@@ -421,11 +419,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM2NjY0ODAxLDc1NjU5MTkwOSw2MjE2MT
-Y0MDEsMTgxMDY2ODUzNiw3MTk2MzMwOTUsMTMzOTM1MDEzLC0y
-MTQ1NDg1NDIxLC0xODczNjQyODI0LC04MDM0MTc0ODQsLTExMj
-Q1OTk5MzksMTQyOTE5MjkyNiwyOTE2ODkxMzYsMTk5NDQ5NTYz
-MiwtNjQyMjE4MTIzLDk4Njk1MTY3NiwtMTI4ODEzMTY5LC0zOD
-k0MzU5OTMsLTc1NDM3MTgxOSwtMTk4NzA0MzA5OSwtMTk0NTcy
-Nzg1OF19
+eyJoaXN0b3J5IjpbLTc4ODk0Nzc0Niw3NTY1OTE5MDksNjIxNj
+E2NDAxLDE4MTA2Njg1MzYsNzE5NjMzMDk1LDEzMzkzNTAxMywt
+MjE0NTQ4NTQyMSwtMTg3MzY0MjgyNCwtODAzNDE3NDg0LC0xMT
+I0NTk5OTM5LDE0MjkxOTI5MjYsMjkxNjg5MTM2LDE5OTQ0OTU2
+MzIsLTY0MjIxODEyMyw5ODY5NTE2NzYsLTEyODgxMzE2OSwtMz
+g5NDM1OTkzLC03NTQzNzE4MTksLTE5ODcwNDMwOTksLTE5NDU3
+Mjc4NThdfQ==
 -->
