@@ -38,7 +38,6 @@ Our proposal encompasses three categories of data: the waveforms, the catalog da
 
 To ensure interoperability, the information in the provided files must be consistent. The sensor naming convention should remain consistent across all files. Additionally, the locations of sensors and events should be expressed using a unified coordinate system, which must also be used for grids, if applicable.
 
-
 ### Why `ASDF` format?
 
 The Adaptable Seismic Data Format (ASDF) was introduced in response to the need for an efficient and comprehensive format for seismic data storage and retrieval. Developed through collaborative research by experts in the seismology field, ASDF aims to address the complexities associated with managing diverse seismic datasets. The format has been designed with adaptability in mind, ensuring both ease of use and interoperability across various platforms. As a result of its well-structured architecture, ASDF has gained widespread acceptance within the seismology community. 
@@ -60,6 +59,10 @@ The benefits of using the `ASDF` format become particularly evident when conside
 4.  **Efficiency in File Management**: ASDF offers a significant reduction in the number of files required for various tasks. A single ASDF file can effectively replace tens to hundreds of thousands of individual waveform files. This consolidation not only results in raw performance and organizational advantages but also addresses challenges like file count quota limits, especially on supercomputing platforms. Furthermore, the format supports efficient parallel I/O on suitable hardware, making it ideal for scalable parallel data processing workflows.
     
 5.  **Versatile Data Type Support**: Beyond seismograms, ASDF is adept at accommodating diverse data types prevalent in seismology. Whether it's spectral estimations, cross-correlations, adjoint sources, receiver functions, or other data types, ASDF ensures organized, self-describing storage. This versatility ensures that seismologists can maintain a consistent data storage paradigm across various facets of their research.
+
+### Implementation using the &mu;Quake Python Library
+
+
 
 ### Waveform Data
 
@@ -318,11 +321,11 @@ Krischer, L., Smith, J. A., Lei, W., Lefebvre, M., Ruan, Y., & Tromp, J. (2016).
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjQ1OTk5MzksMTQyOTE5MjkyNiwyOT
-E2ODkxMzYsMTk5NDQ5NTYzMiwtNjQyMjE4MTIzLDk4Njk1MTY3
-NiwtMTI4ODEzMTY5LC0zODk0MzU5OTMsLTc1NDM3MTgxOSwtMT
-k4NzA0MzA5OSwtMTk0NTcyNzg1OCwtMzEyMDI4MjM4LDQ2MzY4
-NDQ5NywtMTYxNjE3MzU4MiwxMDQ0NDA1MTU0LC0xNjQ1OTE3MD
-k0LDg0MDE0NTA1OSwtMTQzMTg5MDM5MywtMTE3NzIyNzk0Nywx
-MDgxMDE3NjY2XX0=
+eyJoaXN0b3J5IjpbLTgwMzQxNzQ4NCwtMTEyNDU5OTkzOSwxND
+I5MTkyOTI2LDI5MTY4OTEzNiwxOTk0NDk1NjMyLC02NDIyMTgx
+MjMsOTg2OTUxNjc2LC0xMjg4MTMxNjksLTM4OTQzNTk5MywtNz
+U0MzcxODE5LC0xOTg3MDQzMDk5LC0xOTQ1NzI3ODU4LC0zMTIw
+MjgyMzgsNDYzNjg0NDk3LC0xNjE2MTczNTgyLDEwNDQ0MDUxNT
+QsLTE2NDU5MTcwOTQsODQwMTQ1MDU5LC0xNDMxODkwMzkzLC0x
+MTc3MjI3OTQ3XX0=
 -->
